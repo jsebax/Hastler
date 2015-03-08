@@ -31,6 +31,14 @@ var HastlerService = function() {
         return deferred.promise();
     }
 
+    this.addService = function(service) {
+        hastlerServices.push(service);
+    }
+
+    this.tamanio = function() {
+        return hastlerServices.length;
+    }
+
     var hastlerServices = [
         {"id": 1, "serviceName": "Clases de guitarra", "category": "Música", "owner": "Pedro Hernández", "cellPhone": "617-000-0001", "email": "pHern@fakemail.com", "city": "Medellin", "pic": "Guitar.jpg", "hastly": "#hernanP"},
         {"id": 2, "serviceName": "Clases de cálculo", "category": "Academia", "owner": "Alejandro Carvajal", "cellPhone": "617-000-0002", "email": "aleCar@fakemail.com", "city": "Medellin", "pic": "Libros.jpg", "hastly": "#alejoC"},

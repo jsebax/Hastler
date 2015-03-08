@@ -4,6 +4,9 @@
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    </feature>
     <name>Hastler</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.

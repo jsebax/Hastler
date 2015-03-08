@@ -5,6 +5,7 @@
     HomeView.prototype.template = Handlebars.compile($("#home-tpl").html());
     HastlerServiceListView.prototype.template = Handlebars.compile($("#hastlerService-list-tpl").html());
     HastlerServiceView.prototype.template = Handlebars.compile($("#hastlerService-tpl").html());
+    AddServiceView.prototype.template = Handlebars.compile($("#addServiceForm-tpl").html());
 
     var service = new HastlerService();
     var slider = new PageSlider($('body'));
@@ -19,12 +20,16 @@
             });
         });
 
+        router.addRoute('add', function() {
+            slider.slidePage(new AddServiceView(service).render().$el);
+        });
+
         router.start();
     });
 
     /* --------------------------------- Event Registration -------------------------------- */
+
     document.addEventListener('deviceready', function () {
-        FastClick.attach(document.body);
         if (navigator.notification) { // Override default HTML alert with native dialog
             window.alert = function (message) {
                 navigator.notification.alert(
