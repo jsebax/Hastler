@@ -7,6 +7,7 @@ var HastlerService = function() {
         return deferred.promise();
     }
 
+    // Funcion para encontrar un servicio por el id
     this.findById = function(id) {
         var deferred = $.Deferred();
         var hastlerService = null;
@@ -21,6 +22,7 @@ var HastlerService = function() {
         return deferred.promise();
     }
 
+    // Funcion para encontrar un servicio por el nombre
     this.findByName = function(searchKey) {
         var deferred = $.Deferred();
         var results = hastlerServices.filter(function(element) {
@@ -31,14 +33,18 @@ var HastlerService = function() {
         return deferred.promise();
     }
 
+    // Añade un servicio al arreglo de servicios. Nota: El almacenamiento de nuevos servicios se hace en memoria. Cuando se reinicia la
+    // app, se borran los servicios agregados. 
     this.addService = function(service) {
         hastlerServices.push(service);
     }
 
+    // Retorna el tamaño del arreglo de servicios
     this.tamanio = function() {
         return hastlerServices.length;
     }
 
+    // Arreglos de servicios
     var hastlerServices = [
         {"id": 1, "serviceName": "Clases de guitarra", "category": "Música", "owner": "Pedro Hernández", "cellPhone": "617-000-0001", "email": "pHern@fakemail.com", "city": "Medellin", "pic": "Guitar.jpg", "hastly": "#hernanP"},
         {"id": 2, "serviceName": "Clases de cálculo", "category": "Academia", "owner": "Alejandro Carvajal", "cellPhone": "617-000-0002", "email": "aleCar@fakemail.com", "city": "Medellin", "pic": "Libros.jpg", "hastly": "#alejoC"},
