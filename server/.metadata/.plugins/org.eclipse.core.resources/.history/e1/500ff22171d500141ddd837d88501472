@@ -1,0 +1,5 @@
+package entity;
+
+public class Profile implements ProfileI {
+
+}

@@ -1,0 +1,9 @@
+package repository;
+
+import org.springframework.data.repository.Repository;
+
+import entity.Servi;
+
+public interface ServiRepository extends Repository<Servi, String> {
+
+}

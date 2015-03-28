@@ -1,0 +1,6 @@
+1427560000629	Rename package 'demo'
+1427560247281	Rename type 'Person'
+1427560255344	Rename type 'Service'
+1427562192022	Delete element
+1427564383766	Encapsulate field 'owner'
+1427565741277	Rename package 'Controller'

@@ -1,0 +1,25 @@
+package entity;
+
+import org.springframework.data.annotation.Id;
+
+public class Servi implements ServiceI {
+	
+	static final int MAX_LENGTH_DESCRIPTION = 500;
+	static final int MAX_LENGTH_TITLE = 100;
+	
+	@Id
+	private String id;
+
+	private String description;
+	
+	private String title;
+	
+	private PersonI owner;
+	
+	public void update(String title, String description) {
+        checkTitleAndDescription(title, description);
+ 
+        this.title = title;
+        this.description = description;
+    }
+}

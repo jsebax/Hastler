@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ResponseBody"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="repository.ServiRepository"/>
+<fullyQualifiedTypeName name="javax.validation.constraints.Size"/>
+<fullyQualifiedTypeName name="org.hibernate.validator.constraints.NotEmpty"/>
+<fullyQualifiedTypeName name="entity.ProfileI"/>
+<fullyQualifiedTypeName name="entity.Servi"/>
+<fullyQualifiedTypeName name="rest.ServiService"/>
+<fullyQualifiedTypeName name="DTO.ServiDTO"/>
+<fullyQualifiedTypeName name="rest.PersonService"/>
+<fullyQualifiedTypeName name="repository.PersonRepository"/>
+<fullyQualifiedTypeName name="DTO.PersonDTO"/>
+<fullyQualifiedTypeName name="entity.Person"/>
+<fullyQualifiedTypeName name="exeption.PersonNotFoundException"/>
+<fullyQualifiedTypeName name="entity.Profile"/>
+</qualifiedTypeNameHistroy>

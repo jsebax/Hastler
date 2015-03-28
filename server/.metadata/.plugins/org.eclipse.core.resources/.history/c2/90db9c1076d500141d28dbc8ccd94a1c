@@ -1,0 +1,17 @@
+package rest;
+
+import java.util.List;
+
+import DTO.PersonDTO;
+
+public interface PersonService {
+	PersonDTO create(PersonDTO todo);
+	 
+	PersonDTO delete(String id);
+ 
+    List<PersonDTO> findAll();
+ 
+    PersonDTO findById(String id);
+ 
+    PersonDTO update(PersonDTO todo);
+}

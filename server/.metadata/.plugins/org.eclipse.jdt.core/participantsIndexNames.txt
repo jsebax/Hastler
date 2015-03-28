@@ -1,0 +1,7 @@
+INDEX VERSION 1.127
+C:\Users\Usuario\Documents\workspace-sts-3.6.3.SR1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1552232459.index
+\HastlerRest\src\main\java
+C:\Users\Usuario\Documents\workspace-sts-3.6.3.SR1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1979108162.index
+\HastlerRest\src\main\java
+C:\Users\Usuario\Documents\workspace-sts-3.6.3.SR1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2844091123.index
+\MiServicioREST\src\main\java
