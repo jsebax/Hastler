@@ -39,14 +39,14 @@ public class HomeController {
 		return "home";
 	}
 	
-	@RequestMapping(value = "/persona", method = RequestMethod.GET)
-	public @ResponseBody Persona ObtenerPersona(@RequestParam(value="name", required=false)String name,@RequestParam(value="id", required=false)String id){
+	/*@RequestMapping(value = "/persona", method = RequestMethod.GET)
+	public @ResponseBody Person ObtenerPersona(@RequestParam String name){
 		//logica para obtener datos
 		String nombre = "Nombre";
 		int ident = 1;
 		if(name!=null)nombre=name;
 		if(id!=null)ident=Integer.parseInt(id);
-		Persona p = new Persona();
+		Person p = new Person();
 		p.setNombre(nombre);
 		p.setId(ident);
 		return p;
@@ -55,7 +55,7 @@ public class HomeController {
 	@RequestMapping(value = "/servicio", method = RequestMethod.GET)
 	public @ResponseBody ArrayList<Servicio> ObtenerServicio(@RequestParam(value="name", required=true)String name){
 		//logica para obtener datos
-		ArrayList servicios = new ArrayList<Servicio>();
+		ArrayList<Servicio> servicios = new ArrayList<Servicio>();
 		Servicio serv = new Servicio();
 		Persona p = new Persona();
 		p.setNombre(name);
@@ -65,6 +65,6 @@ public class HomeController {
 		serv.setNombre("Clases de cocina");
 		servicios.add(serv);
 		return servicios;
-	}
+	}*/
 	
 }

@@ -10,12 +10,13 @@
 <fullyQualifiedTypeName name="org.hibernate.validator.constraints.NotEmpty"/>
 <fullyQualifiedTypeName name="entity.ProfileI"/>
 <fullyQualifiedTypeName name="entity.Servi"/>
-<fullyQualifiedTypeName name="rest.ServiService"/>
-<fullyQualifiedTypeName name="DTO.ServiDTO"/>
-<fullyQualifiedTypeName name="rest.PersonService"/>
 <fullyQualifiedTypeName name="repository.PersonRepository"/>
 <fullyQualifiedTypeName name="DTO.PersonDTO"/>
 <fullyQualifiedTypeName name="entity.Person"/>
 <fullyQualifiedTypeName name="exeption.PersonNotFoundException"/>
 <fullyQualifiedTypeName name="entity.Profile"/>
+<fullyQualifiedTypeName name="rest.ServiService"/>
+<fullyQualifiedTypeName name="DTO.ServiDTO"/>
+<fullyQualifiedTypeName name="exeption.ServiceNotFoundException"/>
+<fullyQualifiedTypeName name="rest.PersonService"/>
 </qualifiedTypeNameHistroy>
