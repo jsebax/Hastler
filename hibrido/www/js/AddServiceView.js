@@ -13,7 +13,8 @@ var AddServiceView = function (service) {
             alert("Todos los campos son obligatorios");
         } else {
             var tamanio = service.tamanio() + 1;
-            var hService = {"id": tamanio, 
+            var hService = {"user": service.hastlerServices[0].user,
+                            "id": tamanio, 
                             "serviceName": $('#serviceName').val(), 
                             "category": $('#category').val(), 
                             "owner": $('#owner').val(),
