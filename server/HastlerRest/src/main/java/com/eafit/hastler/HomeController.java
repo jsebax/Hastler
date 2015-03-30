@@ -1,8 +1,8 @@
 package com.eafit.hastler;
 
 import java.text.DateFormat;
-import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 import org.slf4j.Logger;
@@ -13,6 +13,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.mkyong.service.MongoDBService;
+
+import entity.Person;
+import entity.Servi;
+import entity.User;
 
 /**
  * Handles requests for the application home page.
@@ -39,7 +45,44 @@ public class HomeController {
 		return "home";
 	}
 	
-	/*@RequestMapping(value = "/persona", method = RequestMethod.GET)
+	@RequestMapping(value = "/persona", method = RequestMethod.GET)
+	public @ResponseBody List<Person> ObtenerPersonas(){
+		MongoDBService mongo = new MongoDBService();
+		List<Person> persons = mongo.findAllPerson();
+		return persons;
+	}
+	
+	@RequestMapping(value = "/persona", method = RequestMethod.POST)
+	public @ResponseBody Person GuardarPersona(@RequestParam Person person){
+		MongoDBService mongo = new MongoDBService();
+		Person personR = mongo.savePerson(person);
+		return personR;
+	}
+	
+	
+	@RequestMapping(value = "/servicio", method = RequestMethod.GET)
+	public @ResponseBody List<Servi> ObtenerServicio(){
+		MongoDBService mongo = new MongoDBService();
+		List<Servi> persons = mongo.findAllServi();
+		return persons;
+	}
+	
+	@RequestMapping(value = "/servicio", method = RequestMethod.POST)
+	public @ResponseBody Servi GuardarServicio(@RequestParam Servi servicio){
+		MongoDBService mongo = new MongoDBService();
+		Servi servicioR = mongo.saveServi(servicio);
+		return servicioR;
+	}	
+	
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public @ResponseBody boolean Login(@RequestParam User user){
+		MongoDBService mongo = new MongoDBService();
+		boolean respuesta = mongo.findOneUser(user);
+		return respuesta;
+	}
+	
+	/*	Ejemplos
+	 * @RequestMapping(value = "/persona", method = RequestMethod.GET)
 	public @ResponseBody Person ObtenerPersona(@RequestParam String name){
 		//logica para obtener datos
 		String nombre = "Nombre";
@@ -53,7 +96,7 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value = "/servicio", method = RequestMethod.GET)
-	public @ResponseBody ArrayList<Servicio> ObtenerServicio(@RequestParam(value="name", required=true)String name){
+	public @ResponseBody ArrayList<Servi> ObtenerServicio(@RequestParam(value="name", required=true)String name){
 		//logica para obtener datos
 		ArrayList<Servicio> servicios = new ArrayList<Servicio>();
 		Servicio serv = new Servicio();

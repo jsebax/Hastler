@@ -136,6 +136,17 @@
 		<item value="org.springsource.sts.package:3.6.4.201503100339-RELEASE-e44"/>
 		<item value="org.springsource.sts:3.6.4.201503100339-RELEASE"/>
 	</list>
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\Usuario\Documents\git\hastler\Hastler\server"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
 	<section name="SaveAsDialogSettings">
 		<item value="525" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|0|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
