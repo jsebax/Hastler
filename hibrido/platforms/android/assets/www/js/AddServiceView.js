@@ -1,17 +1,20 @@
 var AddServiceView = function (service) {
 
+    // Inicializa el AddServiceView
 	this.initialize = function () {
 		this.$el = $('<div/>');
 		this.$el.on('click', '.add-service-btn', this.addService);
 	};
 
+    // Funcion que se llama cuando se presiona el boton agregar
 	this.addService = function () {
 		if ($('#serviceName').val() < 1 || $('#category').val() < 1 || $('#owner').val() < 1 || $('#cellPhone').val() < 1
             || $('#email').val() < 1 || $('#city').val() < 1 || $('#hastly').val() < 1) {
             alert("Todos los campos son obligatorios");
         } else {
             var tamanio = service.tamanio() + 1;
-            var hService = {"id": tamanio, 
+            var hService = {"user": service.hastlerServices[0].user,
+                            "id": tamanio, 
                             "serviceName": $('#serviceName').val(), 
                             "category": $('#category').val(), 
                             "owner": $('#owner').val(),
@@ -32,6 +35,7 @@ var AddServiceView = function (service) {
         }
 	};
 
+    // Renderiza el template
 	this.render = function () {
 		this.$el.html(this.template());
 		return this;
