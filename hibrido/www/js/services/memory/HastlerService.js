@@ -51,6 +51,10 @@ var HastlerService = function() {
         }
     }
 
+    this.getServices = function() {
+        return hastlerServices;
+    }
+
     var usuario = {"user": "default"};
 
     // Arreglos de servicios

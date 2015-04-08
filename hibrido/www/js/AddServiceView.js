@@ -3,7 +3,7 @@ var AddServiceView = function (service) {
     // Inicializa el AddServiceView
 	this.initialize = function () {
 		this.$el = $('<div/>');
-		this.$el.on('click', '.add-service-btn', this.addService);
+		this.$el.on('click', '.add-service-btn', this.addService);		
 	};
 
     // Funcion que se llama cuando se presiona el boton agregar
@@ -12,8 +12,9 @@ var AddServiceView = function (service) {
             || $('#email').val() < 1 || $('#city').val() < 1 || $('#hastly').val() < 1) {
             alert("Todos los campos son obligatorios");
         } else {
+        	servicios = service.getServices();
             var tamanio = service.tamanio() + 1;
-            var hService = {"user": service.hastlerServices[0].user,
+            var hService = {"user": servicios[0].user,
                             "id": tamanio, 
                             "serviceName": $('#serviceName').val(), 
                             "category": $('#category').val(), 

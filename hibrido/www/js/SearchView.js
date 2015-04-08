@@ -1,6 +1,7 @@
 var SearchView = function (service) {
 
 	var hastlerServiceListView;
+	var servicio = service.getServices();
 
 	// Inicializa el template de la pagina de busqueda
 	this.initialize = function () {
@@ -13,7 +14,7 @@ var SearchView = function (service) {
 	// Renderiza el template
 	this.render = function () {
 		this.$el.html(this.template(service));
-		$('.content', this.$el).html(hastlerServiceListView.$el);	
+		$('.content', this.$el).html(hastlerServiceListView.$el);			
 		return this;
 	};
 
