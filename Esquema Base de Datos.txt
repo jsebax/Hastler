@@ -1,0 +1,17 @@
+Servicio				Persona					Perfil
+
+nombre 					email					Hastly
+Dueño(nombre, hastly)	Password				Nombre
+Categoria				hastly 					Telefono
+fecha vencimiento								Email
+Lugar 											Imagen de perfil
+Ranking
+Comentarios
+
+Categorias:
+Academia
+Consultoria
+Musica
+Software	
+Otros
+Imagen de categoria
