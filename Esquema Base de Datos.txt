@@ -1,10 +1,10 @@
-Servicio				Persona					Perfil
+Servicio				          Persona					Perfil
 
-nombre 					email					Hastly
-Dueño(nombre, hastly)	Password				Nombre
-Categoria				hastly 					Telefono
-fecha vencimiento								Email
-Lugar 											Imagen de perfil
+nombre 					          email					  Hastly
+Dueño(nombre, hastly)	    Password				Nombre
+Categoria				          hastly 					Telefono
+fecha vencimiento								          Email
+Lugar 											              Imagen de perfil
 Ranking
 Comentarios
 
