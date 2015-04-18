@@ -11,6 +11,36 @@
         <!-- Template de la pagina de inicio -->
         <script id="home-tpl" type="text/template">
             <header class="bar bar-nav">
+                <h1 class="title">Inicio</h1>
+            </header>
+            <div class="content">
+                <div class="card">
+                    <ul class="table-view">
+                        <li class="table-view-cell media">
+                            <div class="media-body" align="center">
+                                Nombre de Usuario
+                                <input id="userName" type="text" placeholder="Escribe el nombre de usuario"/>
+                            </div>
+                        </li>
+                        <li class="table-view-cell media">
+                            <a id="ingresar" href="#search" class="push-right login-btn">
+                                <span class="media-object pull-left"></span>
+                                <div class="media-body" align="center">
+                                    Ingresar
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </script>
+
+        <!-- Template de la pagina de busqueda -->
+        <script id="search-tpl" type="text/template">
+            <header class="bar bar-nav">
+                <a class="btn btn-link btn-nav pull-left" href="#">
+                    <span class="icon icon-left-nav"></span>
+                </a>
                 <h1 class="title">Servicios</h1>          
                 <a href="#add">
                     <span class="media-object pull-right icon icon-service"></span>
@@ -25,7 +55,8 @@
         <!-- Template de la lista de servicios -->
         <script id="hastlerService-list-tpl" type="test/template">
             <ul class="table-view">
-                {{#each this}}
+                <div align="center">Bienvenido(a) {{user}}</div>
+                {{#each this}}                
                 <li class="table-view-cell media">
                     <a href="#services/{{ id }}">
                         <img class="media-object pull-left" src="assets/pics/{{pic}}">
@@ -42,12 +73,13 @@
         <!-- Template de un servicio especifico -->
         <script id="hastlerService-tpl" type="text/template">
             <header class="bar bar-nav">
-                <a class="btn btn-link btn-nav pull-left" href="#">
+                <a class="btn btn-link btn-nav pull-left" href="#search">
                     <span class="icon icon-left-nav"></span>
                 </a>
                 <h1 class="title">Servicio</h1>
-            </header>
+            </header>            
             <div class="content">
+                <div align="center">Bienvenido(a) {{user}}</div>
                 <div class="card">
                     <ul class="table-view">
                         <li class="table-view-cell media">
@@ -103,12 +135,13 @@
         <!-- Template del formulario para agregar un servicio -->
         <script id="addServiceForm-tpl" type="text/template">
             <header class="bar bar-nav">
-                <a class="btn btn-link btn-nav pull-left" href="#">
+                <a class="btn btn-link btn-nav pull-left" href="#search">
                     <span class="icon icon-left-nav"></span>
                 </a>
                 <h1 class="title">Añadir Servicio</h1>                
             </header>
             <div class="content">
+                <div align="center">Bienvenido(a) {{user}}</div>
                 <div class="card">
                     <ul class="table-view">
                         <li class="table-view-cell media">
@@ -156,7 +189,7 @@
                         <li class="table-view-cell media">
                             <a hre="#" class="push-right add-service-btn">
                                 <span class="media-object pull-left"></span>
-                                <div class="media-body">
+                                <div class="media-body" align="center">
                                     Agregar
                                 </div>
                             </a>
@@ -174,6 +207,7 @@
         <script src="lib/router.js"></script>
         <script src="js/services/memory/HastlerService.js"></script>
         <script src="js/HomeView.js"></script>
+        <script src="js/SearchView.js"></script>
         <script src="js/HastlerServiceListView.js"></script>
         <script src="js/HastlerServiceView.js"></script>
         <script src="js/AddServiceView.js"></script>

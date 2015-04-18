@@ -1,0 +1,28 @@
+Servicio:		
+  nombre 					          					  
+  Dueño(nombre, hastly)	    				
+  Categoria				           					
+  fecha vencimiento								          
+  Lugar 											              
+  Ranking
+  Comentarios
+
+Categorias:
+  Academia
+  Consultoria
+  Musica
+  Software	
+  Otros
+  Imagen de categoria
+
+Persona:
+  email
+  Password
+  hastly
+  
+Perfil:
+  Hastly
+  Nombre
+  Telefono
+  Email
+  Imagen de perfil

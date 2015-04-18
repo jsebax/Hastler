@@ -3,15 +3,20 @@
 
     /* ---------------------------------- Local Variables ---------------------------------- */
     HomeView.prototype.template = Handlebars.compile($("#home-tpl").html());
+    SearchView.prototype.template = Handlebars.compile($("#search-tpl").html());
     HastlerServiceListView.prototype.template = Handlebars.compile($("#hastlerService-list-tpl").html());
     HastlerServiceView.prototype.template = Handlebars.compile($("#hastlerService-tpl").html());
     AddServiceView.prototype.template = Handlebars.compile($("#addServiceForm-tpl").html());
 
     var service = new HastlerService();
     var slider = new PageSlider($('body'));
+    // Añade la ruta al service
     service.initialize().done(function () {
-        router.addRoute ('', function () {
+        router.addRoute ('', function() {
             slider.slidePage(new HomeView(service).render().$el);
+        })
+        router.addRoute ('search', function () {
+            slider.slidePage(new SearchView(service).render().$el);
         });
 
         router.addRoute('services/:id', function(id) {
