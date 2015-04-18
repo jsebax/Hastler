@@ -18,8 +18,13 @@
 <fullyQualifiedTypeName name="rest.PersonService"/>
 <fullyQualifiedTypeName name="entity.Person"/>
 <fullyQualifiedTypeName name="entity.Servi"/>
-<fullyQualifiedTypeName name="com.mkyong.service.MongoDBService"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.mkyong.model.User"/>
 <fullyQualifiedTypeName name="org.springframework.data.mongodb.core.query.Criteria"/>
+<fullyQualifiedTypeName name="rest.MongoDBServiService"/>
+<fullyQualifiedTypeName name="com.eafit.hastler.HomeController"/>
+<fullyQualifiedTypeName name="com.mkyong.service.MongoDBService"/>
+<fullyQualifiedTypeName name="rest.MongoDBPersonService"/>
+<fullyQualifiedTypeName name="org.springframework.data.repository.Repository"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 </qualifiedTypeNameHistroy>
