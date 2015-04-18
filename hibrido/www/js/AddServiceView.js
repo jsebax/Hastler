@@ -14,8 +14,7 @@ var AddServiceView = function (service) {
         } else {
         	servicios = service.getServices();
             var tamanio = service.tamanio() + 1;
-            var hService = {"user": servicios[0].user,
-                            "id": tamanio, 
+            var hService = {"id": tamanio, 
                             "serviceName": $('#serviceName').val(), 
                             "category": $('#category').val(), 
                             "owner": $('#owner').val(),
@@ -25,7 +24,7 @@ var AddServiceView = function (service) {
                             "pic": "imagenDefecto.jpg",
                             "hastly": $('#hastly').val()};
             service.addService(hService);
-            alert("Todos los campos ingresados");
+            alert("Su servicio a sido agregado");
             $('#serviceName').val('');
             $('#category').val('');
             $('#owner').val('');

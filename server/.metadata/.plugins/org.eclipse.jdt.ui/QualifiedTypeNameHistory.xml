@@ -17,7 +17,6 @@
 <fullyQualifiedTypeName name="exeption.ServiceNotFoundException"/>
 <fullyQualifiedTypeName name="rest.PersonService"/>
 <fullyQualifiedTypeName name="entity.Person"/>
-<fullyQualifiedTypeName name="entity.Servi"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.mkyong.model.User"/>
 <fullyQualifiedTypeName name="org.springframework.data.mongodb.core.query.Criteria"/>
@@ -27,4 +26,9 @@
 <fullyQualifiedTypeName name="rest.MongoDBPersonService"/>
 <fullyQualifiedTypeName name="org.springframework.data.repository.Repository"/>
 <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
+<fullyQualifiedTypeName name="org.springframework.http.MediaType"/>
+<fullyQualifiedTypeName name="entity.Servi"/>
+<fullyQualifiedTypeName name="entity.Test"/>
 </qualifiedTypeNameHistroy>

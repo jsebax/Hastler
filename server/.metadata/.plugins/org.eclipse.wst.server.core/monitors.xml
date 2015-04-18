@@ -1,2 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<monitors/>
+<monitors>
+  <monitor port="7621" portId="0" serverId="Pivotal tc Server Developer Edition (Runtime) v3.0 at localhost" started="true"/>
+</monitors>

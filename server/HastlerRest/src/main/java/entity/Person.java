@@ -9,9 +9,8 @@ public class Person implements PersonI {
 	private ProfileI profile;
 
 	
-	public Person(ProfileI profile) {
+	public Person() {
 		super();
-		this.profile = profile;
 	}
 
 	public String getId() {

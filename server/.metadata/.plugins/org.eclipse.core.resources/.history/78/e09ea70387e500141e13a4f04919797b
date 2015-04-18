@@ -1,0 +1,29 @@
+package entity;
+
+import org.springframework.data.annotation.Id;
+
+
+public class Test {
+
+	@Id
+	public String id;
+	
+	public String serviceName;
+	
+	public String category;
+	
+	public String cellPhone;
+	
+	public String email;
+	
+	public String city;
+	
+	public String pic;
+	
+	public String hastly;
+	
+	public String owner;
+	
+	public Test() {
+	}
+}

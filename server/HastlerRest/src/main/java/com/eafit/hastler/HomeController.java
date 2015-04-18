@@ -9,9 +9,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import DBservice.MongoDBService;
@@ -53,7 +53,7 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value = "/persona", method = RequestMethod.POST)
-	public @ResponseBody Person GuardarPersona(@RequestParam Person person){
+	public @ResponseBody Person GuardarPersona(@RequestBody Person person){
 		Person personR = mongo.savePerson(person);
 		return personR;
 	}
@@ -66,18 +66,26 @@ public class HomeController {
 	}
 	
 	@RequestMapping(value = "/servicio", method = RequestMethod.POST)
-	public @ResponseBody Servi GuardarServicio(@RequestParam Servi servicio){
+	public @ResponseBody Servi GuardarServicio(@RequestBody Servi servicio){
 		Servi servicioR = mongo.saveServi(servicio);
 		return servicioR;
 	}	
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
-	public @ResponseBody boolean Login(@RequestParam User user){
+	public @ResponseBody boolean Login(@RequestBody User user){
 		boolean respuesta = mongo.findOneUser(user);
 		return respuesta;
 	}
 	
 	/*	Ejemplos
+	@RequestMapping(value = "/hola", method = RequestMethod.POST)
+	public @ResponseBody Servi mostrarHola(@RequestBody Test jsonString){
+		Servi servicioR = new Servi();
+		System.out.println("yei el use es: "+jsonString.getServiceName());
+		return servicioR;
+	}	
+	
+	
 	 * @RequestMapping(value = "/persona", method = RequestMethod.GET)
 	public @ResponseBody Person ObtenerPersona(@RequestParam String name){
 		//logica para obtener datos

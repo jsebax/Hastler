@@ -10,53 +10,81 @@ public class Servi implements ServiceI {
 	@Id
 	private String id;
 
-	private String description;
+	private String serviceName;
 	
-	private String title;
+	private String category;
 	
-	private PersonI owner;
+	private String owner;	
 	
+	private String cellPhone;
 	
+	private String email;
 	
-	public Servi(String description, String title, PersonI owner) {
+	private String city;
+	
+	private String pic;
+	
+	private String hastly;		
+	
+	public Servi() {
 		super();
-		this.description = description;
-		this.title = title;
-		this.owner = owner;
 	}
 
 	public String getId() {
 		return id;
 	}
-
 	public void setId(String id) {
 		this.id = id;
 	}
-
-	public String getDescription() {
-		return description;
+	public String getServiceName() {
+		return serviceName;
 	}
-
-	public void setDescription(String description) {
-		this.description = description;
+	public void setServiceName(String serviceName) {
+		this.serviceName = serviceName;
 	}
-
-	public String getTitle() {
-		return title;
+	public String getCategory() {
+		return category;
 	}
-
-	public void setTitle(String title) {
-		this.title = title;
+	public void setCategory(String category) {
+		this.category = category;
 	}
-
-	public PersonI getOwner() {
+	public String getOwner() {
 		return owner;
 	}
-
-	public void setOwner(PersonI owner) {
+	public void setOwner(String owner) {
 		this.owner = owner;
 	}
-
+	public String getCellPhone() {
+		return cellPhone;
+	}
+	public void setCellPhone(String cellPhone) {
+		this.cellPhone = cellPhone;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getPic() {
+		return pic;
+	}
+	public void setPic(String pic) {
+		this.pic = pic;
+	}
+	public String getHastly() {
+		return hastly;
+	}
+	public void setHastly(String hastly) {
+		this.hastly = hastly;
+	}
+	
 	private void notNull(String title2, String string) throws Exception {
 		if(title2==null){
 			throw new Exception (string);
@@ -89,11 +117,11 @@ public class Servi implements ServiceI {
     }
 
 
-	public void update(String title, String description, PersonI owner) throws Exception {
-        checkTitleAndDescription(title, description);
+	public void update(String serviceName, String description, String owner) throws Exception {
+        checkTitleAndDescription(serviceName, description);
  
-        this.title = title;
-        this.description = description;
+        this.serviceName = serviceName;
+        this.category = description;
         this.owner = owner;
     }
 }
