@@ -14,8 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.mkyong.service.MongoDBService;
-
+import DBservice.MongoDBService;
 import entity.Person;
 import entity.Servi;
 import entity.User;
@@ -27,6 +26,8 @@ import entity.User;
 public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	
+	MongoDBService mongo = new MongoDBService();
 	
 	/**
 	 * Simply selects the home view to render by returning its name.
@@ -47,14 +48,12 @@ public class HomeController {
 	
 	@RequestMapping(value = "/persona", method = RequestMethod.GET)
 	public @ResponseBody List<Person> ObtenerPersonas(){
-		MongoDBService mongo = new MongoDBService();
 		List<Person> persons = mongo.findAllPerson();
 		return persons;
 	}
 	
 	@RequestMapping(value = "/persona", method = RequestMethod.POST)
 	public @ResponseBody Person GuardarPersona(@RequestParam Person person){
-		MongoDBService mongo = new MongoDBService();
 		Person personR = mongo.savePerson(person);
 		return personR;
 	}
@@ -62,21 +61,18 @@ public class HomeController {
 	
 	@RequestMapping(value = "/servicio", method = RequestMethod.GET)
 	public @ResponseBody List<Servi> ObtenerServicio(){
-		MongoDBService mongo = new MongoDBService();
 		List<Servi> persons = mongo.findAllServi();
 		return persons;
 	}
 	
 	@RequestMapping(value = "/servicio", method = RequestMethod.POST)
 	public @ResponseBody Servi GuardarServicio(@RequestParam Servi servicio){
-		MongoDBService mongo = new MongoDBService();
 		Servi servicioR = mongo.saveServi(servicio);
 		return servicioR;
 	}	
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public @ResponseBody boolean Login(@RequestParam User user){
-		MongoDBService mongo = new MongoDBService();
 		boolean respuesta = mongo.findOneUser(user);
 		return respuesta;
 	}

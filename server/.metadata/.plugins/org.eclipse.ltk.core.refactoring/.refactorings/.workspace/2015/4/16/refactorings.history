@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;MongoDBConnetion&apos;" deleteContents="false" description="Delete resource &apos;MongoDBConnetion&apos;" element1="/MongoDBConnetion" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1429322862744"/>
+</session>
