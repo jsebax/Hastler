@@ -1,0 +1,20 @@
+package business;
+
+import repositories.ServiRepository;
+
+public class PostService implements UnitOfWork {
+
+	private ServiRepository serviMongo;
+	
+	public PostService() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public boolean run() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

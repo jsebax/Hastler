@@ -1,0 +1,11 @@
+package business;
+
+import repositories.ServiRepository;
+
+public interface UnitOfWork {
+	
+	boolean run();
+	
+	void SetRepository(Object repository);
+	
+}

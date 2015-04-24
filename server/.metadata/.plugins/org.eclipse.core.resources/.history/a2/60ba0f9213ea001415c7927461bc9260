@@ -1,0 +1,15 @@
+package business;
+
+public class LogIn implements UnitOfWork {
+
+	public LogIn() {
+		super();
+	}
+
+	@Override
+	public boolean run() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

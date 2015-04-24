@@ -1,0 +1,11 @@
+package business;
+
+public class PostComment implements UnitOfWork {
+
+	@Override
+	public boolean run() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

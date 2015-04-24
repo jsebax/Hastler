@@ -3,10 +3,19 @@ package entity;
 import org.springframework.data.annotation.Id;
 
 public class Person implements PersonI {
+	
 	@Id
 	private String id;
 	
-	private ProfileI profile;
+	private String hastly;
+	
+	private String name;
+	
+	private String telephone;
+	
+	private String email;
+	
+	private String image;
 
 	
 	public Person() {
@@ -21,16 +30,45 @@ public class Person implements PersonI {
 		this.id = id;
 	}
 
-	public ProfileI getProfile() {
-		return profile;
+	public String getHastly() {
+		return hastly;
 	}
 
-	public void setProfile(ProfileI profile) {
-		this.profile = profile;
+	public void setHastly(String hastly) {
+		this.hastly = hastly;
 	}
-	
-	public void update(ProfileI profile){
-		this.profile = profile;
+
+	public String getName() {
+		return name;
 	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getTelephone() {
+		return telephone;
+	}
+
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
 	
 }

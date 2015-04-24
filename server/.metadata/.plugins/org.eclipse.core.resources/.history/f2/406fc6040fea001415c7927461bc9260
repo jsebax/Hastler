@@ -1,0 +1,15 @@
+package entity;
+
+import org.springframework.data.annotation.Id;
+
+public class Match {
+	
+	@Id
+	private String id;
+	
+	private String Hastly;
+	
+	private String Name;
+	
+	private List<String> user
+}

@@ -3,7 +3,7 @@ var HastlerService = function() {
     this.initialize = function() {
         // No Initialization required
         var deferred = $.Deferred();
-		$.get( "http://localhost:8080/hastler/servicio", function( data ) {
+		$.get( "http://localhost:8080/hastler/servicioAll", function( data ) {
 		  hastlerServices = data;
 		  alert( "Data Loaded "  );
 		});

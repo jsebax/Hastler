@@ -1,0 +1,53 @@
+package DBServices;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.data.mongodb.core.MongoOperations;
+
+import DBconfig.SpringMongoConfig;
+import entity.Match;
+import repositories.MatchRepository;
+
+public class MongoMatchRepository implements MatchRepository {
+
+	public MongoMatchRepository() {
+		super();
+	}
+	
+	ApplicationContext ctx = new AnnotationConfigApplicationContext(SpringMongoConfig.class);
+	MongoOperations mongoOperation = (MongoOperations) ctx.getBean("mongoTemplate");
+	
+	@Override
+	public void deleteMatch(Match deleted) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<Match> findAllMatch() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Optional<Match> findOneMatch(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Match saveMatch(Match saved) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Match updateMatch(String id, String toUp, Object update) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

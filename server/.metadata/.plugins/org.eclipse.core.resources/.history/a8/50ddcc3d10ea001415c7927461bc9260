@@ -1,0 +1,19 @@
+package repositories;
+
+import java.util.List;
+import java.util.Optional;
+
+import entity.Match;
+
+public interface MatchRepository extends Repository{
+	void deletePerson(Match deleted);
+	 
+    List<Match> findAllPerson();
+ 
+    Optional<Match> findOnePerson(String id);
+ 
+    Match savePerson(Match saved);
+    
+    Match updatePerson(String id, String toUp, Object update);
+}
+

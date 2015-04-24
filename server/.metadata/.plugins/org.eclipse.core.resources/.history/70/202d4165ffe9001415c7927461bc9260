@@ -1,0 +1,6 @@
+package business;
+
+public interface BusinessObject {
+	public run(){
+	}
+}

@@ -1,0 +1,53 @@
+package DBServices;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.data.mongodb.core.MongoOperations;
+
+import DBconfig.SpringMongoConfig;
+import entity.Person;
+import repositories.PersonRepository;
+
+public class MongoPersonRepository implements PersonRepository {
+	
+	public MongoDBService() {
+		super();
+	}
+	
+	ApplicationContext ctx = new AnnotationConfigApplicationContext(SpringMongoConfig.class);
+	MongoOperations mongoOperation = (MongoOperations) ctx.getBean("mongoTemplate");
+
+	@Override
+	public void deletePerson(Person deleted) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<Person> findAllPerson() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Optional<Person> findOnePerson(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Person savePerson(Person saved) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Person updatePerson(String id, String toUp, Object update) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,28 @@
+package business;
+
+import repositories.ServiRepository;
+
+public class GetAllService implements UnitOfWork {
+
+	ServiRepository serviMongo;
+	
+	public ServiRepository getServiMongo() {
+		return serviMongo;
+	}
+
+	public void setServiMongo(ServiRepository serviMongo) {
+		this.serviMongo = serviMongo;
+	}
+
+	public GetAllService() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public boolean run() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

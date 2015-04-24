@@ -1,0 +1,5 @@
+package DBservice;
+
+public interface PersonRepository {
+
+}

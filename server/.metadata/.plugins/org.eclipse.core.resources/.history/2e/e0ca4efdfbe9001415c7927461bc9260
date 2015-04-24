@@ -1,0 +1,28 @@
+package entity;
+
+import org.springframework.data.annotation.Id;
+
+public class Person implements PersonI {
+	@Id
+	private String id;
+	private String Hastly;
+	private String Name;
+	private String Telephone;
+	private String Email;
+	private String Image;
+
+	
+	public Person() {
+		super();
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	
+}

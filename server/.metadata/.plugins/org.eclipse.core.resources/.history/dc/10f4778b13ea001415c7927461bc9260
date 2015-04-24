@@ -1,0 +1,16 @@
+package business;
+
+public class GetPerson implements UnitOfWork {
+
+	public GetPerson() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public boolean run() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

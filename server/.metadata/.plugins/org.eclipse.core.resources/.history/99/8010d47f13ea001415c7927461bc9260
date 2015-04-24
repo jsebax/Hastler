@@ -1,0 +1,16 @@
+package business;
+
+public class EditService implements UnitOfWork {
+
+	public EditService() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public boolean run() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

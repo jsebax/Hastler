@@ -26,7 +26,9 @@ public class User {
 	}
 
 	public void setUsername(String username) {
-		this.username = username;
+		if(username!=this.username){
+			this.username = username;
+		}
 	}
 
 	public String getPassword() {
@@ -34,7 +36,9 @@ public class User {
 	}
 
 	public void setPassword(String password) {
-		this.password = password;
+		if(password!=this.password){
+			this.password = password;
+		}
 	}
 
 	public User(String username, String password) {
@@ -47,5 +51,8 @@ public class User {
 	public String toString() {
 		return "User [id=" + id + ", username=" + username + ", password=" + password + "]";
 	}
-
+	
+	public void update(String user, String password){
+		setPassword(password);
+    }
 }
