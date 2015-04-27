@@ -1,5 +1,13 @@
-<ion-view view-title="Services">
-    <ion-content class="padding">
+<ion-view view-title="Services" ng-init="list()">
+    <ion-nav-buttons side="right">
+        <button class="right button button-icon icon ion-android-add" ng-click="toCreate()"></button>
+    </ion-nav-buttons>
+    <ion-content>
         <h1>Services</h1>
+        <div class="list">
+            <div ng-repeat="service in data.services" class="item">
+                {{service.title}}
+            </div>
+        </div>
     </ion-content>
 </ion-view>

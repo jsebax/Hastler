@@ -42,11 +42,29 @@ firebaseApp.config(function($stateProvider, $urlRouterProvider, $ionicConfigProv
           }
         }
       })
+      .state('tabs.myServices', {
+        url: '/myServices',
+        views: {
+          'my-services-tab': {
+            templateUrl: 'templates/myServices.html'
+          }
+        }
+      })
       .state('tabs.services', {
         url: '/services',
         views: {
           'services-tab': {
-            templateUrl: 'templates/services.html'
+            templateUrl: 'templates/services.html',
+            controller: 'ServicesController'
+          }
+        }
+      })
+      .state('tabs.serviceForm', {
+        url: '/serviceForm',
+        views: {
+          'services-tab': {
+            templateUrl: 'templates/serviceForm.html',
+            controller: 'ServiceFormController'
           }
         }
       })
@@ -85,11 +103,17 @@ firebaseApp.controller("LoginController", function($scope, $firebaseAuth, $fireb
 
   $scope.logout = function() {
     var firebaseAuth = fb.getAuth();
+    var obj = new Firebase("https://hastler.firebaseio.com/users/" + firebaseAuth.uid);
     if(firebaseAuth) {
       if(navigator.userAgent.indexOf('Android') != -1) {
-        window.location = window.location.origin;
+        obj.unauth();
+        $location.path("/login");
+        window.setTimeout(function() { window.location.reload(true); }, 500);
       } else {
-        location.href = location.origin;
+        //location.href = location.origin;
+        obj.unauth();
+        $location.path("/login");
+        window.location.reload(true);
       }
     }
   };
@@ -110,11 +134,11 @@ firebaseApp.controller("RegisterController", function($scope, $firebaseAuth, $fi
         var obj = new Firebase("https://hastler.firebaseio.com/users/" + authData.uid);
         var object = $firebaseObject(obj);
 
-        object.name = "Put your Name";
-        object.lastname = "Put your Lastname";
-        object.hastly = "#hastly";
+        object.name = "";
+        object.lastname = "";
+        object.hastly = "#";
         object.email = email;
-        object.tel = "Put your Phone";
+        object.tel = "";
 
         return object.$save().then(function(ref) {
           console.log(ref.key() === object.$id);
@@ -125,7 +149,16 @@ firebaseApp.controller("RegisterController", function($scope, $firebaseAuth, $fi
               text: 'OK',
               type: 'button-positive',
               onTap: function() {
-                location.href = location.origin;
+                if(navigator.userAgent.indexOf('Android') != -1) {
+                  obj.unauth();
+                  $location.path("/login");
+                  window.setTimeout(function() { window.location.reload(true); }, 500);
+                } else {
+                  //location.href = location.origin;
+                  obj.unauth();
+                  $location.path("/login");
+                  window.setTimeout(function() { window.location.reload(true); }, 500);
+                }
               }
             }]
           });
@@ -170,7 +203,7 @@ firebaseApp.controller("ProfileController", function($scope, $firebaseObject, $i
         object.lastname = lastname;
       }
       if(hastly !== undefined) {
-        object.hastly = hastly;
+        object.hastly = "#" + hastly;
       }
       if(tel !== undefined) {
         object.tel = tel;
@@ -196,4 +229,51 @@ firebaseApp.controller("ProfileController", function($scope, $firebaseObject, $i
       });
     }
   };
+});
+
+firebaseApp.controller("ServicesController", function($scope, $firebaseObject, $ionicPopup, $location) {
+  var auth = fb.getAuth();
+  var obj = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
+  var object = $firebaseObject(obj);
+  $scope.list = function() {
+    if(auth) {
+      object.$bindTo($scope, "data");
+    }
+  };
+
+  $scope.toCreate = function() {
+    $location.path('/tab/serviceForm');
+  };
+});
+
+firebaseApp.controller("ServiceFormController", function($scope, $firebaseObject, $ionicPopup, $location) {
+  var auth = fb.getAuth();
+  var obj = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
+  var object = $firebaseObject(obj);
+  $scope.list = function() {
+    if(auth) {
+      object.$bindTo($scope, "data");
+    }
+  };
+
+  $scope.create = function(title, category) {
+    if($scope.data.hasOwnProperty("services") !== true) {
+      $scope.data.services = [];
+    }
+    $scope.data.services.push({
+      title: title,
+      owner: $scope.data.hastly,
+      category: category
+    });
+
+    $location.path("/tab/services");
+  };
+
+  $scope.categories = [
+    "Academy",
+    "Consultancy",
+    "Music",
+    "Software",
+    "Other"
+  ];
 });
