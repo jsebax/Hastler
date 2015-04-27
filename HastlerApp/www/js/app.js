@@ -46,7 +46,17 @@ firebaseApp.config(function($stateProvider, $urlRouterProvider, $ionicConfigProv
         url: '/myServices',
         views: {
           'my-services-tab': {
-            templateUrl: 'templates/myServices.html'
+            templateUrl: 'templates/myServices.html',
+            controller: 'MyServicesController'
+          }
+        }
+      })
+      .state('tabs.searchService', {
+        url: '/searchService',
+        views: {
+          'my-services-tab': {
+            templateUrl: 'templates/searchService.html',
+            controller: 'MyServicesController'
           }
         }
       })
@@ -248,11 +258,14 @@ firebaseApp.controller("ServicesController", function($scope, $firebaseObject, $
 
 firebaseApp.controller("ServiceFormController", function($scope, $firebaseObject, $ionicPopup, $location) {
   var auth = fb.getAuth();
-  var obj = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
-  var object = $firebaseObject(obj);
+  var obj1 = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
+  var obj2 = new Firebase("https://hastler.firebaseio.com/services/");
+  var object1 = $firebaseObject(obj1);
+  var object2 = $firebaseObject(obj2);
   $scope.list = function() {
     if(auth) {
-      object.$bindTo($scope, "data");
+      object1.$bindTo($scope, "data");
+      object2.$bindTo($scope, "data2");
     }
   };
 
@@ -266,6 +279,16 @@ firebaseApp.controller("ServiceFormController", function($scope, $firebaseObject
       category: category
     });
 
+    if($scope.data2.hasOwnProperty("services") !== true) {
+      $scope.data2.services = [];
+    }
+    $scope.data2.services.push({
+      title: title,
+      owner: $scope.data.hastly,
+      category: category,
+      id: auth.uid
+    });
+
     $location.path("/tab/services");
   };
 
@@ -276,4 +299,31 @@ firebaseApp.controller("ServiceFormController", function($scope, $firebaseObject
     "Software",
     "Other"
   ];
+});
+
+firebaseApp.controller('MyServicesController', function($scope, $firebaseObject, $ionicPopup, $location) {
+  var auth = fb.getAuth();
+  var obj1 = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
+  var obj2 = new Firebase("https://hastler.firebaseio.com/services/");
+  var object1 = $firebaseObject(obj1);
+  var object2 = $firebaseObject(obj2);
+  $scope.serviceList = [];
+  $scope.toSearch = function() {
+    $location.path("/tab/searchService");
+  };
+
+  $scope.list = function() {
+    if(auth) {
+      object1.$bindTo($scope, "data");
+      object2.$bindTo($scope, "data2").then(function() {
+        $scope.fillArray();
+      });
+    }
+  };
+
+  $scope.fillArray = function() {
+    for(var i = 0; i < $scope.data2.services.length; i++) {
+      $scope.serviceList.push($scope.data2.services[i].title);
+    }
+  };
 });

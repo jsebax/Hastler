@@ -1,17 +1,17 @@
 <ion-view view-title="Services" ng-init="list()">
     <ion-content>
         <h1 align="center">New Service</h1>
-        <div class="list list-inset">
-            <label class="item item-input">
-                Title:<br/><br/><br/><br/>
+        <div class="list">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Title</span>
                 <input ng-model="serviceTitle" type="text" placeholder="Write the title of the service"/>
             </label>
-            <label class="item item-input">
-                Owner: <br/>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Owner</span>
                 {{data.hastly}}
             </label>
-            <label class="item item-input">
-                Category:
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Category</span>
                 <select ng-model="serviceCategory" ng-options="cat for cat in categories">
                 </select>
             </label>
