@@ -3,5 +3,23 @@
         <button class="right button button-icon icon ion-android-search" ng-click="toSearch()"></button>
     </ion-nav-buttons>
     <ion-content>
+        <div class="list">
+            <div ng-repeat="myService in data.myServices" class="item">
+                <button class="button button-block item item-icon-right" ng-click="showme = !showme">
+                    <i class="icon ion-android-arrow-dropdown-circle"></i>
+                    {{ myService.title }}
+                </button>
+                <div ng-show="showme">
+                    <label class="item">
+                        <h2>Category</h2>
+                        <p>{{ myService.category }}</p>
+                    </label>
+                    <label class="item">
+                        <h2>Owner</h2>
+                        <p>{{ myService.owner }}</p>
+                    </label>
+                </div>
+            </div>
+        </div>
     </ion-content>
 </ion-view>

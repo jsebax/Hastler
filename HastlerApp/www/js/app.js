@@ -308,22 +308,31 @@ firebaseApp.controller('MyServicesController', function($scope, $firebaseObject,
   var object1 = $firebaseObject(obj1);
   var object2 = $firebaseObject(obj2);
   $scope.serviceList = [];
+  $scope.myServiceList = [];
   $scope.toSearch = function() {
     $location.path("/tab/searchService");
   };
 
   $scope.list = function() {
     if(auth) {
-      object1.$bindTo($scope, "data");
+      object1.$bindTo($scope, "data").then(function() {
+        $scope.myServiceList = $scope.data.myServices;
+      });
       object2.$bindTo($scope, "data2").then(function() {
-        $scope.fillArray();
+        $scope.serviceList = $scope.data2.services;
       });
     }
   };
 
-  $scope.fillArray = function() {
-    for(var i = 0; i < $scope.data2.services.length; i++) {
-      $scope.serviceList.push($scope.data2.services[i].title);
+  $scope.adquire = function(service) {
+    if(auth) {
+      if($scope.data.hasOwnProperty("myServices") !== true) {
+        $scope.data.myServices = [];
+      }
+
+      $scope.data.myServices.push(service);
+
+      $location.path("/tab/myServices");
     }
-  };
+  }
 });
