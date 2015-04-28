@@ -5,14 +5,13 @@
         </div>
         <div>
             <div class="padding">
-                <div class="spacer" style="width: 300px; height: 5px;"></div>
-                <a href="#/Home" class="button button-block button-positive">Facebook</a>
-                <div>
-                    <p>
-                        <strong>No te compliques, entra con Facebook</strong>
-                    </p>
+                <div style="height: 50%"></div>
+                <button ng-click="login(email, password)" class="button button-block button-positive">Facebook <div class="button button-icon icon ion-social-facebook"></div>
+                </button>
+                <p>
+                    <strong>No te compliques, entra con Facebook</strong>
+                </p>
                 </div>                
-                <div class="spacer" style="width: 300px; height: 15px;"></div>
                 <div class="list list-inset">
                     <label class="item item-input">
                         <input ng-model="email" type="email" placeholder="someone@example.com"/>
@@ -20,9 +19,8 @@
                     <label class="item item-input">
                         <input ng-model="password" type="password" placeholder="Password"/>
                     </label>
-                </div>
-                <div class="spacer" style="width: 300px; height: 5px;"></div>                
-                <button ng-click="login(email, password)" class="button button-block button-dark">Log in</button>
+                </div>       
+                <button ng-click="login(email, password)" class="button button-block button-dark">Login</button>
                 <button ng-click="toRegister()" class="button button-positive button-clear button-block">Create an account</button>               
             </div>
         </div>

@@ -1,21 +1,43 @@
-<ion-view view-title="Register">
+<ion-view view-title="Sign Up">
     <ion-content>
-        <div class="text-center">
-            <h1>Sign Up</h1>
-        </div>
-        <div>
-            <div class="list list-inset">
-                <label class="item item-input">
-                    <input ng-model="email" type="email" placeholder="Email" />
-                </label>
-                <label class="item item-input">
-                    <input ng-model="password" type="password" placeholder="Password" />
-                </label>
+        <div class="padding">
+            <div class="text-center">
+                <h1>Basic info</h1>
             </div>
-            <div class="padding">
-                <button ng-click="register(email, password)" class="button button-block button-positive">Register</button>
-                <button ng-click="cancel()" class="button button-block button-positive">Cancel</button>
+            <div>
+                <div class="list list-inset">
+                    <div class="spacer" style="width: 300px; height: 30px;"></div>
+                    <label class="item item-input">
+                        <input ng-model="email" type="email" placeholder="Email" />
+                    </label>
+                    <label class="item item-input">
+                        <input ng-model="password" type="password" placeholder="Password" />
+                    </label>
+                    <label class="item item-input">
+                        <input ng-model="repassword" type="password" placeholder="RePassword" />
+                    </label>
+                </div>                
+                <div class="spacer" style="width: 300px; height: 30px;"></div>
+                <button ng-click="register(email, password)" class="button button-block button-positive">Accept</button>                
             </div>
         </div>
+        <form>           
+            <ion-list>
+                <label class="item item-input" name="Name">
+                    <span class="input-label">Name</span>
+                    <input type="text" placeholder="">
+                </label>
+                <label class="item item-input" name="Second Name">
+                    <span class="input-label">Second Name</span>
+                    <input type="password" placeholder="">
+                </label>
+                <label class="item item-input" name="Last Name">
+                    <span class="input-label">Last Name</span>
+                    <input type="text" placeholder="">
+                </label>
+            </ion-list>
+            <div class="spacer" style="width: 300px; height: 70px;"></div>
+            <a href="#/signup2" class="button button-dark button-block">Next</a>
+        </form>
     </ion-content>
 </ion-view>
