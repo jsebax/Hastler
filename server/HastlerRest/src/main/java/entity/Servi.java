@@ -1,5 +1,7 @@
 package entity;
 
+import java.util.List;
+
 import org.springframework.data.annotation.Id;
 
 public class Servi implements ServiceI {
@@ -24,7 +26,9 @@ public class Servi implements ServiceI {
 	
 	private String pic;
 	
-	private String hastly;		
+	private String hastly;
+	
+	private List<String> comments;
 	
 	public Servi() {
 		super();
@@ -83,6 +87,26 @@ public class Servi implements ServiceI {
 	}
 	public void setHastly(String hastly) {
 		this.hastly = hastly;
+	}
+	
+	public String getComment(){
+		if(comments!= null){
+			return comments.get(0);
+		}else{
+			return null;
+		}
+	}
+	
+	public String getComment(int index){
+		if(comments.size()>index){
+			return comments.get(index);
+		}else{
+			return null;
+		}
+	}
+	
+	public List<String> getComments(){
+		return comments;
 	}
 	
 	private void notNull(String title2, String string) throws Exception {

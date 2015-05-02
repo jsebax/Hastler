@@ -1,7 +1,0 @@
-package business;
-
-public interface BusinessObject {
-	
-	boolean run(){
-	}
-}

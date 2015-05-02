@@ -54,6 +54,16 @@ public class MongoUserRepository implements UserRepository {
 	}
 	
 	@Override
+	public boolean findOneUser(String email, String pass) {
+		Query searchUserQuery = new Query(Criteria.where("email")
+				.is(email).andOperator(Criteria.where("password").is(pass)));
+		User saved = mongoOperation.findOne(searchUserQuery, User.class);
+		boolean respuesta=false;
+		if(saved!=null)respuesta=true;
+		return respuesta;
+	}
+	
+	@Override
 	public User saveUser(User saved) {
 		mongoOperation.save(saved);
 		return saved;

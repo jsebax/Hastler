@@ -17,4 +17,6 @@ public interface UserRepository extends Repository{
     User updateUser(String id, String toUp, Object update);
     
 	boolean findOneUser(User us);
+
+	boolean findOneUser(String email, String pass);
 }

@@ -12,7 +12,7 @@ public class Match {
 	
 	private String hastly;
 	
-	private String name;
+	private String serviId;
 	
 	private List<String> users;
 
@@ -36,12 +36,12 @@ public class Match {
 		this.hastly = hastly;
 	}
 
-	public String getName() {
-		return name;
+	public String getServiId() {
+		return serviId;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setServiId(String serviId) {
+		this.serviId = serviId;
 	}
 
 	public List<String> getUsers() {

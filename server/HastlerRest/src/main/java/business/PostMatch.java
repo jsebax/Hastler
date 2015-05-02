@@ -1,24 +1,35 @@
 package business;
 
+import entity.Match;
+import repositories.MatchRepository;
 import repositories.Repository;
 
 public class PostMatch implements UnitOfWork {
 
+	MatchRepository matchRepository;
+	Match match;
+	
 	public PostMatch() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public boolean run() {
-		// TODO Auto-generated method stub
-		return false;
+		Match matchR = matchRepository.saveMatch(match);
+		if(matchR.equals(match)){
+			return true;
+		}else{
+			return false;
+		}
 	}
 
 	@Override
 	public void SetRepository(Repository repository) {
-		// TODO Auto-generated method stub
-		
+		matchRepository = (MatchRepository) repository;
+	}
+
+	public void setMatch(Match match) {
+		this.match = match;
 	}
 
 }

@@ -44,6 +44,13 @@ public class MongoServiRepository implements ServiRepository {
 	}
 	
 	@Override
+	public List<Servi> findCategory(String category) {
+		Query searchUserQuery = new Query(Criteria.where("category").is(category));
+		List<Servi> finded = mongoOperation.find(searchUserQuery, Servi.class);
+		return finded;
+	}
+	
+	@Override
 	public Servi saveServi(Servi saved) {
 		mongoOperation.save(saved);
 		return saved;

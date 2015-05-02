@@ -12,6 +12,12 @@ public class User {
 	String username;
 
 	String password;
+	
+	String email;
+	
+	public User() {
+		super();
+	}
 
 	public String getId() {
 		return id;
@@ -40,16 +46,18 @@ public class User {
 			this.password = password;
 		}
 	}
+	
+	public String getEmail() {
+		return email;
+	}
 
-	public User(String username, String password) {
-		super();
-		this.username = username;
-		this.password = password;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", password=" + password + "]";
+		return "User [id=" + id +", email=" + email + ", username=" + username + ", password=" + password + "]";
 	}
 	
 	public void update(String user, String password){

@@ -11,8 +11,12 @@ public interface ServiRepository extends Repository {
 	    List<Servi> findAllServi();
 	 
 	    Optional<Servi> findOneServi(String id);
+	    
+	    List<Servi> findCategory(String category);
 	 
 	    Servi saveServi(Servi saved);
 	    
 	    Servi updateServi(String id, String toUp, Object update);
+	    
+	    
 }

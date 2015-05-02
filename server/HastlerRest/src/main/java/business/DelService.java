@@ -1,24 +1,31 @@
 package business;
 
+import entity.Servi;
 import repositories.Repository;
+import repositories.ServiRepository;
 
 public class DelService implements UnitOfWork{
 
+	ServiRepository serviRepository;
+	Servi servi;
+	
 	public DelService() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public boolean run() {
-		// TODO Auto-generated method stub
-		return false;
+		serviRepository.deleteServi(servi);
+		return true;
 	}
 
 	@Override
 	public void SetRepository(Repository repository) {
-		// TODO Auto-generated method stub
-		
+		serviRepository = (ServiRepository) repository;
+	}
+
+	public void setServi(Servi servicio) {
+		servi = servicio;
 	}
 
 }

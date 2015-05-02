@@ -1,5 +1,0 @@
-package DBservice;
-
-public interface ServiRepository {
-
-}

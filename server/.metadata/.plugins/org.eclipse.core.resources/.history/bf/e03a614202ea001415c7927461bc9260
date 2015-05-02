@@ -1,9 +1,0 @@
-package business;
-
-public interface UnitOfWork {
-	
-	boolean run();
-	
-	void SetRepository(Object repository);
-	
-}

@@ -27,7 +27,7 @@ import business.PostComment;
 import business.PostMatch;
 import business.PostPerson;
 import business.PostService;
-import business.SingIn;
+import business.SingOn;
 import business.UnitOfWork;
 import DBServices.MongoMatchRepository;
 import DBServices.MongoPersonRepository;
@@ -93,14 +93,18 @@ public class Facade {
 	@RequestMapping(value = "/persona", method = RequestMethod.POST)
 	public @ResponseBody Boolean agregarPersona(@RequestBody Person person){
 		UnitOfWork postPerson = new PostPerson();
-		boolean result = true;
+		postPerson.SetRepository(personMongo);
+		((PostPerson)postPerson).setPerson(person);
+		boolean result = postPerson.run();
 		return result;
 	}
 	
 	@RequestMapping(value = "/editarPersona", method = RequestMethod.POST)
 	public @ResponseBody Boolean editPersona(@RequestBody Person person){
 		UnitOfWork editPerson = new EditPerson();
-		boolean result = true;
+		editPerson.SetRepository(personMongo);
+		((EditPerson)editPerson).setPerson(person);
+		boolean result = editPerson.run();
 		return result;
 	}
 	
@@ -127,36 +131,55 @@ public class Facade {
 	@RequestMapping(value = "/servicio", method = RequestMethod.GET)
 	public @ResponseBody List<Servi> obtenerServicios(@RequestBody Servi servicio){
 		UnitOfWork getServi = new GetService();
-		List<Servi> servis = null;
-		return servis;
+		getServi.SetRepository(serviMongo);
+		((GetService)getServi).setServi(servicio);
+		boolean result = getServi.run();
+		if(result){
+			List<Servi> servis = ((GetService)getServi).getServices();
+			return servis;
+		}else{
+			return null;
+		}
 	}
 	
 	@RequestMapping(value = "/servicio", method = RequestMethod.DELETE)
 	public @ResponseBody boolean borrarServicios(@RequestBody Servi servicio){
 		UnitOfWork delServi = new DelService();
-		boolean result = true;
+		delServi.SetRepository(serviMongo);
+		((DelService)delServi).setServi(servicio);
+		boolean result = delServi.run();
 		return result;
 	}
 	
 	@RequestMapping(value = "/editarServi", method = RequestMethod.POST)
 	public @ResponseBody boolean editarServicio(@RequestBody Servi servicio){
 		UnitOfWork editServi = new EditService();
-		
-		boolean result = true;
+		editServi.SetRepository(serviMongo);
+		((EditService)editServi).setServi(servicio);
+		boolean result = editServi.run();
 		return result;
 	}
 	
 	@RequestMapping(value = "/categoria", method = RequestMethod.GET)
 	public @ResponseBody List<Servi> obtenerCategoria(@RequestBody Servi servicio){
 		UnitOfWork getCategory = new GetCategory();
-		List<Servi> servis = null;
-		return servis;
+		getCategory.SetRepository(serviMongo);
+		((GetCategory)getCategory).setCategory(servicio.getCategory());
+		boolean result = getCategory.run();
+		if(result){
+			List<Servi> servis = ((GetCategory)getCategory).getServices();
+			return servis;
+		}else{
+			return null;
+		}
 	}
 	
 	@RequestMapping(value = "/comentario", method = RequestMethod.POST)
 	public @ResponseBody boolean agregarComentario(@RequestBody Servi servicio){
 		UnitOfWork postComment = new PostComment();
-		boolean result = true;
+		postComment.SetRepository(serviMongo);
+		((PostComment)postComment).setComment(servicio);
+		boolean result = postComment.run();
 		return result;
 	}
 	
@@ -166,15 +189,24 @@ public class Facade {
 	@RequestMapping(value = "/match", method = RequestMethod.POST)
 	public @ResponseBody boolean agregarMatch(@RequestBody Match match){
 		UnitOfWork postMatch = new PostMatch();
-		boolean result = true;
+		postMatch.SetRepository(matchMongo);
+		((PostMatch)postMatch).setMatch(match);
+		boolean result = postMatch.run();
 		return result;
 	}
 	
 	@RequestMapping(value = "/match", method = RequestMethod.GET)
-	public @ResponseBody Match obtenerMatch(@RequestBody Match match){
+	public @ResponseBody List<Match> obtenerMatch(@RequestBody Match match){
 		UnitOfWork getMatch = new GetMatch();
-		Match matchs = null;
-		return matchs;
+		getMatch.SetRepository(matchMongo);
+		((GetMatch)getMatch).setMatch(match);
+		boolean result = getMatch.run();
+		if(result){
+			List<Match> matchs = ((GetMatch)getMatch).getMatches();
+			return matchs;
+		}else{
+			return null;
+		}
 	}
 	
 	//lo que tiene que ver con User
@@ -182,15 +214,19 @@ public class Facade {
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public @ResponseBody boolean login(@RequestBody User user){
 		UnitOfWork login = new LogIn();
-		boolean result = true;
+		login.SetRepository(userMongo);
+		((LogIn)login).setUser(user);
+		boolean result = login.run();
 		// esto es boolean respuesta = userMongo.findOneUser(user);
 		return result;
 	}
 	
 	@RequestMapping(value = "/singin", method = RequestMethod.POST)
 	public @ResponseBody boolean singin(@RequestBody User user){
-		UnitOfWork singin = new SingIn();
-		boolean result = true;
+		UnitOfWork singin = new SingOn();
+		singin.SetRepository(userMongo);
+		((SingOn)singin).setUser(user);
+		boolean result = singin.run();
 		return result;
 	}
 	
