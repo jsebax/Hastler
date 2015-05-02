@@ -77,10 +77,17 @@ public class Facade {
 	//lo que tiene que ver con Personas
 	
 	@RequestMapping(value = "/persona", method = RequestMethod.GET)
-	public @ResponseBody List<Person> obtenerPersonas(){
+	public @ResponseBody List<Person> obtenerPersonas(@RequestBody Person person){
 		UnitOfWork getPerson = new GetPerson();
-		List<Person> persons = null;
-		return persons;
+		getPerson.SetRepository(personMongo);
+		((GetPerson) getPerson).setPerson(person);
+		boolean run = getPerson.run();
+		if(run){
+			List<Person> persons = ((GetPerson) getPerson).getPersons();
+			return persons;
+		}else{
+			return null;
+		}		
 	}
 	
 	@RequestMapping(value = "/persona", method = RequestMethod.POST)

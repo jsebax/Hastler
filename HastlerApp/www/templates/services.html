@@ -1,5 +1,25 @@
-<ion-view view-title="Services">
-    <ion-content class="padding">
-        <h1>Services</h1>
+<ion-view view-title="Services" ng-init="list()">
+    <ion-nav-buttons side="right">
+        <button class="right button button-icon icon ion-android-add" ng-click="toCreate()"></button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="list">
+            <div ng-repeat="service in data.services" class="item">
+                <button class="button button-block item item-icon-right" ng-click="showme = !showme">
+                    <i class="icon ion-android-arrow-dropdown-circle"></i>
+                    {{ service.title }}
+                </button>
+                <div ng-show="showme">
+                    <label class="item">
+                        <h2>Category</h2>
+                        <p>{{ service.category }}</p>
+                    </label>
+                    <label class="item">
+                        <h2>Owner</h2>
+                        <p>{{ service.owner }}</p>
+                    </label>
+                </div>
+            </div>
+        </div>
     </ion-content>
 </ion-view>

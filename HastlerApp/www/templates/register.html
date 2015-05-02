@@ -1,20 +1,24 @@
-<ion-view title="Register">
+<ion-view view-title="Sign Up">
     <ion-content>
-        <div class="text-center">
-            <h1>Sign Up</h1>
-        </div>
-        <div>
-            <div class="list list-inset">
-                <label class="item item-input">
-                    <input ng-model="email" type="email" placeholder="Email" />
-                </label>
-                <label class="item item-input">
-                    <input ng-model="password" type="password" placeholder="Password" />
-                </label>
+        <div class="padding">
+            <div class="text-center">
+                <h1>Basic info</h1>
             </div>
-            <div class="padding">
-                <button ng-click="register(email, password)" class="button button-block button-positive">Register</button>
-                <button ng-click="cancel()" class="button button-block button-positive">Cancel</button>
+            <div>
+                <div class="list list-inset">
+                    <div class="spacer" style="width: 300px; height: 30px;"></div>
+                    <label class="item item-input">
+                        <input ng-model="email" type="email" placeholder="Email" />
+                    </label>
+                    <label class="item item-input">
+                        <input ng-model="password" type="password" placeholder="Password" />
+                    </label>
+                    <label class="item item-input">
+                        <input ng-model="repassword" type="password" placeholder="RePassword" />
+                    </label>
+                </div>                
+                <div class="spacer" style="width: 300px; height: 30px;"></div>
+                <button ng-click="register(email, password)" class="button button-block button-dark">Next</button>                
             </div>
         </div>
     </ion-content>

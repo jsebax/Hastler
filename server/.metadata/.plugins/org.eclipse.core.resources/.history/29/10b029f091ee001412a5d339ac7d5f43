@@ -1,0 +1,45 @@
+package business;
+
+import java.util.Collections;
+import java.util.List;
+
+import entity.Person;
+import repositories.PersonRepository;
+import repositories.Repository;
+
+public class GetPerson implements UnitOfWork {
+
+	PersonRepository personRepository;
+	List<Person> persons;
+	Person person;
+	
+	public GetPerson() {
+		super();
+	}
+
+	@Override
+	public boolean run() {
+		Optional<Person> = personRepository.findOnePerson(person.getId());
+		if (option.isPresent())
+	        return Collections.singletonList(option.get());
+	    else
+	        return Collections.emptyList();
+		persons = (List<Person>) personRepository.findOnePerson(person.getId())
+				.map(p -> p).orElse((Person) Collections.emptyList());
+		return true;
+	}
+
+	@Override
+	public void SetRepository(Repository repository) {
+		personRepository = (PersonRepository) repository;
+	}
+
+	public List<Person> getPersons() {
+		return persons;
+	}
+
+	public void setPerson(Person person) {
+		this.person = person;
+	}
+
+}

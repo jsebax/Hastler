@@ -14,6 +14,7 @@ public class GetAllService implements UnitOfWork {
 	public List<Servi> getPersons() {
 		return persons;
 	}
+	
 	public GetAllService() {
 		super();
 	}
