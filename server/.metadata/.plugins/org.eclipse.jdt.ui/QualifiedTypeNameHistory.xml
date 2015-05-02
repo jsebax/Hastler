@@ -32,7 +32,6 @@
 <fullyQualifiedTypeName name="entity.Test"/>
 <fullyQualifiedTypeName name="DBservice.DBService"/>
 <fullyQualifiedTypeName name="DBservice.MongoDBService"/>
-<fullyQualifiedTypeName name="repositories.PersonRepository"/>
 <fullyQualifiedTypeName name="DBServices.MongoPersonRepository"/>
 <fullyQualifiedTypeName name="repositories.ServiRepository"/>
 <fullyQualifiedTypeName name="DBServices.MongoServiRepository"/>
@@ -58,4 +57,6 @@
 <fullyQualifiedTypeName name="business.LogIn"/>
 <fullyQualifiedTypeName name="business.SingIn"/>
 <fullyQualifiedTypeName name="business.PostPerson"/>
+<fullyQualifiedTypeName name="repositories.PersonRepository"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
 </qualifiedTypeNameHistroy>

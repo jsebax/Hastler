@@ -1,13 +1,23 @@
+// Ionic Starter App
+
+// angular.module is a global place for creating, registering and retrieving Angular modules
+// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
+// the 2nd parameter is an array of 'requires'
+// 'starter.controllers' is found in controllers.js
+
 var firebaseApp = angular.module('starter', ['ionic', 'firebase']);
 var url = "https://hastler.firebaseio.com/";
 var fb = new Firebase(url);
 
 firebaseApp.run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
+        // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+        // for form inputs)
         if(window.cordova && window.cordova.plugins.Keyboard) {
             cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
         }
         if(window.StatusBar) {
+            // org.apache.cordova.statusbar required
             StatusBar.styleDefault();
         }
         fb = new Firebase(url);
@@ -16,78 +26,88 @@ firebaseApp.run(function($ionicPlatform) {
 
 firebaseApp.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
   $ionicConfigProvider.tabs.position('bottom');
-
   $stateProvider
-  .state('login', {
-    url: '/login',
-    templateUrl: 'templates/login.html',
-    controller: 'LoginController'
-})
-  .state('register', {
-    url: '/register',
-    templateUrl: 'templates/register.html',
-    controller: 'RegisterController'
-})
-  .state('tabs', {
-    url: '/tab',
-    abstract: true,
-    templateUrl: 'templates/tabs.html'
-})
-  .state('tabs.profile', {
-    url: '/profile',
-    views: {
-      'profile-tab': {
-        templateUrl: 'templates/profile.html',
-        controller: 'ProfileController'
-    }
-}
-})
-  .state('tabs.myServices', {
-    url: '/myServices',
-    views: {
-      'my-services-tab': {
-        templateUrl: 'templates/myServices.html',
-        controller: 'MyServicesController'
-    }
-}
-})
-  .state('tabs.searchService', {
-    url: '/searchService',
-    views: {
-      'my-services-tab': {
-        templateUrl: 'templates/searchService.html',
-        controller: 'MyServicesController'
-    }
-}
-})
-  .state('tabs.services', {
-    url: '/services',
-    views: {
-      'services-tab': {
-        templateUrl: 'templates/services.html',
-        controller: 'ServicesController'
-    }
-}
-})
-  .state('tabs.serviceForm', {
-    url: '/serviceForm',
-    views: {
-      'services-tab': {
-        templateUrl: 'templates/serviceForm.html',
-        controller: 'ServiceFormController'
-    }
-}
-})
-  .state('tabs.account', {
-    url: '/account',
-    views: {
-      'account-tab': {
-        templateUrl: 'templates/account.html',
+
+    .state('login', {
+        url: '/login',
+        templateUrl: 'templates/login.html',
         controller: 'LoginController'
-    }
-}
-});
-  $urlRouterProvider.otherwise('/login');
+    })
+
+    .state('register', {
+        url: '/register',
+        templateUrl: 'templates/register.html',
+        controller: 'RegisterController'
+    })
+
+    .state('tabs', {
+        url: '/tab',
+        abstract: true,
+        templateUrl: 'templates/tabs.html'
+    })
+
+    .state('tabs.profile', {
+        url: '/profile',
+        views: {
+            'profile-tab': {
+                templateUrl: 'templates/profile.html',
+                controller: 'ProfileController'
+            }
+        }
+    })
+
+    .state('tabs.myServices', {
+        url: '/myServices',
+        views: {
+            'my-services-tab': {
+                templateUrl: 'templates/myServices.html',
+                controller: 'MyServicesController'
+            }
+        }
+    })
+
+    .state('tabs.searchService', {
+        url: '/searchService',
+        views: {
+            'my-services-tab': {
+                templateUrl: 'templates/searchService.html',
+                controller: 'MyServicesController'
+            }
+        }
+    })
+
+    .state('tabs.services', {
+        url: '/services',
+        views: {
+            'services-tab': {
+                templateUrl: 'templates/services.html',
+                controller: 'ServicesController'
+            }
+        }
+    })
+
+    .state('tabs.serviceForm', {
+        url: '/serviceForm',
+        views: {
+            'services-tab': {
+                templateUrl: 'templates/serviceForm.html',
+                controller: 'ServiceFormController'
+            }
+        }
+    })
+
+    .state('tabs.account', {
+        url: '/account',
+        views: {
+            'account-tab': {
+                templateUrl: 'templates/account.html',
+                controller: 'LoginController'
+            }
+        }
+    });
+
+    // if none of the above states are matched, use this as the fallback
+    $urlRouterProvider.otherwise('/login');
 });
 
 firebaseApp.controller("LoginController", function($scope, $firebaseAuth, $firebaseObject, $location, $ionicPopup) {
@@ -329,6 +349,6 @@ $scope.adquire = function(service) {
     $scope.data.myServices.push(service);
 
     $location.path("/tab/myServices");
-}
+    }
 }
 });

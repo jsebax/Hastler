@@ -3491,3 +3491,9 @@ java.lang.NullPointerException: null
 2015-04-29 12:07:00,100 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
 2015-04-29 12:07:00,102 [Worker-16] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2015-04-29 12:07:00,104 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-04-29 15:31:46,871 [Worker-39] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: org.test:Rest:0.0.1-SNAPSHOT @ C:\Users\Anderson\Dropbox\Git\Hastler\server\ArquitecturaHastler\pom.xml.
+2015-04-29 15:31:53,646 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-04-29 15:31:53,648 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2015-04-29 15:31:53,654 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2015-04-29 15:31:53,656 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-04-29 15:31:53,657 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Anderson\Dropbox\Git\Hastler\server\ArquitecturaHastler\src\test\resources
