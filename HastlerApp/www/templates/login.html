@@ -7,10 +7,17 @@
         <div class="padding">
             
             <div style="width: 300px; height: 50px;"></div>
-            <center><h1>HASTLER</h1></center>
-            <div class="spacer" style="width: 300px; height: 150px;"></div> 
+            <center><h1 style="font-size: 50px;
+            font-family: 'Lobster13Regular', Helvetica, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: rgba(0, 0, 0, .2) 3px 3px 3px;
+             color:white;
+            /*text stroke*/
+            -webkit-text-stroke: 4px rgba(0, 0, 0, .6);">HASTLER</h1></center>
+            <div class="spacer" style="width: 300px; height: 50px;"></div> 
 
-            <Center><strong>Don't get in trouble log in with yor Facebook account</strong></Center>
+            <Center><strong style="color:white;">Don't get in trouble log in with yor Facebook account</strong></Center>
 
             <button ng-click="login(email, password)" class=" button button-block button-positive icon-left ion-social-facebook"> Facebook </button>
 
@@ -26,9 +33,9 @@
                 </label>
             </div>
         </div>
-        <div class="tabs tabs-color-dark">
+        <div class="tabs tabs-dark">
             <a class="tab-item" ng-click="login(email, password)"><strong>Log in</strong></a>
-            <a class="tab-item" ng-click="toRegister()"><strong>Create an account</strong></a>
+            <a class="tab-item" ng-click="toRegister()"><strong>Sign Up</strong></a>
         </div>
     </ion-content>
 </ion-view>
