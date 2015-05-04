@@ -1,13 +1,21 @@
 <ion-view view-title="Welcome">
-    <ion-nav-bar class="bar-positive">
+    <ion-nav-bar class="bar-dark">
         <ion-nav-back-button></ion-nav-back-button>
     </ion-nav-bar>
-    <ion-content>
+    <!-- <ion-content>-->
         <div class="padding">
-            <div style="width: 300px; height: 15px;"></div>
+            
+            <div style="width: 300px; height: 50px;"></div>
             <center><h1>HASTLER</h1></center>
-            <div class="spacer" style="width: 300px; height: 5px;"></div>                                         
+            <div class="spacer" style="width: 300px; height: 150px;"></div> 
+
+            <Center><strong>Don't get in trouble log in with yor Facebook account</strong></Center>
+
+            <button ng-click="login(email, password)" class=" button button-block button-positive icon-left ion-social-facebook"> Facebook </button>
+
             <div style="width: 300px; height: 15px;"></div>
+
+
             <div class="list list-inset">
                 <label class="item item-input">
                     <input ng-model="email" type="email" placeholder="someone@example.com"/>
@@ -16,12 +24,10 @@
                     <input ng-model="password" type="password" placeholder="Password"/>
                 </label>
             </div>
-            <button ng-click="login(email, password)" class="button button-block button-dark">Log in</button>
-            <div style="width: 300px; height: 30px;"></div>
-            <Center><strong>Don't get in trouble log in with yor Facebook account</strong></Center>
-            <button ng-click="login(email, password)" class="button button-block button-positive"> <div class="button button-icon icon ion-social-facebook"></div> Facebook 
-            </button>
-            <button ng-click="toRegister()" class="button button-positive button-clear button-block">Create an account</button>
+        </div>
+        <div class="tabs tabs-color-dark">
+            <a class="tab-item" ng-click="login(email, password)"><strong>Log in</strong></a>
+            <a class="tab-item" ng-click="toRegister()"><strong>Create an account</strong></a>
         </div>
     </ion-content>
 </ion-view>

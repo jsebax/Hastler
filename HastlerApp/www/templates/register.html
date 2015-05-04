@@ -1,25 +1,33 @@
 <ion-view view-title="Sign Up">
-    <ion-content>
+    <ion-nav-bar class="bar-dark">
+        <ion-nav-back-button></ion-nav-back-button>
+    </ion-nav-bar>
+    <!-- <ion-content>-->
         <div class="padding">
-            <div class="text-center">
-                <h1>Basic info</h1>
-            </div>
-            <div>
-                <div class="list list-inset">
-                    <div class="spacer" style="width: 300px; height: 30px;"></div>
-                    <label class="item item-input">
-                        <input ng-model="email" type="email" placeholder="Email" />
-                    </label>
-                    <label class="item item-input">
-                        <input ng-model="password" type="password" placeholder="Password" />
-                    </label>
-                    <label class="item item-input">
-                        <input ng-model="repassword" type="password" placeholder="RePassword" />
-                    </label>
-                </div>                
+
+            <div class="list list-inset">
                 <div class="spacer" style="width: 300px; height: 30px;"></div>
-                <button ng-click="register(email, password)" class="button button-block button-dark">Next</button>                
+                <label class="item item-input">
+                    <input ng-model="email" type="email" placeholder="Email" />
+                </label>
+                <label class="item item-input">
+                    <input ng-model="password" type="password" placeholder="Password" />
+                </label>
+                <label class="item item-input">
+                    <input ng-model="repassword" type="text" placeholder="First Name" />
+                </label>
+                <label class="item item-input">
+                    <input ng-model="repassword" type="text" placeholder="Last Name" />
+                </label>
             </div>
+
+            <div class="spacer" style="width: 300px; height: 30px;"></div>       
+
         </div>
+
+        <div class="tabs tabs-color-dark">
+            <a class="tab-item" ng-click="register(email, password)"><strong>Sing Up</strong></a>
+        </div>
+
     </ion-content>
 </ion-view>
