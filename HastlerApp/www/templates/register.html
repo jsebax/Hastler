@@ -4,25 +4,27 @@
     </ion-nav-bar>
     <!-- <ion-content>-->
         <div class="padding">
+            
+            <div class="spacer" style="width: 300px; height: 100px;"></div>
 
-            <div class="list list-inset">
-                <div class="spacer" style="width: 300px; height: 30px;"></div>
-                <label class="item item-input">
+            <div class="list">                
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Email</span>
                     <input ng-model="email" type="email" placeholder="Email" />
                 </label>
-                <label class="item item-input">
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Password</span>
                     <input ng-model="password" type="password" placeholder="Password" />
                 </label>
-                <label class="item item-input">
-                    <input ng-model="repassword" type="text" placeholder="First Name" />
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">First Name</span>
+                    <input ng-model="firtName" type="text" placeholder="First Name" />
                 </label>
-                <label class="item item-input">
-                    <input ng-model="repassword" type="text" placeholder="Last Name" />
+                <label class="item item-input item-floating-label">
+                    <span class="input-label">Last Name</span>
+                    <input ng-model="lastName" type="text" placeholder="Last Name" />
                 </label>
-            </div>
-
-            <div class="spacer" style="width: 300px; height: 30px;"></div>       
-
+            </div>     
         </div>
 
         <div class="tabs tabs-color-dark">
