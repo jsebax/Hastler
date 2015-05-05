@@ -17,6 +17,10 @@
                     <input ng-model="password" type="password" placeholder="Password" />
                 </label>
                 <label class="item item-input item-floating-label">
+                    <span class="input-label">RePassword</span>
+                    <input ng-model="rePassword" type="password" placeholder="RePassword" />
+                </label>
+                <label class="item item-input item-floating-label">
                     <span class="input-label">First Name</span>
                     <input ng-model="firtName" type="text" placeholder="First Name" />
                 </label>
@@ -28,7 +32,7 @@
         </div>
 
         <div class="tabs tabs-dark">
-            <a class="tab-item" ng-click="register(email, password)"><strong>Sign Up</strong></a>
+            <a class="tab-item" ng-click="register(email, password, rePassword)"><strong>Sign Up</strong></a>
         </div>
 
     </ion-content>
