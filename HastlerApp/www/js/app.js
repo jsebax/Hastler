@@ -59,7 +59,7 @@ firebaseApp.config(function($stateProvider, $urlRouterProvider, $ionicConfigProv
     .state('tabs.searchService', {
         url: '/searchService',
         views: {
-            'my-services-tab': {
+            'search-tab': {
                 templateUrl: 'templates/search.html',
                 controller: 'searchController'
             }
@@ -91,7 +91,7 @@ firebaseApp.config(function($stateProvider, $urlRouterProvider, $ionicConfigProv
         views: {
             'account-tab': {
                 templateUrl: 'templates/menu.html',
-                controller: 'LoginController'
+                controller: 'ProfileController'
             }
         }
     });
@@ -119,24 +119,7 @@ firebaseApp.controller("LoginController", function($scope, $firebaseAuth, $fireb
 
     $scope.toRegister = function() {
         $location.path("/register");
-    };
-
-    $scope.logout = function() {
-        var firebaseAuth = fb.getAuth();
-        var obj = new Firebase("https://hastler.firebaseio.com/users/" + firebaseAuth.uid);
-        if(firebaseAuth) {
-            if(navigator.userAgent.indexOf('Android') != -1) {
-                obj.unauth();
-                $location.path("/login");
-                window.setTimeout(function() { window.location.reload(true); }, 500);
-            } else {
-                //location.href = location.origin;
-                obj.unauth();
-                $location.path("/login");
-               // window.location.reload(true);
-            }
-        }
-    };
+    };    
 });
 
 firebaseApp.controller("RegisterController", function($scope, $firebaseAuth, $firebaseObject, $location, $ionicPopup) {
@@ -219,6 +202,23 @@ firebaseApp.controller("ProfileController", function($scope, $firebaseObject, $i
     $scope.list = function() {
         if(auth) {
         object.$bindTo($scope, "data");
+        }
+    };
+
+    $scope.logout = function() {
+        var firebaseAuth = fb.getAuth();
+        var obj = new Firebase("https://hastler.firebaseio.com/users/" + firebaseAuth.uid);
+        if(firebaseAuth) {
+            if(navigator.userAgent.indexOf('Android') != -1) {
+                obj.unauth();
+                $location.path("/login");
+                window.setTimeout(function() { window.location.reload(true); }, 500);
+            } else {
+                //location.href = location.origin;
+                obj.unauth();
+                $location.path("/login");
+               // window.location.reload(true);
+            }
         }
     };
 
