@@ -79,8 +79,8 @@ firebaseApp.config(function($stateProvider, $urlRouterProvider, $ionicConfigProv
     .state('tabs.serviceForm', {
         url: '/serviceForm',
         views: {
-            'services-tab': {
-                templateUrl: 'templates/serviceForm.html',
+            'menu-tab': {
+                templateUrl: 'templates/createService.html',
                 controller: 'ServiceFormController'
             }
         }
@@ -89,12 +89,13 @@ firebaseApp.config(function($stateProvider, $urlRouterProvider, $ionicConfigProv
     .state('tabs.account', {
         url: '/account',
         views: {
-            'account-tab': {
+            'menu-tab': {
                 templateUrl: 'templates/menu.html',
                 controller: 'ProfileController'
             }
         }
     });
+
 
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/login');
@@ -222,6 +223,10 @@ firebaseApp.controller("ProfileController", function($scope, $firebaseObject, $i
         }
     };
 
+    $scope.toCreate = function() {
+        $location.path('/tab/serviceForm');
+    };
+
     $scope.updateRecords = function(name, lastname, tel) {
         if(auth) {
             if(name !== undefined) {
@@ -265,10 +270,7 @@ firebaseApp.controller("ServicesController", function($scope, $firebaseObject, $
             object.$bindTo($scope, "data");
         }
     };
-
-    $scope.toCreate = function() {
-        $location.path('/tab/serviceForm');
-    };
+  
 });
 
 firebaseApp.controller("ServiceFormController", function($scope, $firebaseObject, $ionicPopup, $location) {
@@ -349,6 +351,7 @@ firebaseApp.controller('MyServicesController', function($scope, $firebaseObject,
         }
     }
 });
+
 firebaseApp.controller('searchController', function($scope, $firebaseObject, $ionicPopup, $location) {
     var auth = fb.getAuth();
     var obj1 = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
