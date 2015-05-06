@@ -5792,7 +5792,7 @@ textarea, input[placeholder], input[type="text"], input[type="password"], input[
   padding-top: 2px;
   padding-left: 0;
   height: 34px;
-  color: #fff;
+  color: #444;
   vertical-align: middle;
   font-size: 14px;
   line-height: 16px; }
