@@ -2,10 +2,17 @@
 
 .login {
 	background: url('../img/login.jpg') no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: 100% ;
+    text-align: center;
 }
 
 .register {
-	background: url('../img/register3.jpg') no-repeat center;
+	background: url('../img/register.jpg') no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -16,16 +23,17 @@
 }
 
 .color-white{
-	color: #fff;
+    color: #fff;
 }
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-  color: #636363;
+    color: #636363;
 }
 input:-moz-placeholder, textarea:-moz-placeholder {
-  color: #636363;
+    color: #636363;
 }
 
 .color-gray{
-  color: #808080;
+    color: #808080;
 }
+    
