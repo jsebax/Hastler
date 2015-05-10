@@ -1,5 +1,7 @@
 package business;
 
+import java.util.UUID;
+
 import entity.Person;
 import repositories.PersonRepository;
 import repositories.Repository;
@@ -15,6 +17,7 @@ public class PostPerson implements UnitOfWork {
 
 	@Override
 	public boolean run() {
+		person.setId(UUID.randomUUID().toString());
 		Person personR = personRepository.savePerson(person);
 		if(person.equals(personR)){
 			return true;

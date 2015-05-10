@@ -18,7 +18,7 @@ public class GetService implements UnitOfWork {
 
 	@Override
 	public boolean run() {
-		services = serviRepository.findServi(servi.getServiceName());
+		services= serviRepository.findServi(servi.getServiceName());
 		if(services.isEmpty()){
 			return false;
 		}else{

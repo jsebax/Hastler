@@ -68,7 +68,7 @@ public class MongoServiRepository implements ServiRepository {
 	@Override
 	public List<Servi> findServi(String serviceName) {
 		Query searchUserQuery = new Query(Criteria.where("serviceName").regex(serviceName).orOperator(
-				Criteria.where("owner").regex(serviceName)));
+				Criteria.where("serviceName").regex(serviceName)));
 		List<Servi> finded = mongoOperation.find(searchUserQuery, Servi.class);
 		return finded;
 	}

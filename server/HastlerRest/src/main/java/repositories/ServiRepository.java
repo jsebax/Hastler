@@ -17,6 +17,6 @@ public interface ServiRepository extends Repository {
 	    Servi saveServi(Servi saved);
 	    
 	    Servi updateServi(String id, String toUp, Object update);
-	    
-	    
+
+		List<Servi> findServi(String serviceName);
 }

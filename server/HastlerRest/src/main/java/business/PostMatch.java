@@ -1,5 +1,7 @@
 package business;
 
+import java.util.UUID;
+
 import entity.Match;
 import repositories.MatchRepository;
 import repositories.Repository;
@@ -15,6 +17,7 @@ public class PostMatch implements UnitOfWork {
 
 	@Override
 	public boolean run() {
+		match.setId(UUID.randomUUID().toString());
 		Match matchR = matchRepository.saveMatch(match);
 		if(matchR.equals(match)){
 			return true;

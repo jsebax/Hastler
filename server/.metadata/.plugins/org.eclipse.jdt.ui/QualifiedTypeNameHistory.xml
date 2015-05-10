@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="repository.ServiRepository"/>
 <fullyQualifiedTypeName name="javax.validation.constraints.Size"/>
 <fullyQualifiedTypeName name="org.hibernate.validator.constraints.NotEmpty"/>
@@ -15,7 +14,6 @@
 <fullyQualifiedTypeName name="rest.PersonService"/>
 <fullyQualifiedTypeName name="entity.Person"/>
 <fullyQualifiedTypeName name="com.mkyong.model.User"/>
-<fullyQualifiedTypeName name="org.springframework.data.mongodb.core.query.Criteria"/>
 <fullyQualifiedTypeName name="rest.MongoDBServiService"/>
 <fullyQualifiedTypeName name="com.eafit.hastler.HomeController"/>
 <fullyQualifiedTypeName name="com.mkyong.service.MongoDBService"/>
@@ -60,4 +58,6 @@
 <fullyQualifiedTypeName name="entity.User"/>
 <fullyQualifiedTypeName name="business.LogIn"/>
 <fullyQualifiedTypeName name="repositories.UserRepository"/>
+<fullyQualifiedTypeName name="org.springframework.data.mongodb.core.query.Criteria"/>
+<fullyQualifiedTypeName name="java.util.UUID"/>
 </qualifiedTypeNameHistroy>

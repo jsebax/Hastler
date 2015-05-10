@@ -1,10 +1,12 @@
 package business;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
+import entity.Servi;
 import repositories.Repository;
 import repositories.ServiRepository;
-import entity.Servi;
 
 public class GetService implements UnitOfWork {
 
@@ -18,7 +20,7 @@ public class GetService implements UnitOfWork {
 
 	@Override
 	public boolean run() {
-		services = serviRepository.findServi(servi.getServiceName());
+		services= serviRepository.findServi(servi.getServiceName());
 		if(services.isEmpty()){
 			return false;
 		}else{
