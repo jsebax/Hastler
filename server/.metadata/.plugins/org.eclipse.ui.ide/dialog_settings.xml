@@ -4,7 +4,7 @@
 		<item value="com.atlassian.connector.eclipse.jira:3.2.3.v20140630"/>
 		<item value="com.atlassian.connector.eclipse.monitor:3.2.3.v20140630"/>
 		<item value="org.aspectj:1.8.5.20150128171000"/>
-		<item value="org.cloudfoundry.ide.eclipse.server:1.8.1.201503242338-RELEASE"/>
+		<item value="org.cloudfoundry.ide.eclipse.server:1.8.2.201505070649-RELEASE"/>
 		<item value="org.eclipse.ajdt:2.2.4.e44x-20150202-1700"/>
 		<item value="org.eclipse.cvs:1.4.100.v20150204-1700"/>
 		<item value="org.eclipse.datatools.common.doc.user:1.12.0.v201405281819-26-311A16321A3557"/>
@@ -68,7 +68,7 @@
 		<item value="org.eclipse.jpt.dbws.eclipselink.feature:1.2.101.v201501152048"/>
 		<item value="org.eclipse.jpt.jaxb.eclipselink.feature:1.4.102.v201501171820"/>
 		<item value="org.eclipse.jpt.jaxb.feature:1.5.2.v201501171820"/>
-		<item value="org.eclipse.jpt.jpa.eclipselink.feature:3.4.1.v201409111648"/>
+		<item value="org.eclipse.jpt.jpa.eclipselink.feature:3.4.0.v201405081709-7K7U8_EVVFNcJZNwOZn43KEF"/>
 		<item value="org.eclipse.jpt.jpa.feature:3.4.0.v201405081709-7V7dEpFC7sReAYthMgWBL39c7"/>
 		<item value="org.eclipse.jst.common.fproj.enablement.jdt:3.6.3.v201501141810"/>
 		<item value="org.eclipse.jst.enterprise_ui.feature:3.6.3.v201501281502"/>

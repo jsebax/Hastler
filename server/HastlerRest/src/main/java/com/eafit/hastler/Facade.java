@@ -222,8 +222,8 @@ public class Facade {
 		return result;
 	}
 	
-	@RequestMapping(value = "/singin", method = RequestMethod.POST)
-	public @ResponseBody boolean singin(@RequestBody User user){
+	@RequestMapping(value = "/singon", method = RequestMethod.POST)
+	public @ResponseBody boolean singon(@RequestBody User user){
 		UnitOfWork singin = new SingOn();
 		singin.SetRepository(userMongo);
 		((SingOn)singin).setUser(user);
