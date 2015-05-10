@@ -1,12 +1,10 @@
 package business;
 
-import java.util.Collections;
 import java.util.List;
-import java.util.Optional;
 
-import entity.Person;
 import repositories.PersonRepository;
 import repositories.Repository;
+import entity.Person;
 
 public class GetPerson implements UnitOfWork {
 
@@ -20,13 +18,11 @@ public class GetPerson implements UnitOfWork {
 
 	@Override
 	public boolean run() {
-		Optional<Person>  option = personRepository.findOnePerson(person.getId());
-		if (option.isPresent()){
-			persons = Collections.singletonList(option.get());
-			return true;
-		}else{
-			persons = Collections.emptyList();
+		persons = personRepository.findPerson(person.getName());
+		if (persons.isEmpty()){
 			return false;
+		}else{
+			return true;
 		}
 	}
 

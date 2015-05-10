@@ -57,5 +57,14 @@ public class MongoPersonRepository implements PersonRepository {
 		Person saved = mongoOperation.findOne(searchUserQuery, Person.class);
 		return saved;
 	}
+	
+	@Override
+	public List<Person> findPerson(String personData) {
+		Query searchPersonQuery = new Query(Criteria.where("name").regex(personData).orOperator(
+				Criteria.where("hastly").regex(personData)).orOperator(
+						Criteria.where("email").regex(personData)));
+		List<Person> finded = mongoOperation.find(searchPersonQuery, Person.class);
+		return finded;
+	}
 
 }

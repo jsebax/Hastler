@@ -20,6 +20,8 @@ import business.EditService;
 import business.GetAllService;
 import business.GetCategory;
 import business.GetMatch;
+import business.GetMatchHastly;
+import business.GetMatchServiId;
 import business.GetPerson;
 import business.GetService;
 import business.LogIn;
@@ -184,7 +186,6 @@ public class Facade {
 		return result;
 	}
 	
-	
 	//lo que tiene que ver con match
 	
 	@RequestMapping(value = "/match", method = RequestMethod.POST)
@@ -199,6 +200,34 @@ public class Facade {
 	@RequestMapping(value = "/match", method = RequestMethod.GET)
 	public @ResponseBody List<Match> obtenerMatch(@RequestBody Match match){
 		UnitOfWork getMatch = new GetMatch();
+		getMatch.SetRepository(matchMongo);
+		((GetMatch)getMatch).setMatch(match);
+		boolean result = getMatch.run();
+		if(result){
+			List<Match> matchs = ((GetMatch)getMatch).getMatches();
+			return matchs;
+		}else{
+			return null;
+		}
+	}
+	
+	@RequestMapping(value = "/matchServi", method = RequestMethod.GET)
+	public @ResponseBody List<Match> obtenerMatchServiId(@RequestBody Match match){
+		UnitOfWork getMatch = new GetMatchServiId();
+		getMatch.SetRepository(matchMongo);
+		((GetMatch)getMatch).setMatch(match);
+		boolean result = getMatch.run();
+		if(result){
+			List<Match> matchs = ((GetMatch)getMatch).getMatches();
+			return matchs;
+		}else{
+			return null;
+		}
+	}
+	
+	@RequestMapping(value = "/matchHastly", method = RequestMethod.GET)
+	public @ResponseBody List<Match> obtenerMatchHastly(@RequestBody Match match){
+		UnitOfWork getMatch = new GetMatchHastly();
 		getMatch.SetRepository(matchMongo);
 		((GetMatch)getMatch).setMatch(match);
 		boolean result = getMatch.run();

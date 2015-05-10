@@ -15,4 +15,6 @@ public interface PersonRepository extends Repository{
     Person savePerson(Person saved);
     
     Person updatePerson(String id, String toUp, Object update);
+
+	List<Person> findPerson(String personData);
 }

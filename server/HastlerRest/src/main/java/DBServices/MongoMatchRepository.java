@@ -58,4 +58,18 @@ public class MongoMatchRepository implements MatchRepository {
 		return saved;
 	}
 
+	@Override
+	public List<Match> findMatchServi(String serviId) {
+		Query searchMatchQuery = new Query(Criteria.where("serviId").is(serviId));
+		List<Match> finded = mongoOperation.find(searchMatchQuery, Match.class);
+		return finded;
+	}
+
+	@Override
+	public List<Match> findMatchHastly(String data) {
+		Query searchMatchQuery = new Query(Criteria.where("hastly").is(data));
+		List<Match> finded = mongoOperation.find(searchMatchQuery, Match.class);
+		return finded;
+	}
+
 }
