@@ -2,7 +2,6 @@ package business;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.Optional;
 
 import entity.Match;
 import repositories.MatchRepository;
@@ -20,9 +19,9 @@ public class GetMatch implements UnitOfWork {
 
 	@Override
 	public boolean run() {
-		Optional<Match> matchR= matchRepository.findOneMatch(match.getId());
-		if(matchR.isPresent()){
-			matches = Collections.singletonList(matchR.get());
+		Match matchR= matchRepository.findOneMatch(match.getId());
+		if(matchR!=null){
+			matches = Collections.singletonList(matchR);
 			return true;
 		}else{
 			matches = null;

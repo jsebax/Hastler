@@ -1,7 +1,6 @@
 package repositories;
 
 import java.util.List;
-import java.util.Optional;
 
 import entity.Match;
 
@@ -10,7 +9,7 @@ public interface MatchRepository extends Repository{
 	 
     List<Match> findAllMatch();
  
-    Optional<Match> findOneMatch(String id);
+    Match findOneMatch(String id);
  
     Match saveMatch(Match saved);
     

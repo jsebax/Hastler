@@ -1,7 +1,6 @@
 package repositories;
 
 import java.util.List;
-import java.util.Optional;
 
 import entity.Person;
 
@@ -10,7 +9,7 @@ public interface PersonRepository extends Repository{
 	 
     List<Person> findAllPerson();
  
-    Optional<Person> findOnePerson(String id);
+    Person findOnePerson(String id);
  
     Person savePerson(Person saved);
     
@@ -18,7 +17,7 @@ public interface PersonRepository extends Repository{
 
 	List<Person> findPerson(String personData);
 
-	Optional<Person> findPersonEmail(String email);
+	Person findPersonEmail(String email);
 	
-	Optional<Person> findPersonHastly(String email);
+	Person findPersonHastly(String email);
 }

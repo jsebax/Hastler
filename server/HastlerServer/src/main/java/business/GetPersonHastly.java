@@ -1,6 +1,6 @@
 package business;
 
-import java.util.Optional;
+
 
 import entity.Person;
 import repositories.PersonRepository;
@@ -8,7 +8,7 @@ import repositories.Repository;
 
 public class GetPersonHastly implements UnitOfWork {
 	PersonRepository personRepository;
-	Optional<Person> persons;
+	Person persons;
 	Person person;
 	
 	public GetPersonHastly() {
@@ -18,7 +18,7 @@ public class GetPersonHastly implements UnitOfWork {
 	@Override
 	public boolean run() {
 		persons = personRepository.findPersonHastly(person.getHastly());
-		if (persons.isPresent()){
+		if (persons!=null){
 			return true;
 		}else{
 			return false;
@@ -31,7 +31,7 @@ public class GetPersonHastly implements UnitOfWork {
 	}
 
 	public Person getPersons() {
-		return persons.get();
+		return persons;
 	}
 
 	public void setPerson(Person person) {

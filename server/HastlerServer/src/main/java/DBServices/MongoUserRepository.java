@@ -1,7 +1,6 @@
 package DBServices;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -36,11 +35,10 @@ public class MongoUserRepository implements UserRepository {
 	}
 	
 	@Override
-	public Optional<User> findOneUser(String id) {
+	public User findOneUser(String id) {
 		Query searchUserQuery = new Query(Criteria.where("id").is(id));
-		User saved = mongoOperation.findOne(searchUserQuery, User.class);
-		Optional<User> optionalSaved = Optional.of(saved);
-		return optionalSaved;
+		User saved = mongoOperation.findOne(searchUserQuery, User.class);		
+		return saved;
 	}
 	
 	@Override

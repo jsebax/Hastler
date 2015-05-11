@@ -1,7 +1,6 @@
 package DBServices;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -36,11 +35,10 @@ public class MongoPersonRepository implements PersonRepository {
 	}
 	
 	@Override
-	public Optional<Person> findOnePerson(String id) {
+	public Person findOnePerson(String id) {
 		Query searchUserQuery = new Query(Criteria.where("id").is(id));
 		Person saved = mongoOperation.findOne(searchUserQuery, Person.class);
-		Optional<Person> optionalSaved = Optional.of(saved);
-		return optionalSaved;
+		return saved;
 	}
 	
 	@Override
@@ -68,18 +66,16 @@ public class MongoPersonRepository implements PersonRepository {
 	}
 
 	@Override
-	public Optional<Person> findPersonEmail(String email) {
+	public Person findPersonEmail(String email) {
 		Query searchUserQuery = new Query(Criteria.where("email").is(email));
-		Person saved = mongoOperation.findOne(searchUserQuery, Person.class);
-		Optional<Person> optionalSaved = Optional.of(saved);
-		return optionalSaved;
+		Person finded = mongoOperation.findOne(searchUserQuery, Person.class);
+		return finded;
 	}
 
 	@Override
-	public Optional<Person> findPersonHastly(String hastly) {
+	public Person findPersonHastly(String hastly) {
 		Query searchUserQuery = new Query(Criteria.where("hastly").is(hastly));
-		Person saved = mongoOperation.findOne(searchUserQuery, Person.class);
-		Optional<Person> optionalSaved = Optional.of(saved);
-		return optionalSaved;
+		Person finded = mongoOperation.findOne(searchUserQuery, Person.class);
+		return finded;
 	}
 }

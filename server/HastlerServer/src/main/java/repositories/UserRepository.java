@@ -1,7 +1,6 @@
 package repositories;
 
 import java.util.List;
-import java.util.Optional;
 
 import entity.User;
 
@@ -10,7 +9,7 @@ public interface UserRepository extends Repository{
 	 
     List<User> findAllUser();
  
-    Optional<User> findOneUser(String id);
+    User findOneUser(String id);
  
     User saveUser(User saved);
     

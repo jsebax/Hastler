@@ -1,7 +1,6 @@
 package repositories;
 
 import java.util.List;
-import java.util.Optional;
 
 import entity.Servi;
 
@@ -10,7 +9,7 @@ public interface ServiRepository extends Repository {
 	 
 	    List<Servi> findAllServi();
 	 
-	    Optional<Servi> findOneServi(String id);
+	    Servi findOneServi(String id);
 	    
 	    List<Servi> findCategory(String category);
 	 

@@ -1,6 +1,6 @@
 package business;
 
-import java.util.Optional;
+
 
 import entity.Person;
 import repositories.PersonRepository;
@@ -9,7 +9,7 @@ import repositories.Repository;
 public class GetPersonEmail implements UnitOfWork {
 
 	PersonRepository personRepository;
-	Optional<Person> persons;
+	Person persons;
 	Person person;
 	
 	public GetPersonEmail() {
@@ -19,7 +19,7 @@ public class GetPersonEmail implements UnitOfWork {
 	@Override
 	public boolean run() {
 		persons = personRepository.findPersonEmail(person.getEmail());
-		if (persons.isPresent()){
+		if (persons!=null){
 			return true;
 		}else{
 			return false;
@@ -32,7 +32,7 @@ public class GetPersonEmail implements UnitOfWork {
 	}
 
 	public Person getPersons() {
-		return persons.get();
+		return persons;
 	}
 
 	public void setPerson(Person person) {

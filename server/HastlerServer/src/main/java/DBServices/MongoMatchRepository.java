@@ -1,7 +1,6 @@
 package DBServices;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -36,11 +35,10 @@ public class MongoMatchRepository implements MatchRepository {
 	}
 
 	@Override
-	public Optional<Match> findOneMatch(String id) {
+	public Match findOneMatch(String id) {
 		Query searchMatchQuery = new Query(Criteria.where("id").is(id));
-		Match saved = mongoOperation.findOne(searchMatchQuery, Match.class);
-		Optional<Match> optionalSaved = Optional.of(saved);
-		return optionalSaved;
+		Match finded = mongoOperation.findOne(searchMatchQuery, Match.class);
+		return finded;
 	}
 
 	@Override

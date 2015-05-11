@@ -1,7 +1,6 @@
 package DBServices;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -36,11 +35,10 @@ public class MongoServiRepository implements ServiRepository {
 	}
 	
 	@Override
-	public Optional<Servi> findOneServi(String id) {
+	public Servi findOneServi(String id) {
 		Query searchUserQuery = new Query(Criteria.where("id").is(id));
 		Servi saved = mongoOperation.findOne(searchUserQuery, Servi.class);
-		Optional<Servi> optionalSaved = Optional.of(saved);
-		return optionalSaved;
+		return saved;
 	}
 	
 	@Override

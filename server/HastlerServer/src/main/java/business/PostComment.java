@@ -2,7 +2,6 @@ package business;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.Optional;
 
 import entity.Servi;
 import repositories.Repository;
@@ -21,8 +20,8 @@ public class PostComment implements UnitOfWork {
 	public boolean run() {
 		List<String> comments = Collections.emptyList();
 		comments.add(this.servi.getComment());
-		Optional<Servi> service = serviRepository.findOneServi(this.servi.getId());
-		comments.addAll(service.get().getComments());
+		Servi service = serviRepository.findOneServi(this.servi.getId());
+		comments.addAll(service.getComments());
 		Servi serviR = serviRepository.updateServi(this.servi.getId(), 
 				"comment", comments);
 		if(serviR.getId() == this.servi.getId()){
