@@ -1,8 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<typeInfoHistroy>
-<typeInfo handle="=HastlerRest/src\/main\/java&lt;repositories{PersonRepository.java[PersonRepository" modifiers="513" timestamp="1429825702386"/>
-<typeInfo handle="=HastlerRest/src\/main\/java&lt;repositories{UserRepository.java[UserRepository" modifiers="513" timestamp="1430605833860"/>
-<typeInfo handle="=HastlerRest/C:\/Program Files\/Java\/jre1.8.0_45\/lib\/rt.jar&lt;java.nio.file.attribute(UserDefinedFileAttributeView.class[UserDefinedFileAttributeView" modifiers="1537" timestamp="1429581160272"/>
-<typeInfo handle="=HastlerRest/src\/main\/java&lt;repositories{MatchRepository.java[MatchRepository" modifiers="513" timestamp="1429831620527"/>
-<typeInfo handle="=HastlerRest/src\/main\/java&lt;business{UnitOfWork.java[UnitOfWork" modifiers="513" timestamp="1429825768772"/>
-</typeInfoHistroy>
+<typeInfoHistroy/>

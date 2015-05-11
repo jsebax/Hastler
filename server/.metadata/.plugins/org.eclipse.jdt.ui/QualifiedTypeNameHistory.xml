@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.hibernate.validator.constraints.NotEmpty"/>
 <fullyQualifiedTypeName name="entity.ProfileI"/>
 <fullyQualifiedTypeName name="repository.PersonRepository"/>
 <fullyQualifiedTypeName name="DTO.PersonDTO"/>
@@ -60,4 +59,5 @@
 <fullyQualifiedTypeName name="java.util.UUID"/>
 <fullyQualifiedTypeName name="business.GetMatchServiId"/>
 <fullyQualifiedTypeName name="business.GetMatchHastly"/>
+<fullyQualifiedTypeName name="com.eafit.hastler.Facade"/>
 </qualifiedTypeNameHistroy>
