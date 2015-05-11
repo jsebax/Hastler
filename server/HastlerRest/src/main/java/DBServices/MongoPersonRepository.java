@@ -67,4 +67,19 @@ public class MongoPersonRepository implements PersonRepository {
 		return finded;
 	}
 
+	@Override
+	public Optional<Person> findPersonEmail(String email) {
+		Query searchUserQuery = new Query(Criteria.where("email").is(email));
+		Person saved = mongoOperation.findOne(searchUserQuery, Person.class);
+		Optional<Person> optionalSaved = Optional.of(saved);
+		return optionalSaved;
+	}
+
+	@Override
+	public Optional<Person> findPersonHastly(String hastly) {
+		Query searchUserQuery = new Query(Criteria.where("hastly").is(hastly));
+		Person saved = mongoOperation.findOne(searchUserQuery, Person.class);
+		Optional<Person> optionalSaved = Optional.of(saved);
+		return optionalSaved;
+	}
 }

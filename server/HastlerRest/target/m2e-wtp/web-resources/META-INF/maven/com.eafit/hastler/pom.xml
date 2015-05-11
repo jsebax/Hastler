@@ -15,7 +15,7 @@
 	</properties>
 	<dependencies>
 		
-		<!-- Spring -->
+		<!-- Spring -->	
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
@@ -198,6 +198,10 @@
                     <mainClass>org.test.int1.Main</mainClass>
                 </configuration>
             </plugin>
+            <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+			</plugin>
         </plugins>
     </build>
 </project>

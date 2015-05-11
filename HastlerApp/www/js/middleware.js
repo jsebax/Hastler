@@ -78,6 +78,24 @@ function obtenerPersonas(persona){
 	});
 }
 
+function obtenerPersonaEmail(persona){
+	//persona.name = stringbusqueda;
+	var personaR;
+	var ulrthis = urlServer+"personaEmail";
+	$.get(ulrthis,function(data){
+		personaR = data;
+	});
+}
+
+function obtenerPersonaHastly(persona){
+	//persona.name = stringbusqueda;
+	var personaR;
+	var ulrthis = urlServer+"personaHastly";
+	$.get(ulrthis,function(data){
+		personaR = data;
+	});
+}
+
 function agregarPersona(persona){
 	/*	rellenar de persona; 
 		-hastly;

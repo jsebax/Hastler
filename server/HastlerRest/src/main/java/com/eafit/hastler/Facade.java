@@ -23,6 +23,8 @@ import business.GetMatch;
 import business.GetMatchHastly;
 import business.GetMatchServiId;
 import business.GetPerson;
+import business.GetPersonEmail;
+import business.GetPersonHastly;
 import business.GetService;
 import business.LogIn;
 import business.PostComment;
@@ -87,6 +89,34 @@ public class Facade {
 		if(run){
 			List<Person> persons = ((GetPerson) getPerson).getPersons();
 			return persons;
+		}else{
+			return null;
+		}		
+	}
+	
+	@RequestMapping(value = "/personaEmail", method = RequestMethod.GET)
+	public @ResponseBody Person obtenerPersonasEmail(@RequestBody Person person){
+		UnitOfWork getPerson = new GetPersonEmail();
+		getPerson.SetRepository(personMongo);
+		((GetPersonEmail) getPerson).setPerson(person);
+		boolean run = getPerson.run();
+		if(run){
+			Person personR = ((GetPersonEmail) getPerson).getPersons();
+			return personR;
+		}else{
+			return null;
+		}		
+	}
+	
+	@RequestMapping(value = "/personaHastly", method = RequestMethod.GET)
+	public @ResponseBody Person obtenerPersonasHastly(@RequestBody Person person){
+		UnitOfWork getPerson = new GetPersonHastly();
+		getPerson.SetRepository(personMongo);
+		((GetPersonHastly) getPerson).setPerson(person);
+		boolean run = getPerson.run();
+		if(run){
+			Person personR = ((GetPersonHastly) getPerson).getPersons();
+			return personR;
 		}else{
 			return null;
 		}		

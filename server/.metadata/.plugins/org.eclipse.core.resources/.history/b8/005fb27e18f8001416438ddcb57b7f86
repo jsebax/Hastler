@@ -1,0 +1,43 @@
+package business;
+
+import java.util.List;
+import java.util.Optional;
+
+import repositories.PersonRepository;
+import repositories.Repository;
+import entity.Person;
+
+public class GetPerson implements UnitOfWork {
+
+	PersonRepository personRepository;
+	Optional<Person> personR;
+	Person person;
+	
+	public GetPerson() {
+		super();
+	}
+
+	@Override
+	public boolean run() {
+		personR = personRepository.findPerson(person.getName());
+		if (personR.isEmpty()){
+			return false;
+		}else{
+			return true;
+		}
+	}
+
+	@Override
+	public void SetRepository(Repository repository) {
+		personRepository = (PersonRepository) repository;
+	}
+
+	public Person getPersons() {
+		return persons;
+	}
+
+	public void setPerson(Person person) {
+		this.person = person;
+	}
+
+}
