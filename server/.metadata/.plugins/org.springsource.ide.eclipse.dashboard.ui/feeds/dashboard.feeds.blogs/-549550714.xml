@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Spring</title>
+  <link rel="alternate" href="https://spring.io/blog" />
+  <link rel="self" href="https://spring.io/blog.atom" />
+  <id>http://spring.io/blog.atom</id>
+  <icon>https://spring.io/favicon.ico</icon>
+  <updated>2015-05-11T18:39:11Z</updated>
+  <entry>
+    <title>New in STS 3.7.0: Spring Boot Yaml Editor</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/05/11/new-in-sts-3-7-0-spring-boot-yaml-editor" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Kris De Volder</name>
+    </author>
+    <id>tag:spring.io,2015-05-11:2117</id>
+    <updated>2015-05-11T18:39:11Z</updated>
+    <content type="html">&lt;p&gt;In STS 3.6.4 we introduced &lt;a href="https://drive.google.com/open?id=0B-E3P0EgKBcKdE9GY3RiMDZNb0E&amp;authuser=1"&gt;&amp;ldquo;.properties&amp;rdquo; editor support&lt;/a&gt;, for editing Spring Boot configuration properties.&lt;/p&gt;&lt;p&gt;Soon thereafter, people started asking about support for &amp;ldquo;.yml&amp;rdquo; files as well. We are proud to say that the &amp;ldquo;.yml&amp;rdquo; support is now reality.&lt;/p&gt;&lt;p&gt;Check out the &lt;a href="https://docs.google.com/file/d/0B-E3P0EgKBcKdE9GY3RiMDZNb0E/edit"&gt;5 minute video demo&lt;/a&gt; to see this in action:&lt;/p&gt;&lt;p&gt;The Spring Boot Yaml editor is built on top of &lt;a href="https://github.com/oyse/yedit"&gt;YEdit&lt;/a&gt;. STS adds boot-specific content-assist, validation, hover-infos and hyperlink detectors.&lt;/p&gt;&lt;p&gt;It can be tried out today from STS&amp;rsquo;s &lt;a href="https://github.com/spring-projects/spring-ide#installation-ci-builds"&gt;nightly update site&lt;/a&gt; and is planned to be released as part of STS 3.7.0 near the end of June 2015.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Gradle dependency management plugin 0.5.1 released</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/05/11/gradle-dependency-management-plugin-0-5-1-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Andy Wilkinson</name>
+    </author>
+    <id>tag:spring.io,2015-05-11:2116</id>
+    <updated>2015-05-11T16:03:30Z</updated>
+    <content type="html">&lt;p&gt;We are pleased to announce that &lt;a href="https://github.com/spring-gradle-plugins/dependency-management-plugin"&gt;Gradle dependency management plugin&lt;/a&gt; 0.5.1.RELEASE is now available from Maven Central, Bintray, and the Gradle Plugin Portal. For more information about how the plugin can improve your Gradle builds, please read the &lt;a href="https://spring.io/blog/2015/02/23/better-dependency-management-for-gradle"&gt;introductory blog post&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;This maintenance release fixes an issue with the support for Maven-style exclusions. In addition, 0.5.0 introduced a new task, &lt;code&gt;dependencyManagement&lt;/code&gt;, that you can use to diagnose your project&amp;rsquo;s dependency management. More details can be found in the &lt;a href="https://github.com/spring-gradle-plugins/dependency-management-plugin#dependency-management-task"&gt;project&amp;rsquo;s README&lt;/a&gt;.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>To My Fellow Students:</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/05/11/to-my-fellow-students" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2015-04-24:2096</id>
+    <updated>2015-05-11T00:55:39Z</updated>
+    <content type="html">&lt;p&gt;&amp;ldquo;You are always a student, never a master. You have to keep moving forward.&amp;rdquo; -Conrad Hall&lt;/p&gt;&lt;p&gt;&amp;ldquo;The empires of the future are the empires of the mind.&amp;rdquo; -Winston Churchill &lt;/p&gt;&lt;p&gt;&amp;ldquo;You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose.&amp;rdquo; -Dr. Seuss &lt;/p&gt;&lt;p&gt;&amp;ldquo;Good students are good at all things.&amp;rdquo; -Marissa Mayer &lt;/p&gt;&lt;p&gt;&amp;ldquo;The person who never made a mistake never tried anything new.&amp;rdquo; -Albert Einstein &lt;/p&gt;&lt;p&gt;&lt;em&gt;Warning&lt;/em&gt;: if you&amp;rsquo;re a seasoned developer, than this may not be the post you&amp;rsquo;re looking for. Keep reading, anyway. I&amp;rsquo;ll bet you know some developers who are taking their first steps and, maybe, this could help them!&lt;/p&gt;&lt;p&gt;Hi!. &lt;a href="http://twitter.com/starbuxman"&gt;I&amp;rsquo;m Josh (@starbuxman)&lt;/a&gt;. I work as &lt;a href="http://spring.io/team/jlong"&gt;the Spring developer advocate&lt;/a&gt; at Pivotal and I, like the rest of the team, spend a lot of time talking to a &lt;em&gt;lot&lt;/em&gt; of really amazing people. We talk to all manner of developers: conference attendees, customers, students, C-levels and interns alike. I personally have made friends on every continent (save Antarctica! One day..) and interacted - online or sometimes in-person - with developers in every timezone. While I enjoy every selfie, hand-shake, discussion, forum thread, Twitter conversation, and email thread, the exchanges that really stick with me are the ones from students. They&amp;rsquo;re often finding their way not just with Spring, but with Java in general and programming at large. They (foolishly!!) assume I have a clue. Those conversations weigh heavily on me. It&amp;rsquo;s very important to not send them off in the wrong direction, if possible. This post is an attempt to capture a lot of these discussions.&lt;/p&gt;&lt;h2&gt;&lt;a href="#a-journey-of-a-thousand-miles" class="anchor" name="a-journey-of-a-thousand-miles"&gt;&lt;/a&gt;A Journey of a Thousand Miles..&lt;/h2&gt;&lt;p&gt;Sometimes students ask about how to get started. I don&amp;rsquo;t even know where to begin. Get started in.. &lt;em&gt;what&lt;/em&gt;? Sometimes I talk to young people trying to start programming. As often as not, these are people who I get introduced to by their parents. These young people know there&amp;rsquo;s a prize - for the inspired it&amp;rsquo;s a life filled with passion and new peaks to summit - waiting for those who make the journey, but they don&amp;rsquo;t know how to take the first steps.&lt;/p&gt;&lt;p&gt;Most of the people I&amp;rsquo;ve talked to started building applications to see something ..dance. In my generation, many of us started with Basic games, and later a lot of developers started with something related to HTML and JavaScript, or even Flash. My first steps in Java were, after all, with Applets! These days, I see a lot of young people taking their first steps with Android or iOS or, even more recently, with Arduino and Minecraft mods. It&amp;rsquo;s encouraging to be able to make something dance. Visual feedback is satisfying, it&amp;rsquo;s encouraging. Put another way, I don&amp;rsquo;t know any young, aspiring programmers who just can&amp;rsquo;t stop thinking about CRON jobs!&lt;/p&gt;&lt;p&gt;There are many outlets for young people to get started with programming. Some of my favorites are Devoxx4Kids, Code.org (_the Hour of Code_) and Coder Dojo.&lt;/p&gt;&lt;p&gt;&lt;a href="http://www.devoxx4kids.org/"&gt;Devoxx4Kids&lt;/a&gt; is a non-profit organization that was spun out of the Devoxx conferences and has chapters and events world-wide (though more are &lt;em&gt;always&lt;/em&gt; welcome!). Devoxx4Kids connects qualified adult volunteers, a large and growing set of fun exercises, labs and technologies, and kids to run events worldwide aimed at inspiring young people (teenagers) to take their first steps with people there to help them.&lt;/p&gt;&lt;p&gt;&lt;a href="http://code.org"&gt;Code.org&lt;/a&gt; is a similar movement that has garnered the attention and endorsements of modern-day celebrities like Microsoft founder Bill Gates, Facebook founder Mark Zuckerberg, US president Bill Clinton, and musician Will.i.am to encourage young people to get involved in code. There are educational resources and - every year - the community stages an hour of code event worldwide to encourage young people to write their first lines of code. In 2014, US president Obama participated and wrote his first lines of code in JavaScript! Like Devoxx4Kids, the &lt;em&gt;Hour of Code&lt;/em&gt; movement sees thousands of events and workshops spring up world-wide where young people can go and get help taking their first steps programming.&lt;/p&gt;&lt;p&gt;&lt;a href="https://coderdojo.com/"&gt;Coder Dojo&lt;/a&gt; is a global network of free programming clubs for young people.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.khanacademy.org/"&gt;Khan Academy&lt;/a&gt; has numerous online learning resources for all manner of subjects, not just computer science. There &lt;em&gt;Computer Programing&lt;/em&gt; section is expansive, though. &lt;/p&gt;&lt;h2&gt;&lt;a href="#what-rsquo-s-beyond-the-horizon" class="anchor" name="what-rsquo-s-beyond-the-horizon"&gt;&lt;/a&gt;What&amp;rsquo;s Beyond the Horizon&lt;/h2&gt;&lt;p&gt;Sometimes I talk to students further down the road, at university perhaps, starting to understand what it means to &lt;em&gt;program&lt;/em&gt; a computer, and now eager to apply their newfound power. For them, it&amp;rsquo;s not about making the conceptual leap into programming, it&amp;rsquo;s about taking the next steps and applying it to some problem space. &lt;/p&gt;&lt;p&gt;I&amp;rsquo;m going to &lt;em&gt;attempt&lt;/em&gt; to lay out the universe of technology as I see it these days and explain what each discipline is. This list isn&amp;rsquo;t even close to exhaustive. It&amp;rsquo;s important to understand that disciplines are not exclusive. Many developers straddle many disciplines and mix-and-match as required. This is the ideal. Program &lt;em&gt;all&lt;/em&gt; the things! Specialization is for insects! Be the &lt;em&gt;Renaissance programmer&lt;/em&gt; the world needs.&lt;/p&gt;&lt;p&gt;This list couldn&amp;rsquo;t possibly be exhaustive and I&amp;rsquo;m happy to have any additions in the comments.&lt;/p&gt;&lt;p&gt;I will also try to link to relevant introductory material and popular technologies in this space. My perspective is of course my own. There are no doubt other resources out there, but I&amp;rsquo;m going with what I know works.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Web Programming&lt;/strong&gt;: This, I think, is the most natural place to start for developers today because &lt;em&gt;everything&lt;/em&gt; is connected to the web. Web programming refers to both the job of creating HTTP-based web applications (like Amazon.com) with pages, forms, etc., and to creating APIs. Humans talk to web applications (usually from a browser) and machines talk to APIs. Today, the most popular way to create APIs is to use REST. Web programming &lt;em&gt;also&lt;/em&gt; refers to the work of &lt;em&gt;consuming&lt;/em&gt; other web services, as you might act as a client to the Facebook API, for example. When people talk about web-development, they&amp;rsquo;re usually talking about things like &lt;a href="http://spring.io/guides/gs/rest-service/"&gt;REST web-services&lt;/a&gt;, &lt;a href="http://spring.io/guides/gs/securing-web/"&gt;web security&lt;/a&gt;, &lt;a href="http://spring.io/guides/tutorials/spring-security-and-angular-js/"&gt;OAuth&lt;/a&gt;, &lt;a href="http://docs.spring.io/spring/docs/current/spring-framework-reference/html/testing.html"&gt;web testing&lt;/a&gt;, JavaScript, CSS, and APIs. &lt;/p&gt;&lt;p&gt;&lt;strong&gt;Front-End &amp;amp; (Rich or Mobile) Client Development&lt;/strong&gt;: For every web application out there, there are an increasing number of screens from which to consume it: Android-based devices, Apple iOS devices, video game consoles, TVs, cars, desktop and mobile browsers, etc. When we talk about front end development that usually, at least, refers to building &lt;a href="http://spring.io/guides/tutorials/spring-security-and-angular-js/"&gt;browser-based JavaScript&lt;/a&gt; and HTML5 applications as well as mobile applications (typically &lt;a href="http://spring.io/guides/gs/consuming-rest-android/"&gt;Android&lt;/a&gt; and &lt;a href="http://spring.io/guides/gs/consuming-rest-ios"&gt;iOS&lt;/a&gt;).&lt;/p&gt;&lt;p&gt;&lt;strong&gt;SQL Data Processing&lt;/strong&gt;: A diminishing, but still non-trivial, amount of application data is stored in relational databases (RDBMSes) like MySQL and PostgreSQL. These databases use a query language called SQL. You&amp;rsquo;ll find there are myriad technologies to talk to these databases. In the JVM space, one typically uses &lt;a href="http://spring.io/guides/gs/relational-data-access/"&gt;JDBC&lt;/a&gt; and &lt;a href="http://spring.io/guides/gs/accessing-data-jpa/"&gt;JPA&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;NoSQL Data Processing&lt;/strong&gt;: RDBMSes may be the entrenched technology, but it&amp;rsquo;s by no means the only way of storing data. Often, application data has specialized storage requirements. Maybe the data is better described not in a set &lt;a href="http://spring.io/guides/gs/accessing-data-jpa/"&gt;of loosely connected tables&lt;/a&gt;, but &lt;a href="http://spring.io/guides/gs/accessing-data-neo4j/"&gt;as a graph of nodes&lt;/a&gt;, or as a series &lt;a href="http://spring.io/guides/gs/accessing-data-mongodb/"&gt;of less rigid &lt;em&gt;documents&lt;/em&gt;&lt;/a&gt;, or perhaps the use cases require the ability to &lt;a href="https://github.com/spring-projects/spring-data-elasticsearch"&gt;do full text searches on the data&lt;/a&gt;. In any case, you&amp;rsquo;ll end up using a so-called &lt;a href="http://en.wikipedia.org/wiki/NoSQL"&gt;&lt;em&gt;Not-only-SQL&lt;/em&gt; or a No-SQL&lt;/a&gt; solution for these sorts of requirements.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Big-Data Processing&lt;/strong&gt;: while RDBMSes may be ubiquitous, and NoSQL may be more efficient or natural for certain types of data, some data sets require specialized processing techniques simply because there is &lt;em&gt;so much&lt;/em&gt; of it. This category of processing is called big-data. There is often overlap between NoSQL and big-data. When we talk about big-data processing, most people think of technologies like &lt;a href="http://projects.spring.io/spring-hadoop/"&gt;Apache Hadoop&lt;/a&gt;, &lt;a href="http://spring.io/guides/gs/yarn-batch-processing/"&gt;YARN&lt;/a&gt;, &lt;a href="https://spring.io/blog/2015/04/15/using-apache-kafka-for-integration-and-data-processing-pipelines-with-spring"&gt;Apache Kafka&lt;/a&gt; and stream-processing solutions &lt;a href="http://spring.io/guides/gs/spring-xd/"&gt;like Spring XD&lt;/a&gt;. &lt;/p&gt;&lt;p&gt;&lt;strong&gt;Embedded Development&lt;/strong&gt;: This space is huge, and - I confess - I know very little about it. Today, in 2015, Java and C are very, very popular programming languages. C is 40+ years old, though! It continues to be so popular because it can run in &lt;em&gt;very&lt;/em&gt; tiny computing environments, like watches, alarm clocks, refrigerators, cars, etc. When people talk about embedded development, they may be talking about using Linux, C, and custom microprocessors to build solutions for low-memory footprint devices. My theory is that this domain will decline in popularity over time as even the smaller things in our lives (cars, mobile phones), now have power enough to run more recent programming languages like Java, JavaScript, Groovy, etc.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Cloud Computing&lt;/strong&gt;: in 2007, Amazon.com (yes, the book reseller) announced that it was going to make it possible to &lt;em&gt;rent&lt;/em&gt; computers from them by the hour, &lt;em&gt;on-demand&lt;/em&gt;. No human intervention was required, just APIs. It thus became possible to build software that could accommodate so many requests from users and - if demand grew - to dynamically &lt;em&gt;add&lt;/em&gt; more computers and install new software! Since then, the world&amp;rsquo;s changed dramatically, and when we talk about cloud computing today we&amp;rsquo;re talking about how to build applications that are &lt;em&gt;elastic&lt;/em&gt; - they can shrink and grow by adding capacity, dynamically. Imagine for example a website (like Amazon.com!) that has requires many, many more computers during big holidays like Christmas, because vastly more people are buying things. Historically, adding computer capacity meant somebody had to buy new machines, go to the data center and install new machines and operating systems, connect them to the network, etc., etc. Today developers use a layers of software on top of the raw-metal hardware to treat the hardware as a giant pool of resources. For developers and operators to be able to move as quickly as possible to business demand, they need the ability to elastically deploy, manage and scale applications. a Platform-as-a-Service lets you do this. When people talk about cloud computing today, they&amp;rsquo;re probably talking about lower level infrastructure technologies like Amazon Web Services and Docker, and higher-level Platforms-as-a-Service like Heroku, and Pivotal&amp;rsquo;s open-source &lt;a href="http://spring.io/guides/gs/sts-cloud-foundry-deployment/"&gt;Cloud Foundry&lt;/a&gt;. Cloud Foundry is a the whole layer above the infrastructure. Newer versions of Cloud Foundry support runing containerized workloads. One popular container is the aforementioned Docker. If you want to get a taste for what it&amp;rsquo;s like to build, manage and scale containerized workloads on your local desktop machine, check out &lt;a href="http://lattice.cf/docs/getting-started/"&gt;Lattice&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Application Integration&lt;/strong&gt;: as we move forward in time, there&amp;rsquo;s an increasing number of applications and services that have been developed without knowledge of each other. The work of making two otherwise ignorant applications share data and services is called &lt;em&gt;application integration&lt;/em&gt;. There are different ways to handle this chore, but the work typically involves reading, adapting, and writing data between systems. For this one might use enterprise application integration and message-driven architectures, or batch-processing. When we talk about application integration, we&amp;rsquo;re typically talking about technologies like Rendez-Vous, &lt;a href="http://spring.io/guides/gs/messaging-jms/"&gt;JMS&lt;/a&gt;, MQ Series, &lt;a href="http://spring.io/guides/gs/messaging-rabbitmq/"&gt;RabbitMQ&lt;/a&gt;, and &lt;a href="http://spring.io/guides/gs/integration"&gt;Spring Integration&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Internet of Things&lt;/strong&gt;: this is related to embedded development. It&amp;rsquo;s the idea that most devices today can or already do have an IP addresses. They&amp;rsquo;re networked. Examples include alarm clocks, coffee makers, home security systems, and refrigerators. Typically they generate a lot of data (as you might expect 24/7 consumer devices to do) and so it becomes important to use &lt;a href="http://docs.spring.io/spring-integration/reference/html/mqtt.html"&gt;lightweight protocols like MQTT&lt;/a&gt; to manage the traffic.&lt;/p&gt;&lt;p&gt;It&amp;rsquo;s important to understand that these things blend into each other. If you care about scaling application availability with cloud-computing, you&amp;rsquo;ll probably also care about APIs and you&amp;rsquo;ll probably also care about big-data and NoSQL. If you care about APIs, you&amp;rsquo;ll probably also care about how to connect those APIs to client technologies like Android. I&amp;rsquo;ve made these distinctions so you can start.. somewhere! Pick a vertical, for now, but always dare to venture beyond. You&amp;rsquo;ll be rewarded for your curiosity.&lt;/p&gt;&lt;h2&gt;&lt;a href="#always-be-learning" class="anchor" name="always-be-learning"&gt;&lt;/a&gt;Always Be Learning!&lt;/h2&gt;&lt;p&gt;The best engineers start their day under the assumption that they&amp;rsquo;re going to learn something before they get home. If your projects at work are monotonous, then get new projects.&lt;/p&gt;&lt;p&gt;Keep apprised of the latest and greatest news, if you can. There is no end to available resources to read the latest software releases, and watch interesting new published tech talks.&lt;/p&gt;&lt;p&gt;Here are some resources I check everyday before I start working, typically over coffee and lunch:&lt;/p&gt;&lt;p&gt;&lt;a href="http://infoq.com"&gt;InfoQ&lt;/a&gt; is an online tech portal with news on all manner of subjects and technology verticals.&lt;/p&gt;&lt;p&gt;&lt;a href="http://reddit.com"&gt;Reddit&lt;/a&gt; is an amazing place to find all sorts of news, not just on technology. I keep a few different &lt;em&gt;sub-Reddits&lt;/em&gt; bookmarked: &lt;a href="http://reddit.com/r/programming"&gt;programming&lt;/a&gt;, &lt;a href="http://reddit.com/r/java"&gt;Java&lt;/a&gt; for technology. I keep a few others for decidedly &lt;em&gt;non&lt;/em&gt; technical content, too! :D&lt;/p&gt;&lt;p&gt;&lt;a href="http://hackernews.ycombinator.com"&gt;Hacker News&lt;/a&gt; is another (moderated) link aggregator. It typicall provides some pretty deep stuff. I like it as a way of keeping an eye on the &lt;em&gt;edge&lt;/em&gt; of technology.&lt;/p&gt;&lt;p&gt;&lt;a href="http://dzone.com"&gt;DZone&lt;/a&gt; can be nice if you don&amp;rsquo;t mind sifting through the noise to find interesting posts. It&amp;rsquo;s a link aggregator, like Reddit.&lt;/p&gt;&lt;p&gt;&lt;a href="http://virtualjug.com"&gt;the Virtual JUG&lt;/a&gt; is an online &lt;em&gt;virtual&lt;/em&gt; Java User Group that&amp;rsquo;s aired live over YouTube and features experts from around the Java community on a regular basis. Recordings of the talks are available on YouTube afterwards.&lt;/p&gt;&lt;p&gt;&lt;a href="http://github.com/"&gt;GitHub&lt;/a&gt; is an online community for developers to collaborate on code. It builds on the &lt;code&gt;git&lt;/code&gt; source-control and revision system, but integrates issue tracking, collaboration tools, documentation, and much more. It is &lt;em&gt;by-far&lt;/em&gt; the largest community of developers and - my favorite part - there are &lt;em&gt;tons&lt;/em&gt; of great (and some not so great!) open-source code examples on there that you can search for and peruse. Want to get good at programming? Fix some bugs and work on a team. We call that &lt;em&gt;scratching your own itch&lt;/em&gt;. It&amp;rsquo;ll improve your skills, give you valuable experience working with often very-skilled developers, and - if you make any kind of contributions to a project with users - you might possibly make somebody else&amp;rsquo;s day better. Win-win!&lt;/p&gt;&lt;p&gt;&lt;a href="http://stackoverflow.com"&gt;StackOverflow.com&lt;/a&gt; is an question-and-answer forum. Have a question on programing? Chances are someone else already had the same one. Search and behold. Or, if you can&amp;rsquo;t find the right result, ask away. As you start to have the answers, give back by answering other people&amp;rsquo;s questions.&lt;/p&gt;&lt;p&gt;&lt;a href="http://spring.io/blog"&gt;the Spring Blog&lt;/a&gt; If you&amp;rsquo;ll permit me one more plug, we &lt;em&gt;do&lt;/em&gt; publish a lot of blogs on a crazy diverse set of topics, so I hope you&amp;rsquo;ll check this blog out as well ;-)&lt;/p&gt;&lt;h2&gt;&lt;a href="#you-mention-java-a-lot" class="anchor" name="you-mention-java-a-lot"&gt;&lt;/a&gt;You Mention Java a Lot..&lt;/h2&gt;&lt;p&gt;I work with the Java language, which runs on top of the Java Virtual Machine. Java is a boring little language, I think, for the better. It lends itself to novices who want to start building things, and not struggling with the syntax. It helps the experienced too because it&amp;rsquo;s fairly consistent to read. I, personally, quite like Java. It&amp;rsquo;s expressive enough while still being easy enough to pickup and read. Whether you like Java the language or not, however, everybody agrees that the JVM (as a platform) is second-to-none. Virtually all the big-web giants (Twitter, Netflix, Google, eBay, Amazon.com, Yahoo!, etc) use the JVM in a majority capacity. The JVM is battle tested and well established. T&lt;/p&gt;&lt;p&gt;here are always alternatives, of course, but it should not be surprising that getting started in big-data, NoSQL, cloud-computing, mobile development, web APIs and more all require some proficiency of the JVM. If you don&amp;rsquo;t like the Java language (though, you should try Java 8! You might like it..), there are &lt;em&gt;plenty&lt;/em&gt; of mature alternatives like &lt;a href="http://www.groovy-lang.org/"&gt;Groovy&lt;/a&gt;, Scala, Clojure (Lisp on the JVM), &lt;a href="http://jruby.org"&gt;JRuby&lt;/a&gt; (Ruby on the JVM), Jython (Python on the JVM), Kotlin, and Ceylon, all of which run on the JVM. That&amp;rsquo;s right - you get the most powerful language runtime in the world, in the language flavor of your choice.&lt;/p&gt;&lt;h2&gt;&lt;a href="#next-steps" class="anchor" name="next-steps"&gt;&lt;/a&gt;Next Steps&lt;/h2&gt;&lt;p&gt;This whole blog has been about next steps. Congratulations on taking the first steps! You&amp;rsquo;ll make a lot of friends, solve a lot of interesting problems, and have a lot of fun if you put your mind to it. &lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring AMQP 1.4.5.RELEASE and 1.5.0.M1 Available</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/05/08/spring-amqp-1-4-5-release-and-1-5-0-m1-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Gary Russell</name>
+    </author>
+    <id>tag:spring.io,2015-05-07:2114</id>
+    <updated>2015-05-08T08:02:00Z</updated>
+    <content type="html">&lt;p&gt;We are pleased to announce that the latest maintenance release for Spring AMQP (1.4.5.RELEASE) is now available. This contains just a &lt;a href="https://jira.spring.io/secure/ReleaseNote.jspa?projectId=10450&amp;version=14993"&gt;few bug fixes since 1.4.4&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;In addition, the first milestone release for the 1.5 release is also available (1.5.0.M1). A release candidate will be available in a month or so, with the GA expected later in the summer.&lt;/p&gt;&lt;p&gt;The main features of this release are highlighted below:&lt;/p&gt;&lt;h2&gt;&lt;a href="#class-level-code-rabbitlistener-code" class="anchor" name="class-level-code-rabbitlistener-code"&gt;&lt;/a&gt;Class-level &lt;code&gt;@RabbitListener&lt;/code&gt;&lt;/h2&gt;&lt;p&gt;It is now possible to define the &lt;code&gt;@RabbitListener&lt;/code&gt; annotation at the class level. Together with method-level &lt;code&gt;@RabbitHandler&lt;/code&gt; annotations, this allows a single listener to invoke different methods in the class, depending on the payload type. For example:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@RabbitListener(queues=&amp;quot;orders, shipments&amp;quot;)&#xD;
+public class MultiListenerBean {&#xD;
+&#xD;
+    @RabbitHandler&#xD;
+    public OrderConfirmation handleOrder(Order order) {&#xD;
+        ...    &#xD;
+    }&#xD;
+&#xD;
+    @RabbitHandler&#xD;
+    public Invoice ship(Shipment shipment) {&#xD;
+        ...&#xD;
+    }&#xD;
+&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h2&gt;&lt;a href="#auto-declare-queues-and-bindings-for-code-rabbitlistener-code" class="anchor" name="auto-declare-queues-and-bindings-for-code-rabbitlistener-code"&gt;&lt;/a&gt;Auto-Declare Queues and Bindings for &lt;code&gt;@RabbitListener&lt;/code&gt;&lt;/h2&gt;&lt;p&gt;It is now possible to automatically declare queues, exchanges and bindings when using the &lt;code&gt;@RabbitListener&lt;/code&gt; annotation.&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@RabbitListener(bindings = @QueueBinding(&#xD;
+	value = @Queue(value = &amp;quot;auto.declare&amp;quot;, autoDelete = &amp;quot;true&amp;quot;),&#xD;
+	exchange = @Exchange(value = &amp;quot;auto.exch&amp;quot;, autoDelete = &amp;quot;true&amp;quot;),&#xD;
+	key = &amp;quot;auto.rk&amp;quot;))&#xD;
+public String handleWithDeclare(String foo) {&#xD;
+	return foo.toUpperCase();&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In this example, the queue &lt;code&gt;auto.declare&lt;/code&gt; is declared and bound to exchange &lt;code&gt;auto.exch&lt;/code&gt; with routing key &lt;code&gt;auto.rk&lt;/code&gt;. The exchange is declared too.&lt;/p&gt;&lt;p&gt;Previously, the &lt;code&gt;Queue&lt;/code&gt;, &lt;code&gt;Exchange&lt;/code&gt; and &lt;code&gt;Binding&lt;/code&gt; had to be declared as separate &lt;code&gt;@Bean&lt;/code&gt;s.&lt;/p&gt;&lt;h2&gt;&lt;a href="#configurable-exchange-routing-key-for-replies" class="anchor" name="configurable-exchange-routing-key-for-replies"&gt;&lt;/a&gt;Configurable Exchange/Routing Key for Replies&lt;/h2&gt;&lt;p&gt;Previously, when using request/reply messaging with the &lt;code&gt;RabbitTemplate&lt;/code&gt;, replies were routed to the default exchange and routed with the queue name. It is now possible to supply a &lt;code&gt;reply-address&lt;/code&gt; with the form &lt;code&gt;exchange/routingKey&lt;/code&gt; to route using a specific exchange and routing key.&lt;/p&gt;&lt;h2&gt;&lt;a href="#rabbitmanagementtemplate" class="anchor" name="rabbitmanagementtemplate"&gt;&lt;/a&gt;RabbitManagementTemplate&lt;/h2&gt;&lt;p&gt;The &lt;code&gt;spring-erlang&lt;/code&gt; jar is no longer provided. Users are encouraged to use the RabbitMQ REST API instead. The RabbitMQ team are working on a Java binding for the REST API and Spring AMQP now provides a lightweight wrapper for that API using the familiar &lt;code&gt;Queue&lt;/code&gt;, &lt;code&gt;Exchange&lt;/code&gt; and &lt;code&gt;Binding&lt;/code&gt; domain objects.&lt;/p&gt;&lt;h2&gt;&lt;a href="#conclusion" class="anchor" name="conclusion"&gt;&lt;/a&gt;Conclusion&lt;/h2&gt;&lt;p&gt;Complete details of the new features can be found in the &lt;a href="http://docs.spring.io/spring-amqp/docs/1.5.0.M1/reference/html/_introduction.html#_changes_in_1_5_since_1_4"&gt;What&amp;rsquo;s New section of the reference manual&lt;/a&gt; and the &lt;a href="https://jira.spring.io/secure/ReleaseNote.jspa?projectId=10450&amp;version=14837"&gt;JIRA release notes&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Users are encouraged to try the new features before the GA release and provide feedback using the normal channels (&lt;code&gt;spring-amqp&lt;/code&gt; tag on Stack Overflow, and JIRA).&lt;/p&gt;&lt;p&gt;See &lt;a href="http://projects.spring.io/spring-amqp/"&gt;the project page&lt;/a&gt; for links to documentation and downloads.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Webinar Replay:  Smarter Service-to-Service Invocations with Spring Cloud</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/05/07/webinar-replay-smarter-service-to-service-invocations-with-spring-cloud" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2015-05-07:2115</id>
+    <updated>2015-05-07T13:42:00Z</updated>
+    <content type="html">&lt;p&gt;Speaker: Josh Long &lt;/p&gt;
+&lt;p&gt;Slides:&lt;a href="https://speakerdeck.com/joshlong/smarter-service-to-service-invocation-with-spring-cloud"&gt; https://speakerdeck.com/joshlong/smarter-service-to-service-invocation-with-spring-cloud &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Spring Cloud 1.0 is here! It offers a powerful way to create and consume microservices. As you introduce new services, you introduce integration problems: services can be shaky, they can disappear and - as they're often exposed over HTTP - they require a bit more footwork than in-process method invocations. In this webinar, we'll focus specifically on how Spring Cloud integrates service registration (e.g.: Eureka, Consul, or Zookeeper), declarative REST clients (with Netflix's Feign), reactive programming and the circuit breaker pattern with Hystrix to support easy, robust service-to-service invocations.&lt;/p&gt;
+&lt;p&gt;Learn about about Spring Cloud at &lt;a href="http://projects.spring.io/spring-cloud"&gt;http://projects.spring.io/spring-cloud&lt;/a&gt;&lt;a href="http://projects.spring.io/spring-cloud"&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Learn about about Spring Boot at &lt;a href="http://projects.spring.io/spring-security"&gt;http://projects.spring.io/spring-boot&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;iframe width="420" height="315" src="https://www.youtube.com/embed/my3yr8Arq2g" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt; &lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Webinar: A Comprehensive Spring Showcase: Personal Cloud Storage Application</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/05/06/webinar-a-comprehensive-spring-showcase-personal-cloud-storage-application" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2015-05-05:2110</id>
+    <updated>2015-05-06T07:06:00Z</updated>
+    <content type="html">&lt;p&gt;Speaker: Erdem Gunay, Turkcell&lt;/p&gt;
+&lt;p&gt;Turkcell launched a personal cloud storage service few years ago. Adding new business features was costly in terms of time and budget on the legacy solution. The user experience needed to be improved. Finally, it was decided to build a new solution where Spring Boot and Spring Framework projects play crucial role as the backbone.&#xD;
+The project was completed just in 6 months starting from scratch. The solution was built on top of Spring Boot and many Spring IO Platform projects, allowing the development team focus on business logic instead of configuration &amp; integration details. The project has been divided into deployable modules (API, backend, migration, test automation) accessing micro services that are responsible for one task only. Join Erdem for a review of the migration effort and new architecture - all enabled by Spring Boot.&lt;/p&gt;&lt;p&gt;Tuesday, June 9th, 2015 2:00PM GMT (London GMT) &lt;a href="http://connect.pivotal.io/OSS_Webinar_7AMComprehensiveSpringShowcasePersonalCloudStorageApplication_Register.html"&gt;Register&lt;/a&gt;&lt;br/&gt;&lt;p&gt;Tuesday, June 9th, 2015 10:00AM PDT (San Francisco GMT-07:00) &lt;a href="http://connect.pivotal.io/OSS_Webinar_10AMComprehensiveSpringShowcasePersonalCloudStorageApp_Register.html"&gt;Register&lt;/a&gt;&lt;/p&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>This Week in Spring - May 5th, 2015</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/05/05/this-week-in-spring-may-5th-2015" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2015-05-05:2113</id>
+    <updated>2015-05-05T15:16:52Z</updated>
+    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! This week I&amp;rsquo;m in Las Vegas at the mega EMC World event.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Security lead Rob Winch has just announced that &lt;a href="http://spring.io/blog/2015/05/05/spring-security-saml-1-0-1-released"&gt;Spring Security SAML 1.0.1 is now available&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Phillip Verheyden&amp;rsquo;s talk offers a very pragmatic look at&lt;a href="http://spring.io/blog/2015/05/05/springone2gx-2014-replay-migrating-to-spring-4-from-spring-3-what-you-need-to-know"&gt;how to move Spring 3 application&lt;/a&gt; - including dependencies like Jackson and Hibernate - to take advantage of newer and new features in Spring 4.x.&lt;/li&gt;
+  &lt;li&gt;My pal Adib Saikali&amp;rsquo;s SpringOne2GX 2014 talk on building a &lt;a href="http://spring.io/blog/2015/05/05/springone2gx-2014-replay-great-single-page-apps-need-great-backends"&gt;rich client backends with Spring is now up&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Don&amp;rsquo;t miss this replay of Spring ninja Greg Turnquist&amp;rsquo;s &lt;a href="http://spring.io/blog/2015/05/05/webinar-debug-and-maintain-your-spring-boot-app"&gt;talk on debugging and maintaining Spring Boot applications&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Dustin Whittle&amp;rsquo;s talk &lt;a href="http://spring.io/blog/2015/05/05/springone2gx-2014-replay-performance-testing-crash-course"&gt;on how to performance testing (Spring) applications&lt;/a&gt; is filled with useful tools, tips-and-tricks for performance testing applications using Siege, Bees with Machine Guns, Google PageSpeed, WBench, and more.&lt;/li&gt;
+  &lt;li&gt;Don&amp;rsquo;t miss our pal Marten Deinum&amp;rsquo;s May 12th webinar on &lt;a href="http://spring.io/blog/2015/05/05/webinar-improving-your-legacy-application-with-spring"&gt;modernizing &lt;em&gt;legacy&lt;/em&gt; Spring applications&lt;/a&gt;. I can&amp;rsquo;t wait to listen to this one! Regular &lt;em&gt;This Week in Spring&lt;/em&gt; readers know he almost always makes an appearance in our roundup!&lt;/li&gt;
+  &lt;li&gt;Spring Data ninja &lt;a href="http://spring.io/blog/2015/04/30/spring-for-apache-hadoop-2-2-m1-released"&gt;Thomas Risberg just announced Spring for Apache Hadoop 2.2 M1&lt;/a&gt;. The new release includes newer supported dependencies, better support for for Hiveserver2 including a batch tasklet, support for a batch tasklet to run Spark apps, Spring Boot-integration, smarter security integration, and integration with Spring Cloud components, and much more!&lt;/li&gt;
+  &lt;li&gt;The good Dr. Pollack &lt;a href="http://spring.io/blog/2015/04/30/spring-xd-1-2-m1-and-1-1-2-released"&gt;just announced Spring XD 1.2 M1&lt;/a&gt; (including a preview of the astonishing Spring Flo visual editor, improved Cassandra and Kafka integration, and much more) and 1.1.2 which contains bugfixes. I can&amp;rsquo;t wait to see some of the stuff in Spring XD 1.2.M1.&lt;/li&gt;
+  &lt;li&gt;Spring Security lead Rob Winch just announced Spring LDAP 2.0.3.RELEASE, which &lt;a href="http://spring.io/blog/2015/04/30/spring-ldap-2-0-3-released"&gt;is mainly a bugfix release&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Check out Unicon&amp;rsquo;s recently developed &lt;a href="https://github.com/Unicon/cas-client-autoconfig-support"&gt;CAS-client auto-configuration for Spring Boot&lt;/a&gt;. CAS is a sort of single-sign on for the web. &lt;a href="https://github.com/Unicon/cas-client-autoconfig-support"&gt;https://github.com/Unicon/cas-client-autoconfig-support&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Check out Sébastien Deleuze&amp;rsquo;s talk from Spring I/O to learn more about &lt;a href="https://speakerdeck.com/sdeleuze/isomorphic-templating-with-spring-boot-nashorn-and-react"&gt;Spring framework 4.2&amp;rsquo;s upcoming support for isomorphic&lt;/a&gt; (scripted on both server and client) views using React.js and Handlebars.&lt;/li&gt;
+  &lt;li&gt;Check out this post to learn how to deploy a Spring Boot application to AWS using Elastic Beanstalk](&lt;a href="http://mtdevuk.com/2015/02/10/how-to-deploy-a-spring-boot-application-to-amazon-aws-using-elastic-beanstalk/"&gt;http://mtdevuk.com/2015/02/10/how-to-deploy-a-spring-boot-application-to-amazon-aws-using-elastic-beanstalk/&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;Java Code Geek has a nice post aggregating the top Java &lt;a href="http://www.javacodegeeks.com/2015/04/we-analyzed-60678-libraries-on-github-here-are-the-top-100.html?utm_content=buffereb42f&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer"&gt;libraries represented by imports in some 60,000+ libraries on GitHub&lt;/a&gt;. The numbers are &lt;em&gt;very&lt;/em&gt; telling: Spring libraries feature the most frequently, taken together, and Spring Test, in particular, comes right after JUnit (ahead of the likes of Mockito!) in terms of popularity. I also like that many of the &lt;em&gt;other&lt;/em&gt; non-Spring libaries represented are very often included a Spring Boot starter. Convenient!&lt;/li&gt;
+  &lt;li&gt;Check out the upcoming &lt;a href="https://vaadin.com/spring"&gt;May 7th webinar on using Spring and Vaadin together&lt;/a&gt; if you&amp;rsquo;re a Vaadin developer, you&amp;rsquo;re going to want to know about Spring Boot!&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Security SAML 1.0.1 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/05/05/spring-security-saml-1-0-1-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Rob Winch</name>
+    </author>
+    <id>tag:spring.io,2015-05-04:2106</id>
+    <updated>2015-05-05T13:37:22Z</updated>
+    <content type="html">&lt;p&gt;I&amp;rsquo;m pleased to announce the release of Spring Security SAML 1.0.1. This release is passive to 1.0.0 the highlights of which are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Added support for Spring Security 4.0&lt;/li&gt;
+  &lt;li&gt;Added integration guide with &lt;a href="http://docs.spring.io/spring-security-saml/docs/1.0.1.RELEASE/reference/html/chapter-idp-guide.html#d5e1816"&gt;Okta&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;MaxAuthenticationAge time supports longer expiration times than 21 days&lt;/li&gt;
+  &lt;li&gt;Deployment without JKS keystore is now supported&lt;/li&gt;
+  &lt;li&gt;Service provider can now define multiple assertion consumer endpoints with same binding&lt;/li&gt;
+  &lt;li&gt;Minor fixes and documentation improvements&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;a href="https://spring.io/spring-security-saml"&gt;Project Site&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-security-saml/docs/1.0.x/reference/html/"&gt;Documentation&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-security-saml/docs/1.0.x/reference/html/chapter-whats-new.html#section-whats-new-highlight-1.0.1"&gt;Changelog&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>SpringOne2GX 2014 Replay: Migrating to Spring 4 from Spring 3 - What you need to know</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/05/05/springone2gx-2014-replay-migrating-to-spring-4-from-spring-3-what-you-need-to-know" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2015-05-05:2112</id>
+    <updated>2015-05-05T07:21:00Z</updated>
+    <content type="html">&lt;p&gt;Migrating to Spring 4 from Spring 3 - What you need to know &lt;/p&gt;
+&lt;p&gt;Recorded at SpringOne2GX 2014. &lt;/p&gt;
+&lt;p&gt;Speaker: Phillip Verheyden &lt;/p&gt;
+&lt;p&gt;Applied Spring Track &lt;/p&gt;
+&lt;p&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/upgrade-tospring4"&gt;http://www.slideshare.net/SpringCentral/upgrade-tospring4&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;In this talk we will cover what it takes to migrate a Spring 3.x application to Spring 4. Some of the questions that we will answer: What improvements does Spring 4 offer over Spring 3 and why should I invest in upgrading? What do I do with all of my current XML configuration? What about dependent library upgrades like Hibernate and Jackson? Part of this talk will focus on updating a specific application based on Spring 3 up to date with Spring 4 and the latest in best practices and design. &lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&#xD;
+  &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/V4GRyzbyy6Y" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&#xD;
+&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>SpringOne2GX 2014 Replay: Great single page apps need great backends</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/05/05/springone2gx-2014-replay-great-single-page-apps-need-great-backends" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2015-05-05:2111</id>
+    <updated>2015-05-05T07:19:00Z</updated>
+    <content type="html">&lt;p&gt;Recorded at SpringOne2GX 2014.&lt;/p&gt;
+&lt;p&gt; Speaker: Adib Saikali &lt;/p&gt;
+&lt;p&gt;Web / JavaScript Track &lt;/p&gt;
+&lt;p&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/adib-saikali-great-backendneedgreatfrontends"&gt;http://www.slideshare.net/SpringCentral/adib-saikali-great-backendneedgreatfrontends&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This session will get you up to speed on the best practices for building backend services to support highly sophisticated single page apps Using Spring 4. Topics covered include error handling, security, performance, api evolution, automated testing, integration with backbone, AngularJS &amp;amp; RequireJS. The presentation will demo working code examples and a github repo where you can access the demos.&lt;/p&gt;
+&lt;p&gt;&#xD;
+  &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/dJHZQyfOQYY" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&#xD;
+&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Webinar: Debug and Maintain your Spring Boot App</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/05/05/webinar-debug-and-maintain-your-spring-boot-app" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2015-05-05:2109</id>
+    <updated>2015-05-05T06:52:00Z</updated>
+    <content type="html">&lt;p&gt;Speaker: Greg Turnquist&lt;/p&gt;
+&lt;p&gt; So you have decided to build an application using Spring Boot? Sooner or later, something will go wrong. It does not matter how experienced we are. How will Spring Boot help us figure out what went wrong and fix things? This talk introduces lots of tools to help us debug and manage &amp;quot;bootiful&amp;quot; apps. You will learn how to use Boot's autoconfiguration report, override Boot's settings &amp;amp; beans, create custom metrics/health checks/app info, and create custom JMX info &amp;amp; custom CRaSH commands.&lt;/p&gt;&lt;p&gt;Tuesday, May 28th, 2015 2:00PM GMT (London GMT) &lt;a href="http://connect.pivotal.io/OSS_Webinar_7AMDebugandMaintainyourSpringBootApp_Register.html"&gt;Register&lt;/a&gt;&lt;br/&gt;&lt;p&gt;Tuesday, May 28th, 2015 10:00AM PDT (San Francisco GMT-07:00) &lt;a href="http://connect.pivotal.io/OSS_Webinar_10AMDebugandMaintainyourSpringBootApp_Register.html"&gt;Register&lt;/a&gt;&lt;/p&gt;&lt;br/&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>SpringOne2GX 2014 Replay: Performance Testing Crash Course</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/05/05/springone2gx-2014-replay-performance-testing-crash-course" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2015-05-05:2108</id>
+    <updated>2015-05-05T06:51:00Z</updated>
+    <content type="html">&lt;p&gt;Recorded at SpringOne2GX 2014.&lt;/p&gt;
+&lt;p&gt; Speaker: Dustin Whittle &lt;/p&gt;
+&lt;p&gt;Applied Spring Track &lt;/p&gt;
+&lt;p&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/performance-testing-crashcourse"&gt;http://www.slideshare.net/SpringCentral/performance-testing-crashcourse&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;The performance of your application affects your business more than you might think. Top engineering organizations think of performance not as a nice-to-have, but as a crucial feature of their product. Those organizations understand that performance has a direct impact on user experience and, ultimately, their bottom line. Unfortunately, most engineering teams do not regularly test the performance and scalability of their infrastructure. Dustin Whittle shares the latest performance testing tools and insights into why your team should add performance testing to the development process. Learn how to evaluate performance and scalability on the server-side and the client-side with tools like Siege, Bees with Machine Guns, Google PageSpeed, WBench, and more. Take back an understanding of how to automate performance and load testing and evaluate the impact it has on performance and your business.&lt;/p&gt;
+&lt;p&gt;&#xD;
+  &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/jE5sN79lZic" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&#xD;
+&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Webinar: Improving your (legacy) Application with Spring</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/05/05/webinar-improving-your-legacy-application-with-spring" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2015-05-05:2107</id>
+    <updated>2015-05-05T06:46:00Z</updated>
+    <content type="html">&lt;p&gt;Speakers: Marten Deinum&lt;/p&gt;
+&lt;p&gt;Spring has been around since the release of “J2EE Design and Development” in 2002. Spring and Java have evolved quite a bit since that time. In those years a lot of applications have been developed. All those &amp;quot;legacy&amp;quot; applications that are around have proven their value and that is why they lasted. In this session we will explore how we can improve our legacy applications by doing some refactoring or redesign (component based development) but also by introducing (newer) Spring IO technologies.&lt;/p&gt;&lt;p&gt;Tuesday, May 12th, 2015 2:00PM GMT (London GMT) &lt;a href="http://connect.pivotal.io/OSS_Webinar_7AMImprovingyourlegacyApplicationwithSpring_Register.html"&gt;Register&lt;/a&gt;&lt;br/&gt;&lt;p&gt;Tuesday, May 12th, 2015 10:00AM PDT (San Francisco GMT-07:00) &lt;a href="http://connect.pivotal.io/OSS_Webinar_10AMImprovingyourlegacyApplicationwithSpring_Register.html"&gt;Register&lt;/a&gt;&lt;/p&gt;&lt;br/&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring for Apache Hadoop 2.2 M1 released</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/04/30/spring-for-apache-hadoop-2-2-m1-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Thomas Risberg</name>
+    </author>
+    <id>tag:spring.io,2015-04-30:2105</id>
+    <updated>2015-04-30T17:04:00Z</updated>
+    <content type="html">&lt;p&gt;We are pleased to announce the Spring for Apache Hadoop 2.2 M1 milestone releases.&lt;/p&gt;&lt;p&gt;We continue to provide version specific artifacts with their respective transitive dependencies in the Spring IO milestone repository:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;2.2.0.M1 (default - Apache Hadoop stable 2.6.0)&lt;/li&gt;
+  &lt;li&gt;2.2.0.M1-phd21 (Pivotal HD 2.1)&lt;/li&gt;
+  &lt;li&gt;2.2.0.M1-phd30 (Pivotal HD 3.0)&lt;/li&gt;
+  &lt;li&gt;2.2.0.M1-cdh5 (Cloudera CDH5)&lt;/li&gt;
+  &lt;li&gt;2.2.0.M1-hdp22 (Hortonworks HDP 2.2)&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;The most important enhancements in the Spring for Apache Hadoop 2.2 M1 release: &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Remove support for running with JDK 6, Java 7 or later is now required&lt;/li&gt;
+  &lt;li&gt;Improvements to the HDFS writer to support syncable writes and a new timeout option&lt;/li&gt;
+  &lt;li&gt;Add support for Pivotal HD 3.0&lt;/li&gt;
+  &lt;li&gt;Update CLoudera CDH 5 to use version 5.3.3&lt;/li&gt;
+  &lt;li&gt;Update Hortonworks HDP 2.2 version to 2.2.4.0&lt;/li&gt;
+  &lt;li&gt;Update Kite SDK to version 1.0&lt;/li&gt;
+  &lt;li&gt;Update Spring project versions to the latest&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;For the next milestones and releases we are planning on working on the following features:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Better Java Configuration support.&lt;/li&gt;
+  &lt;li&gt;Add better support for for Hiveserver2 including a batch tasklet.&lt;/li&gt;
+  &lt;li&gt;Basic support for a batch tasklet to run Spark apps.&lt;/li&gt;
+  &lt;li&gt;Better boot support throughout the different modules.&lt;/li&gt;
+  &lt;li&gt;Improved security support (i.e. the YARN Boot CLI interaction, etc).&lt;/li&gt;
+  &lt;li&gt;Enhancements to have seamless integration with spring-cloud components (i.e. spring-cloud-cluster).&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Please provide feedback so we can prioritize the work on these features and any additional feature requests. You can use JIRA issues or GitHub issues (see project page for links).&lt;/p&gt;&lt;p&gt;The project page is at - &lt;a href="http://projects.spring.io/spring-hadoop/"&gt;http://projects.spring.io/spring-hadoop/&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring XD 1.2 M1 and 1.1.2 released</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/04/30/spring-xd-1-2-m1-and-1-1-2-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Mark Pollack</name>
+    </author>
+    <id>tag:spring.io,2015-04-30:2104</id>
+    <updated>2015-04-30T16:12:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the Spring XD team, I am very pleased to announce the first milestone release of Spring XD 1.2 and the 1.1.2 maintenance release.&lt;/p&gt;&lt;p&gt;Download Links:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;1.1.2.RELEASE: &lt;a href="http://repo.spring.io/release/org/springframework/xd/spring-xd/1.1.2.RELEASE/spring-xd-1.1.2.RELEASE-dist.zip"&gt;zip&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;1.2.0.M1: &lt;a href="http://repo.spring.io/libs-milestone/org/springframework/xd/spring-xd/1.2.0.M1/spring-xd-1.2.0.M1-dist.zip"&gt;zip&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;You can also install using &lt;a href="http://docs.spring.io/spring-xd/docs/1.2.0.M1/reference/html/#osx-homebrew-installation"&gt;brew&lt;/a&gt; and &lt;a href="http://docs.spring.io/spring-xd/docs/1.2.0.M1/reference/html/#redhatcentos-installation"&gt;rpm&lt;/a&gt;&lt;/p&gt;&lt;p&gt;The full list of &lt;a href="https://jira.spring.io/secure/ReleaseNote.jspa?projectId=11401&amp;version=14989"&gt;issues fixed for 1.1.2&lt;/a&gt; is available in JIRA. Of note the 1.1.2 release provides PHD 3.0 support.&lt;/p&gt;&lt;p&gt;The 1.2 M1 release includes bug fixes as well and several new features and enhancements:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://docs.spring.io/spring-xd/docs/1.2.0.M1/reference/html/#using-hadoop"&gt;PHD 3.0 support&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://docs.spring.io/spring-xd/docs/1.2.0.M1/reference/html/#mongodb-source"&gt;MongoDB Source&lt;/a&gt;, a &lt;a href="https://github.com/spring-projects/spring-xd/commits?author=agandhinit"&gt;community contribution&lt;/a&gt; from Abhinav Gandhi&lt;/li&gt;
+  &lt;li&gt;Module registry backed by HDFS&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://docs.spring.io/spring-xd/docs/1.2.0.M1/reference/html/#_running_gpload_as_a_batch_job_code_gpload_code"&gt;Greenplum gpload&lt;/a&gt; as provided batch job. This allows for efficient loading from CSV files into Greenplum DB/HAWQ.&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/spring-projects/spring-xd-modules/tree/master/gpfdist"&gt;gpfdist sink&lt;/a&gt; that adheres to the gpfdist protocol. This allows for streaming data in parallel into Greenplum DB/HAWQ.&lt;/li&gt;
+  &lt;li&gt;Zookeeper distributed queue based deployment for streams and jobs.&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://docs.spring.io/spring-xd/docs/1.2.0.M1/reference/html/#error-handling-message-delivery-failures"&gt;Improved error handling for RabbitMQ&lt;/a&gt; with Dead Letter Queue and durable queue support for pub/sub named channels (tap: and topic:)&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://docs.spring.io/spring-xd/docs/1.2.0.M1/reference/html/#_running_sqoop_as_a_batch_job_code_sqoop_code"&gt;Sqoop integration improvements&lt;/a&gt;, support for merge and codegen commands as well as running against a secured Hadoop cluster.&lt;/li&gt;
+  &lt;li&gt;Kafka message bus improvements, customized partition count for topics created by the message bus. (module.[modulename].producer.minParitionCount)&lt;/li&gt;
+  &lt;li&gt;Improved performance characteristics for &lt;a href="https://jira.spring.io/browse/XD-2911"&gt;TupleBuilder&lt;/a&gt; and the &lt;a href="https://jira.spring.io/browse/XD-2815"&gt;JDBC to HDFS&lt;/a&gt; job&lt;/li&gt;
+  &lt;li&gt;Spark Streaming integration improvements, reliable receiver support and bug fixes.&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;The full list of &lt;a href="https://jira.spring.io/secure/ReleaseNote.jspa?projectId=11401&amp;version=14898"&gt;issues fixed for 1.2 M1&lt;/a&gt; is available in JIRA.&lt;/p&gt;&lt;p&gt;Of note for the next release of Spring XD 1.2 RC1 we will be including support for&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Kafka message bus &lt;a href="http://bit.ly/1Q3yc6T"&gt;improvements&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Cassandra sink&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/mbogoevici/elasticsearch-sink"&gt;Elastic search sink&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Improved HA support for RabbitMQ&lt;/li&gt;
+  &lt;li&gt;Incremental data import for JDBC to HDFS job&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;The Beta version of Spring Flo for XD - an HTML5 based canvas for creating data pipelines, analytics dashboards, and monitoring - will be released along with XD 1.2 GA. For a sneak peak at the work in progress, watch this screencast: &lt;p&gt;&lt;/p&gt;&lt;p&gt;&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/17pLpcdIu_M" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;br/&gt;&lt;/p&gt;&lt;/p&gt;&lt;p&gt;Feedback is very important, so please get in touch with questions and comments via&lt;br/&gt;* &lt;a href="http://stackoverflow.com/questions/tagged/spring-xd"&gt;StackOverflow&lt;/a&gt; &lt;code&gt;spring-xd&lt;/code&gt; tag&lt;br/&gt;* &lt;a href="https://jira.spring.io/browse/XD/?selectedTab=com.atlassian.jira.jira-projects-plugin:summary-panel"&gt;Spring JIRA&lt;/a&gt; or &lt;a href="https://github.com/spring-projects/spring-xd/issues"&gt;GitHub Issues&lt;/a&gt;&lt;/p&gt;&lt;h1&gt;&lt;a href="#springone-2gx-2015-is-around-the-corner" class="anchor" name="springone-2gx-2015-is-around-the-corner"&gt;&lt;/a&gt;SpringOne 2GX 2015 is around the corner!&lt;/h1&gt;&lt;p&gt;Book your place at &lt;a href="http://www.springone2gx.com"&gt;SpringOne2GX in Washington, DC soon&lt;/a&gt;. Super Early Bird Price expires June 12th! It&amp;rsquo;s simply the best opportunity to find out first hand all that&amp;rsquo;s going on and to provide direct feedback. Expect a number of significant new announcements this year. Check recent blog posts to see what I mean and there is more to come!&lt;/p&gt;&lt;h1&gt;&lt;a href="#discounts" class="anchor" name="discounts"&gt;&lt;/a&gt;Discounts&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;The Super Early Bird price tier ($300 discount) expires June 12th. The Early Bird price tier (June 13th - August 14th) is discounted $150.&lt;/li&gt;
+  &lt;li&gt;Register 4 and get the 5th pass free. Contact us with the names of your first 4 registrants for your complimentary pass code (conference admission only).&lt;/li&gt;
+  &lt;li&gt;Alumni, contact us for your discount code ($150 off any option).&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring LDAP 2.0.3 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/04/30/spring-ldap-2-0-3-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Rob Winch</name>
+    </author>
+    <id>tag:spring.io,2015-04-29:2103</id>
+    <updated>2015-04-30T14:21:26Z</updated>
+    <content type="html">&lt;p&gt;I’m pleased to announce the release of Spring LDAP 2.0.3.RELEASE. The highlights of this release include:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="https://jira.spring.io/browse/LDAP-330"&gt;LDAP-330&lt;/a&gt; - Support for Spring Data Commons 1.10 (Spring Data Fowler)&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://jira.spring.io/browse/LDAP-304"&gt;LDAP-304&lt;/a&gt; - NullPointerException DirContextAdapter.collectModifications&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://jira.spring.io/browse/LDAP-314"&gt;LDAP-314&lt;/a&gt; - repository methods ignoring @Entity(base=)&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://jira.spring.io/browse/LDAP-317"&gt;LDAP-317&lt;/a&gt; - ldap:context-source/url not parsing properties #{}&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://jira.spring.io/browse/LDAP-321"&gt;LDAP-321&lt;/a&gt; - IllegalStateException: No value for key PoolingContextSource&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;For additional information on the release, refer to the &lt;a href="https://jira.spring.io/secure/ReleaseNote.jspa?projectId=10071&amp;version=14532"&gt;changelog&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;a href="http://projects.spring.io/spring-ldap/"&gt;Project Site&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-ldap/docs/2.0.3.RELEASE/reference/"&gt;Reference&lt;/a&gt; | &lt;a href="https://jira.spring.io/browse/LDAP"&gt;Issues&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>This Week in Spring - April 29th, 2015</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/04/28/this-week-in-spring-april-29th-2015" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2015-04-28:2099</id>
+    <updated>2015-04-28T22:30:00Z</updated>
+    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! This week, I&amp;rsquo;m in Barcelona, Spain for the &lt;a href="http://springio.net"&gt;Spring I/O conference&lt;/a&gt;. &lt;/p&gt;&lt;p&gt;&lt;img  width="400" src ="https://pbs.twimg.com/media/CDs-ekvVEAAwKdH.jpg" /&gt;&lt;img  width="400" src ="https://pbs.twimg.com/media/CDs-eqHVAAAoizY.jpg"/&gt;&lt;br/&gt;&lt;div&gt;(can you spot &lt;a href="http://spring.io/team"&gt;your favorite Spring team&lt;/a&gt; or community member?)&lt;/div&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Social lead Craig Walls just announced the &lt;a href="https://spring.io/blog/2015/04/27/spring-social-facebook-2-0-1-released"&gt;release of Spring Social Facebook 2.0.1&lt;/a&gt;, the first maintenance release in the Spring Social Facebook 2.0 line.&lt;/li&gt;
+  &lt;li&gt;the good Dr. Syer just published a &lt;a href="https://spring.io/blog/2015/04/27/binding-to-data-services-with-spring-boot-in-cloud-foundry"&gt;blog on different ways to bind services in Cloud Foundry&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Security lead Rob Winch &lt;a href="https://spring.io/blog/2015/04/23/spring-security-4-0-1-released"&gt;just released Spring Security 4.0.1&lt;/a&gt;, the first maintenance release in the Spring Security 4.0 line&lt;/li&gt;
+  &lt;li&gt;This Week&amp;rsquo;s SpringOne2GX Replays are out! Marius Bogoevici shows us how to &lt;a href="http://spring.io/blog/2015/04/28/springone2gx-2014-replay-building-highly-modular-and-testable-business-systems-with-spring-integration"&gt;Build highly modular and testable business systems with Spring Integration&lt;/a&gt;, Brian Cavalier talks about &lt;a href="https://spring.io/blog/2015/04/28/springone2gx-2014-replay-efficient-client-server-communication-with-differential-synchronization-and-json-patch"&gt;Efficient Client-Server Communication with Differential Synchronization and JSON Patch&lt;/a&gt; and Topher Bullock and Will Tran review &lt;a href="http://spring.io/blog/2015/04/28/springone2gx-2014-replay-server-side-javascript-with-nashorn-and-spring"&gt;Server-side JavaScript with Nashorn and Spring&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Were you at JAX London last week? No? Then you missed &lt;em&gt;Domain Driven Design&lt;/em&gt; author &lt;a href="https://jaxenter.de/jax-2015-keynote-eric-evans-ddd-microservices-18605"&gt;Eric Evan&amp;rsquo;s talk on bounded contexts with microservices&lt;/a&gt;. Check it out!&lt;/li&gt;
+  &lt;li&gt;Zurelsoft&amp;rsquo;s Sanjay Shah put together a decent, &lt;a href="http://blog.zurelsoft.com/blog/what-will-get-you-to-adopt-spring-boot-for-spring-based-applications"&gt;high-level pitch for Spring Boot&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://twitter.com/ewolff"&gt;Eberhard Wolff&lt;/a&gt;&amp;rsquo;s just &lt;a href="https://twitter.com/ewolff/status/592673619496538114"&gt;perfectly expressed&lt;/a&gt; the inertia behind monolithic applications: &amp;ldquo;Monolithic gravity: A large system will attract new features and changes. In the process it will become larger and eventually collapse.&amp;rdquo;&lt;/li&gt;
+  &lt;li&gt;My pal Geertjan, who works on Oracle&amp;rsquo;s Netbeans platform, just introduced a very cool contribution from &lt;a href="https://twitter.com/mehieltwit"&gt;Aggelos Karalias&lt;/a&gt; that integrates &lt;a href="https://blogs.oracle.com/geertjan/entry/new_spring_boot_integration_for"&gt;autocompletion support for Spring Boot&amp;rsquo;s metadata about configuration properties&lt;/a&gt;. This support is similar to what&amp;rsquo;s available in the latest STS and IntelliJ IDEA 14.1 releases. Very cool!&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://infoq.com"&gt;InfoQ&lt;/a&gt;&amp;rsquo;s just published a &lt;a href="http://www.infoq.com/news/2015/04/spring-security-4"&gt;nice post on Spring Security 4&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Apache Geode (the core of Pivotal&amp;rsquo;s Gemfire distributed datagrid technology) has just passed a vote &lt;a href="https://www.mail-archive.com/general@incubator.apache.org/msg48427.html"&gt;to be an incubator project in the Apache Software Foundation&lt;/a&gt;! Congratulations!&lt;/li&gt;
+  &lt;li&gt;Our pal &lt;a href="http://twitter.com/david_welch"&gt;David Welch&lt;/a&gt; just shared a &lt;a href="https://github.com/Lemniscate/spring-metrics-jdbc"&gt;JDBC-backed &lt;code&gt;MetricRepository&lt;/code&gt;&lt;/a&gt; that looks mighty useful! Check it out!&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>SpringOne2GX 2014 Replay: Building highly modular and testable business systems with Spring Integration</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/04/28/springone2gx-2014-replay-building-highly-modular-and-testable-business-systems-with-spring-integration" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2015-04-29:2100</id>
+    <updated>2015-04-28T22:29:00Z</updated>
+    <content type="html">&lt;p&gt;Recorded at SpringOne2GX 2014. &lt;/p&gt;
+&lt;p&gt;Speaker: Marius Bogoevici &lt;/p&gt;
+&lt;p&gt;Data / Integration Track &lt;/p&gt;
+&lt;p&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/building-modular-business-applications"&gt;http://www.slideshare.net/SpringCentral/building-modular-business-applications&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;By its very nature, Spring Integration allows for building sophisticated business systems that aggregate multiple sources of data and orchestrate a complex set of business services. But complex functionality doesn’t have to translate into complex design. In fact, through its emphasis on low coupling, Spring Integration is fostering a highly modular application design, with huge benefits in terms of understandability, reusability and testability. In this session you will learn how to design your Spring Integration applications in a modular fashion, by grouping together logically-related components into subsystems that interact with each other, a core concept of Spring XD, but can be successfully applied in any application. Besides the benefit of a heightened level of abstraction, this approach has a number of other important benefits as well: first, such subsystems are reusable, and, secondly, and equally important, they can be tested in isolation. So, after a brief discussion on reusability, the presentation will focus on how to unit test such subsystems and even complete Spring Integration applications, with the ultimate goal of applying business-centric techniques such as Behaviour-Driven Development. &lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;p&gt;&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/KA2hFQQJE-4" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>SpringOne2GX 2014 Replay: Server-side JavaScript with Nashorn and Spring</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/04/28/springone2gx-2014-replay-server-side-javascript-with-nashorn-and-spring" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2015-04-29:2101</id>
+    <updated>2015-04-28T22:28:00Z</updated>
+    <content type="html">&lt;p&gt;Recorded at SpringOne2GX 2014.&lt;/p&gt;
+&lt;p&gt; Speakers: Topher Bullock, Will Tran  &lt;/p&gt;
+&lt;p&gt;Web / JavaScript Track&lt;/p&gt;
+&lt;p&gt; Slides: &lt;a href="http://www.slideshare.net/SpringCentral/serverside-javascript-with-nashorn-and-spring"&gt;http://www.slideshare.net/SpringCentral/serverside-javascript-with-nashorn-and-spring &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To stay competitive, enterprises are scrambling to find ways to rapidly deliver applications that are a pleasure to use on a wide range of devices. Microservice architectures, continuous delivery and the cloud can give businesses the agility to transform into great software businesses, but how do you actually turn those buzzwords into reality? Here we present our take on a solution. Using Spring Boot, Java 8’s Nashorn JavaScript engine, and Cloud Foundry, we’ve created a framework that makes it really easy to deliver API’s to support the rich and highly contextualized experiences that users expect in world class applications. We’d like to share with you what we’ve built, and what we’ve learned along the way.&lt;/p&gt;
+&lt;p&gt;&#xD;
+  &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/ceCZte7piJE" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&#xD;
+&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>SpringOne2GX 2014 Replay: Efficient Client-Server Communication with Differential Synchronization and JSON Patch</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/04/28/springone2gx-2014-replay-efficient-client-server-communication-with-differential-synchronization-and-json-patch" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2015-04-29:2102</id>
+    <updated>2015-04-28T22:27:00Z</updated>
+    <content type="html">&lt;p&gt;Recorded at SpringOne2GX 2014.&lt;/p&gt;
+&lt;p&gt;Speaker: Brian Cavalier &lt;/p&gt;
+&lt;p&gt;Web / JavaScript Track &lt;/p&gt;
+&lt;p&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/efficient-clientserver-communication-with-differential-synchronization-and-json-patch"&gt;http://www.slideshare.net/SpringCentral/efficient-clientserver-communication-with-differential-synchronization-and-json-patch&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The world of client-server has changed. The traditional application of REST is no longer the best fit. We're depolying applications into a world where users expect responsive UIs, on all their devices, even while disconnected. We're deploying into a world where connection latency, mobile radio usage and battery life have become primary concerns. Differential Synchronization (DS) is an algorithm that syncs data across N parties, even in the face of dropped connections, offline devices, etc. It makes more efficient use of connections by batching and sending only changes, in both directions, from client to server and from server to client. We’ll look at how it can be used with JSON Patch to synchronize application data between clients and servers over HTTP Patch, WebSocket, and STOMP, and how it can be integrated into the Spring ecosystem.&lt;/p&gt;
+&lt;p&gt;&#xD;
+  &lt;iframe width="560" height="315" src="http://www.slideshare.net/SpringCentral/efficient-clientserver-communication-with-differential-synchronization-and-json-patch" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&#xD;
+&lt;/p&gt;</content>
+  </entry>
+</feed>
+

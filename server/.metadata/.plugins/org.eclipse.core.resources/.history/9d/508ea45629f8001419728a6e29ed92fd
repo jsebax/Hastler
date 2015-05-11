@@ -54,10 +54,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-			    <configuration>
-			        <source>1.7</source>
-			        <target>1.7</target>
-			    </configuration>
             </plugin>
             <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
@@ -73,5 +69,4 @@
         </plugins>
     </build>
 
-    <packaging>war</packaging>
 </project>
