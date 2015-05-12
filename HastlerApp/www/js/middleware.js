@@ -11,6 +11,7 @@ ENTIDADES:
 		-id;
 		-hastly;
 		-name;
+		-lastName;
 		-telephone;
 		-email;
 		-image;

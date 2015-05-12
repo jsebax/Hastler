@@ -5,42 +5,7 @@
     
     <ion-content class="padding">
 
-    	<div class="list card">
-            <div class="item item-divider">
-                Name
-            </div>
-            <div class="item item-text-wrap">
-                {{data.name}}
-                <input ng-model="dataName" type="text" placeholder="New name"/>
-            </div>
-            <div class="item item-divider">
-                Lastname
-            </div>
-            <div class="item item-text-wrap">
-                {{data.lastname}}
-                <input ng-model="dataLastname" type="text" placeholder="New lastname"/>
-            </div>
-            <div class="item item-divider">
-                Hastly
-            </div>
-            <div class="item item-text-wrap">
-                {{data.hastly}}               
-            </div>
-            <div class="item item-divider">
-                Email
-            </div>
-            <div class="item item-text-wrap">
-                {{data.email}}
-            </div>
-            <div class="item item-divider">
-                Phone
-            </div>
-            <div class="item item-text-wrap">
-                {{data.tel}}
-                <input ng-model="dataTel" type="text" placeholder="New phone"/>
-            </div>
-        </div>
-        <button class="button button-block button-positive" ng-click="updateRecords(dataName, dataLastname, dataTel);">Save Changes</button>
+        <button class="button button-block button-positive"ng-click="toProfile()" href="/profile">Profile</button>
         <button class="button button-block button-positive" ng-click="toCreate()">My Services</button>
         <button class="button button-block button-assertive" ng-click="logout()">Log out</button>
 

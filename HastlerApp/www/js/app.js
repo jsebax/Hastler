@@ -5,11 +5,11 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 
-var firebaseApp = angular.module('starter', ['ionic', 'firebase']);
+var app = angular.module('starter', ['ionic', 'firebase']);
 var url = "https://hastler.firebaseio.com/";
 var fb = new Firebase(url);
 
-firebaseApp.run(function($ionicPlatform) {
+app.run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
@@ -23,7 +23,7 @@ firebaseApp.run(function($ionicPlatform) {
     });
 });
 
-firebaseApp.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
     $stateProvider
 
     .state('login', {
@@ -99,7 +99,17 @@ firebaseApp.config(function($stateProvider, $urlRouterProvider, $ionicConfigProv
     $urlRouterProvider.otherwise('/login');
 });
 
-firebaseApp.controller("LoginController", function($scope, $firebaseAuth, $firebaseObject, $location, $ionicPopup) {
+app.controller('MainCtrl', function($scope, $state, $ionicSideMenuDelegate) { 
+    $scope.toggleLeft = function() {
+        $ionicSideMenuDelegate.toggleLeft();
+    };
+  
+    $scope.changeState = function(page) {
+        $state.go(page);
+    }
+})
+
+app.controller("LoginController", function($scope, $firebaseAuth, $firebaseObject, $location, $ionicPopup) {
     var fbAuth = $firebaseAuth(fb);
     $scope.login = function(email, password) {
         fbAuth.$authWithPassword({
@@ -117,18 +127,18 @@ firebaseApp.controller("LoginController", function($scope, $firebaseAuth, $fireb
     };
 });
 
-firebaseApp.controller("RegisterController", function($scope, $firebaseAuth, $firebaseObject, $location, $ionicPopup) {
+app.controller("RegisterController", function($scope, $firebaseAuth, $firebaseObject, $location, $ionicPopup) {
     $scope.register = function(email, password, rePassword) {
         var fbAuth = $firebaseAuth(fb);
        
         if ( password != rePassword ) {
             $ionicPopup.alert({
-              title: 'Passwords don\'t match',              
+              title: 'Passwords don\'t match',
             }).then(function(res) {
               console.log('Test Alert Box');
             });
 
-        } else {           
+        } else {
         
             fbAuth.$createUser({
                 email: email,
@@ -190,7 +200,7 @@ firebaseApp.controller("RegisterController", function($scope, $firebaseAuth, $fi
     };
 });
 
-firebaseApp.controller("ProfileController", function($scope, $firebaseObject, $ionicPopup, $location) {
+app.controller("ProfileController", function($scope, $firebaseObject, $ionicPopup, $location) {
     var auth = fb.getAuth();
     var obj = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
     var object = $firebaseObject(obj);
@@ -199,6 +209,14 @@ firebaseApp.controller("ProfileController", function($scope, $firebaseObject, $i
         object.$bindTo($scope, "data");
         }
     };
+
+     $scope.toggleLeft = function() {
+        $ionicSideMenuDelegate.toggleLeft();
+    };
+  
+    $scope.changeState = function(page) {
+        $state.go(page);
+    }
 
     $scope.logout = function() {
         var firebaseAuth = fb.getAuth();
@@ -219,6 +237,10 @@ firebaseApp.controller("ProfileController", function($scope, $firebaseObject, $i
 
     $scope.toCreate = function() {
         $location.path('/tab/serviceForm');
+    };
+
+    $scope.toProfile = function() {
+        $location.path('/tab/profile');
     };
 
     $scope.updateRecords = function(name, lastname, tel) {
@@ -255,7 +277,7 @@ firebaseApp.controller("ProfileController", function($scope, $firebaseObject, $i
     };
 });
 
-firebaseApp.controller("ServicesController", function($scope, $firebaseObject, $ionicPopup, $location) {
+app.controller("ServicesController", function($scope, $firebaseObject, $ionicPopup, $location) {
     var auth = fb.getAuth();
     var obj = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
     var object = $firebaseObject(obj);
@@ -267,7 +289,7 @@ firebaseApp.controller("ServicesController", function($scope, $firebaseObject, $
   
 });
 
-firebaseApp.controller("ServiceFormController", function($scope, $firebaseObject, $ionicPopup, $location) {
+app.controller("ServiceFormController", function($scope, $firebaseObject, $ionicPopup, $location) {
     var auth = fb.getAuth();
     var obj1 = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
     var obj2 = new Firebase("https://hastler.firebaseio.com/services/");
@@ -313,7 +335,7 @@ firebaseApp.controller("ServiceFormController", function($scope, $firebaseObject
     ];
 });
 
-firebaseApp.controller('MyServicesController', function($scope, $firebaseObject, $ionicPopup, $location) {
+app.controller('MyServicesController', function($scope, $firebaseObject, $ionicPopup, $location) {
     var auth = fb.getAuth();
     var obj1 = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
     var obj2 = new Firebase("https://hastler.firebaseio.com/services/");
@@ -346,7 +368,7 @@ firebaseApp.controller('MyServicesController', function($scope, $firebaseObject,
     }
 });
 
-firebaseApp.controller('searchController', function($scope, $firebaseObject, $ionicPopup, $location) {
+app.controller('searchController', function($scope, $firebaseObject, $ionicPopup, $location) {
     var auth = fb.getAuth();
     var obj1 = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
     var obj2 = new Firebase("https://hastler.firebaseio.com/services/");
