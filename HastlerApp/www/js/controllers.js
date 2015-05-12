@@ -41,10 +41,6 @@ firebaseApp.controller("LoginController", function($scope, $firebaseAuth, $fireb
         });
     };
 
-    $scope.toRegister = function() {
-        $location.path("/register");
-    };
-
     $scope.logout = function() {
         var firebaseAuth = fb.getAuth();
         var obj = new Firebase("https://hastler.firebaseio.com/users/" + firebaseAuth.uid);
@@ -236,8 +232,9 @@ firebaseApp.controller('MyServicesController', function($scope, $firebaseObject,
     var object2 = $firebaseObject(obj2);
     $scope.serviceList = [];
     $scope.myServiceList = [];
+
     $scope.toSearch = function() {
-        $location.path("/tab/searchService");
+        $location.path("/tab/search");
     };
 
     $scope.list = function() {

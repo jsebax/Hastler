@@ -20,12 +20,10 @@ firebaseApp.run(function($ionicPlatform) {
             // org.apache.cordova.statusbar required
             StatusBar.styleDefault();
         }
-        fb = new Firebase(url);
     });
 });
 
 firebaseApp.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
-    $ionicConfigProvider.tabs.position('bottom');
     $stateProvider
 
     .state('login', {
@@ -56,8 +54,8 @@ firebaseApp.config(function($stateProvider, $urlRouterProvider, $ionicConfigProv
         }
     })
 
-    .state('tabs.searchService', {
-        url: '/searchService',
+    .state('tabs.search', {
+        url: '/search',
         views: {
             'search-tab': {
                 templateUrl: 'templates/search.html',
@@ -86,8 +84,8 @@ firebaseApp.config(function($stateProvider, $urlRouterProvider, $ionicConfigProv
         }
     })
 
-    .state('tabs.account', {
-        url: '/account',
+    .state('tabs.menu', {
+        url: '/menu',
         views: {
             'menu-tab': {
                 templateUrl: 'templates/menu.html',
@@ -117,10 +115,6 @@ firebaseApp.controller("LoginController", function($scope, $firebaseAuth, $fireb
             });
         });
     };
-
-    $scope.toRegister = function() {
-        $location.path("/register");
-    };    
 });
 
 firebaseApp.controller("RegisterController", function($scope, $firebaseAuth, $firebaseObject, $location, $ionicPopup) {
