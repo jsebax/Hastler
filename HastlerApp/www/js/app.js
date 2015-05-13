@@ -84,6 +84,16 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
         }
     })
 
+    .state('tabs.profile', {
+        url: '/profile',
+        views: {
+            'menu-tab': {
+                templateUrl: 'templates/profile.html',
+                controller: 'ProfileController'
+            }
+        }
+    })
+
     .state('tabs.menu', {
         url: '/menu',
         views: {
@@ -200,7 +210,7 @@ app.controller("RegisterController", function($scope, $firebaseAuth, $firebaseOb
     };
 });
 
-app.controller("ProfileController", function($scope, $firebaseObject, $ionicPopup, $location) {
+app.controller("ProfileController", function($scope, $firebaseObject, $ionicPopup, $location, myMiddleware) {
     var auth = fb.getAuth();
     var obj = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
     var object = $firebaseObject(obj);
@@ -209,6 +219,8 @@ app.controller("ProfileController", function($scope, $firebaseObject, $ionicPopu
         object.$bindTo($scope, "data");
         }
     };
+
+    myMiddleware.x();
 
      $scope.toggleLeft = function() {
         $ionicSideMenuDelegate.toggleLeft();
@@ -303,6 +315,7 @@ app.controller("ServiceFormController", function($scope, $firebaseObject, $ionic
     };
 
     $scope.create = function(title, category) {
+
         if($scope.data.hasOwnProperty("services") !== true) {
             $scope.data.services = [];
         }
