@@ -1,13 +1,14 @@
 package business;
 
+import DBServices.MongoPersonRepository;
 import entity.Person;
 import repositories.PersonRepository;
 import repositories.Repository;
 
 public class EditPerson implements UnitOfWork {
 
-	PersonRepository personRepository;
-	Person person;
+	private PersonRepository personRepository;
+	private Person person;
 	
 	public EditPerson() {
 		super();
@@ -50,10 +51,12 @@ public class EditPerson implements UnitOfWork {
 
 	@Override
 	public void SetRepository(Repository repository) {
+		personRepository = new MongoPersonRepository();
 		personRepository = (PersonRepository) repository;
 	}
 
 	public void setPerson(Person person) {
+		this.person = new Person();
 		this.person = person;
 	}
 

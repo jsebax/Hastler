@@ -3,14 +3,15 @@ package business;
 import java.util.Collections;
 import java.util.List;
 
+import DBServices.MongoServiRepository;
 import entity.Servi;
 import repositories.Repository;
 import repositories.ServiRepository;
 
 public class PostComment implements UnitOfWork {
 
-	ServiRepository serviRepository;
-	Servi servi;
+	private ServiRepository serviRepository;
+	private Servi servi;
 	
 	public PostComment() {
 		super();
@@ -33,10 +34,12 @@ public class PostComment implements UnitOfWork {
 
 	@Override
 	public void SetRepository(Repository repository) {
+		serviRepository = new MongoServiRepository();
 		serviRepository = (ServiRepository) repository;
 	}
 
 	public void setComment(Servi sevicio) {
+		servi = new Servi();
 		servi = sevicio;
 	}
 

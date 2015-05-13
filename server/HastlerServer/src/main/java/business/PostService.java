@@ -2,6 +2,7 @@ package business;
 
 import java.util.UUID;
 
+import DBServices.MongoServiRepository;
 import entity.Servi;
 import repositories.Repository;
 import repositories.ServiRepository;
@@ -9,9 +10,10 @@ import repositories.ServiRepository;
 public class PostService implements UnitOfWork {
 
 	private ServiRepository serviMongo;
-	Servi servicio;
+	private Servi servicio;
 	
 	public void setServicioR(Servi servicioR) {
+		servicio = new Servi();
 		this.servicio = servicioR;
 	}
 
@@ -32,6 +34,7 @@ public class PostService implements UnitOfWork {
 
 	@Override
 	public void SetRepository(Repository repository) {
+		this.serviMongo = new MongoServiRepository();
 		this.serviMongo = (ServiRepository) serviMongo;
 	}
 

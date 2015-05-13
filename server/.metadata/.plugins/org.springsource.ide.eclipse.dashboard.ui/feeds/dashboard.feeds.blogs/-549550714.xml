@@ -5,7 +5,31 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2015-05-11T18:39:11Z</updated>
+  <updated>2015-05-13T00:13:26Z</updated>
+  <entry>
+    <title>This Week in Spring - May 12, 2015</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/05/13/this-week-in-spring-may-12-2015" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2015-05-13:2119</id>
+    <updated>2015-05-13T00:13:26Z</updated>
+    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! This week, I&amp;rsquo;m in Chicago, IL, for &lt;a href="http://gotocon.com/chicago-2015/"&gt;the spectacular GOTO conference, Chicago edition&lt;/a&gt;. &lt;a href="http://twitter.com/starbuxman"&gt;If you&amp;rsquo;re in the Chicago area, ping me on Twitter (@starbuxman)&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Now, without further ado.. &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Spring Tool Suite ninja Kris De Volder &lt;a href="http://spring.io/blog/2015/05/11/new-in-sts-3-7-0-spring-boot-yaml-editor"&gt;just announced the new support for editing &lt;code&gt;.yml&lt;/code&gt; files in STS&lt;/a&gt; - this is particularly awesome if you&amp;rsquo;re using Spring Boot!&lt;/li&gt;
+  &lt;li&gt;Spring IO lead and all-around mad-scientist Andy Wilkinson just &lt;a href="http://spring.io/blog/2015/05/11/gradle-dependency-management-plugin-0-5-1-released"&gt;released the Gradle dependency management plugin 0.5.1.RELEASE&lt;/a&gt;. This plugin brings the power of Maven&amp;rsquo;s &lt;code&gt;dependencyManagement&lt;/code&gt; mechanism to Gradle and makes it easy to create consistent builds.&lt;/li&gt;
+  &lt;li&gt;This following blog has very little to do with Spring, but I think it&amp;rsquo;s super important. It&amp;rsquo;s a post I put together that is meant to help the wayward student taking her or his first steps in computer science. I hope it&amp;rsquo;s useful &lt;a href="http://spring.io/blog/2015/05/11/to-my-fellow-students"&gt;and would love feedback, if you&amp;rsquo;ve got something to add&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Spring Integration lead &lt;a href="http://spring.io/blog/2015/05/08/spring-amqp-1-4-5-release-and-1-5-0-m1-available"&gt;Gary Russell just released Spring AMQP 1.4.5 and 1.5.0-M1&lt;/a&gt;. The 1.5 series introduces class-level &lt;code&gt;@RabbitListener&lt;/code&gt; annotations (not just method-level ones), auto-declared queues and bindings, configurable exchange/routing Key for replies, a &lt;code&gt;RabbitManagementTemplate&lt;/code&gt; which uses RabbitMQ&amp;rsquo;s REST API bindings, not the hitherto supported Erlang-specific integrations.&lt;/li&gt;
+  &lt;li&gt;Did you get a chance to see my webinar on smarter service-to-service invocations with Spring Cloud? If not, &lt;a href="http://spring.io/blog/2015/05/07/webinar-replay-smarter-service-to-service-invocations-with-spring-cloud"&gt;check it out, it&amp;rsquo;s online&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Turkcell&amp;rsquo;s Erdem Gunay, and our pal, gave a webinar explaining &lt;a href="http://spring.io/blog/2015/05/06/webinar-a-comprehensive-spring-showcase-personal-cloud-storage-application"&gt;how Spring is used in Turkcell&amp;rsquo;s personal cloud service&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;The Madrid Groovy User Group publishes their videos and the recent Spanish-language talk, by Pablo Alba, &lt;a href="https://www.youtube.com/watch?v=eVox8LBS2RE"&gt;introduces websockets and Spring Boot&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Niels Bech Nielsen&amp;rsquo;s talk on Spring Boot &lt;a href="https://www.youtube.com/watch?v=W-TXm3oQ9yg"&gt;for microservices looks pretty interesting&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=QduW8RgKV3o"&gt;Spring Data ninja Thomas Darimont&amp;rsquo;s German-language talk on Spring XD&lt;/a&gt; is up and it looks mighty interesting! (Even if I don&amp;rsquo;t particularly understand the language itself..)&lt;/li&gt;
+  &lt;li&gt;Spring Data lead Oliver Gierke&amp;rsquo;s talk on &lt;a href="http://www.infoq.com/presentations/spring-cloud"&gt;Spring Cloud for the MicroExchange conference is also now up and available&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Daniel Maas put together a nice blog on &lt;a href="https://objectpartners.com/2015/05/07/intelligent-microservice-metrics-with-spring-boot-and-statsd/"&gt;intelligent microservice metrics with Spring Boot and Statsd&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <title>New in STS 3.7.0: Spring Boot Yaml Editor</title>
     <link rel="alternate" href="https://spring.io/blog/2015/05/11/new-in-sts-3-7-0-spring-boot-yaml-editor" />
@@ -379,24 +403,6 @@ The project was completed just in 6 months starting from scratch. The solution w
 &lt;p&gt;To stay competitive, enterprises are scrambling to find ways to rapidly deliver applications that are a pleasure to use on a wide range of devices. Microservice architectures, continuous delivery and the cloud can give businesses the agility to transform into great software businesses, but how do you actually turn those buzzwords into reality? Here we present our take on a solution. Using Spring Boot, Java 8’s Nashorn JavaScript engine, and Cloud Foundry, we’ve created a framework that makes it really easy to deliver API’s to support the rich and highly contextualized experiences that users expect in world class applications. We’d like to share with you what we’ve built, and what we’ve learned along the way.&lt;/p&gt;
 &lt;p&gt;&#xD;
   &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/ceCZte7piJE" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&#xD;
-&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>SpringOne2GX 2014 Replay: Efficient Client-Server Communication with Differential Synchronization and JSON Patch</title>
-    <link rel="alternate" href="https://spring.io/blog/2015/04/28/springone2gx-2014-replay-efficient-client-server-communication-with-differential-synchronization-and-json-patch" />
-    <category term="news" label="News and Events" />
-    <author>
-      <name>Pieter Humphrey</name>
-    </author>
-    <id>tag:spring.io,2015-04-29:2102</id>
-    <updated>2015-04-28T22:27:00Z</updated>
-    <content type="html">&lt;p&gt;Recorded at SpringOne2GX 2014.&lt;/p&gt;
-&lt;p&gt;Speaker: Brian Cavalier &lt;/p&gt;
-&lt;p&gt;Web / JavaScript Track &lt;/p&gt;
-&lt;p&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/efficient-clientserver-communication-with-differential-synchronization-and-json-patch"&gt;http://www.slideshare.net/SpringCentral/efficient-clientserver-communication-with-differential-synchronization-and-json-patch&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The world of client-server has changed. The traditional application of REST is no longer the best fit. We're depolying applications into a world where users expect responsive UIs, on all their devices, even while disconnected. We're deploying into a world where connection latency, mobile radio usage and battery life have become primary concerns. Differential Synchronization (DS) is an algorithm that syncs data across N parties, even in the face of dropped connections, offline devices, etc. It makes more efficient use of connections by batching and sending only changes, in both directions, from client to server and from server to client. We’ll look at how it can be used with JSON Patch to synchronize application data between clients and servers over HTTP Patch, WebSocket, and STOMP, and how it can be integrated into the Spring ecosystem.&lt;/p&gt;
-&lt;p&gt;&#xD;
-  &lt;iframe width="560" height="315" src="http://www.slideshare.net/SpringCentral/efficient-clientserver-communication-with-differential-synchronization-and-json-patch" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&#xD;
 &lt;/p&gt;</content>
   </entry>
 </feed>

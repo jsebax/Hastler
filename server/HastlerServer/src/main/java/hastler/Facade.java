@@ -82,6 +82,7 @@ public class Facade {
 	
 	@RequestMapping(value = "/persona", method = RequestMethod.GET)
 	public @ResponseBody List<Person> obtenerPersonas(@RequestBody Person person){
+		System.out.println("obtenerPersonas");
 		UnitOfWork getPerson = new GetPerson();
 		getPerson.SetRepository(personMongo);
 		((GetPerson) getPerson).setPerson(person);
@@ -96,6 +97,7 @@ public class Facade {
 	
 	@RequestMapping(value = "/personaEmail", method = RequestMethod.GET)
 	public @ResponseBody Person obtenerPersonasEmail(@RequestBody Person person){
+		System.out.println("obtenerPersonasEmail");
 		UnitOfWork getPerson = new GetPersonEmail();
 		getPerson.SetRepository(personMongo);
 		((GetPersonEmail) getPerson).setPerson(person);
@@ -110,6 +112,7 @@ public class Facade {
 	
 	@RequestMapping(value = "/personaHastly", method = RequestMethod.GET)
 	public @ResponseBody Person obtenerPersonasHastly(@RequestBody Person person){
+		System.out.println("obtenerPersonasHastly");
 		UnitOfWork getPerson = new GetPersonHastly();
 		getPerson.SetRepository(personMongo);
 		((GetPersonHastly) getPerson).setPerson(person);
@@ -124,6 +127,7 @@ public class Facade {
 	
 	@RequestMapping(value = "/persona", method = RequestMethod.POST)
 	public @ResponseBody Boolean agregarPersona(@RequestBody Person person){
+		System.out.println("agregarPersona");
 		UnitOfWork postPerson = new PostPerson();
 		postPerson.SetRepository(personMongo);
 		((PostPerson)postPerson).setPerson(person);
@@ -132,7 +136,8 @@ public class Facade {
 	}
 	
 	@RequestMapping(value = "/editarPersona", method = RequestMethod.POST)
-	public @ResponseBody Boolean editPersona(@RequestBody Person person){
+	public @ResponseBody Boolean editarPersona(@RequestBody Person person){
+		System.out.println("editarPersona");
 		UnitOfWork editPerson = new EditPerson();
 		editPerson.SetRepository(personMongo);
 		((EditPerson)editPerson).setPerson(person);
@@ -144,6 +149,7 @@ public class Facade {
 	
 	@RequestMapping(value = "/servicioAll", method = RequestMethod.GET)
 	public @ResponseBody List<Servi> obtenerServiciosAll(){
+		System.out.println("obtenerServiciosAll");
 		UnitOfWork getAll = new GetAllService();
 		getAll.SetRepository(serviMongo);
 		getAll.run();
@@ -154,6 +160,7 @@ public class Facade {
 	
 	@RequestMapping(value = "/servicio", method = RequestMethod.POST)
 	public @ResponseBody boolean guardarServicio(@RequestBody Servi servicio){
+		System.out.println("guardarServicio");
 		UnitOfWork postServi = new PostService();
 		postServi.SetRepository(serviMongo);
 		((PostService)postServi).setServicioR(servicio);
@@ -163,6 +170,7 @@ public class Facade {
 	
 	@RequestMapping(value = "/servicio", method = RequestMethod.GET)
 	public @ResponseBody List<Servi> obtenerServicios(@RequestBody Servi servicio){
+		System.out.println("obtenerServicios");
 		UnitOfWork getServi = new GetService();
 		getServi.SetRepository(serviMongo);
 		((GetService)getServi).setServi(servicio);
@@ -176,7 +184,8 @@ public class Facade {
 	}
 	
 	@RequestMapping(value = "/servicio", method = RequestMethod.DELETE)
-	public @ResponseBody boolean borrarServicios(@RequestBody Servi servicio){
+	public @ResponseBody boolean borrarServicio(@RequestBody Servi servicio){
+		System.out.println("borrarServicio");
 		UnitOfWork delServi = new DelService();
 		delServi.SetRepository(serviMongo);
 		((DelService)delServi).setServi(servicio);
@@ -186,6 +195,7 @@ public class Facade {
 	
 	@RequestMapping(value = "/editarServi", method = RequestMethod.POST)
 	public @ResponseBody boolean editarServicio(@RequestBody Servi servicio){
+		System.out.println("editarServicio");
 		UnitOfWork editServi = new EditService();
 		editServi.SetRepository(serviMongo);
 		((EditService)editServi).setServi(servicio);
@@ -195,6 +205,7 @@ public class Facade {
 	
 	@RequestMapping(value = "/categoria", method = RequestMethod.GET)
 	public @ResponseBody List<Servi> obtenerCategoria(@RequestBody Servi servicio){
+		System.out.println("obtenerCategoria");
 		UnitOfWork getCategory = new GetCategory();
 		getCategory.SetRepository(serviMongo);
 		((GetCategory)getCategory).setCategory(servicio.getCategory());
@@ -209,6 +220,7 @@ public class Facade {
 	
 	@RequestMapping(value = "/comentario", method = RequestMethod.POST)
 	public @ResponseBody boolean agregarComentario(@RequestBody Servi servicio){
+		System.out.println("agregarComentario");
 		UnitOfWork postComment = new PostComment();
 		postComment.SetRepository(serviMongo);
 		((PostComment)postComment).setComment(servicio);
@@ -220,6 +232,7 @@ public class Facade {
 	
 	@RequestMapping(value = "/match", method = RequestMethod.POST)
 	public @ResponseBody boolean agregarMatch(@RequestBody Match match){
+		System.out.println("agregarMatch");
 		UnitOfWork postMatch = new PostMatch();
 		postMatch.SetRepository(matchMongo);
 		((PostMatch)postMatch).setMatch(match);
@@ -229,6 +242,7 @@ public class Facade {
 	
 	@RequestMapping(value = "/match", method = RequestMethod.GET)
 	public @ResponseBody List<Match> obtenerMatch(@RequestBody Match match){
+		System.out.println("obtenerMatch");
 		UnitOfWork getMatch = new GetMatch();
 		getMatch.SetRepository(matchMongo);
 		((GetMatch)getMatch).setMatch(match);
@@ -243,6 +257,7 @@ public class Facade {
 	
 	@RequestMapping(value = "/matchServi", method = RequestMethod.GET)
 	public @ResponseBody List<Match> obtenerMatchServiId(@RequestBody Match match){
+		System.out.println("obtenerMatchServiId");
 		UnitOfWork getMatch = new GetMatchServiId();
 		getMatch.SetRepository(matchMongo);
 		((GetMatch)getMatch).setMatch(match);
@@ -257,6 +272,7 @@ public class Facade {
 	
 	@RequestMapping(value = "/matchHastly", method = RequestMethod.GET)
 	public @ResponseBody List<Match> obtenerMatchHastly(@RequestBody Match match){
+		System.out.println("obtenerMatchHastly");
 		UnitOfWork getMatch = new GetMatchHastly();
 		getMatch.SetRepository(matchMongo);
 		((GetMatch)getMatch).setMatch(match);
@@ -273,6 +289,7 @@ public class Facade {
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public @ResponseBody boolean login(@RequestBody User user){
+		System.out.println("login");
 		UnitOfWork login = new LogIn();
 		login.SetRepository(userMongo);
 		((LogIn)login).setUser(user);
@@ -283,6 +300,7 @@ public class Facade {
 	
 	@RequestMapping(value = "/singon", method = RequestMethod.POST)
 	public @ResponseBody boolean singon(@RequestBody User user){
+		System.out.println("singon");
 		UnitOfWork singin = new SingOn();
 		singin.SetRepository(userMongo);
 		((SingOn)singin).setUser(user);

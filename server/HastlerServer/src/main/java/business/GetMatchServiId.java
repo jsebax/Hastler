@@ -1,16 +1,18 @@
 package business;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import DBServices.MongoMatchRepository;
 import repositories.MatchRepository;
 import repositories.Repository;
 import entity.Match;
 
 public class GetMatchServiId implements UnitOfWork {
 
-	MatchRepository matchRepository;
-	Match match;
-	List<Match> matches;
+	private MatchRepository matchRepository;
+	private Match match;
+	private List<Match> matches;
 	
 	public GetMatchServiId() {
 		super();
@@ -18,8 +20,9 @@ public class GetMatchServiId implements UnitOfWork {
 
 	@Override
 	public boolean run() {
-		List<Match> matchR= matchRepository.findMatchServi(match.getServiId());
-		if(matchR.isEmpty()){
+		this.matches = new ArrayList<Match>();
+		this.matches = matchRepository.findMatchServi(match.getServiId());
+		if(this.matches.isEmpty()){
 			return false;
 		}else{
 			return true;
@@ -28,10 +31,12 @@ public class GetMatchServiId implements UnitOfWork {
 
 	@Override
 	public void SetRepository(Repository repository) {
+		matchRepository = new MongoMatchRepository();
 		matchRepository = (MatchRepository) repository;
 	}
 
 	public void setMatch(Match match) {
+		this.match = new Match();
 		this.match = match;
 	}
 

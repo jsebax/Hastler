@@ -1,16 +1,18 @@
 package business;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import DBServices.MongoPersonRepository;
 import repositories.PersonRepository;
 import repositories.Repository;
 import entity.Person;
 
 public class GetPerson implements UnitOfWork {
 
-	PersonRepository personRepository;
-	List<Person> persons;
-	Person person;
+	private PersonRepository personRepository;
+	private List<Person> persons;
+	private Person person;
 	
 	public GetPerson() {
 		super();
@@ -18,6 +20,7 @@ public class GetPerson implements UnitOfWork {
 
 	@Override
 	public boolean run() {
+		persons = new ArrayList<Person>();
 		persons = personRepository.findPerson(person.getName());
 		if (persons.isEmpty()){
 			return false;
@@ -28,6 +31,7 @@ public class GetPerson implements UnitOfWork {
 
 	@Override
 	public void SetRepository(Repository repository) {
+		personRepository = new MongoPersonRepository();
 		personRepository = (PersonRepository) repository;
 	}
 
@@ -36,6 +40,7 @@ public class GetPerson implements UnitOfWork {
 	}
 
 	public void setPerson(Person person) {
+		this.person = new Person();
 		this.person = person;
 	}
 

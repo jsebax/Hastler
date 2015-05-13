@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;SmartFilter.java&apos; to &apos;HastlerServer/src/main/java/hastler&apos;&#x0D;&#x0A;- Original project: &apos;gs-rest-service-cors-complete&apos;&#x0D;&#x0A;- Destination element: &apos;HastlerServer/src/main/java/hastler&apos;&#x0D;&#x0A;- Original element: &apos;hello.SmartFilter.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="=HastlerServer/src\/main\/java&lt;hastler" element1="/src\/main\/java&lt;hello{SmartFilter.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1431490007721" units="1" version="1.0"/>
+</session>

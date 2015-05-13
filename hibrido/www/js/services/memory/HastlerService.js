@@ -3,7 +3,7 @@ var HastlerService = function() {
     this.initialize = function() {
         // No Initialization required
         var deferred = $.Deferred();
-		$.get( "http://localhost:8080/hastler/servicioAll", function( data ) {
+		$.get( "http://localhost:8080/servicioAll", function( data ) {
 		  hastlerServices = data;
 		  alert( "Data Loaded "  );
 		});
@@ -40,13 +40,13 @@ var HastlerService = function() {
     // Añade un servicio al arreglo de servicios. Nota: El almacenamiento de nuevos servicios se hace en memoria. Cuando se reinicia la
     // app, se borran los servicios agregados. 
     this.addService = function(service) {
-		 var jsonString = JSON.stringify({"id": service.id, "serviceName": service.serviceName, 
-		 "category": service.category, "owner": usuario.user, "cellPhone": service.cellPhone,
-		 "email": service.email, "city":  service.city, "pic": service.hastly, "hastly": service.owner});
-		//var jsonString = JSON.stringify({"id": 1, "serviceName": "Clases de guitarra", "category": "Música", "owner": "Pedro Hernández", "cellPhone": "617-000-0001", "email": "pHern@fakemail.com", "city": "Medellin", "pic": "Guitar.jpg", "hastly": "#hernanP"});
+		 //var jsonString = JSON.stringify({"id": service.id, "serviceName": service.serviceName, 
+		 //"category": service.category, "owner": usuario.user, "cellPhone": service.cellPhone,
+		 //"email": service.email, "city":  service.city, "pic": service.hastly, "hastly": service.owner});
+		var jsonString = JSON.stringify({"id": 1, "serviceName": "Clases de guitarra", "category": "Música", "owner": "Pedro Hernández", "cellPhone": "617-000-0001", "email": "pHern@fakemail.com", "city": "Medellin", "pic": "Guitar.jpg", "hastly": "#hernanP"});
 		$.ajax({
 
-            url:"http://localhost:8080/hastler/servicio",
+            url:"http://localhost:8080/servicio",
 
             type:"POST", 
 

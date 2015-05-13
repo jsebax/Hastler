@@ -1,16 +1,18 @@
 package business;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import DBServices.MongoMatchRepository;
 import repositories.MatchRepository;
 import repositories.Repository;
 import entity.Match;
 
 public class GetMatchHastly implements UnitOfWork {
 
-	MatchRepository matchRepository;
-	Match match;
-	List<Match> matches;
+	private MatchRepository matchRepository;
+	private Match match;
+	private List<Match> matches;
 	
 	public GetMatchHastly() {
 		super();
@@ -18,8 +20,9 @@ public class GetMatchHastly implements UnitOfWork {
 
 	@Override
 	public boolean run() {
-		List<Match> matchR= matchRepository.findMatchHastly(match.getHastly());
-		if(matchR.isEmpty()){
+		this.matches = new ArrayList<Match>();
+		this.matches= matchRepository.findMatchHastly(match.getHastly());
+		if(this.matches.isEmpty()){
 			return false;
 		}else{
 			return true;
@@ -28,10 +31,12 @@ public class GetMatchHastly implements UnitOfWork {
 
 	@Override
 	public void SetRepository(Repository repository) {
+		matchRepository = new MongoMatchRepository();
 		matchRepository = (MatchRepository) repository;
 	}
 
 	public void setMatch(Match match) {
+		this.match = new Match();
 		this.match = match;
 	}
 

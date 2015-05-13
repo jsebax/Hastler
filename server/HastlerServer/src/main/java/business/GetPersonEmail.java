@@ -2,15 +2,16 @@ package business;
 
 
 
+import DBServices.MongoPersonRepository;
 import entity.Person;
 import repositories.PersonRepository;
 import repositories.Repository;
 
 public class GetPersonEmail implements UnitOfWork {
 
-	PersonRepository personRepository;
-	Person persons;
-	Person person;
+	private PersonRepository personRepository;
+	private Person persons;
+	private Person person;
 	
 	public GetPersonEmail() {
 		super();
@@ -18,6 +19,7 @@ public class GetPersonEmail implements UnitOfWork {
 
 	@Override
 	public boolean run() {
+		persons = new Person();
 		persons = personRepository.findPersonEmail(person.getEmail());
 		if (persons!=null){
 			return true;
@@ -28,6 +30,7 @@ public class GetPersonEmail implements UnitOfWork {
 
 	@Override
 	public void SetRepository(Repository repository) {
+		personRepository = new MongoPersonRepository();
 		personRepository = (PersonRepository) repository;
 	}
 
@@ -36,6 +39,7 @@ public class GetPersonEmail implements UnitOfWork {
 	}
 
 	public void setPerson(Person person) {
+		this.person = new Person();
 		this.person = person;
 	}
 

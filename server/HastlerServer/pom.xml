@@ -41,6 +41,12 @@
             <scope>test</scope>
         </dependency>
         <!-- end::tests[] -->
+        
+        <dependency>
+        	<groupId>com.fasterxml.jackson.core</groupId>
+        	<artifactId>jackson-databind</artifactId>
+        </dependency>
+        
     </dependencies>
 
     <properties>

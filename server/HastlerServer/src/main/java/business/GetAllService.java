@@ -2,6 +2,7 @@ package business;
 
 import java.util.List;
 
+import DBServices.MongoServiRepository;
 import entity.Servi;
 import repositories.Repository;
 import repositories.ServiRepository;
@@ -30,6 +31,7 @@ public class GetAllService implements UnitOfWork {
 
 	@Override
 	public void SetRepository(Repository serviMongo) {
+		this.serviMongo = new MongoServiRepository();
 		this.serviMongo = (ServiRepository) serviMongo;
 	}
 

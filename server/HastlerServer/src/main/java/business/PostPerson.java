@@ -2,14 +2,15 @@ package business;
 
 import java.util.UUID;
 
+import DBServices.MongoPersonRepository;
 import entity.Person;
 import repositories.PersonRepository;
 import repositories.Repository;
 
 public class PostPerson implements UnitOfWork {
 
-	PersonRepository personRepository;
-	Person person;
+	private PersonRepository personRepository;
+	private Person person;
 	
 	public PostPerson() {
 		super();
@@ -28,10 +29,12 @@ public class PostPerson implements UnitOfWork {
 
 	@Override
 	public void SetRepository(Repository repository) {
+		personRepository = new MongoPersonRepository();
 		personRepository = (PersonRepository) repository;
 	}
 
 	public void setPerson(Person person) {
+		this.person = new Person();
 		this.person = person;
 	}
 

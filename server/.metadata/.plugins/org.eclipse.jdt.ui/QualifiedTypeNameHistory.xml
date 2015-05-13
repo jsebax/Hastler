@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="entity.ProfileI"/>
-<fullyQualifiedTypeName name="repository.PersonRepository"/>
-<fullyQualifiedTypeName name="DTO.PersonDTO"/>
-<fullyQualifiedTypeName name="exeption.PersonNotFoundException"/>
-<fullyQualifiedTypeName name="entity.Profile"/>
 <fullyQualifiedTypeName name="rest.ServiService"/>
 <fullyQualifiedTypeName name="DTO.ServiDTO"/>
 <fullyQualifiedTypeName name="exeption.ServiceNotFoundException"/>
 <fullyQualifiedTypeName name="rest.PersonService"/>
-<fullyQualifiedTypeName name="entity.Person"/>
 <fullyQualifiedTypeName name="com.mkyong.model.User"/>
 <fullyQualifiedTypeName name="rest.MongoDBServiService"/>
 <fullyQualifiedTypeName name="com.eafit.hastler.HomeController"/>
@@ -23,18 +17,13 @@
 <fullyQualifiedTypeName name="entity.Test"/>
 <fullyQualifiedTypeName name="DBservice.DBService"/>
 <fullyQualifiedTypeName name="DBservice.MongoDBService"/>
-<fullyQualifiedTypeName name="DBServices.MongoPersonRepository"/>
-<fullyQualifiedTypeName name="DBServices.MongoServiRepository"/>
-<fullyQualifiedTypeName name="DBServices.MongoUserRepository"/>
 <fullyQualifiedTypeName name="business.GetAllService"/>
 <fullyQualifiedTypeName name="repositories.Repository"/>
 <fullyQualifiedTypeName name="business.GetPerson"/>
 <fullyQualifiedTypeName name="business.PostService"/>
 <fullyQualifiedTypeName name="business.DelService"/>
-<fullyQualifiedTypeName name="DBServices.MongoMatchRepository"/>
 <fullyQualifiedTypeName name="business.PostMatch"/>
 <fullyQualifiedTypeName name="business.GetMatch"/>
-<fullyQualifiedTypeName name="entity.Match"/>
 <fullyQualifiedTypeName name="business.UnitOfWork"/>
 <fullyQualifiedTypeName name="business.PostPerson"/>
 <fullyQualifiedTypeName name="business.EditPerson"/>
@@ -44,15 +33,11 @@
 <fullyQualifiedTypeName name="business.GetCategory"/>
 <fullyQualifiedTypeName name="business.PostComment"/>
 <fullyQualifiedTypeName name="javax.imageio.spi.ServiceRegistry"/>
-<fullyQualifiedTypeName name="repositories.ServiRepository"/>
-<fullyQualifiedTypeName name="entity.Servi"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.math.MathContext"/>
 <fullyQualifiedTypeName name="repositories.MatchRepository"/>
 <fullyQualifiedTypeName name="java.util.Optional"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="business.SingIn"/>
-<fullyQualifiedTypeName name="entity.User"/>
 <fullyQualifiedTypeName name="business.LogIn"/>
 <fullyQualifiedTypeName name="repositories.UserRepository"/>
 <fullyQualifiedTypeName name="org.springframework.data.mongodb.core.query.Criteria"/>
@@ -60,4 +45,19 @@
 <fullyQualifiedTypeName name="business.GetMatchServiId"/>
 <fullyQualifiedTypeName name="business.GetMatchHastly"/>
 <fullyQualifiedTypeName name="com.eafit.hastler.Facade"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="repositories.ServiRepository"/>
+<fullyQualifiedTypeName name="DBServices.MongoServiRepository"/>
+<fullyQualifiedTypeName name="entity.Servi"/>
+<fullyQualifiedTypeName name="org.springframework.data.mongodb.core.mapping.MongoMappingContext"/>
+<fullyQualifiedTypeName name="DBServices.MongoMatchRepository"/>
+<fullyQualifiedTypeName name="entity.Match"/>
+<fullyQualifiedTypeName name="org.springframework.data.mongodb.core.mapping.MongoPersistentEntity"/>
+<fullyQualifiedTypeName name="DBServices.MongoPersonRepository"/>
+<fullyQualifiedTypeName name="entity.Person"/>
+<fullyQualifiedTypeName name="DBServices.MongoUserRepository"/>
+<fullyQualifiedTypeName name="entity.User"/>
 </qualifiedTypeNameHistroy>
