@@ -68,17 +68,32 @@ ENTIDADES:
 		hastlerServices.push(service);
 */
 
-var app = angular.module('starter', ['ionic']);
-var urlServer="http://52.25.8.145:8080/";
+//var app = angular.module('starter', ['ionic']);
+var urlServer="http://localhost:8080/";
 
 app.service('myMiddleware', function() {
-
+	
 	this.x = function() {
         console.log("Hola");
         alert("Hi!");
     }
+    this.y = function() {
+        console.log("Hola");
+        alert("funciona!");
+    }
 
-	this.obtenerPersonas = function (persona){
+	this.initialize = function() {
+    	// No Initialization required
+    	var deferred = $.Deferred();
+		$.get( "http://localhost:8080/servicioAll", function( data ) {
+			hastlerServices = data;
+			alert( "Data Loaded " );
+		});
+    	   deferred.resolve();
+    	return deferred.promise();
+	}
+
+    this.obtenerPersonas = function (persona){
 		//persona.name = stringbusqueda;
 		var personas;
 		var ulrthis = urlServer+"persona";
@@ -177,18 +192,18 @@ app.service('myMiddleware', function() {
 								 "email": servicio.email, "city":  servicio.city, "pic": servicio.pic, "hastly": servicio.hastly});
 		var ulrthis = urlServer+"servicio";
 		$.ajax({
-	            url:ulrthis,
-	            type:"POST", 
-	            contentType: "application/json; charset=utf-8",
-	            data: jsonString, //Stringified Json Object
-	            async: false,    //Cross-domain requests and dataType: "jsonp" requests do not support synchronous operation
-	            cache: false,    //This will force requested pages not to be cached by the browser  
-	            processData:false, //To avoid making query String instead of JSON
-	            success: function(resposeJsonObject){
-					if(responseJsonObject){
-						alert("exito al agregar servicio");
-					}
-				}});
+            url:ulrthis,
+            type:"POST", 
+            contentType: "application/json; charset=utf-8",
+            data: jsonString, //Stringified Json Object
+            async: false,    //Cross-domain requests and dataType: "jsonp" requests do not support synchronous operation
+            cache: false,    //This will force requested pages not to be cached by the browser  
+            processData:false, //To avoid making query String instead of JSON
+            success: function(resposeJsonObject){
+				if(responseJsonObject){
+					alert("exito al agregar servicio");
+				}
+			}});
 	}
 
 	this.obtenerServicios = function (servicio){
@@ -315,22 +330,10 @@ app.service('myMiddleware', function() {
 	this.obtenerMatchHastly = function (match){
 		//match.hastly se necesita;
 		var matchesR;
-		var ulrthis = urlServer+"matchHastly";
+		var ulrthis = urlServer + "matchHastly";
 		$.get(ulrthis,function(data){
 			matchesR = data;
 		});
-	}
-
-	this.login = function (user){
-		/*
-			user.password se necesita
-			user.username se necesita o user.email se necesita
-		*/
-		var loged;
-		var ulrthis = urlServer+"login";
-		$.get(ulrthis,function(data){
-			loged=data;
-		}
 	}
 
 	this.singon = function (user){
@@ -355,5 +358,16 @@ app.service('myMiddleware', function() {
 					}
 				}});
 	}
-	
+
+	this.login = function (user){
+		/*
+			user.password se necesita
+			user.username se necesita o user.email se necesita
+		*/	
+		var loged;
+		var ulrthis = urlServer + "login";
+		$.get(ulrthis,function(data){
+			loged = data;
+		});
+	};
 });

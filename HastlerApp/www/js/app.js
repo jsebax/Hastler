@@ -32,9 +32,29 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
         controller: 'LoginController'
     })
 
+    .state('resetPassword', {
+        url: '/resetPassword',
+        templateUrl: 'templates/resetPassword.html',
+        //controller: 'resetPasswordController'
+    })
+
+    //Templates Registro
+    //Tamplate Email
     .state('register', {
         url: '/register',
         templateUrl: 'templates/register.html',
+        controller: 'RegisterController'
+    })
+
+    .state('registerPassword', {
+        url: '/registerPassword',
+        templateUrl: 'templates/registerPassword.html',
+        controller: 'RegisterController'
+    })
+
+    .state('registerName', {
+        url: '/registerName',
+        templateUrl: 'templates/registerName.html',
         controller: 'RegisterController'
     })
 
@@ -119,8 +139,18 @@ app.controller('MainCtrl', function($scope, $state, $ionicSideMenuDelegate) {
     }
 })
 
-app.controller("LoginController", function($scope, $firebaseAuth, $firebaseObject, $location, $ionicPopup) {
+app.controller("LoginController", function($scope, $firebaseAuth, $firebaseObject, $location, $ionicPopup, myMiddleware) {
+    
     var fbAuth = $firebaseAuth(fb);
+
+    $scope.go = function(page) {
+         $location.path('/'+page);
+    }
+
+    $scope.toResetPassword = function() {
+        $location.path('/resetPassword');
+    };
+
     $scope.login = function(email, password) {
         fbAuth.$authWithPassword({
             email: email,
@@ -137,10 +167,35 @@ app.controller("LoginController", function($scope, $firebaseAuth, $firebaseObjec
     };
 });
 
-app.controller("RegisterController", function($scope, $firebaseAuth, $firebaseObject, $location, $ionicPopup) {
-    $scope.register = function(email, password, rePassword) {
-        var fbAuth = $firebaseAuth(fb);
+app.controller("RegisterController", function($scope, $firebaseAuth, $firebaseObject, $location, $ionicPopup, myMiddleware) {
+
+    var email,password;
+
+    $scope.toRegisterPassword = function(mail) {
+        if ( mail == '' ) {
+            console.log(mail);
+        }
        
+
+        $location.path('/registerPassword');
+        email = mail;
+        $ionicPopup.alert({
+            title: email
+        });
+    };
+
+    $scope.toRegisterName = function(pass) {
+        $location.path('/registerName');
+        password = pass;
+        $ionicPopup.alert({
+            title: email
+        });
+    };
+
+    $scope.register = function(Name, lastname) {
+        var fbAuth = $firebaseAuth(fb);
+        
+        /*
         if ( password != rePassword ) {
             $ionicPopup.alert({
               title: 'Passwords don\'t match',
@@ -149,7 +204,7 @@ app.controller("RegisterController", function($scope, $firebaseAuth, $firebaseOb
             });
 
         } else {
-        
+        */
             fbAuth.$createUser({
                 email: email,
                 password: password
@@ -206,7 +261,7 @@ app.controller("RegisterController", function($scope, $firebaseAuth, $firebaseOb
                     template: error
                 });
             });
-        }
+        //}
     };
 });
 
@@ -214,21 +269,12 @@ app.controller("ProfileController", function($scope, $firebaseObject, $ionicPopu
     var auth = fb.getAuth();
     var obj = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
     var object = $firebaseObject(obj);
+
     $scope.list = function() {
         if(auth) {
         object.$bindTo($scope, "data");
         }
-    };
-
-    myMiddleware.x();
-
-     $scope.toggleLeft = function() {
-        $ionicSideMenuDelegate.toggleLeft();
-    };
-  
-    $scope.changeState = function(page) {
-        $state.go(page);
-    }
+    };   
 
     $scope.logout = function() {
         var firebaseAuth = fb.getAuth();
@@ -242,7 +288,7 @@ app.controller("ProfileController", function($scope, $firebaseObject, $ionicPopu
                 //location.href = location.origin;
                 obj.unauth();
                 $location.path("/login");
-               // window.location.reload(true);
+                //window.location.reload(true);
             }
         }
     };
@@ -301,16 +347,14 @@ app.controller("ServicesController", function($scope, $firebaseObject, $ionicPop
   
 });
 
-app.controller("ServiceFormController", function($scope, $firebaseObject, $ionicPopup, $location) {
+app.controller("ServiceFormController", function($scope, $firebaseObject, $ionicPopup, $location, myMiddleware ) {
     var auth = fb.getAuth();
     var obj1 = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
     var obj2 = new Firebase("https://hastler.firebaseio.com/services/");
     var object1 = $firebaseObject(obj1);
-    var object2 = $firebaseObject(obj2);
     $scope.list = function() {
         if(auth) {
             object1.$bindTo($scope, "data");
-            object2.$bindTo($scope, "data2");
         }
     };
 
@@ -319,32 +363,25 @@ app.controller("ServiceFormController", function($scope, $firebaseObject, $ionic
         if($scope.data.hasOwnProperty("services") !== true) {
             $scope.data.services = [];
         }
+
+        myMiddleware.guardarServicio({
+            title: title,
+            owner: "hola",
+            category: category
+        });
+/*
         $scope.data.services.push({
             title: title,
             owner: $scope.data.hastly,
             category: category
         });
-
-        if($scope.data2.hasOwnProperty("services") !== true) {
-            $scope.data2.services = [];
-        }
-
-        $scope.data2.services.push({
-            title: title,
-            owner: $scope.data.hastly,
-            category: category,
-            id: auth.uid
-        });
-
+*/
         $location.path("/tab/services");
     };
 
     $scope.categories = [
         "Academy",
-        "Consultancy",
-        "Music",
-        "Software",
-        "Other"
+        "Music"
     ];
 });
 

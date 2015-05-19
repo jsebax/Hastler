@@ -5,7 +5,7 @@ var HastlerService = function() {
         var deferred = $.Deferred();
 		$.get( "http://localhost:8080/servicioAll", function( data ) {
 		  hastlerServices = data;
-		  alert( "Data Loaded "  );
+		  alert( "Data Loaded " );
 		});
         deferred.resolve();
         return deferred.promise();
@@ -43,6 +43,7 @@ var HastlerService = function() {
 		 //var jsonString = JSON.stringify({"id": service.id, "serviceName": service.serviceName, 
 		 //"category": service.category, "owner": usuario.user, "cellPhone": service.cellPhone,
 		 //"email": service.email, "city":  service.city, "pic": service.hastly, "hastly": service.owner});
+
 		var jsonString = JSON.stringify({"id": 1, "serviceName": "Clases de guitarra", "category": "Música", "owner": "Pedro Hernández", "cellPhone": "617-000-0001", "email": "pHern@fakemail.com", "city": "Medellin", "pic": "Guitar.jpg", "hastly": "#hernanP"});
 		$.ajax({
 

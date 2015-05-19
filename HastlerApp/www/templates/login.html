@@ -1,19 +1,14 @@
 <ion-view view-title="Welcome" hide-back-button="true" class="login">
-    <ion-nav-bar class="bar-dark">
-        <ion-nav-back-button></ion-nav-back-button>
-    </ion-nav-bar>
-    <!--<ion-content class="login">-->
-        
+    <!--<ion-content class="login">-->        
         <div class="padding">
             
-            <div style="width: 300px; height: 50px;"></div>
+            <div style="width: 300px; height: 10px;"></div>
             <center><h1 class= "logo">HASTLER</h1></center>
-            <div class="spacer" style="width: 300px; height: 50px;"></div>
+            <div class="spacer" style="width: 300px; height: 70px;"></div>
 
-            <Center style="color:white; font-family: 'Lobster13Regular', Helvetica, sans-serif;
-            font-weight: bold;">Don't get in trouble log in with your Facebook account</Center>
+            <Center style="color:white; font-family: 'Lobster13Regular', Helvetica, sans-serif; font-weight: bold;">Don't get in trouble log in with your facebook account</Center>
 
-            <button ng-click="login(email, password)" class="button button-block button-positive icon-left ion-social-facebook fbbody">Facebook</button>
+            <button ng-click="login(email, password)" class="button button-block button-positive icon-left ion-social-facebook fbbody">facebook</button>
 
             <div style="width: 300px; height: 15px;"></div>
 
@@ -28,11 +23,12 @@
                     <input ng-model="password" type="password" placeholder="Password"/>
                 </label>
             </div>
+            <button class="button button-positive" ng-click="toResetPassword()">forgot password?</button>
         </div>
+
         <div class="tabs tabs-dark">
             <a class="tab-item" ng-click="login(email, password) "><strong>Log in</strong></a>
-            <a class="tab-item" href="#/register"><strong>Sign Up</strong></a>
-                
+            <a class="tab-item" href="#/register"><strong>Sign Up</strong></a>        
         </div>
-    </ion-content>
+
 </ion-view>

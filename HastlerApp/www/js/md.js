@@ -5,4 +5,8 @@ app.service('myMiddleware', function() {
         console.log("Hola");
         alert("Hi!");
     }
+    this.y = function() {
+        console.log("Hola");
+        alert("Hi!");
+    }
 });

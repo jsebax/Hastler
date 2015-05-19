@@ -7,6 +7,7 @@ var AddServiceView = function (service) {
 	};
 
     // Funcion que se llama cuando se presiona el boton agregar
+
 	this.addService = function () {
 		if ($('#serviceName').val() < 1 || $('#category').val() < 1 || $('#owner').val() < 1 || $('#cellPhone').val() < 1
             || $('#email').val() < 1 || $('#city').val() < 1 || $('#hastly').val() < 1) {
@@ -24,7 +25,11 @@ var AddServiceView = function (service) {
                             "pic": "imagenDefecto.jpg",
                             "hastly": $('#hastly').val()};
             service.addService(hService);
+
+            //mensaje
             alert("Su servicio a sido agregado");
+
+            //limpiar campos
             $('#serviceName').val('');
             $('#category').val('');
             $('#owner').val('');
@@ -36,11 +41,12 @@ var AddServiceView = function (service) {
 	};
 
     // Renderiza el template
+
 	this.render = function () {
 		this.$el.html(this.template());
 		return this;
 	};
 
 	this.initialize();
-
+    
 }

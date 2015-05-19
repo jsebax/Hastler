@@ -10,6 +10,7 @@
 
     var service = new HastlerService();
     var slider = new PageSlider($('body'));
+    
     // Añade la ruta al service
     service.initialize().done(function () {
         router.addRoute ('', function() {
