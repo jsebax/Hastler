@@ -99,14 +99,10 @@ app.service('myMiddleware', function($http) {
 		//persona.name = stringbusqueda;
 		var personas;
 		var urlthis = urlServer+"persona";
-		$http.get(urlthis).success(function(data){
-			personas = data;
-			return personas;
-		});
 		$http({
 		    url: urlthis, 
 		    method: 'GET',
-		    params: {},
+		    params: {name:persona.name},
 		}).success(function(data, status, headers, config){
 		    callback(data);
 		}).error(function(data, status, headers, config){
@@ -125,7 +121,7 @@ app.service('myMiddleware', function($http) {
 		$http({
 		    url: urlthis, 
 		    method: 'GET',
-		    params: {},
+		    params: {email:persona.email},
 		}).success(function(data, status, headers, config){
 		    callback(data);
 		}).error(function(data, status, headers, config){
@@ -144,7 +140,7 @@ app.service('myMiddleware', function($http) {
 		$http({
 		    url: urlthis, 
 		    method: 'GET',
-		    params: {},
+		    params: {hastly:persona.hastly},
 		}).success(function(data, status, headers, config){
 		    callback(data);
 		}).error(function(data, status, headers, config){
@@ -152,7 +148,7 @@ app.service('myMiddleware', function($http) {
 		});
 	}
 
-	this.agregarPersona = function (persona){
+	this.agregarPersona = function (persona,callback){
 		/*	rellenar de persona; 
 			-hastly;
 			-name;
@@ -164,9 +160,9 @@ app.service('myMiddleware', function($http) {
 								"image":persona.image});
 		var urlthis = urlServer+"persona";
 		$http.post(urlthis,jsonString).success(function(data, status, headers, config) {
-		    return data;    
+		    callback(data);    
 		}).error(function(data, status, headers, config) {
-		    return data; 
+		    callback(data); 
 		});
 	}
 
@@ -247,7 +243,7 @@ app.service('myMiddleware', function($http) {
 		$http({
 		    url: urlthis, 
 		    method: 'GET',
-		    params: {},
+		    params: {name:servicio.name},
 		}).success(function(data, status, headers, config){
 		    callback(data);
 		}).error(function(data, status, headers, config){
@@ -307,7 +303,7 @@ app.service('myMiddleware', function($http) {
 		$http({
 		    url: urlthis, 
 		    method: 'GET',
-		    params: {},
+		    params: {category:servicio.category},
 		}).success(function(data, status, headers, config){
 		    callback(data);
 		}).error(function(data, status, headers, config){
@@ -368,7 +364,7 @@ app.service('myMiddleware', function($http) {
 		$http({
 		    url: urlthis, 
 		    method: 'GET',
-		    params: {},
+		    params: {Id:match.Id},
 		}).success(function(data, status, headers, config){
 		    callback(data);
 		}).error(function(data, status, headers, config){
@@ -407,11 +403,7 @@ app.service('myMiddleware', function($http) {
 		    callback(data);
 		}).error(function(data, status, headers, config){
 		    callback(false);
-		});
-		$http.get(urlthis).success(function(data){
-			matchesR = data;
-			return matchesR;
-		});
+		});		
 	}
 
 	this.singon = function (user){
@@ -433,22 +425,6 @@ app.service('myMiddleware', function($http) {
 		    alert("Singon fallido");
 		    return false; 
 		});
-/*
-		$.ajax({
-	            url:urlthis,
-	            type:"POST", 
-	            contentType: "application/json; charset=utf-8",
-	            data: jsonString, //Stringified Json Object
-	            async: false,    //Cross-domain requests and dataType: "jsonp" requests do not support synchronous operation
-	            cache: false,    //This will force requested pages not to be cached by the browser  
-	            processData:false, //To avoid making query String instead of JSON
-	            success: function(resposeJsonObject){
-					if(responseJsonObject){
-						alert("exito al registrarse");
-						login(user);
-					}
-				}});
-*/
 	}
 
 	this.login = function (user, callback){

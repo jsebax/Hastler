@@ -64,10 +64,10 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
         templateUrl: 'templates/tabs.html'
     })
 
-    .state('tabs.myServices', {
-        url: '/myServices',
+    .state('tabs.home', {
+        url: '/home',
         views: {
-            'my-services-tab': {
+            'home-tab': {
                 templateUrl: 'templates/home.html',
                 controller: 'MyServicesController'
             }
@@ -150,13 +150,17 @@ app.controller("LoginController", function($scope, $firebaseAuth, $firebaseObjec
         $scope.user.password = password;
         $scope.user.email = email;
         $scope.loginsuccess = false;
-        console.log($scope.loginsuccess);
         myMiddleware.login($scope.user,function(data){
             $scope.loginsuccess = data;
+            console.log($scope.loginsuccess);
             if(!$scope.loginsuccess){
                 alert("El email o la contraseña no son correctos");
             }else{
-                $location.path('/home');
+                console.log("entro...");
+                var emaildiv = document.getElementById("email"); 
+                //document.getElementById("email").value; da el valor del email
+                emaildiv.innerHTML = email;
+                $location.path('/tab/home');
             }
         });
     };
@@ -177,21 +181,26 @@ app.controller("RegisterController", function($scope, $firebaseAuth, $firebaseOb
         myMiddleware.singon($scope.user);
         alert($scope.singonsuccess);
         if($scope.singonsuccess){
-            $profilesuccess = myMiddleware.agregarPersona($scope.profile);
-            if(profilesuccess){
-                var loginsuccess = myMiddleware.login($scope.userfunction(data){
-                    $scope.loginsuccess = data;
-                    if(!$scope.loginsuccess){
-                        alert("Desafortunadamente se tuvo un problema al intentar loguearse, por favor intente denuevo más tarde.");
-                        $location.path('/login');
-                    }else{
-                        $location.path('/home');
-                    }
-                });
-            }else{
-                $location.path('/login');
-                alert("Desafortunadamente se tuvo un problema al intentar loguearse, por favor intente denuevo más tarde.");
-            }
+            $scope.profilesuccess = true;
+            myMiddleware.agregarPersona($scope.profile,function(dataprofile){
+                $scope.profilesuccess = dataprofile;
+                if($scope.profilesuccess){
+                    myMiddleware.login($scope.user,function(data){
+                        $scope.loginsuccess = data;
+                        if(!$scope.loginsuccess){
+                            alert("Desafortunadamente se tuvo un problema al intentar loguearse, por favor intente denuevo más tarde.");
+                            $location.path('/login');
+                        }else{
+                            var emaildiv = document.getElementById("email");
+                            emaildiv.innerHTML = $scope.user.email;
+                            $location.path('/tab/home');
+                        }
+                    });
+                }else{
+                    $location.path('/login');
+                    alert("Desafortunadamente se tuvo un problema al intentar loguearse, por favor intente denuevo más tarde.");
+                }
+            });
         }else{            
             $location.path=('/register');
         }
