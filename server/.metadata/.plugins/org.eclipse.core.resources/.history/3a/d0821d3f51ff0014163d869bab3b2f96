@@ -1,0 +1,83 @@
+package DBServices;
+
+import java.util.List;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.data.mongodb.core.MongoOperations;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.data.mongodb.core.query.Update;
+
+import DBconfig.SpringMongoConfig;
+import entity.User;
+import repositories.UserRepository;
+
+public class MongoUserRepository implements UserRepository {
+	
+	public MongoUserRepository() {
+		super();
+	}
+	
+	ApplicationContext ctx = new AnnotationConfigApplicationContext(SpringMongoConfig.class);
+	MongoOperations mongoOperation = (MongoOperations) ctx.getBean("mongoTemplate");
+	
+	@Override
+	public void deleteUser(User deleted) {
+		Query searchUserQuery = new Query(Criteria.where("id").is(deleted.getId()));
+		mongoOperation.remove(searchUserQuery, User.class);		
+	}
+	
+	@Override
+	public List<User> findAllUser() {
+		List<User> listUser = mongoOperation.findAll(User.class);
+		return listUser;
+	}
+	
+	@Override
+	public User findOneUser(String id) {
+		Query searchUserQuery = new Query(Criteria.where("id").is(id));
+		User saved = mongoOperation.findOne(searchUserQuery, User.class);		
+		return saved;
+	}
+	
+	@Override
+	public boolean findOneUser(User us) {
+		Query searchUserQuery = new Query(Criteria.where("username")
+				.is(us.getUsername()).andOperator(Criteria.where("password").is(us.getPassword())));
+		User saved = mongoOperation.findOne(searchUserQuery, User.class);
+		boolean respuesta=false;
+		if(saved!=null)respuesta=true;
+		return respuesta;
+	}
+	
+	@Override
+	public boolean findOneUser(String email, String pass) {
+		System.out.println("email= " + email + ", password= " + pass);
+		Query searchUserQuery = new Query(Criteria.where("email")
+				.is(email).andOperator(Criteria.where("password").is(pass)));
+		User saved = mongoOperation.findOne(searchUserQuery, User.class);
+		boolean respuesta=false;
+		if(saved!=null){
+			System.out.println(saved.getId());
+			respuesta=true;
+		}
+		return respuesta;
+	}
+	
+	@Override
+	public User saveUser(User saved) {
+		mongoOperation.save(saved);
+		return saved;
+	}
+	
+	@Override
+	public User updateUser(String id, String toUp, Object update) {
+		Query searchUserQuery = new Query(Criteria.where("id").is(id));
+		mongoOperation.updateFirst(searchUserQuery, Update.update(toUp, update),
+				User.class);
+		User saved = mongoOperation.findOne(searchUserQuery, User.class);
+		return saved;
+	}
+
+}

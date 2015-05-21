@@ -5,7 +5,329 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2015-05-15T15:03:03Z</updated>
+  <updated>2015-05-20T16:28:00Z</updated>
+  <entry>
+    <title>Webinar Replay: Reactive data-pipelines with Spring XD and Kafka</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/05/20/webinar-replay-reactive-data-pipelines-with-spring-xd-and-kafka" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2015-05-20:2132</id>
+    <updated>2015-05-20T16:28:00Z</updated>
+    <content type="html">&lt;p&gt;Speakers: Marius Bogoevici &amp;amp; Mark Pollack &lt;/p&gt;
+&lt;p&gt;Slides: &lt;a href="https://speakerdeck.com/mbogoevici/reactive-data-pipelines-with-spring-xd-and-kafka"&gt;https://speakerdeck.com/mbogoevici/reactive-data-pipelines-with-spring-xd-and-kafka &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In the recent years, drastic increases in data volume as well as a greater demand for low latency have led to a radical shift in business requirements and application development methods. In response to these demands, frameworks such as RxJava and high throughput messaging systems such as Kafka have emerged as key building blocks. However, integrating technologies is never easy and Spring XD provides a solution. Through its development model and runtime, Spring XD makes it easy to develop highly scalable data pipelines, and lets you focus on writing and testing business logic vs. integrating and scaling a big data stack. Come and see how easy this can be in this webinar, where we will demonstrate how to build highly scalable data pipelines with RxJava and Kafka, using Spring XD as a platform. In the recent years, drastic increases in data volume as well as a greater demand for low latency have led to a radical shift in business requirements and application development methods. In response to these demands, frameworks such as RxJava and high throughput messaging systems such as Kafka have emerged as key building blocks. However, integrating technologies is never easy and Spring XD provides a solution. Through its development model and runtime, Spring XD makes it easy to develop highly scalable data pipelines, and lets you focus on writing and testing business logic vs. integrating and scaling a big data stack. Come and see how easy this can be in this webinar, where we will demonstrate how to build highly scalable data pipelines with RxJava and Kafka, using Spring XD as a platform.&lt;/p&gt;
+&lt;p&gt; Learn more about Spring XD at http://projects.spring.io/spring-xd&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&#xD;
+  &lt;iframe width="420" height="315" src="https://www.youtube.com/embed/nP7Cx4yeZU4" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&#xD;
+&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>This Week in Spring - May 19th, 2015</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/05/19/this-week-in-spring-may-19th-2015" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2015-05-19:2127</id>
+    <updated>2015-05-19T23:02:00Z</updated>
+    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! As usual, we&amp;rsquo;ve got a&lt;br/&gt;lot to cover this week so let&amp;rsquo;s get to it!&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;the good Dr. Dave Syer is back it again with this seventh installment on how to better modularize the Angular.js client that talks to a &lt;a href="http://spring.io/blog/2015/05/13/modularizing-the-client-angular-js-and-spring-security-part-vii"&gt;backend Spring Security, Spring Boot, and Spring Security OAuth-powered service&lt;/a&gt; and with this eighth installment which looks &lt;a href="http://spring.io/blog/2015/05/19/testing-an-angular-application-angular-js-and-spring-security-part-viii"&gt;at how to test that Angular.js application&lt;/a&gt;!&lt;/li&gt;
+  &lt;li&gt;Spring Security lead and all around amazing, test-driven dude, Rob Winch just &lt;a href="http://spring.io/blog/2015/05/14/spring-test-htmlunit-1-0-0-rc1-released"&gt;announced Spring Test HtmlUnit 1.0.0.RC1&lt;/a&gt; with a lot of new polish.&lt;/li&gt;
+  &lt;li&gt;Spring Batch lead Michael Minella &lt;a href="https://spring.io/blog/2015/05/19/spring-batch-3-0-4-release-is-now-available"&gt;just announced that Spring Batch 3.0.4, a maintenance release, is now available&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Spring Social lead Craig Walls just announced that two maintenance releases, &lt;a href="http://spring.io/blog/2015/05/19/spring-social-1-1-2-released"&gt;Spring Social 1.1.2&lt;/a&gt; and &lt;a href="http://spring.io/blog/2015/05/15/spring-social-1-1-1-released"&gt;Spring Social 1.1.1&lt;/a&gt;, have been released&lt;/li&gt;
+  &lt;li&gt;On May 28th, join Pivotal&amp;rsquo;s own Greg Turnquist: &lt;a href="http://spring.io/blog/2015/05/05/webinar-debug-and-maintain-your-spring-boot-app"&gt;How to Debug and Maintain your Spring Boot App&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Turkcell&amp;rsquo;s Erdem Gunay, and our pal, is giving a webinar on June 9th explaining &lt;a href="http://spring.io/blog/2015/05/06/webinar-a-comprehensive-spring-showcase-personal-cloud-storage-application"&gt;how Spring is pretty comprehensively used in Turkcell&amp;rsquo;s personal cloud service&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;longtime Spring community member &lt;a href="http://stackoverflow.com/questions/30288959/eureka-peers-not-synchronized"&gt;David Welch had a question about setting up a highly available Netflix Eureka installation&lt;/a&gt; and Spring Cloud co-founder Spencer Gibb helped him along on this super useful StackOverflow.com post.&lt;/li&gt;
+  &lt;li&gt;Fancy using JUnit &lt;code&gt;@Rule&lt;/code&gt; instances instead of being forced to specify Spring&amp;rsquo;s JUnit &lt;code&gt;TestRunner&lt;/code&gt; (which effectively removes the ability to use &lt;em&gt;other&lt;/em&gt; sometimes required &lt;code&gt;TestRunner&lt;/code&gt; implementations)? Check out the &lt;a href="https://github.com/spring-projects/spring-framework/commit/d1b1c4f888b5ab5c60cf4beb87f577143bdbebe7"&gt;upcoming Spring framework 4.2 support already in master&lt;/a&gt;!&lt;/li&gt;
+  &lt;li&gt;on May 27th the Seattle Continuous Delivery Meetup &lt;a href="http://www.meetup.com/seattle-continuous-delivery/events/222464656/"&gt;is having a Spring Boot talk&lt;/a&gt;! Naturally. Check it out. Spring Boot fits well in a continuous delivery pipeline: it&amp;rsquo;s easy to build isolated, testable, and production-ready applications.&lt;/li&gt;
+  &lt;li&gt;Yet another (well done, by the way!) post on how to &lt;a href="https://www.jiwhiz.com/blogs/Spring_Boot_Docker_MySQL_Demo"&gt;setup Spring Boot applications and containerize them with Docker&lt;/a&gt;. Seems this is a popular topic! &lt;a href="http://spring.io/guides/gs/spring-boot-docker/"&gt;Good thing we have a guide&lt;/a&gt;!&lt;/li&gt;
+  &lt;li&gt;Spring and Groovy Tool Suite ninja &lt;a href="http://spring.io/blog/2015/05/11/new-in-sts-3-7-0-spring-boot-yaml-editor"&gt;Kris De Volder announced the STS support for YAML&lt;/a&gt; last week - have you tried it yet?&lt;/li&gt;
+  &lt;li&gt;the &lt;em&gt;IS Applications Development Services&lt;/em&gt; blog has a nice post on &lt;a href="http://www.appsdev.is.ed.ac.uk/blog/?p=501"&gt;documenting Spring Boot applications with Swagger&lt;/a&gt;. I like Swagger, but I&amp;rsquo;d recommend also trying out &lt;a href="https://github.com/spring-projects/spring-restdocs"&gt;Spring REST Docs&lt;/a&gt; which are less invasive - they live in the unit-tests - &lt;em&gt;and&lt;/em&gt; they&amp;rsquo;re Asciidoctor-friendly.&lt;/li&gt;
+  &lt;li&gt;Wow, were are finally out of SpringOne2GX replays! This is the last batch, mostly Groovy and Grails. First, Baruch Sadogursky from JFrog talks about &lt;a href="http://spring.io/blog/2015/05/19/springone2gx-2014-replay-grails-plugin-testing-strategies"&gt;Grails Plugin Testing Strategies&lt;/a&gt;. Then David Dawson, from Simplicity Itself talks about &lt;a href="http://spring.io/blog/2015/05/19/springone2gx-2014-replay-philosophical-architecture-in-grails"&gt;Philosophical Architecture in Grails&lt;/a&gt;. Also, Ken Kousen &lt;a href="http://spring.io/blog/2015/05/19/springone2gx-2014-replay-groovy-vampires-combining-groovy-rest-nosql-and-more"&gt;Groovy Vampires: Combining Groovy, REST, NoSQL, and more&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Batch 3.0.4.RELEASE is now available</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/05/19/spring-batch-3-0-4-release-is-now-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Michael Minella</name>
+    </author>
+    <id>tag:spring.io,2015-05-19:2126</id>
+    <updated>2015-05-19T22:36:53Z</updated>
+    <content type="html">&lt;p&gt;We are pleased to announce that Spring Batch 3.0.4.RELEASE is now available via Maven Central, Github and the SpringSource download repository. This is the 4th maintenance release for the 3.0.x branch of Spring Batch and addresses a number of bugs and a few minor enhancements. Many thanks to all of those who submitted the many &lt;a href="https://github.com/springsource/spring-batch/pulls"&gt;pull requests&lt;/a&gt; that went into this release.&lt;/p&gt;&lt;p&gt;&lt;a href="http://spring.io/projects/spring-batch"&gt;Spring Batch Home&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-batch"&gt;Source on GitHub&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-batch/"&gt;Reference Documentation&lt;/a&gt;&lt;/p&gt;&lt;p&gt;We look forward to your feedback in &lt;a href="https://jira.spring.io/browse/BATCH"&gt;Jira&lt;/a&gt;, &lt;a href="http://stackoverflow.com/questions/tagged/spring-batch"&gt;StackOverflow&lt;/a&gt;, or to me directly via Twitter &lt;a href="twitter.com/michaelminella"&gt;@michaelminella&lt;/a&gt;.&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Social 1.1.2 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/05/19/spring-social-1-1-2-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Craig Walls</name>
+    </author>
+    <id>tag:spring.io,2015-05-19:2125</id>
+    <updated>2015-05-19T20:03:16Z</updated>
+    <content type="html">&lt;p&gt;Dear Spring Community,&lt;/p&gt;&lt;p&gt;I&amp;rsquo;m pleased to announce the availability of Spring Social 1.1.2.RELEASE. This includes Spring Social&amp;rsquo;s core, web, security, and config modules. This release fixes a dependency issue from last week&amp;rsquo;s 1.1.1.RELEASE.&lt;/p&gt;&lt;p&gt;&lt;a href="http://projects.spring.io/spring-social/core.html"&gt;Project Site&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-social/docs/1.1.2.RELEASE/reference/htmlsingle/"&gt;Reference&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-social/docs/1.1.2.RELEASE/apidocs/"&gt;JavaDoc&lt;/a&gt;&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>SpringOne2GX 2014 Replay: Philosophical Architecture in Grails</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/05/19/springone2gx-2014-replay-philosophical-architecture-in-grails" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2015-05-20:2131</id>
+    <updated>2015-05-19T17:02:00Z</updated>
+    <content type="html">&lt;p&gt;Recorded at SpringOne2GX 2014. &lt;/p&gt;
+&lt;p&gt;Speaker: David Dawson, Simplicity Itself &lt;/p&gt;
+&lt;p&gt;G&amp;amp;G Special Topics &lt;/p&gt;
+&lt;p&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/s2gx-philosophicalarchitecture"&gt;http://www.slideshare.net/SpringCentral/s2gx-philosophicalarchitecture&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Software development is hard. Life is hard. We try to keep up with a changing world, and it's hard. Where though, does the problem lie? In this talk, David, CEO at Simplicity Itself, will describe a different way of approaching the problem of software development, a different way of trying to keep up with a changing world. This is not a soft talk, all opinions are backed up by cold hard code in a running Grails application, showing how a change in the way you think can radically change your software.&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&#xD;
+  &lt;iframe width="420" height="315" src="https://www.youtube.com/embed/nx8XMY7evbA" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&#xD;
+&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>SpringOne2GX 2014 Replay: Groovy Vampires: Combining Groovy, REST, NoSQL, and more</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/05/19/springone2gx-2014-replay-groovy-vampires-combining-groovy-rest-nosql-and-more" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2015-05-19:2130</id>
+    <updated>2015-05-19T16:52:00Z</updated>
+    <content type="html">&lt;p&gt;Recorded at SpringOne2GX 2014. &lt;/p&gt;
+&lt;p&gt;Speaker: Kenneth Kousen &lt;/p&gt;
+&lt;p&gt;G&amp;amp;G Special Topics &lt;/p&gt;
+&lt;p&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/groovy-vampires"&gt;http://www.slideshare.net/SpringCentral/groovy-vampires&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If a book as horrible as Twilight can sell millions of copies and be made into an even worse movie, how many copies can a book with Groovy vampires sell? (Spoiler: Not as many.) Yes, this topic may be silly, but the technologies used (Groovy, Ratpack, MongoDB, Grails, REST) are (un)deadly serious. &lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&#xD;
+  &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/hwH1PK94PKw" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&#xD;
+&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>SpringOne2GX 2014 Replay: Grails Plugin Testing Strategies</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/05/19/springone2gx-2014-replay-grails-plugin-testing-strategies" />
+    <category term="news" label="News and Events" />
+    <author>
+      <name>Pieter Humphrey</name>
+    </author>
+    <id>tag:spring.io,2015-05-19:2128</id>
+    <updated>2015-05-19T16:46:00Z</updated>
+    <content type="html">&lt;p&gt;Recorded at SpringOne2GX 2014. &lt;/p&gt;
+&lt;p&gt;Speaker: Baruch Sadogursky, JFrog &lt;/p&gt;
+&lt;p&gt;Slides: No slides, Baruch is 100% demo, baby&lt;/p&gt;
+&lt;p&gt;G&amp;amp;G Special Topics&lt;/p&gt;
+&lt;p&gt; Maintaining Grails plugins can be a real challenge given the high expectations and demands. Apart from supporting many users, you're tasked with making sure that the plugin is compatible with a range of Grails versions - both old and new. Your plugin must also be compatible with multiple development environments (OSs, SDKs, etc,) and play nice with the wealth of other plugins that exist in the ecosystem. How can we make sure that all these high standards are met? Testing, and lot's of it!&lt;/p&gt;
+&lt;p&gt;&#xD;
+  &lt;iframe width="420" height="315" src="https://www.youtube.com/embed/NxWw4Zacg-c" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&#xD;
+&lt;/p&gt;</content>
+  </entry>
+  <entry>
+    <title>Testing an Angular Application: Angular JS and Spring Security Part VIII</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/05/19/testing-an-angular-application-angular-js-and-spring-security-part-viii" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Dave Syer</name>
+    </author>
+    <id>tag:spring.io,2015-04-26:2097</id>
+    <updated>2015-05-19T15:25:00Z</updated>
+    <content type="html">&lt;p&gt;In this article we continue &lt;a href="https://spring.io/blog/2015/05/13/modularizing-the-client-angular-js-and-spring-security-part-vii" title="Seventh Article in the Series"&gt;our discussion&lt;/a&gt; of how to use &lt;a href="http://projects.spring.io/spring-security"&gt;Spring Security&lt;/a&gt; with &lt;a href="http://angularjs.org"&gt;Angular JS&lt;/a&gt; in a &amp;ldquo;single page application&amp;rdquo;. Here we show how to write and run unit tests for the client-side code using the Javascript test framework &lt;a href="http://jasmine.github.io/2.0/introduction.html"&gt;Jasmine&lt;/a&gt;. This is the eighth in a series of articles, and you can catch up on the basic building blocks of the application or build it from scratch by reading the &lt;a href="https://spring.io/blog/2015/01/12/spring-and-angular-js-a-secure-single-page-application" title="First Article in the Series"&gt;first article&lt;/a&gt;, or you can just go straight to the &lt;a href="https://github.com/dsyer/spring-security-angular/tree/master/basic"&gt;source code in Github&lt;/a&gt; (the same source code as Part I, but with tests now added). This article actually has very little code using Spring or Spring Security, but it covers the client-side testing in a way that might not be so easy to find in the usual Javascript community resources, and one which we feel will be comfortable for the majority of Spring users.&lt;/p&gt;&lt;p&gt;As with the rest of this series, the build tools are typical for Spring users, and not so much for experienced front-end developers. Thus we look for solutions that can be used from a Java IDE, and on the command line with familiar Java build tools. If you already know about Jasmine and Javascript testing, and you are happy using a Node.js based toolchain (e.g. &lt;code&gt;npm&lt;/code&gt;, &lt;code&gt;grunt&lt;/code&gt; etc.), then you probably can skip this article completely. If you are more comfortable in Eclipse or IntelliJ, and would prefer to use the same tools for your front end as for the back end, then this article will be of interest. When we need a command line (e.g. for continuous integration), we use Maven in the examples here, but Gradle users will probably find the same code easy to integrate.&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Reminder: if you are working through this section with the sample application, be sure to clear your browser cache of cookies and HTTP Basic credentials. In Chrome the best way to do that for a single server is to open a new incognito window.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;h2&gt;&lt;a href="#writing-a-specification-in-jasmine" class="anchor" name="writing-a-specification-in-jasmine"&gt;&lt;/a&gt;Writing a Specification in Jasmine&lt;/h2&gt;&lt;p&gt;Our &amp;ldquo;home&amp;rdquo; controller in the &amp;ldquo;basic&amp;rdquo; application is very simple, so it won&amp;rsquo;t take a lot to test it thoroughly. Here&amp;rsquo;s a reminder of the code (&lt;code&gt;hello.js&lt;/code&gt;):&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint javascript"&gt;angular.module(&amp;#39;hello&amp;#39;, []).controller(&amp;#39;home&amp;#39;, function($scope, $http) {&#xD;
+  $http.get(&amp;#39;resource/&amp;#39;).success(function(data) {&#xD;
+    $scope.greeting = data;&#xD;
+  })&#xD;
+});
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The main challenge we face is to provide the &lt;code&gt;$scope&lt;/code&gt; and &lt;code&gt;$http&lt;/code&gt; objects in the test, so we can make assertions about how they are used in the controller. Actually, even before we face that challenge we need to be able to create a controller instance, so we can test what happens when it loads. Here&amp;rsquo;s how you can do that.&lt;/p&gt;&lt;p&gt;Create a new file &lt;code&gt;spec.js&lt;/code&gt; and put it in &amp;ldquo;src/test/resources/static/js&amp;rdquo;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint javascript"&gt;describe(&amp;quot;App&amp;quot;, function() {&#xD;
+&#xD;
+	beforeEach(module(&amp;#39;hello&amp;#39;));&#xD;
+&#xD;
+    var $controller;&#xD;
+	beforeEach(inject(function($injector) {&#xD;
+		$controller = $injector.get(&amp;#39;$controller&amp;#39;);&#xD;
+	}));&#xD;
+&#xD;
+	it(&amp;quot;loads a controller&amp;quot;, function() {&#xD;
+		var controller = $controller(&amp;#39;home&amp;#39;)&#xD;
+	});&#xD;
+&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In this very basic test suite we have 3 important elements:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;p&gt;We &lt;code&gt;describe()&lt;/code&gt; the thing that is being tested (the &amp;ldquo;App&amp;rdquo; in this case) with a function.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;Inside that function we provide a couple of &lt;code&gt;beforeEach()&lt;/code&gt; callbacks, one of which loads the Angular module &amp;ldquo;hello&amp;rdquo;, and the other of which creates a factory for controllers, which we call &lt;code&gt;$controller&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;Behaviour is expressed through a call to &lt;code&gt;it()&lt;/code&gt;, where we state in words what the expectation is, and then provide a function that makes assertions.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;p&gt;The test function here is so trivial it actually doesn&amp;rsquo;t even make assertions, but it does create an instance of the &amp;ldquo;home&amp;rdquo; controller, so if that fails then the test will fail.&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;NOTE: &amp;ldquo;src/test/resources/static/js&amp;rdquo; is a logical place for test code in a Java application, although a case could be made for &amp;ldquo;src/test/javascript&amp;rdquo;. We will see later why it makes sense to put it in the test classpath, though (indeed if you are used to Spring Boot conventions you may already see why).&lt;/p&gt;
+&lt;/blockquote&gt;&lt;p&gt;Now we need a driver for this Javascript code, in the form of an HTML page that we coudl load in a browser. Create a file called &amp;ldquo;test.html&amp;rdquo; and put it in &amp;ldquo;src/test/resources/static&amp;rdquo;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint html"&gt;&amp;lt;!doctype html&amp;gt;&#xD;
+&amp;lt;html&amp;gt;&#xD;
+&amp;lt;head&amp;gt;&#xD;
+&#xD;
+&amp;lt;title&amp;gt;Jasmine Spec Runner&amp;lt;/title&amp;gt;&#xD;
+&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot;&#xD;
+  href=&amp;quot;/webjars/jasmine/2.0.0/jasmine.css&amp;quot;&amp;gt;&#xD;
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;/webjars/jasmine/2.0.0/jasmine.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#xD;
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&#xD;
+  src=&amp;quot;/webjars/jasmine/2.0.0/jasmine-html.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#xD;
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;/webjars/jasmine/2.0.0/boot.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#xD;
+&#xD;
+&amp;lt;!-- include source files here... --&amp;gt;&#xD;
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;/js/angular-bootstrap.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#xD;
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;/js/hello.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#xD;
+&#xD;
+&amp;lt;!-- include spec files here... --&amp;gt;&#xD;
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&#xD;
+  src=&amp;quot;/webjars/angularjs/1.3.8/angular-mocks.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#xD;
+&amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;/js/spec.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&#xD;
+&#xD;
+&amp;lt;/head&amp;gt;&#xD;
+&#xD;
+&amp;lt;body&amp;gt;&#xD;
+&amp;lt;/body&amp;gt;&#xD;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The HTML is content free, but it loads some Javascript, and it will have a UI once the scripts all run.&lt;/p&gt;&lt;p&gt;First we load the required Jasmine components from &lt;code&gt;/webjars/**&lt;/code&gt;. The 4 files that we load are just boilerplate - you can do the same thing for any application. To make those available at runtime in a test we will need to add the Jasmine dependency to our &amp;ldquo;pom.xml&amp;rdquo;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint xml"&gt;&amp;lt;dependency&amp;gt;&#xD;
+  &amp;lt;groupId&amp;gt;org.webjars&amp;lt;/groupId&amp;gt;&#xD;
+  &amp;lt;artifactId&amp;gt;jasmine&amp;lt;/artifactId&amp;gt;&#xD;
+  &amp;lt;version&amp;gt;2.0.0&amp;lt;/version&amp;gt;&#xD;
+  &amp;lt;scope&amp;gt;test&amp;lt;/scope&amp;gt;&#xD;
+&amp;lt;/dependency&amp;gt;&#xD;
+ ```&#xD;
+&#xD;
+Then we come to the application-specific code. The main source code for our front end is &amp;quot;hello.js&amp;quot; so we have to load that, and also its dependencies in the form of &amp;quot;angular-bootstrap.js&amp;quot; (the latter is created by the wro4j maven plugin, so you need to run `mvn package` once successfully before it is loadable).&#xD;
+&#xD;
+Finally we need the &amp;quot;spec.js&amp;quot; that we jsut wrote, and its dependencies (any that are not already included the the other scripts), which for an Angular application will nearly always include the &amp;quot;angular-mocks.js&amp;quot;. We load it from webjars, so you will also need to add that dependency to &amp;quot;pom.xml&amp;quot;:&#xD;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;dependency&gt;&lt;br/&gt; &lt;groupId&gt;org.webjars&lt;/groupId&gt;&lt;br/&gt; &lt;artifactId&gt;angularjs&lt;/artifactId&gt;&lt;br/&gt; &lt;version&gt;1.3.8&lt;/version&gt;&lt;br/&gt; &lt;scope&gt;test&lt;/scope&gt;&lt;br/&gt;&lt;/dependency&gt;&lt;br/&gt; ```&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;NOTE: The angularjs webjar was already included as a dependency of the wro4j plugin, so that it could build the &amp;ldquo;angular-bootstrap.js&amp;rdquo;. This is going to be used in a different build step, so we need it again.&lt;/p&gt;
+&lt;/blockquote&gt;&lt;h2&gt;&lt;a href="#running-the-specs" class="anchor" name="running-the-specs"&gt;&lt;/a&gt;Running the Specs&lt;/h2&gt;&lt;p&gt;To run our &amp;ldquo;test.html&amp;rdquo; code we need a tiny application (e.g. in &amp;ldquo;src/test/java/test&amp;rdquo;):&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@SpringBootApplication&#xD;
+@Controller&#xD;
+public class TestApplication {&#xD;
+&#xD;
+	@RequestMapping(&amp;quot;/&amp;quot;)&#xD;
+	public String home() {&#xD;
+		return &amp;quot;forward:/test.html&amp;quot;;&#xD;
+	}&#xD;
+&#xD;
+	public static void main(String[] args) {&#xD;
+		new SpringApplicationBuilder(TestApplication.class).properties(&#xD;
+				&amp;quot;server.port=9999&amp;quot;, &amp;quot;security.basic.enabled=false&amp;quot;).run(args);&#xD;
+	}&#xD;
+&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The &lt;code&gt;TestApplication&lt;/code&gt; is pure boilerplate: all applications could run tests the same way. You can run it in your IDE and visit &lt;a href="http://localhost:9999"&gt;http://localhost:9999&lt;/a&gt; to see the Javascript running. The one &lt;code&gt;@RequestMapping&lt;/code&gt; we provided just makes the home page display out test HTML. All (one) tests should be green.&lt;/p&gt;&lt;p&gt;Your developer workflow from here would be to make a change to Javascript code and reload the test application in your browser to run the tests. So simple!&lt;/p&gt;&lt;h2&gt;&lt;a href="#improving-the-unit-test-mocking-http-backend" class="anchor" name="improving-the-unit-test-mocking-http-backend"&gt;&lt;/a&gt;Improving the Unit Test: Mocking HTTP Backend&lt;/h2&gt;&lt;p&gt;To improve the spec to production grade we need to actually assert something about what happens when the controller loads. Since it makes a call to &lt;code&gt;$http.get()&lt;/code&gt; we need to mock that call to avoid having to run the whole application just for a unit test. To do that we use the Angular &lt;code&gt;$httpBackend&lt;/code&gt; (in &amp;ldquo;spec.js&amp;rdquo;):&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint javascript"&gt;describe(&amp;quot;App&amp;quot;, function() {&#xD;
+&#xD;
+  beforeEach(module(&amp;#39;hello&amp;#39;));&#xD;
+&#xD;
+  var $httpBackend, $controller;&#xD;
+  beforeEach(inject(function($injector) {&#xD;
+    $httpBackend = $injector.get(&amp;#39;$httpBackend&amp;#39;);&#xD;
+    $controller = $injector.get(&amp;#39;$controller&amp;#39;);&#xD;
+  }));&#xD;
+&#xD;
+  afterEach(function() {&#xD;
+    $httpBackend.verifyNoOutstandingExpectation();&#xD;
+    $httpBackend.verifyNoOutstandingRequest();&#xD;
+  });&#xD;
+&#xD;
+  it(&amp;quot;says Hello Test when controller loads&amp;quot;, function() {&#xD;
+    var $scope = {};&#xD;
+    $httpBackend.expectGET(&amp;#39;resource/&amp;#39;).respond(200, {&#xD;
+      id : 4321,&#xD;
+      content : &amp;#39;Hello Test&amp;#39;&#xD;
+    });&#xD;
+    var controller = $controller(&amp;#39;home&amp;#39;, {&#xD;
+      $scope : $scope&#xD;
+    });&#xD;
+    $httpBackend.flush();&#xD;
+    expect($scope.greeting.content).toEqual(&amp;#39;Hello Test&amp;#39;);&#xD;
+  });&#xD;
+&#xD;
+})
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The new pieces here are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;p&gt;The creation of the &lt;code&gt;$httpBackend&lt;/code&gt; in a &lt;code&gt;beforeEach()&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;Adding a new &lt;code&gt;afterEach()&lt;/code&gt; that verifies the state of the backend.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;In the test function we set expectations for the backend before we create the controller, telling it to expect a call to &amp;lsquo;resource/&amp;rsquo;,and what the response should be.&lt;/p&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;p&gt;We also add a call to jasmine &lt;code&gt;expect()&lt;/code&gt; to assert the outcome.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;Without having to start and stop the test application, this test should now be green in the browser.&lt;/p&gt;&lt;h2&gt;&lt;a href="#running-specs-on-the-command-line" class="anchor" name="running-specs-on-the-command-line"&gt;&lt;/a&gt;Running Specs on the Command Line&lt;/h2&gt;&lt;p&gt;It&amp;rsquo;s great to be able to run specs in a browser, because there are excellent developer tools built into modern browsers (e.g. F12 in Chrome). You can set breakpoints and inspect variables, and well as being able to refresh the view to re-run your tests in a live server. But this won&amp;rsquo;t help you with continuous integration: for that you need a way to run the tests from a command line. There is tooling available for whatever build tools you prefer to use, but since we are using Maven here, we will add a plugin to the &amp;ldquo;pom.xml&amp;rdquo;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint xml"&gt;&amp;lt;plugin&amp;gt;&#xD;
+  &amp;lt;groupId&amp;gt;com.github.searls&amp;lt;/groupId&amp;gt;&#xD;
+  &amp;lt;artifactId&amp;gt;jasmine-maven-plugin&amp;lt;/artifactId&amp;gt;&#xD;
+  &amp;lt;version&amp;gt;2.0-alpha-01&amp;lt;/version&amp;gt;&#xD;
+  &amp;lt;executions&amp;gt;&#xD;
+    &amp;lt;execution&amp;gt;&#xD;
+      &amp;lt;goals&amp;gt;&#xD;
+        &amp;lt;goal&amp;gt;test&amp;lt;/goal&amp;gt;&#xD;
+      &amp;lt;/goals&amp;gt;&#xD;
+    &amp;lt;/execution&amp;gt;&#xD;
+  &amp;lt;/executions&amp;gt;&#xD;
+&amp;lt;/plugin&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The default settings for this plugin won&amp;rsquo;t work with the static resource layout that we already made, so we need a bit of configuration for that:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint"&gt;&amp;lt;plugin&amp;gt;&#xD;
+  ...&#xD;
+  &amp;lt;configuration&amp;gt;&#xD;
+    &amp;lt;additionalContexts&amp;gt;&#xD;
+      &amp;lt;context&amp;gt;&#xD;
+        &amp;lt;contextRoot&amp;gt;/lib&amp;lt;/contextRoot&amp;gt;&#xD;
+        &amp;lt;directory&amp;gt;${project.build.directory}/generated-resources/static/js&amp;lt;/directory&amp;gt;&#xD;
+      &amp;lt;/context&amp;gt;&#xD;
+    &amp;lt;/additionalContexts&amp;gt;&#xD;
+    &amp;lt;preloadSources&amp;gt;&#xD;
+      &amp;lt;source&amp;gt;/lib/angular-bootstrap.js&amp;lt;/source&amp;gt;&#xD;
+      &amp;lt;source&amp;gt;/webjars/angularjs/1.3.8/angular-mocks.js&amp;lt;/source&amp;gt;&#xD;
+    &amp;lt;/preloadSources&amp;gt;&#xD;
+    &amp;lt;jsSrcDir&amp;gt;${project.basedir}/src/main/resources/static/js&amp;lt;/jsSrcDir&amp;gt;&#xD;
+    &amp;lt;jsTestSrcDir&amp;gt;${project.basedir}/src/test/resources/static/js&amp;lt;/jsTestSrcDir&amp;gt;&#xD;
+    &amp;lt;webDriverClassName&amp;gt;org.openqa.selenium.phantomjs.PhantomJSDriver&amp;lt;/webDriverClassName&amp;gt;&#xD;
+  &amp;lt;/configuration&amp;gt;&#xD;
+&amp;lt;/plugin&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Notice that the &lt;code&gt;webDriverClassName&lt;/code&gt; is specified as &lt;code&gt;PhantomJSDriver&lt;/code&gt;, which means you need &lt;code&gt;phantomjs&lt;/code&gt; to be on your &lt;code&gt;PATH&lt;/code&gt; at runtime. This works out of the box in &lt;a href="https://travis-ci.org"&gt;Travis CI&lt;/a&gt;, and requires a simple installation in Linux, MacOS and Windows - you can &lt;a href="http://phantomjs.org/download.html"&gt;download binaries&lt;/a&gt; or use a package manager, like &lt;code&gt;apt-get&lt;/code&gt; on Ubuntu for instance. In principle, any Selenium web driver can be used here (and the default is &lt;code&gt;HtmlUnitDriver&lt;/code&gt;), but PhantomJS is probably the best one to use for an Angular application.&lt;/p&gt;&lt;p&gt;We also need to make the Angular library available to the plugin so it can load that &amp;ldquo;angular-mocks.js&amp;rdquo; dependency:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint"&gt;&amp;lt;plugin&amp;gt;&#xD;
+  ...&#xD;
+  &amp;lt;dependencies&amp;gt;&#xD;
+    &amp;lt;dependency&amp;gt;&#xD;
+      &amp;lt;groupId&amp;gt;org.webjars&amp;lt;/groupId&amp;gt;&#xD;
+      &amp;lt;artifactId&amp;gt;angularjs&amp;lt;/artifactId&amp;gt;&#xD;
+      &amp;lt;version&amp;gt;1.3.8&amp;lt;/version&amp;gt;&#xD;
+    &amp;lt;/dependency&amp;gt;&#xD;
+  &amp;lt;/dependencies&amp;gt;&#xD;
+&amp;lt;/plugin&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;That&amp;rsquo;s it. All boilerplate again (so it can go in a parent pom if you want to share the code between multiple projects). Just run it on the command line:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint"&gt;$ mvn jasmine:test
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The tests also run as part of the Maven &amp;ldquo;test&amp;rdquo; lifecycle, so you can just run &lt;code&gt;mvn test&lt;/code&gt; to run all the Java tests as well as the Javascript ones, slotting very smoothly into your existing build and deployment cycle. Here&amp;rsquo;s the log:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint"&gt;$ mvn test&#xD;
+...&#xD;
+[INFO] &#xD;
+-------------------------------------------------------&#xD;
+ J A S M I N E   S P E C S&#xD;
+-------------------------------------------------------&#xD;
+[INFO] &#xD;
+App&#xD;
+  says Hello Test when controller loads&#xD;
+&#xD;
+Results: 1 specs, 0 failures&#xD;
+&#xD;
+[INFO] ------------------------------------------------------------------------&#xD;
+[INFO] BUILD SUCCESS&#xD;
+[INFO] ------------------------------------------------------------------------&#xD;
+[INFO] Total time: 21.064s&#xD;
+[INFO] Finished at: Sun Apr 26 14:46:14 BST 2015&#xD;
+[INFO] Final Memory: 47M/385M&#xD;
+[INFO] ------------------------------------------------------------------------
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The Jasmine Maven plugin also comes with a goal &lt;code&gt;mvn jasmine:bdd&lt;/code&gt; that runs a server that you can load in your browser to run the tests (as an alternative to the &lt;code&gt;TestApplication&lt;/code&gt; above).&lt;/p&gt;&lt;h2&gt;&lt;a href="#conclusion" class="anchor" name="conclusion"&gt;&lt;/a&gt;Conclusion&lt;/h2&gt;&lt;p&gt;Being able to run unit tests for Javascript is important in a modern web application and it&amp;rsquo;s a topic that we&amp;rsquo;ve ignored (or dodged) up to now in this series. With this installment we have presented the basic ingredients of how to write the tests, how to run them at development time and also, importantly, in a continuous integration setting. The approach we have taken is not going to suit everyone, so please don&amp;rsquo;t feel bad about doing it in a different way, but make sure you have all those ingredients. The way we did it here will probably feel comfortable to traditional Java enterprise developers, and integrates well with their existing tools and processes, so if you are in that category I hope you will find it useful as a starting point. More examples of testing with Angular and Jasmine can be found in plenty of places on the internet, but the first point of call might be the &lt;a href="https://github.com/dsyer/spring-security-angular/tree/master/single"&gt;&amp;ldquo;single&amp;rdquo; sample&lt;/a&gt; from this series, which now has some up to date test code which is a bit less trivial than the code we needed to write for the &amp;ldquo;basic&amp;rdquo; sample in this article.&lt;/p&gt;</content>
+  </entry>
   <entry>
     <title>Spring Social 1.1.1 Released</title>
     <link rel="alternate" href="https://spring.io/blog/2015/05/15/spring-social-1-1-1-released" />
@@ -41,7 +363,7 @@
       <name>Dave Syer</name>
     </author>
     <id>tag:spring.io,2015-04-16:2084</id>
-    <updated>2015-05-13T14:50:19Z</updated>
+    <updated>2015-05-13T14:50:00Z</updated>
     <content type="html">&lt;p&gt;In this article we continue &lt;a href="https://spring.io/blog/2015/03/23/multiple-ui-applications-and-a-gateway-single-page-application-with-spring-and-angular-js-part-vi" title="Sixth Article in the Series"&gt;our discussion&lt;/a&gt; of how to use &lt;a href="http://projects.spring.io/spring-security"&gt;Spring Security&lt;/a&gt; with &lt;a href="http://angularjs.org"&gt;Angular JS&lt;/a&gt; in a &amp;ldquo;single page application&amp;rdquo;. Here we show how to modularize the client-side code, and how to use &amp;ldquo;nice&amp;rdquo; URL paths without the fragment notation (e.g. &amp;ldquo;/#/login&amp;rdquo;) which Angular uses by default, but most users dislike. This is the seventh in a series of articles, and you can catch up on the basic building blocks of the application or build it from scratch by reading the &lt;a href="https://spring.io/blog/2015/01/12/spring-and-angular-js-a-secure-single-page-application" title="First Article in the Series"&gt;first article&lt;/a&gt;, or you can just go straight to the &lt;a href="https://github.com/dsyer/spring-security-angular/tree/master/modular"&gt;source code in Github&lt;/a&gt;. We will be able to tidy up a lot of loose ends from the JavaScript code of the rest of this series, and at the same time show how it can fit very snugly against a backend server built from Spring Security and Spring Boot.&lt;/p&gt;&lt;h2&gt;&lt;a href="#breaking-up-the-application" class="anchor" name="breaking-up-the-application"&gt;&lt;/a&gt;Breaking up the Application&lt;/h2&gt;&lt;p&gt;The sample application that we worked with so far in this series was trivial enough that we could get away with a single JavaScript source file for the whole thing. No larger application will ever end up that way, even if it starts out life like this one, so to mimic real life in a sample we are going to break things up. A good starting point would be to take the &amp;ldquo;single&amp;rdquo; application from &lt;a href="https://spring.io/blog/2015/01/12/the-login-page-angular-js-and-spring-security-part-ii" title="Second Article in the Series"&gt;Part II&lt;/a&gt; and have a look at its structure in the source code. Here&amp;rsquo;s a directory listing for the static content (excluding the &amp;ldquo;application.yml&amp;rdquo; that belongs on the server):&lt;/p&gt;
 &lt;pre&gt;&lt;code class="prettyprint"&gt;static/&#xD;
  js/&#xD;
@@ -332,7 +654,7 @@ public String redirect() {&#xD;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;As long as &lt;code&gt;auth.path&lt;/code&gt; is initialized with &lt;code&gt;$location.path()&lt;/code&gt;, this will even work if the user types in a route explicitly into the browser (i.e. doesn&amp;rsquo;t want to load the home page first).&lt;/p&gt;&lt;p&gt;Fire up the application (using your IDE and the &lt;code&gt;main()&lt;/code&gt; method, or on the command line with &lt;code&gt;mvn spring-boot:run&lt;/code&gt;) and visit it at &lt;a href="http://localhost:8080"&gt;http://localhost:8080&lt;/a&gt; to see the result.&lt;/p&gt;
 &lt;blockquote&gt;&lt;p&gt;Reminder: be sure to clear your browser cache of cookies and HTTP Basic credentials. In Chrome the best way to do that is to open a new incognito window.&lt;/p&gt;
-&lt;/blockquote&gt;&lt;h2&gt;&lt;a href="#conclusion" class="anchor" name="conclusion"&gt;&lt;/a&gt;Conclusion&lt;/h2&gt;&lt;p&gt;In this article we have seen how to modularize an Angular application (taking as a starting point the application from &lt;a href="https://spring.io/blog/2015/01/12/the-login-page-angular-js-and-spring-security-part-ii" title="Second Article in the Series"&gt;Part II&lt;/a&gt; of &lt;a href="https://spring.io/blog/2015/01/12/spring-and-angular-js-a-secure-single-page-application" title="First Article in the Series"&gt;the series&lt;/a&gt;), how to make it redirect to a login page, and how to use &amp;ldquo;natural&amp;rdquo; routes that can be typed or bookmarked easily by users. We took a step back from the last couple of articles in the series, concentrating on the client-side code a bit more, and temporarily ditching the distributed architecture that we were building in Parts III-VI. That doesn&amp;rsquo;t mean that the changes here can&amp;rsquo;t be applied to those other applications (actually it&amp;rsquo;s fairly trivial) - it was just to simplify the server-side code while we were learning how to do things on the client. There &lt;em&gt;were&lt;/em&gt; a couple of server-side features that we used or discussed briefly though (for instance the use of a &amp;ldquo;forward&amp;rdquo; view in Spring MVC to enable &amp;ldquo;natural&amp;rdquo; routes), so we have continued the theme of Angular and Spring working together, and shown that they do so quite well with small tweaks here and there.&lt;/p&gt;</content>
+&lt;/blockquote&gt;&lt;h2&gt;&lt;a href="#conclusion" class="anchor" name="conclusion"&gt;&lt;/a&gt;Conclusion&lt;/h2&gt;&lt;p&gt;In this article we have seen how to modularize an Angular application (taking as a starting point the application from &lt;a href="https://spring.io/blog/2015/01/12/the-login-page-angular-js-and-spring-security-part-ii" title="Second Article in the Series"&gt;Part II&lt;/a&gt; of &lt;a href="https://spring.io/blog/2015/01/12/spring-and-angular-js-a-secure-single-page-application" title="First Article in the Series"&gt;the series&lt;/a&gt;), how to make it redirect to a login page, and how to use &amp;ldquo;natural&amp;rdquo; routes that can be typed or bookmarked easily by users. We took a step back from the last couple of articles in the series, concentrating on the client-side code a bit more, and temporarily ditching the distributed architecture that we were building in Parts III-VI. That doesn&amp;rsquo;t mean that the changes here can&amp;rsquo;t be applied to those other applications (actually it&amp;rsquo;s fairly trivial) - it was just to simplify the server-side code while we were learning how to do things on the client. There &lt;em&gt;were&lt;/em&gt; a couple of server-side features that we used or discussed briefly though (for instance the use of a &amp;ldquo;forward&amp;rdquo; view in Spring MVC to enable &amp;ldquo;natural&amp;rdquo; routes), so we have continued the theme of Angular and Spring working together, and shown that they do so quite well with small tweaks here and there.&lt;/p&gt;&lt;p&gt;The &lt;a href="https://spring.io/blog/2015/05/19/testing-an-angular-application-angular-js-and-spring-security-part-viii"&gt;next part in the series&lt;/a&gt; is about testing the client-side code.&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>This Week in Spring - May 12, 2015</title>
@@ -498,149 +820,6 @@ public String handleWithDeclare(String foo) {&#xD;
 	return foo.toUpperCase();&#xD;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In this example, the queue &lt;code&gt;auto.declare&lt;/code&gt; is declared and bound to exchange &lt;code&gt;auto.exch&lt;/code&gt; with routing key &lt;code&gt;auto.rk&lt;/code&gt;. The exchange is declared too.&lt;/p&gt;&lt;p&gt;Previously, the &lt;code&gt;Queue&lt;/code&gt;, &lt;code&gt;Exchange&lt;/code&gt; and &lt;code&gt;Binding&lt;/code&gt; had to be declared as separate &lt;code&gt;@Bean&lt;/code&gt;s.&lt;/p&gt;&lt;h2&gt;&lt;a href="#configurable-exchange-routing-key-for-replies" class="anchor" name="configurable-exchange-routing-key-for-replies"&gt;&lt;/a&gt;Configurable Exchange/Routing Key for Replies&lt;/h2&gt;&lt;p&gt;Previously, when using request/reply messaging with the &lt;code&gt;RabbitTemplate&lt;/code&gt;, replies were routed to the default exchange and routed with the queue name. It is now possible to supply a &lt;code&gt;reply-address&lt;/code&gt; with the form &lt;code&gt;exchange/routingKey&lt;/code&gt; to route using a specific exchange and routing key.&lt;/p&gt;&lt;h2&gt;&lt;a href="#rabbitmanagementtemplate" class="anchor" name="rabbitmanagementtemplate"&gt;&lt;/a&gt;RabbitManagementTemplate&lt;/h2&gt;&lt;p&gt;The &lt;code&gt;spring-erlang&lt;/code&gt; jar is no longer provided. Users are encouraged to use the RabbitMQ REST API instead. The RabbitMQ team are working on a Java binding for the REST API and Spring AMQP now provides a lightweight wrapper for that API using the familiar &lt;code&gt;Queue&lt;/code&gt;, &lt;code&gt;Exchange&lt;/code&gt; and &lt;code&gt;Binding&lt;/code&gt; domain objects.&lt;/p&gt;&lt;h2&gt;&lt;a href="#conclusion" class="anchor" name="conclusion"&gt;&lt;/a&gt;Conclusion&lt;/h2&gt;&lt;p&gt;Complete details of the new features can be found in the &lt;a href="http://docs.spring.io/spring-amqp/docs/1.5.0.M1/reference/html/_introduction.html#_changes_in_1_5_since_1_4"&gt;What&amp;rsquo;s New section of the reference manual&lt;/a&gt; and the &lt;a href="https://jira.spring.io/secure/ReleaseNote.jspa?projectId=10450&amp;version=14837"&gt;JIRA release notes&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Users are encouraged to try the new features before the GA release and provide feedback using the normal channels (&lt;code&gt;spring-amqp&lt;/code&gt; tag on Stack Overflow, and JIRA).&lt;/p&gt;&lt;p&gt;See &lt;a href="http://projects.spring.io/spring-amqp/"&gt;the project page&lt;/a&gt; for links to documentation and downloads.&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Webinar Replay:  Smarter Service-to-Service Invocations with Spring Cloud</title>
-    <link rel="alternate" href="https://spring.io/blog/2015/05/07/webinar-replay-smarter-service-to-service-invocations-with-spring-cloud" />
-    <category term="news" label="News and Events" />
-    <author>
-      <name>Pieter Humphrey</name>
-    </author>
-    <id>tag:spring.io,2015-05-07:2115</id>
-    <updated>2015-05-07T13:42:00Z</updated>
-    <content type="html">&lt;p&gt;Speaker: Josh Long &lt;/p&gt;
-&lt;p&gt;Slides:&lt;a href="https://speakerdeck.com/joshlong/smarter-service-to-service-invocation-with-spring-cloud"&gt; https://speakerdeck.com/joshlong/smarter-service-to-service-invocation-with-spring-cloud &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Spring Cloud 1.0 is here! It offers a powerful way to create and consume microservices. As you introduce new services, you introduce integration problems: services can be shaky, they can disappear and - as they're often exposed over HTTP - they require a bit more footwork than in-process method invocations. In this webinar, we'll focus specifically on how Spring Cloud integrates service registration (e.g.: Eureka, Consul, or Zookeeper), declarative REST clients (with Netflix's Feign), reactive programming and the circuit breaker pattern with Hystrix to support easy, robust service-to-service invocations.&lt;/p&gt;
-&lt;p&gt;Learn about about Spring Cloud at &lt;a href="http://projects.spring.io/spring-cloud"&gt;http://projects.spring.io/spring-cloud&lt;/a&gt;&lt;a href="http://projects.spring.io/spring-cloud"&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Learn about about Spring Boot at &lt;a href="http://projects.spring.io/spring-security"&gt;http://projects.spring.io/spring-boot&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt; &lt;iframe width="420" height="315" src="https://www.youtube.com/embed/my3yr8Arq2g" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt; &lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Webinar: A Comprehensive Spring Showcase: Personal Cloud Storage Application</title>
-    <link rel="alternate" href="https://spring.io/blog/2015/05/06/webinar-a-comprehensive-spring-showcase-personal-cloud-storage-application" />
-    <category term="news" label="News and Events" />
-    <author>
-      <name>Pieter Humphrey</name>
-    </author>
-    <id>tag:spring.io,2015-05-05:2110</id>
-    <updated>2015-05-06T07:06:00Z</updated>
-    <content type="html">&lt;p&gt;Speaker: Erdem Gunay, Turkcell&lt;/p&gt;
-&lt;p&gt;Turkcell launched a personal cloud storage service few years ago. Adding new business features was costly in terms of time and budget on the legacy solution. The user experience needed to be improved. Finally, it was decided to build a new solution where Spring Boot and Spring Framework projects play crucial role as the backbone.&#xD;
-The project was completed just in 6 months starting from scratch. The solution was built on top of Spring Boot and many Spring IO Platform projects, allowing the development team focus on business logic instead of configuration &amp; integration details. The project has been divided into deployable modules (API, backend, migration, test automation) accessing micro services that are responsible for one task only. Join Erdem for a review of the migration effort and new architecture - all enabled by Spring Boot.&lt;/p&gt;&lt;p&gt;Tuesday, June 9th, 2015 2:00PM GMT (London GMT) &lt;a href="http://connect.pivotal.io/OSS_Webinar_7AMComprehensiveSpringShowcasePersonalCloudStorageApplication_Register.html"&gt;Register&lt;/a&gt;&lt;br/&gt;&lt;p&gt;Tuesday, June 9th, 2015 10:00AM PDT (San Francisco GMT-07:00) &lt;a href="http://connect.pivotal.io/OSS_Webinar_10AMComprehensiveSpringShowcasePersonalCloudStorageApp_Register.html"&gt;Register&lt;/a&gt;&lt;/p&gt;&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - May 5th, 2015</title>
-    <link rel="alternate" href="https://spring.io/blog/2015/05/05/this-week-in-spring-may-5th-2015" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2015-05-05:2113</id>
-    <updated>2015-05-05T15:16:52Z</updated>
-    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! This week I&amp;rsquo;m in Las Vegas at the mega EMC World event.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Spring Security lead Rob Winch has just announced that &lt;a href="http://spring.io/blog/2015/05/05/spring-security-saml-1-0-1-released"&gt;Spring Security SAML 1.0.1 is now available&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Phillip Verheyden&amp;rsquo;s talk offers a very pragmatic look at&lt;a href="http://spring.io/blog/2015/05/05/springone2gx-2014-replay-migrating-to-spring-4-from-spring-3-what-you-need-to-know"&gt;how to move Spring 3 application&lt;/a&gt; - including dependencies like Jackson and Hibernate - to take advantage of newer and new features in Spring 4.x.&lt;/li&gt;
-  &lt;li&gt;My pal Adib Saikali&amp;rsquo;s SpringOne2GX 2014 talk on building a &lt;a href="http://spring.io/blog/2015/05/05/springone2gx-2014-replay-great-single-page-apps-need-great-backends"&gt;rich client backends with Spring is now up&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Don&amp;rsquo;t miss this replay of Spring ninja Greg Turnquist&amp;rsquo;s &lt;a href="http://spring.io/blog/2015/05/05/webinar-debug-and-maintain-your-spring-boot-app"&gt;talk on debugging and maintaining Spring Boot applications&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Dustin Whittle&amp;rsquo;s talk &lt;a href="http://spring.io/blog/2015/05/05/springone2gx-2014-replay-performance-testing-crash-course"&gt;on how to performance testing (Spring) applications&lt;/a&gt; is filled with useful tools, tips-and-tricks for performance testing applications using Siege, Bees with Machine Guns, Google PageSpeed, WBench, and more.&lt;/li&gt;
-  &lt;li&gt;Don&amp;rsquo;t miss our pal Marten Deinum&amp;rsquo;s May 12th webinar on &lt;a href="http://spring.io/blog/2015/05/05/webinar-improving-your-legacy-application-with-spring"&gt;modernizing &lt;em&gt;legacy&lt;/em&gt; Spring applications&lt;/a&gt;. I can&amp;rsquo;t wait to listen to this one! Regular &lt;em&gt;This Week in Spring&lt;/em&gt; readers know he almost always makes an appearance in our roundup!&lt;/li&gt;
-  &lt;li&gt;Spring Data ninja &lt;a href="http://spring.io/blog/2015/04/30/spring-for-apache-hadoop-2-2-m1-released"&gt;Thomas Risberg just announced Spring for Apache Hadoop 2.2 M1&lt;/a&gt;. The new release includes newer supported dependencies, better support for for Hiveserver2 including a batch tasklet, support for a batch tasklet to run Spark apps, Spring Boot-integration, smarter security integration, and integration with Spring Cloud components, and much more!&lt;/li&gt;
-  &lt;li&gt;The good Dr. Pollack &lt;a href="http://spring.io/blog/2015/04/30/spring-xd-1-2-m1-and-1-1-2-released"&gt;just announced Spring XD 1.2 M1&lt;/a&gt; (including a preview of the astonishing Spring Flo visual editor, improved Cassandra and Kafka integration, and much more) and 1.1.2 which contains bugfixes. I can&amp;rsquo;t wait to see some of the stuff in Spring XD 1.2.M1.&lt;/li&gt;
-  &lt;li&gt;Spring Security lead Rob Winch just announced Spring LDAP 2.0.3.RELEASE, which &lt;a href="http://spring.io/blog/2015/04/30/spring-ldap-2-0-3-released"&gt;is mainly a bugfix release&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;Check out Unicon&amp;rsquo;s recently developed &lt;a href="https://github.com/Unicon/cas-client-autoconfig-support"&gt;CAS-client auto-configuration for Spring Boot&lt;/a&gt;. CAS is a sort of single-sign on for the web. &lt;a href="https://github.com/Unicon/cas-client-autoconfig-support"&gt;https://github.com/Unicon/cas-client-autoconfig-support&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Check out Sébastien Deleuze&amp;rsquo;s talk from Spring I/O to learn more about &lt;a href="https://speakerdeck.com/sdeleuze/isomorphic-templating-with-spring-boot-nashorn-and-react"&gt;Spring framework 4.2&amp;rsquo;s upcoming support for isomorphic&lt;/a&gt; (scripted on both server and client) views using React.js and Handlebars.&lt;/li&gt;
-  &lt;li&gt;Check out this post to learn how to deploy a Spring Boot application to AWS using Elastic Beanstalk](&lt;a href="http://mtdevuk.com/2015/02/10/how-to-deploy-a-spring-boot-application-to-amazon-aws-using-elastic-beanstalk/"&gt;http://mtdevuk.com/2015/02/10/how-to-deploy-a-spring-boot-application-to-amazon-aws-using-elastic-beanstalk/&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;Java Code Geek has a nice post aggregating the top Java &lt;a href="http://www.javacodegeeks.com/2015/04/we-analyzed-60678-libraries-on-github-here-are-the-top-100.html?utm_content=buffereb42f&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer"&gt;libraries represented by imports in some 60,000+ libraries on GitHub&lt;/a&gt;. The numbers are &lt;em&gt;very&lt;/em&gt; telling: Spring libraries feature the most frequently, taken together, and Spring Test, in particular, comes right after JUnit (ahead of the likes of Mockito!) in terms of popularity. I also like that many of the &lt;em&gt;other&lt;/em&gt; non-Spring libaries represented are very often included a Spring Boot starter. Convenient!&lt;/li&gt;
-  &lt;li&gt;Check out the upcoming &lt;a href="https://vaadin.com/spring"&gt;May 7th webinar on using Spring and Vaadin together&lt;/a&gt; if you&amp;rsquo;re a Vaadin developer, you&amp;rsquo;re going to want to know about Spring Boot!&lt;/li&gt;
-&lt;/ul&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Security SAML 1.0.1 Released</title>
-    <link rel="alternate" href="https://spring.io/blog/2015/05/05/spring-security-saml-1-0-1-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Rob Winch</name>
-    </author>
-    <id>tag:spring.io,2015-05-04:2106</id>
-    <updated>2015-05-05T13:37:22Z</updated>
-    <content type="html">&lt;p&gt;I&amp;rsquo;m pleased to announce the release of Spring Security SAML 1.0.1. This release is passive to 1.0.0 the highlights of which are:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Added support for Spring Security 4.0&lt;/li&gt;
-  &lt;li&gt;Added integration guide with &lt;a href="http://docs.spring.io/spring-security-saml/docs/1.0.1.RELEASE/reference/html/chapter-idp-guide.html#d5e1816"&gt;Okta&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;MaxAuthenticationAge time supports longer expiration times than 21 days&lt;/li&gt;
-  &lt;li&gt;Deployment without JKS keystore is now supported&lt;/li&gt;
-  &lt;li&gt;Service provider can now define multiple assertion consumer endpoints with same binding&lt;/li&gt;
-  &lt;li&gt;Minor fixes and documentation improvements&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;&lt;a href="https://spring.io/spring-security-saml"&gt;Project Site&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-security-saml/docs/1.0.x/reference/html/"&gt;Documentation&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-security-saml/docs/1.0.x/reference/html/chapter-whats-new.html#section-whats-new-highlight-1.0.1"&gt;Changelog&lt;/a&gt;&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>SpringOne2GX 2014 Replay: Migrating to Spring 4 from Spring 3 - What you need to know</title>
-    <link rel="alternate" href="https://spring.io/blog/2015/05/05/springone2gx-2014-replay-migrating-to-spring-4-from-spring-3-what-you-need-to-know" />
-    <category term="news" label="News and Events" />
-    <author>
-      <name>Pieter Humphrey</name>
-    </author>
-    <id>tag:spring.io,2015-05-05:2112</id>
-    <updated>2015-05-05T07:21:00Z</updated>
-    <content type="html">&lt;p&gt;Migrating to Spring 4 from Spring 3 - What you need to know &lt;/p&gt;
-&lt;p&gt;Recorded at SpringOne2GX 2014. &lt;/p&gt;
-&lt;p&gt;Speaker: Phillip Verheyden &lt;/p&gt;
-&lt;p&gt;Applied Spring Track &lt;/p&gt;
-&lt;p&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/upgrade-tospring4"&gt;http://www.slideshare.net/SpringCentral/upgrade-tospring4&lt;/a&gt; &lt;/p&gt;
-&lt;p&gt;In this talk we will cover what it takes to migrate a Spring 3.x application to Spring 4. Some of the questions that we will answer: What improvements does Spring 4 offer over Spring 3 and why should I invest in upgrading? What do I do with all of my current XML configuration? What about dependent library upgrades like Hibernate and Jackson? Part of this talk will focus on updating a specific application based on Spring 3 up to date with Spring 4 and the latest in best practices and design. &lt;/p&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;
-&lt;p&gt;&#xD;
-  &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/V4GRyzbyy6Y" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&#xD;
-&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>SpringOne2GX 2014 Replay: Great single page apps need great backends</title>
-    <link rel="alternate" href="https://spring.io/blog/2015/05/05/springone2gx-2014-replay-great-single-page-apps-need-great-backends" />
-    <category term="news" label="News and Events" />
-    <author>
-      <name>Pieter Humphrey</name>
-    </author>
-    <id>tag:spring.io,2015-05-05:2111</id>
-    <updated>2015-05-05T07:19:00Z</updated>
-    <content type="html">&lt;p&gt;Recorded at SpringOne2GX 2014.&lt;/p&gt;
-&lt;p&gt; Speaker: Adib Saikali &lt;/p&gt;
-&lt;p&gt;Web / JavaScript Track &lt;/p&gt;
-&lt;p&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/adib-saikali-great-backendneedgreatfrontends"&gt;http://www.slideshare.net/SpringCentral/adib-saikali-great-backendneedgreatfrontends&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;This session will get you up to speed on the best practices for building backend services to support highly sophisticated single page apps Using Spring 4. Topics covered include error handling, security, performance, api evolution, automated testing, integration with backbone, AngularJS &amp;amp; RequireJS. The presentation will demo working code examples and a github repo where you can access the demos.&lt;/p&gt;
-&lt;p&gt;&#xD;
-  &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/dJHZQyfOQYY" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&#xD;
-&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>Webinar: Debug and Maintain your Spring Boot App</title>
-    <link rel="alternate" href="https://spring.io/blog/2015/05/05/webinar-debug-and-maintain-your-spring-boot-app" />
-    <category term="news" label="News and Events" />
-    <author>
-      <name>Pieter Humphrey</name>
-    </author>
-    <id>tag:spring.io,2015-05-05:2109</id>
-    <updated>2015-05-05T06:52:00Z</updated>
-    <content type="html">&lt;p&gt;Speaker: Greg Turnquist&lt;/p&gt;
-&lt;p&gt; So you have decided to build an application using Spring Boot? Sooner or later, something will go wrong. It does not matter how experienced we are. How will Spring Boot help us figure out what went wrong and fix things? This talk introduces lots of tools to help us debug and manage &amp;quot;bootiful&amp;quot; apps. You will learn how to use Boot's autoconfiguration report, override Boot's settings &amp;amp; beans, create custom metrics/health checks/app info, and create custom JMX info &amp;amp; custom CRaSH commands.&lt;/p&gt;&lt;p&gt;Tuesday, May 28th, 2015 2:00PM GMT (London GMT) &lt;a href="http://connect.pivotal.io/OSS_Webinar_7AMDebugandMaintainyourSpringBootApp_Register.html"&gt;Register&lt;/a&gt;&lt;br/&gt;&lt;p&gt;Tuesday, May 28th, 2015 10:00AM PDT (San Francisco GMT-07:00) &lt;a href="http://connect.pivotal.io/OSS_Webinar_10AMDebugandMaintainyourSpringBootApp_Register.html"&gt;Register&lt;/a&gt;&lt;/p&gt;&lt;br/&gt;&lt;p&gt;&amp;nbsp;&lt;/p&gt;&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>SpringOne2GX 2014 Replay: Performance Testing Crash Course</title>
-    <link rel="alternate" href="https://spring.io/blog/2015/05/05/springone2gx-2014-replay-performance-testing-crash-course" />
-    <category term="news" label="News and Events" />
-    <author>
-      <name>Pieter Humphrey</name>
-    </author>
-    <id>tag:spring.io,2015-05-05:2108</id>
-    <updated>2015-05-05T06:51:00Z</updated>
-    <content type="html">&lt;p&gt;Recorded at SpringOne2GX 2014.&lt;/p&gt;
-&lt;p&gt; Speaker: Dustin Whittle &lt;/p&gt;
-&lt;p&gt;Applied Spring Track &lt;/p&gt;
-&lt;p&gt;Slides: &lt;a href="http://www.slideshare.net/SpringCentral/performance-testing-crashcourse"&gt;http://www.slideshare.net/SpringCentral/performance-testing-crashcourse&lt;/a&gt; &lt;/p&gt;
-&lt;p&gt;The performance of your application affects your business more than you might think. Top engineering organizations think of performance not as a nice-to-have, but as a crucial feature of their product. Those organizations understand that performance has a direct impact on user experience and, ultimately, their bottom line. Unfortunately, most engineering teams do not regularly test the performance and scalability of their infrastructure. Dustin Whittle shares the latest performance testing tools and insights into why your team should add performance testing to the development process. Learn how to evaluate performance and scalability on the server-side and the client-side with tools like Siege, Bees with Machine Guns, Google PageSpeed, WBench, and more. Take back an understanding of how to automate performance and load testing and evaluate the impact it has on performance and your business.&lt;/p&gt;
-&lt;p&gt;&#xD;
-  &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/jE5sN79lZic" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&#xD;
-&lt;/p&gt;</content>
   </entry>
 </feed>
 

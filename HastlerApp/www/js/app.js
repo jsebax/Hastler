@@ -141,127 +141,61 @@ app.controller('MainCtrl', function($scope, $state, $ionicSideMenuDelegate) {
 
 app.controller("LoginController", function($scope, $firebaseAuth, $firebaseObject, $location, $ionicPopup, myMiddleware) {
     
-    var fbAuth = $firebaseAuth(fb);
-
-    $scope.go = function(page) {
-         $location.path('/'+page);
-    }
-
     $scope.toResetPassword = function() {
         $location.path('/resetPassword');
     };
 
     $scope.login = function(email, password) {
-        fbAuth.$authWithPassword({
-            email: email,
-            password: password
-        }).then(function(authData) {
-            $location.path("/tab/myServices");
-        }).catch(function(error) {
-            console.error("ERROR: " + error);
-            $ionicPopup.alert({
-                title: 'Alert',
-                template: error
-            });
+        $scope.user = [];
+        $scope.user.password = password;
+        $scope.user.email = email;
+        $scope.loginsuccess = false;
+        console.log($scope.loginsuccess);
+        myMiddleware.login($scope.user,function(data){
+            $scope.loginsuccess = data;
+            if(!$scope.loginsuccess){
+                alert("El email o la contraseña no son correctos");
+            }else{
+                $location.path('/home');
+            }
         });
     };
 });
 
 app.controller("RegisterController", function($scope, $firebaseAuth, $firebaseObject, $location, $ionicPopup, myMiddleware) {
 
-    var email,password;
-
-    $scope.toRegisterPassword = function(mail) {
-        if ( mail == '' ) {
-            console.log(mail);
-        }
-       
-
-        $location.path('/registerPassword');
-        email = mail;
-        $ionicPopup.alert({
-            title: email
-        });
-    };
-
-    $scope.toRegisterName = function(pass) {
-        $location.path('/registerName');
-        password = pass;
-        $ionicPopup.alert({
-            title: email
-        });
-    };
-
-    $scope.register = function(Name, lastname) {
+    $scope.register = function(mail, pass, Name, lastname) {
         var fbAuth = $firebaseAuth(fb);
+        $scope.user = [];
+        $scope.user.password = pass;
+        $scope.user.email = mail;
+
+        $scope.profile = [];
+        $scope.profile.name = Name;
+        $scope.profile.email = mail;
+        $scope.singonsuccess = true;
+        myMiddleware.singon($scope.user);
+        alert($scope.singonsuccess);
+        if($scope.singonsuccess){
+            $profilesuccess = myMiddleware.agregarPersona($scope.profile);
+            if(profilesuccess){
+                var loginsuccess = myMiddleware.login($scope.userfunction(data){
+                    $scope.loginsuccess = data;
+                    if(!$scope.loginsuccess){
+                        alert("Desafortunadamente se tuvo un problema al intentar loguearse, por favor intente denuevo más tarde.");
+                        $location.path('/login');
+                    }else{
+                        $location.path('/home');
+                    }
+                });
+            }else{
+                $location.path('/login');
+                alert("Desafortunadamente se tuvo un problema al intentar loguearse, por favor intente denuevo más tarde.");
+            }
+        }else{            
+            $location.path=('/register');
+        }
         
-        /*
-        if ( password != rePassword ) {
-            $ionicPopup.alert({
-              title: 'Passwords don\'t match',
-            }).then(function(res) {
-              console.log('Test Alert Box');
-            });
-
-        } else {
-        */
-            fbAuth.$createUser({
-                email: email,
-                password: password
-            }).then(function() {
-
-                return fbAuth.$authWithPassword({
-                    email: email,
-                    password: password
-                }).then(function(authData) {
-                    var obj = new Firebase("https://hastler.firebaseio.com/users/" + authData.uid);
-                    var object = $firebaseObject(obj);
-
-                    object.name = "";
-                    object.lastname = "";
-                    object.hastly = "#";
-                    object.email = email;
-                    object.tel = "";
-
-                    return object.$save().then(function(ref) {
-                        console.log(ref.key() === object.$id);
-                        object.$bindTo($scope, "data");
-                        $ionicPopup.show({
-                            title: 'User created successfully',
-                            buttons: [{
-                                text: 'OK',
-                                type: 'button-positive',
-                                onTap: function() {
-                                    if(navigator.userAgent.indexOf('Android') != -1) {
-                                        obj.unauth();
-                                        $location.path("/myServices");
-                                        window.setTimeout(function() { window.location.reload(true); }, 500);
-                                    } else {
-                                        //location.href = location.origin;
-                                        obj.unauth();
-                                        $location.path("/myServices");
-                                        window.setTimeout(function() { window.location.reload(true); }, 500);
-                                    }
-                                }
-                            }]      
-                        });
-                    }, function(error) {
-                        console.log("ERROR: " + error);
-                        $ionicPopup.alert({
-                            title: 'Alert',
-                            template: error
-                        });
-                    });
-                });
-                
-            }).catch(function(error) {
-                console.error("ERROR:" + error);
-                $ionicPopup.alert({
-                    title: 'Alert',
-                    template: error
-                });
-            });
-        //}
     };
 });
 
@@ -352,6 +286,8 @@ app.controller("ServiceFormController", function($scope, $firebaseObject, $ionic
     var obj1 = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
     var obj2 = new Firebase("https://hastler.firebaseio.com/services/");
     var object1 = $firebaseObject(obj1);
+    $scope.service = [];
+    
     $scope.list = function() {
         if(auth) {
             object1.$bindTo($scope, "data");
@@ -359,16 +295,10 @@ app.controller("ServiceFormController", function($scope, $firebaseObject, $ionic
     };
 
     $scope.create = function(title, category) {
-
-        if($scope.data.hasOwnProperty("services") !== true) {
-            $scope.data.services = [];
-        }
-
-        myMiddleware.guardarServicio({
-            title: title,
-            owner: "hola",
-            category: category
-        });
+        $scope.service.serviceName = title;
+        $scope.service.owner = $scope.data.hastly;
+        $scope.service.category = category;
+        myMiddleware.guardarServicio($scope.service);
 /*
         $scope.data.services.push({
             title: title,

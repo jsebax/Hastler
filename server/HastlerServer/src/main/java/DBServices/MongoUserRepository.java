@@ -53,11 +53,14 @@ public class MongoUserRepository implements UserRepository {
 	
 	@Override
 	public boolean findOneUser(String email, String pass) {
+		System.out.println("email= " + email + ", password= " + pass);
 		Query searchUserQuery = new Query(Criteria.where("email")
 				.is(email).andOperator(Criteria.where("password").is(pass)));
 		User saved = mongoOperation.findOne(searchUserQuery, User.class);
 		boolean respuesta=false;
-		if(saved!=null)respuesta=true;
+		if(saved!=null){
+			respuesta=true;
+		}
 		return respuesta;
 	}
 	

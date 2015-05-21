@@ -17,7 +17,7 @@ public class SingOn implements UnitOfWork {
 	@Override
 	public boolean run() {
 		User userR = userRepository.saveUser(user);
-		if(userR.equals(user)){
+		if(userR != null){
 			return true;
 		}else{
 			return false;

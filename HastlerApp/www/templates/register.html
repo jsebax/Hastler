@@ -10,13 +10,28 @@
                 <label class="item item-input item-stacked-label item-icon-right">
                     <i class= "color-white icon ion-email"></i>
                     <span class="color-white input-label"><strong>Email</strong></span>
-                    <input ng-model="email" type="email" placeholder="Email" />
+                    <input ng-model="email" type="email" placeholder="Email" />           
+                </label>
+                <label class="item item-input item-stacked-label  item-icon-right">
+                    <i class= "color-white icon ion-android-unlock"></i>
+                    <span class="color-white input-label"><strong>Password</strong></span>
+                    <input ng-model="password" type="password" placeholder="Password" />
+                </label>
+                <label class="item item-input item-stacked-label item-icon-right">
+                    <i class= "color-white icon ion-ios-paper"></i>
+                    <span class="color-white input-label"><strong>First Name</strong></span>
+                    <input ng-model="name" type="text" placeholder="First Name" />
+                </label>
+                <label class="item item-input item-stacked-label item-icon-right">
+                    <i class= "color-white icon ion-ios-paper"></i>
+                    <span class="color-white input-label"><strong>Last Name</strong></span>
+                    <input ng-model="lastName" type="text" placeholder="Last Name" />
                 </label>
             </div>
         </div>
 
         <div class="tabs tabs-dark">
-            <a class="tab-item" ng-click="toRegisterPassword(email)"><strong>Next</strong></a>
+            <a class="tab-item" ng-click="register(email,password,name, lastName)"><strong>Next</strong></a>
         </div>
 
 </ion-view>

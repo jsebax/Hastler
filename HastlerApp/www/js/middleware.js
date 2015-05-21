@@ -69,13 +69,15 @@ ENTIDADES:
 */
 
 //var app = angular.module('starter', ['ionic']);
-var urlServer="http://localhost:8080/";
+var urlServer = "http://localhost:8080/";
 
-app.service('myMiddleware', function() {
+app.service('myMiddleware', function($http) {
 	
-	this.x = function() {
-        console.log("Hola");
-        alert("Hi!");
+	urlserver = url;
+
+	this.x = function(x) {
+        console.log(x);
+        alert(x);
     }
     this.y = function() {
         console.log("Hola");
@@ -85,38 +87,68 @@ app.service('myMiddleware', function() {
 	this.initialize = function() {
     	// No Initialization required
     	var deferred = $.Deferred();
-		$.get( "http://localhost:8080/servicioAll", function( data ) {
+		$http.get( "http://localhost:8080/servicioAll", function( data ) {
 			hastlerServices = data;
 			alert( "Data Loaded " );
 		});
-    	   deferred.resolve();
+    	    deferred.resolve();
     	return deferred.promise();
 	}
 
-    this.obtenerPersonas = function (persona){
+    this.obtenerPersonas = function (persona, callback){
 		//persona.name = stringbusqueda;
 		var personas;
-		var ulrthis = urlServer+"persona";
-		$.get(ulrthis,function(data){
+		var urlthis = urlServer+"persona";
+		$http.get(urlthis).success(function(data){
 			personas = data;
+			return personas;
+		});
+		$http({
+		    url: urlthis, 
+		    method: 'GET',
+		    params: {},
+		}).success(function(data, status, headers, config){
+		    callback(data);
+		}).error(function(data, status, headers, config){
+		    callback(false);
 		});
 	}
 
-	this.obtenerPersonaEmail = function (persona){
+	this.obtenerPersonaEmail = function (persona, callback){
 		//persona.name = stringbusqueda;
 		var personaR;
-		var ulrthis = urlServer+"personaEmail";
-		$.get(ulrthis,function(data){
+		var urlthis = urlServer+"personaEmail";
+		$http.get(urlthis).success(function(data){
 			personaR = data;
+			return personaR;
+		});
+		$http({
+		    url: urlthis, 
+		    method: 'GET',
+		    params: {},
+		}).success(function(data, status, headers, config){
+		    callback(data);
+		}).error(function(data, status, headers, config){
+		    callback(false);
 		});
 	}
 
-	this.obtenerPersonaHastly = function (persona){
+	this.obtenerPersonaHastly = function (persona, callback){
 		//persona.name = stringbusqueda;
 		var personaR;
-		var ulrthis = urlServer+"personaHastly";
-		$.get(ulrthis,function(data){
+		var urlthis = urlServer+"personaHastly";
+		$http.get(urlthis).success(function(data){
 			personaR = data;
+			return personaR;
+		});
+		$http({
+		    url: urlthis, 
+		    method: 'GET',
+		    params: {},
+		}).success(function(data, status, headers, config){
+		    callback(data);
+		}).error(function(data, status, headers, config){
+		    callback(false);
 		});
 	}
 
@@ -130,50 +162,50 @@ app.service('myMiddleware', function() {
 		var jsonString = JSON.stringify({"hastly":persona.hastly,"name":persona.name,
 								"telephone":persona.telephone,"email":persona.email,
 								"image":persona.image});
-		var ulrthis = urlServer+"persona";
-		$.ajax({
-	            url:ulrthis,
-	            type:"POST", 
-	            contentType: "application/json; charset=utf-8",
-	            data: jsonString, //Stringified Json Object
-	            async: false,    //Cross-domain requests and dataType: "jsonp" requests do not support synchronous operation
-	            cache: false,    //This will force requested pages not to be cached by the browser  
-	            processData:false, //To avoid making query String instead of JSON
-	            success: function(resposeJsonObject){
-					if(responseJsonObject){
-						alert("exito al agregar persona");
-					}
-				}});
+		var urlthis = urlServer+"persona";
+		$http.post(urlthis,jsonString).success(function(data, status, headers, config) {
+		    return data;    
+		}).error(function(data, status, headers, config) {
+		    return data; 
+		});
 	}
 
 	this.editPersona = function (persona){
 		/*
 			persona.id se necesita;
 		*/
-		var ulrthis = urlServer+"editarPersona";
+		var urlthis = urlServer+"editarPersona";
 		var jsonString = JSON.stringify({"id":persona.id,"hastly":persona.hastly,"name":persona.name,
 								"telephone":persona.telephone,"email":persona.email,
 								"image":persona.image});
-		$.ajax({
-	            url:ulrthis,
-	            type:"POST", 
-	            contentType: "application/json; charset=utf-8",
-	            data: jsonString, //Stringified Json Object
-	            async: false,    //Cross-domain requests and dataType: "jsonp" requests do not support synchronous operation
-	            cache: false,    //This will force requested pages not to be cached by the browser  
-	            processData:false, //To avoid making query String instead of JSON
-	            success: function(resposeJsonObject){
-					if(responseJsonObject){
-						alert("exito al editar persona");
-					}
-				}});
+		$http.post(urlthis,jsonString).success(function(data, status, headers, config) {
+		    if(data){
+		    	alert("exito al editar persona");
+		    }else{
+		    	alert("No se pudo editar persona");
+		    }
+		    return data; 
+		}).error(function(data, status, headers, config) {
+		    alert("No se pudo editar persona");
+		    return data; 
+		});
 	}
 
-	this.obtenerServiciosAll = function (){
+	this.obtenerServiciosAll = function (callback){
 		var servicios;
-		var ulrthis = urlServer+"servicioAll";
-		$.get(ulrthis,function(data){
+		var urlthis = urlServer+"servicioAll";
+		$http.get(urlthis).success(function(data){
 			servicios = data;
+			return servicios;
+		});
+		$http({
+		    url: urlthis, 
+		    method: 'GET',
+		    params: {},
+		}).success(function(data, status, headers, config){
+		    callback(data);
+		}).error(function(data, status, headers, config){
+		    callback(false);
 		});
 	}
 
@@ -190,45 +222,56 @@ app.service('myMiddleware', function() {
 		var jsonString = JSON.stringify({"serviceName": servicio.serviceName, 
 								 "category": servicio.category, "owner": servicio.owner, "cellPhone": servicio.cellPhone,
 								 "email": servicio.email, "city":  servicio.city, "pic": servicio.pic, "hastly": servicio.hastly});
-		var ulrthis = urlServer+"servicio";
-		$.ajax({
-            url:ulrthis,
-            type:"POST", 
-            contentType: "application/json; charset=utf-8",
-            data: jsonString, //Stringified Json Object
-            async: false,    //Cross-domain requests and dataType: "jsonp" requests do not support synchronous operation
-            cache: false,    //This will force requested pages not to be cached by the browser  
-            processData:false, //To avoid making query String instead of JSON
-            success: function(resposeJsonObject){
-				if(responseJsonObject){
-					alert("exito al agregar servicio");
-				}
-			}});
+		var urlthis = urlServer+"servicio";
+		$http.post(urlthis,jsonString).success(function(data, status, headers, config) {
+		    if(data){
+		    	alert("Servicio creado exitosamente");
+		    }else{
+		    	alert("El servicio no pudo ser creado");
+		    }
+		    return data;
+		}).error(function(data, status, headers, config) {
+		    alert("El servicio no pudo ser creado");
+		    return data; 
+		});
 	}
 
-	this.obtenerServicios = function (servicio){
+	this.obtenerServicios = function (servicio, callback){
 		//servicio.serviceName = stringbusqueda;
 		var servicios;
-		var ulrthis = urlServer+"servicio";
-		$.get(ulrthis,function(data){
+		var urlthis = urlServer+"servicio";
+		$http.get(urlthis).success(function(data){
 			servicios = data;
+			return servicios;
+		});
+		$http({
+		    url: urlthis, 
+		    method: 'GET',
+		    params: {},
+		}).success(function(data, status, headers, config){
+		    callback(data);
+		}).error(function(data, status, headers, config){
+		    callback(false);
 		});
 	}
 
 	this.borrarServicios = function (servicio){
 		//servicio.id se necesita;
 		var servicios;
-		var ulrthis = urlServer+"servicio";
+		var urlthis = urlServer+"servicio";
 		var jsonString = JSON.stringify({"id":servicio.id});
-		$.ajax({
-			type: "DELETE",
-			url: ulrthis,
-			data: jsonString,
-			success: function(data){
-				if(data){
-					alert("exito al borrar el servicio");
-				}
-			}
+		var options = [];
+		options.data = jsonString;
+		$http.delete(urlthis,options).success(function(data, status, headers, config) {
+		    if(data){
+		    	alert("Se borro con exito el servicio");
+		    }else{
+		    	alert("Ocurrio un problema al borrar el servicio");
+		    }
+		    return data; 
+		}).error(function(data, status, headers, config) {
+		    alert("Ocurrio un problema al borrar el servicio");
+		    return data; 
 		});
 	}
 
@@ -239,28 +282,36 @@ app.service('myMiddleware', function() {
 		var jsonString = JSON.stringify({"id":servicio.id,"serviceName": servicio.serviceName, 
 								 "category": servicio.category, "owner": servicio.owner, "cellPhone": servicio.cellPhone,
 								 "email": servicio.email, "city":  servicio.city, "pic": servicio.pic, "hastly": servicio.hastly});
-		var ulrthis = urlServer+"editarServi";
-		$.ajax({
-	            url:ulrthis,
-	            type:"POST", 
-	            contentType: "application/json; charset=utf-8",
-	            data: jsonString, //Stringified Json Object
-	            async: false,    //Cross-domain requests and dataType: "jsonp" requests do not support synchronous operation
-	            cache: false,    //This will force requested pages not to be cached by the browser  
-	            processData:false, //To avoid making query String instead of JSON
-	            success: function(resposeJsonObject){
-					if(responseJsonObject){
-						alert("exito al editar servicio");
-					}
-				}});
+		var urlthis = urlServer+"editarServi";
+		$http.post(urlthis,jsonString).success(function(data, status, headers, config) {
+		    if(data){
+		    	alert("exito al editar servicio");
+		    }else{
+		    	alert("No se pudo editar servicio");
+		    }
+		    return data;
+		}).error(function(data, status, headers, config) {
+		    alert("No se pudo editar servicio");
+		    return data; 
+		});
 	} 
 
-	this.obtenerCategoria = function (servicio){
+	this.obtenerCategoria = function (servicio, callback){
 		//servicio.category se necesita;
 		var servicios;
-		var ulrthis = urlServer+"categoria";
-		$.get(ulrthis,function(data){
+		var urlthis = urlServer+"categoria";
+		$http.get(urlthis).success(function(data){
 			servicios = data;
+			return servicios;
+		});
+		$http({
+		    url: urlthis, 
+		    method: 'GET',
+		    params: {},
+		}).success(function(data, status, headers, config){
+		    callback(data);
+		}).error(function(data, status, headers, config){
+		    callback(false);
 		});
 	}
 
@@ -270,20 +321,19 @@ app.service('myMiddleware', function() {
 			servicio.comments[0]=commentarioAgregado;
 		*/
 		var jsonString = JSON.stringify({"id":servicio.id,"comments":servicio.comments});
-		var ulrthis = urlServer+"editarServi";
-		$.ajax({
-	            url:ulrthis,
-	            type:"POST", 
-	            contentType: "application/json; charset=utf-8",
-	            data: jsonString, //Stringified Json Object
-	            async: false,    //Cross-domain requests and dataType: "jsonp" requests do not support synchronous operation
-	            cache: false,    //This will force requested pages not to be cached by the browser  
-	            processData:false, //To avoid making query String instead of JSON
-	            success: function(resposeJsonObject){
-					if(responseJsonObject){
-						alert("exito al agregar comentario");
-					}
-				}});
+		var urlthis = urlServer+"editarServi";
+
+		$http.post(urlthis,jsonString).success(function(data, status, headers, config) {
+		    if(data){
+		    	alert("exito al crear comentario");
+		    }else{
+		    	alert("No se pudo crear comentario");
+		    }
+		    return data; 
+		}).error(function(data, status, headers, config) {
+		    alert("No se pudo crear comentario");
+		    return data; 
+		});
 	}
 
 	this.agregarMatch = function (match){
@@ -293,46 +343,74 @@ app.service('myMiddleware', function() {
 			-serviId;
 		*/
 		var jsonString = JSON.stringify({"hastly":match.hastly,"serviId":match.serviId});
-		var ulrthis = urlServer+"match";
-		$.ajax({
-	            url:ulrthis,
-	            type:"POST", 
-	            contentType: "application/json; charset=utf-8",
-	            data: jsonString, //Stringified Json Object
-	            async: false,    //Cross-domain requests and dataType: "jsonp" requests do not support synchronous operation
-	            cache: false,    //This will force requested pages not to be cached by the browser  
-	            processData:false, //To avoid making query String instead of JSON
-	            success: function(resposeJsonObject){
-					if(responseJsonObject){
-						alert("exito al agregar match");
-					}
-				}});
+		var urlthis = urlServer+"match";
+		$http.post(urlthis,jsonString).success(function(data, status, headers, config) {
+		    if(data){
+		    	alert("exito al agregar match");
+		    }else{
+		    	alert("No se pudo agregar match");
+		    }
+		    return data; 
+		}).error(function(data, status, headers, config) {
+		    alert("No se pudo agregar match");
+		    return data; 
+		});
 	}
 
-	this.obtenerMatch = function (match){
+	this.obtenerMatch = function (match, callback){
 		//match.id se necesita;
 		var matchR;
-		var ulrthis = urlServer+"match";
-		$.get(ulrthis,function(data){
+		var urlthis = urlServer+"match";
+		$http.get(urlthis).success(function(data){
 			matchR = data;
+			return matchR;
+		});
+		$http({
+		    url: urlthis, 
+		    method: 'GET',
+		    params: {},
+		}).success(function(data, status, headers, config){
+		    callback(data);
+		}).error(function(data, status, headers, config){
+		    callback(false);
 		});
 	}
 
-	this.obtenerMatchServiId = function (match){
+	this.obtenerMatchServiId = function (match, callback){
 		//match.serviId se necesita;
 		var matchesR;
-		var ulrthis = urlServer+"matchServi";
-		$.get(ulrthis,function(data){
+		var urlthis = urlServer+"matchServi";
+		$http.get(urlthis).success(function(data){
 			matchesR = data;
+			return matchesR;
+		});
+		$http({
+		    url: urlthis, 
+		    method: 'GET',
+		    params: {serviId:match.serviId},
+		}).success(function(data, status, headers, config){
+		    callback(data);
+		}).error(function(data, status, headers, config){
+		    callback(false);
 		});
 	}
 
-	this.obtenerMatchHastly = function (match){
+	this.obtenerMatchHastly = function (match,callback){
 		//match.hastly se necesita;
 		var matchesR;
-		var ulrthis = urlServer + "matchHastly";
-		$.get(ulrthis,function(data){
+		var urlthis = urlServer + "matchHastly";
+		$http({
+		    url: urlthis, 
+		    method: 'GET',
+		    params: {hastly:match.hastly},
+		}).success(function(data, status, headers, config){
+		    callback(data);
+		}).error(function(data, status, headers, config){
+		    callback(false);
+		});
+		$http.get(urlthis).success(function(data){
 			matchesR = data;
+			return matchesR;
 		});
 	}
 
@@ -342,9 +420,22 @@ app.service('myMiddleware', function() {
 			user.username se necesita o user.email se necesita
 		*/
 		var jsonString = JSON.stringify({"password":user.password,"username":user.username,"email":user.email });
-		var ulrthis = urlServer+"singon";
+		var urlthis = urlServer+"singon";
+		$http.post(urlthis,jsonString).success(function(data, status, headers, config) {
+		    if(data){
+		    	alert("Singon exitoso");
+		    	return true;
+		    }else{
+		    	alert("Singon fallido");
+		    	return false;
+		    }
+		}).error(function(data, status, headers, config) {
+		    alert("Singon fallido");
+		    return false; 
+		});
+/*
 		$.ajax({
-	            url:ulrthis,
+	            url:urlthis,
 	            type:"POST", 
 	            contentType: "application/json; charset=utf-8",
 	            data: jsonString, //Stringified Json Object
@@ -357,17 +448,28 @@ app.service('myMiddleware', function() {
 						login(user);
 					}
 				}});
+*/
 	}
 
-	this.login = function (user){
+	this.login = function (user, callback){
 		/*
 			user.password se necesita
 			user.username se necesita o user.email se necesita
-		*/	
+		*/
 		var loged;
-		var ulrthis = urlServer + "login";
-		$.get(ulrthis,function(data){
-			loged = data;
+		var urlthis = urlServer + "login";
+		$http({
+		    url: urlthis, 
+		    method: 'GET',
+		    params: {password:user.password,email:user.email,username:user.username},
+		}).success(function(data, status, headers, config){
+		    callback(data);
+		}).error(function(data, status, headers, config){
+		    callback(false);
 		});
+		/*$http.get(urlthis,params).success(function(data){
+			loged = data;
+			return loged;
+		});*/
 	};
 });
