@@ -94,11 +94,21 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
         }
     })
 
+    .state('tabs.myCreateServices', {
+        url: '/myCreateServices',
+        views: {
+            'menu-tab': {
+                templateUrl: 'templates/myCreateServices.html',
+                controller: 'myCreateServicesController'
+            }
+        }
+    })
+
     .state('tabs.serviceForm', {
         url: '/serviceForm',
         views: {
             'menu-tab': {
-                templateUrl: 'templates/createService.html',
+                templateUrl: 'templates/serviceForm.html',
                 controller: 'ServiceFormController'
             }
         }
@@ -281,9 +291,9 @@ app.controller("menuController", function($scope, $firebaseObject, $ionicPopup, 
         }
     };
 
-    $scope.toCreate = function() {
-        $location.path('/tab/serviceForm');
-    };
+    $scope.toMyCreateServices = function() {
+        $location.path('/tab/myCreateServices');
+    };   
 
     $scope.toMyProfile = function() {
         $location.path('/tab/myProfile');
@@ -334,6 +344,12 @@ app.controller("ServiceFormController", function($scope, $firebaseObject, $ionic
         "Academy",
         "Music"
     ];
+});
+
+app.controller("myCreateServicesController", function($scope, $firebaseObject, $ionicPopup, $location, myMiddleware ) {
+    $scope.toServiceForm = function() {
+        $location.path('/tab/serviceForm');
+    };
 });
 
 app.controller('homeController', function($scope, $firebaseObject, $ionicPopup, $location) {
