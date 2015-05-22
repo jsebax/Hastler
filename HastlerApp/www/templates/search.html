@@ -14,10 +14,7 @@
 
             <div ng-repeat="serviceData in serviceList | filter:searchText" class="item">
                 <button class="button button-block item item-icon-right" ng-click="showme = !showme">
-                    <i class="icon ion-android-arrow-dropdown-circle"></i>
-                    {{ serviceData.title }}
-
-                    
+                                      
 
                     <div class="item item-avatar">
                     <img src="https://lh3.googleusercontent.com/-MMVM88kotCQ/AAAAAAAAAAI/AAAAAAAAAAA/neeJld0xTdE/photo.jpg">
@@ -28,21 +25,7 @@
                     <div class="item item-body">
                     <img class="full-image" src="http://www.iconarchitects.com/images/projectImages/mayville-university.jpg">
 
-                </button>
-
-                <div ng-show="showme">
-                    <label class="item">
-                        <h2>Category</h2>
-                        <p>{{ serviceData.category }}</p>
-                    </label>
-                    <label class="item">
-                        <h2>Owner</h2>
-                        <p>{{ serviceData.owner }}</p>
-                    </label>
-                    <label class="item">
-                        <button class="button button-block button-positive" ng-click="adquire(serviceData)">Adquire</button>
-                    </label>
-                </div>
+                </button>               
             </div>
         </div>
     </ion-content>

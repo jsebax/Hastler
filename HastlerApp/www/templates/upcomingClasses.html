@@ -7,49 +7,19 @@
         <div class="list card">
             <div ng-repeat="service in data.services" class="item">
                 <button class="button button-block item item-icon-right" ng-click="showme = !showme">
-                    <i class="icon ion-android-arrow-dropdown-circle"></i>
-                    {{ service.title }}
+                                        
+                    <div class="item item-avatar">
+                       
+                        <img src="https://lh3.googleusercontent.com/-MMVM88kotCQ/AAAAAAAAAAI/AAAAAAAAAAA/neeJld0xTdE/photo.jpg">
+                        <h2>Pretty Hate Machine</h2>
+                        <p>Nine Inch Nails</p>
+                        </div>
+
+                     <div class="item item-image">
+                        <img src="http://www.iconarchitects.com/images/projectImages/mayville-university.jpg">
+                    </div>
                 </button>
-
-                <div class="item item-avatar">
-    <img src="avatar.jpg">
-    <h2>Pretty Hate Machine</h2>
-    <p>Nine Inch Nails</p>
-  </div>
-
-  <div class="item item-image">
-    <img src="cover.jpg">
-  </div>
-                <div ng-show="showme">
-                    <label class="item">
-                        <h2>Category</h2>
-                        <p>{{ service.category }}</p>
-                    </label>
-                    <label class="item">
-                        <h2>Owner</h2>
-                        <p>{{ service.owner }}</p>
-                    </label>
-                </div>
             </div>
-        </div>
-
-        <div class="list">
-            <div ng-repeat="myService in data.myServices" class="item">
-                <button class="button button-block item item-icon-right" ng-click="showme = !showme">
-                    <i class="icon ion-android-arrow-dropdown-circle"></i>
-                    {{ myService.title }}
-                </button>
-                <div ng-show="showme">
-                    <label class="item">
-                        <h2>Category</h2>
-                        <p>{{ myService.category }}</p>
-                    </label>
-                    <label class="item">
-                        <h2>Owner</h2>
-                        <p>{{ myService.owner }}</p>
-                    </label>
-                </div>
-            </div>
-        </div>
+        </div>        
     </ion-content>
 </ion-view>
