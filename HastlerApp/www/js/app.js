@@ -69,7 +69,7 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
         views: {
             'home-tab': {
                 templateUrl: 'templates/home.html',
-                controller: 'MyServicesController'
+                controller: 'homeController'
             }
         }
     })
@@ -104,12 +104,12 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
         }
     })
 
-    .state('tabs.profile', {
-        url: '/profile',
+    .state('tabs.myProfile', {
+        url: '/myProfile',
         views: {
             'menu-tab': {
-                templateUrl: 'templates/profile.html',
-                controller: 'ProfileController'
+                templateUrl: 'templates/myProfile.html',
+                controller: 'myProfileController'
             }
         }
     })
@@ -119,25 +119,14 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
         views: {
             'menu-tab': {
                 templateUrl: 'templates/menu.html',
-                controller: 'ProfileController'
+                controller: 'menuController'
             }
         }
     });
 
-
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/login');
 });
-
-app.controller('MainCtrl', function($scope, $state, $ionicSideMenuDelegate) { 
-    $scope.toggleLeft = function() {
-        $ionicSideMenuDelegate.toggleLeft();
-    };
-  
-    $scope.changeState = function(page) {
-        $state.go(page);
-    }
-})
 
 app.controller("LoginController", function($scope, $firebaseAuth, $firebaseObject, $location, $ionicPopup, myMiddleware) {
     
@@ -208,16 +197,72 @@ app.controller("RegisterController", function($scope, $firebaseAuth, $firebaseOb
     };
 });
 
-app.controller("ProfileController", function($scope, $firebaseObject, $ionicPopup, $location, myMiddleware) {
+app.controller("myProfileController", function($scope, $firebaseObject, $ionicPopup, $location, myMiddleware) {
     var auth = fb.getAuth();
-    var obj = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
-    var object = $firebaseObject(obj);
+    //var obj = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
+    //var object = $firebaseObject(obj);
 
     $scope.list = function() {
         if(auth) {
         object.$bindTo($scope, "data");
         }
-    };   
+    };
+
+    $scope.logout = function() {
+        var firebaseAuth = fb.getAuth();
+        var obj = new Firebase("https://hastler.firebaseio.com/users/" + firebaseAuth.uid);
+        if(firebaseAuth) {
+            if(navigator.userAgent.indexOf('Android') != -1) {
+                obj.unauth();
+                $location.path("/login");
+                window.setTimeout(function() { window.location.reload(true); }, 500);
+            } else {
+                //location.href = location.origin;
+                obj.unauth();
+                $location.path("/login");
+                //window.location.reload(true);
+            }
+        }
+    };
+
+    $scope.updateRecords = function(name, lastname, tel) {
+        if(auth) {
+            if(name !== undefined) {
+                object.name = name;
+            }
+            if(lastname !== undefined) {
+                object.lastname = lastname;
+            }
+            if(tel !== undefined) {
+                object.tel = tel;
+            }
+            object.$save().then(function(ref) {
+                console.log(ref.key() === object.$id);
+                $ionicPopup.show({
+                    title: 'Changes Saved Successfully',
+                    buttons: [{
+                        text: 'OK',
+                        type: 'button-positive',
+                        onTap: function() {
+                            $location.path("/tab/myProfile");
+                        }
+                    }]
+                });
+            }, function(error) {
+                console.log("ERROR: " + error);
+                $ionicPopup.alert({
+                    title: 'Alert',
+                    template: error
+                });
+            });
+        }
+    };
+});
+
+app.controller("menuController", function($scope, $firebaseObject, $ionicPopup, $location, myMiddleware) {
+    var auth = fb.getAuth();
+    //var obj = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
+    //var object = $firebaseObject(obj);
 
     $scope.logout = function() {
         var firebaseAuth = fb.getAuth();
@@ -240,48 +285,15 @@ app.controller("ProfileController", function($scope, $firebaseObject, $ionicPopu
         $location.path('/tab/serviceForm');
     };
 
-    $scope.toProfile = function() {
-        $location.path('/tab/profile');
-    };
-
-    $scope.updateRecords = function(name, lastname, tel) {
-        if(auth) {
-            if(name !== undefined) {
-                object.name = name;
-            }
-            if(lastname !== undefined) {
-                object.lastname = lastname;
-            }
-            if(tel !== undefined) {
-                object.tel = tel;
-            }
-            object.$save().then(function(ref) {
-                console.log(ref.key() === object.$id);
-                $ionicPopup.show({
-                    title: 'Changes Saved Successfully',
-                    buttons: [{
-                        text: 'OK',
-                        type: 'button-positive',
-                        onTap: function() {
-                            $location.path("/tab/profile");
-                        }
-                    }]
-                });
-            }, function(error) {
-                console.log("ERROR: " + error);
-                $ionicPopup.alert({
-                    title: 'Alert',
-                    template: error
-                });
-            });
-        }
-    };
+    $scope.toMyProfile = function() {
+        $location.path('/tab/myProfile');
+    };    
 });
 
 app.controller("ServicesController", function($scope, $firebaseObject, $ionicPopup, $location) {
     var auth = fb.getAuth();
-    var obj = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
-    var object = $firebaseObject(obj);
+    //var obj = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
+    //var object = $firebaseObject(obj);
     $scope.list = function() {
         if(auth) {
             object.$bindTo($scope, "data");
@@ -292,9 +304,9 @@ app.controller("ServicesController", function($scope, $firebaseObject, $ionicPop
 
 app.controller("ServiceFormController", function($scope, $firebaseObject, $ionicPopup, $location, myMiddleware ) {
     var auth = fb.getAuth();
-    var obj1 = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
+    //var obj1 = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
     var obj2 = new Firebase("https://hastler.firebaseio.com/services/");
-    var object1 = $firebaseObject(obj1);
+    //var object1 = $firebaseObject(obj1);
     $scope.service = [];
     
     $scope.list = function() {
@@ -324,7 +336,7 @@ app.controller("ServiceFormController", function($scope, $firebaseObject, $ionic
     ];
 });
 
-app.controller('MyServicesController', function($scope, $firebaseObject, $ionicPopup, $location) {
+app.controller('homeController', function($scope, $firebaseObject, $ionicPopup, $location) {
     var auth = fb.getAuth();
     var obj1 = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
     var obj2 = new Firebase("https://hastler.firebaseio.com/services/");
@@ -359,9 +371,9 @@ app.controller('MyServicesController', function($scope, $firebaseObject, $ionicP
 
 app.controller('searchController', function($scope, $firebaseObject, $ionicPopup, $location) {
     var auth = fb.getAuth();
-    var obj1 = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
+    //var obj1 = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
     var obj2 = new Firebase("https://hastler.firebaseio.com/services/");
-    var object1 = $firebaseObject(obj1);
+    //var object1 = $firebaseObject(obj1);
     var object2 = $firebaseObject(obj2);
     $scope.serviceList = [];
     $scope.myServiceList = [];
