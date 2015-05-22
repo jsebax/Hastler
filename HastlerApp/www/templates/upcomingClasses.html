@@ -1,15 +1,25 @@
-<ion-view view-title="Upcoming Classes" ng-init="list()">
+<ion-view view-title="Upcoming Classes" ng-init="list()" class="services">
     <ion-nav-bar class="bar-dark">
         <ion-nav-back-button></ion-nav-back-button>
     </ion-nav-bar>
     
     <ion-content>
-        <div class="list">
+        <div class="list card">
             <div ng-repeat="service in data.services" class="item">
                 <button class="button button-block item item-icon-right" ng-click="showme = !showme">
                     <i class="icon ion-android-arrow-dropdown-circle"></i>
                     {{ service.title }}
                 </button>
+
+                <div class="item item-avatar">
+    <img src="avatar.jpg">
+    <h2>Pretty Hate Machine</h2>
+    <p>Nine Inch Nails</p>
+  </div>
+
+  <div class="item item-image">
+    <img src="cover.jpg">
+  </div>
                 <div ng-show="showme">
                     <label class="item">
                         <h2>Category</h2>

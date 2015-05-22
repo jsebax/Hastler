@@ -1,4 +1,4 @@
-<ion-view view-title="Search" ng-init="list()">
+<ion-view view-title="Search" ng-init="list()"  class="services">
     <ion-nav-bar class="bar-dark">
         <ion-nav-back-button></ion-nav-back-button>
     </ion-nav-bar>
@@ -10,12 +10,24 @@
             <input type="text" placeholder="Search" ng-model="searchText"></input>
         </div>
 
-        <div class="list">
+        <div class="list card">
 
             <div ng-repeat="serviceData in serviceList | filter:searchText" class="item">
                 <button class="button button-block item item-icon-right" ng-click="showme = !showme">
                     <i class="icon ion-android-arrow-dropdown-circle"></i>
                     {{ serviceData.title }}
+
+                    
+
+                    <div class="item item-avatar">
+                    <img src="https://lh3.googleusercontent.com/-MMVM88kotCQ/AAAAAAAAAAI/AAAAAAAAAAA/neeJld0xTdE/photo.jpg">
+                    <h2>Marty McFly</h2>
+                    <p>November 05, 1955</p>
+                    </div>
+
+                    <div class="item item-body">
+                    <img class="full-image" src="http://www.iconarchitects.com/images/projectImages/mayville-university.jpg">
+
                 </button>
 
                 <div ng-show="showme">
