@@ -1,4 +1,13 @@
 /* Empty. Add your own CSS if you like */
+.paddingz{
+    padding-top: 15%;
+    height: 100%;
+}
+
+.item-stacked-label{
+    padding-right: 4%;
+}
+
 
 .login {
 	background: url('../img/login.jpg') no-repeat center;
@@ -37,6 +46,10 @@ input:-moz-placeholder, textarea:-moz-placeholder {
     color: #C0C0C0;
 }
 
+.color-black{
+    color: #000000;
+}
+
 .logo{
     font-size: 50px;
     font-family: 'Lobster13Regular', Helvetica, sans-serif;
@@ -54,4 +67,5 @@ input:-moz-placeholder, textarea:-moz-placeholder {
     font-weight: normal;
     text-rendering: optimizeLegibility;
 }
-    
+
+   
