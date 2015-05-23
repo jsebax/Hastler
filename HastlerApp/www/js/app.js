@@ -138,7 +138,7 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
     $urlRouterProvider.otherwise('/login');
 });
 
-app.controller("LoginController", function($scope, $firebaseAuth, $firebaseObject, $location, $ionicPopup, myMiddleware) {
+app.controller("LoginController", function($scope, $location, $ionicPopup, $cordovaFacebook, myMiddleware) {
     
     $scope.toResetPassword = function() {
         $location.path('/resetPassword');
@@ -161,6 +161,47 @@ app.controller("LoginController", function($scope, $firebaseAuth, $firebaseObjec
                 emaildiv.innerHTML = email;
                 $location.path('/tab/home');
             }
+        });
+    };
+
+    /*
+     * Learn how facebooks graph api works: https://developers.facebook.com/docs/graph-api/quickstart/v2.2
+     * The array params "public_profile", "email", "user_friends" are the permissions / data that the app is trying to access.
+    */
+    $scope.fbLogin = function() {
+        $cordovaFacebook.login(["public_profile", "email", "user_friends"])
+        .then(function(success) {
+            /*
+             * Get user data here.
+             * For more, explore the graph api explorer here: https://developers.facebook.com/tools/explorer/
+             * "me" refers to the user who logged in. Don't confuse it as some hardcoded string variable.
+             *
+            */
+            //To know more available fields go to https://developers.facebook.com/tools/explorer/
+            $cordovaFacebook.api("me?fields=id,name,picture", [])
+            .then(function(result) {
+                /*
+                 * As an example, we are fetching the user id, user name, and the users profile picture
+                 * and assigning it to an object and then we are logging the response.
+                */
+                var userData = {
+                    id: result.id,
+                    name: result.name,
+                    pic: result.picture.data.url
+                }
+                //Do what you wish to do with user data. Here we are just displaying it in the view
+                $scope.fbData = JSON.stringify(userData, null, 4);
+
+                $location.path('/tab/home');
+
+            }, function(error) {
+                //Error message
+            })
+
+        }, function(error) {
+            // Facebook returns error message due to which login was cancelled.
+            // Depending on your platform show the message inside the appropriate UI widget
+            // For example, show the error message inside a toast notification on Android
         });
     };
 });
