@@ -72,8 +72,6 @@ ENTIDADES:
 var urlServer = "http://localhost:8080/";
 
 app.service('myMiddleware', function($http) {
-	
-	urlserver = url;
 
 	this.x = function(x) {
         console.log(x);
@@ -114,10 +112,6 @@ app.service('myMiddleware', function($http) {
 		//persona.name = stringbusqueda;
 		var personaR;
 		var urlthis = urlServer+"personaEmail";
-		$http.get(urlthis).success(function(data){
-			personaR = data;
-			return personaR;
-		});
 		$http({
 		    url: urlthis, 
 		    method: 'GET',
@@ -133,10 +127,7 @@ app.service('myMiddleware', function($http) {
 		//persona.name = stringbusqueda;
 		var personaR;
 		var urlthis = urlServer+"personaHastly";
-		$http.get(urlthis).success(function(data){
-			personaR = data;
-			return personaR;
-		});
+
 		$http({
 		    url: urlthis, 
 		    method: 'GET',
@@ -157,7 +148,7 @@ app.service('myMiddleware', function($http) {
 			-image;*/
 		var jsonString = JSON.stringify({"hastly":persona.hastly,"name":persona.name,
 								"telephone":persona.telephone,"email":persona.email,
-								"image":persona.image});
+								"image":persona.image, "lastName":persona.lastName});
 		var urlthis = urlServer+"persona";
 		$http.post(urlthis,jsonString).success(function(data, status, headers, config) {
 		    callback(data);    
@@ -166,34 +157,31 @@ app.service('myMiddleware', function($http) {
 		});
 	}
 
-	this.editPersona = function (persona){
+	this.editPersona = function (persona, callback){
 		/*
 			persona.id se necesita;
 		*/
 		var urlthis = urlServer+"editarPersona";
 		var jsonString = JSON.stringify({"id":persona.id,"hastly":persona.hastly,"name":persona.name,
 								"telephone":persona.telephone,"email":persona.email,
-								"image":persona.image});
+								"image":persona.image, "lastName":persona.lastName});
 		$http.post(urlthis,jsonString).success(function(data, status, headers, config) {
 		    if(data){
-		    	alert("exito al editar persona");
+		    	console.log("exito al editar persona");
 		    }else{
-		    	alert("No se pudo editar persona");
+		    	console.log("No se pudo editar persona "+data);
 		    }
-		    return data; 
+		    callback(data); 
 		}).error(function(data, status, headers, config) {
-		    alert("No se pudo editar persona");
-		    return data; 
+		    console.log("No se pudo editar persona");
+		    callback(data); 
 		});
 	}
 
 	this.obtenerServiciosAll = function (callback){
 		var servicios;
 		var urlthis = urlServer+"servicioAll";
-		$http.get(urlthis).success(function(data){
-			servicios = data;
-			return servicios;
-		});
+
 		$http({
 		    url: urlthis, 
 		    method: 'GET',
@@ -205,7 +193,7 @@ app.service('myMiddleware', function($http) {
 		});
 	}
 
-	this.guardarServicio = function (servicio){
+	this.guardarServicio = function (servicio,callback){
 		/*	rellenar de servicio; 
 			-serviceName;
 			-category;
@@ -221,14 +209,14 @@ app.service('myMiddleware', function($http) {
 		var urlthis = urlServer+"servicio";
 		$http.post(urlthis,jsonString).success(function(data, status, headers, config) {
 		    if(data){
-		    	alert("Servicio creado exitosamente");
+		    	console.log("Servicio creado exitosamente");
 		    }else{
-		    	alert("El servicio no pudo ser creado");
+		    	console.log("El servicio no pudo ser creado");
 		    }
-		    return data;
+		    callback(data);
 		}).error(function(data, status, headers, config) {
-		    alert("El servicio no pudo ser creado");
-		    return data; 
+		    console.log("El servicio no pudo ser creado");
+		    callback(false); 
 		});
 	}
 
@@ -236,10 +224,7 @@ app.service('myMiddleware', function($http) {
 		//servicio.serviceName = stringbusqueda;
 		var servicios;
 		var urlthis = urlServer+"servicio";
-		$http.get(urlthis).success(function(data){
-			servicios = data;
-			return servicios;
-		});
+
 		$http({
 		    url: urlthis, 
 		    method: 'GET',
@@ -251,27 +236,37 @@ app.service('myMiddleware', function($http) {
 		});
 	}
 
-	this.borrarServicios = function (servicio){
-		//servicio.id se necesita;
+	this.obtenerServiciosEmail = function (servicio, callback){
+		//servicio.serviceName = stringbusqueda;
 		var servicios;
-		var urlthis = urlServer+"servicio";
-		var jsonString = JSON.stringify({"id":servicio.id});
-		var options = [];
-		options.data = jsonString;
-		$http.delete(urlthis,options).success(function(data, status, headers, config) {
-		    if(data){
-		    	alert("Se borro con exito el servicio");
-		    }else{
-		    	alert("Ocurrio un problema al borrar el servicio");
-		    }
-		    return data; 
-		}).error(function(data, status, headers, config) {
-		    alert("Ocurrio un problema al borrar el servicio");
-		    return data; 
+		var urlthis = urlServer+"servicioEmail";
+
+		$http({
+		    url: urlthis, 
+		    method: 'GET',
+		    params: {email:servicio.email},
+		}).success(function(data, status, headers, config){
+		    callback(data);
+		}).error(function(data, status, headers, config){
+		    callback(false);
 		});
 	}
 
-	this.editarServicio = function (servicio){
+	this.borrarServicios = function (servicio, callback){
+		//servicio.id se necesita;
+		var urlthis = urlServer+"servicio";
+		$http({
+		    url: urlthis, 
+		    method: 'delete',
+		    params: {Id:servicio.id},
+		}).success(function(data, status, headers, config){
+		    callback(data);
+		}).error(function(data, status, headers, config){
+		    callback(false);
+		});
+	}
+
+	this.editarServicio = function (servicio, callback){
 		/*
 			servicio.id se necesita;
 		*/
@@ -281,14 +276,14 @@ app.service('myMiddleware', function($http) {
 		var urlthis = urlServer+"editarServi";
 		$http.post(urlthis,jsonString).success(function(data, status, headers, config) {
 		    if(data){
-		    	alert("exito al editar servicio");
+		    	console.log("exito al editar servicio");
 		    }else{
-		    	alert("No se pudo editar servicio");
+		    	console.log("No se pudo editar servicio");
 		    }
-		    return data;
+		    callback(data);
 		}).error(function(data, status, headers, config) {
-		    alert("No se pudo editar servicio");
-		    return data; 
+		    console.log("No se pudo editar servicio");
+		    callback(false); 
 		});
 	} 
 
@@ -296,10 +291,7 @@ app.service('myMiddleware', function($http) {
 		//servicio.category se necesita;
 		var servicios;
 		var urlthis = urlServer+"categoria";
-		$http.get(urlthis).success(function(data){
-			servicios = data;
-			return servicios;
-		});
+
 		$http({
 		    url: urlthis, 
 		    method: 'GET',
@@ -311,7 +303,7 @@ app.service('myMiddleware', function($http) {
 		});
 	}
 
-	this.agregarComentario = function (servicio){
+	this.agregarComentario = function (servicio, callback){
 		/*
 			servicio.id se necesita;
 			servicio.comments[0]=commentarioAgregado;
@@ -321,18 +313,18 @@ app.service('myMiddleware', function($http) {
 
 		$http.post(urlthis,jsonString).success(function(data, status, headers, config) {
 		    if(data){
-		    	alert("exito al crear comentario");
+		    	console.log("exito al crear comentario");
 		    }else{
-		    	alert("No se pudo crear comentario");
+		    	console.log("No se pudo crear comentario");
 		    }
-		    return data; 
+		    callback(data); 
 		}).error(function(data, status, headers, config) {
-		    alert("No se pudo crear comentario");
-		    return data; 
+		    console.log("No se pudo crear comentario");
+		    callback(false);
 		});
 	}
 
-	this.agregarMatch = function (match){
+	this.agregarMatch = function (match, callback){
 		/*
 			rellenar de match:
 			-hastly;
@@ -342,14 +334,14 @@ app.service('myMiddleware', function($http) {
 		var urlthis = urlServer+"match";
 		$http.post(urlthis,jsonString).success(function(data, status, headers, config) {
 		    if(data){
-		    	alert("exito al agregar match");
+		    	console.log("exito al agregar match");
 		    }else{
-		    	alert("No se pudo agregar match");
+		    	console.log("No se pudo agregar match");
 		    }
-		    return data; 
+		    callback(data);
 		}).error(function(data, status, headers, config) {
-		    alert("No se pudo agregar match");
-		    return data; 
+		    console.log("No se pudo agregar match");
+		    callback(false);
 		});
 	}
 
@@ -357,10 +349,7 @@ app.service('myMiddleware', function($http) {
 		//match.id se necesita;
 		var matchR;
 		var urlthis = urlServer+"match";
-		$http.get(urlthis).success(function(data){
-			matchR = data;
-			return matchR;
-		});
+
 		$http({
 		    url: urlthis, 
 		    method: 'GET',
@@ -376,10 +365,7 @@ app.service('myMiddleware', function($http) {
 		//match.serviId se necesita;
 		var matchesR;
 		var urlthis = urlServer+"matchServi";
-		$http.get(urlthis).success(function(data){
-			matchesR = data;
-			return matchesR;
-		});
+
 		$http({
 		    url: urlthis, 
 		    method: 'GET',
@@ -415,14 +401,14 @@ app.service('myMiddleware', function($http) {
 		var urlthis = urlServer+"singon";
 		$http.post(urlthis,jsonString).success(function(data, status, headers, config) {
 		    if(data){
-		    	alert("Singon exitoso");
+		    	console.log("Singon exitoso");
 		    	return true;
 		    }else{
-		    	alert("Singon fallido");
+		    	console.log("Singon fallido");
 		    	return false;
 		    }
 		}).error(function(data, status, headers, config) {
-		    alert("Singon fallido");
+		    console.log("Singon fallido");
 		    return false; 
 		});
 	}
@@ -443,9 +429,5 @@ app.service('myMiddleware', function($http) {
 		}).error(function(data, status, headers, config){
 		    callback(false);
 		});
-		/*$http.get(urlthis,params).success(function(data){
-			loged = data;
-			return loged;
-		});*/
 	};
 });

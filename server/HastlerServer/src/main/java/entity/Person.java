@@ -17,7 +17,8 @@ public class Person implements PersonI {
 	
 	private String image;
 
-	
+	private String lastName;
+		
 	public Person() {
 		super();
 	}
@@ -70,5 +71,11 @@ public class Person implements PersonI {
 		this.image = image;
 	}
 
-	
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 }

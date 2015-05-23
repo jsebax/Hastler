@@ -1,4 +1,4 @@
-<ion-view view-title="Search" ng-init="list()"  class="services">
+<ion-view view-title="Search" ng-init="list()" class="services">
     <ion-nav-bar class="bar-dark">
         <ion-nav-back-button></ion-nav-back-button>
     </ion-nav-bar>
@@ -12,20 +12,24 @@
 
         <div class="list card">
 
-            <div ng-repeat="serviceData in serviceList | filter:searchText" class="item">
-                <button class="button button-block item item-icon-right" ng-click="showme = !showme">
-                                      
-                    <div class="item item-avatar">
-                        <img src="https://lh3.googleusercontent.com/-MMVM88kotCQ/AAAAAAAAAAI/AAAAAAAAAAA/neeJld0xTdE/photo.jpg"></img>
-                        <h2>Clase de Calculo</h2>
-                        <p>Pedro Vicente</p>
+            <div ng-repeat="service in services | filter:searchText" class="item">                                      
+                    <button class="button button-block item item-icon-right" ng-click="showme = !showme">
+                        <i class="icon ion-android-arrow-dropdown-circle"></i>
+                        {{ service.serviceName }}
+                    </button>
+                    <div style="display:none">
+                        {{ service.id }}
                     </div>
-
-                    <div class="item item-body">
-                        <img class="full-image" src="http://www.iconarchitects.com/images/projectImages/mayville-university.jpg"></img>
-                    </div>
-                    
-                </button>               
+                    <div ng-show="showme">
+                        <label class="item">
+                            <h2>Category</h2>
+                            <p>{{ service.category }}</p>
+                        </label>
+                        <label class="item">
+                            <h2>Owner</h2>
+                            <p>{{ service.owner }}</p>
+                        </label>
+                    </div>             
             </div>
         </div>
     </ion-content>

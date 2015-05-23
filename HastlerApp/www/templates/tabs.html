@@ -1,15 +1,15 @@
 <ion-tabs class="tabs-striped tabs-icon-only tabs-background-dark tabs-positive">
 
-    <ion-tab title="Home" icon="icon ion-android-home" href="#/tab/home">
-        <ion-nav-view name="my-services-tab"></ion-nav-view>
+    <ion-tab title="Home" icon="icon ion-android-home" ng-click="toHome()">
+        <ion-nav-view name="home-tab"></ion-nav-view>
     </ion-tab>
 
-    <ion-tab title="search" icon="ion-android-search" href="#/tab/search">
+    <ion-tab title="search" icon="ion-android-search" ng-click="toSearch()">
         <ion-nav-view name="search-tab"></ion-nav-view>
     </ion-tab>
 
-    <ion-tab title="Upcoming Classes" icon="ion-clipboard"  href="#/tab/services">
-        <ion-nav-view name="services-tab"></ion-nav-view>
+    <ion-tab title="Upcoming Classes" icon="ion-clipboard" ng-click="toUpComingClasses()">
+        <ion-nav-view name="upComingClasses-tab"></ion-nav-view>
     </ion-tab>
 
     <ion-tab title="Settings" icon="icon ion-person" href="#/tab/menu">

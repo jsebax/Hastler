@@ -1,0 +1,47 @@
+package business;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import DBServices.MongoServiRepository;
+import entity.Servi;
+import repositories.Repository;
+import repositories.ServiRepository;
+
+public class GetServiceEmail implements UnitOfWork {
+
+	private ServiRepository serviRepository;
+	private Servi servi;
+	private List<Servi>services;
+	
+	public GetServiceEmail() {
+		super();
+	}
+
+	@Override
+	public boolean run() {
+		services = new ArrayList<Servi>();
+		services = serviRepository.findServiEmail(servi.getEmail());
+		if(services.isEmpty()){
+			return false;
+		}else{
+			return true;
+		}
+	}
+
+	@Override
+	public void SetRepository(Repository repository) {
+		serviRepository = new MongoServiRepository();
+		serviRepository = (ServiRepository) repository;
+	}
+
+	public void setServi(Servi servicio) {
+		servi = new Servi();
+		servi = servicio;
+	}
+
+	public List<Servi> getServices() {
+		return services;
+	}
+
+}

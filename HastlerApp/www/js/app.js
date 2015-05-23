@@ -5,9 +5,8 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 
-var app = angular.module('starter', ['ionic', 'firebase']);
-var url = "https://hastler.firebaseio.com/";
-var fb = new Firebase(url);
+var app = angular.module('starter', ['ionic']);
+
 
 app.run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
@@ -35,33 +34,20 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
     .state('resetPassword', {
         url: '/resetPassword',
         templateUrl: 'templates/resetPassword.html',
-        //controller: 'resetPasswordController'
+        controller: 'resetPasswordController'
     })
 
-    //Templates Registro
-    //Tamplate Email
     .state('register', {
         url: '/register',
         templateUrl: 'templates/register.html',
         controller: 'RegisterController'
     })
 
-    .state('registerPassword', {
-        url: '/registerPassword',
-        templateUrl: 'templates/registerPassword.html',
-        controller: 'RegisterController'
-    })
-
-    .state('registerName', {
-        url: '/registerName',
-        templateUrl: 'templates/registerName.html',
-        controller: 'RegisterController'
-    })
-
     .state('tabs', {
         url: '/tab',
         abstract: true,
-        templateUrl: 'templates/tabs.html'
+        templateUrl: 'templates/tabs.html',
+        controller: 'tabController'
     })
 
     .state('tabs.home', {
@@ -84,12 +70,12 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
         }
     })
 
-    .state('tabs.services', {
-        url: '/services',
+    .state('tabs.upComingClasses', {
+        url: '/upComingClasses',
         views: {
-            'services-tab': {
-                templateUrl: 'templates/upcomingClasses.html',
-                controller: 'ServicesController'
+            'upComingClasses-tab': {
+                templateUrl: 'templates/upComingClasses.html',
+                controller: 'upComingClassesController'
             }
         }
     })
@@ -138,8 +124,14 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
     $urlRouterProvider.otherwise('/login');
 });
 
-app.controller("LoginController", function($scope, $firebaseAuth, $firebaseObject, $location, $ionicPopup, myMiddleware) {
-    
+app.controller("LoginController", function($scope, $location, $ionicPopup, myMiddleware) {
+    $scope.session = function(){
+        if(window.localStorage['email']!=''&&
+                window.localStorage['email']!=undefined){
+             $location.path('/tab/home');
+        }
+    };
+
     $scope.toResetPassword = function() {
         $location.path('/resetPassword');
     };
@@ -156,29 +148,62 @@ app.controller("LoginController", function($scope, $firebaseAuth, $firebaseObjec
                 alert("El email o la contraseña no son correctos");
             }else{
                 console.log("entro...");
-                var emaildiv = document.getElementById("email"); 
-                //document.getElementById("email").value; da el valor del email
-                emaildiv.innerHTML = email;
+                window.localStorage['email']= email;
                 $location.path('/tab/home');
             }
         });
     };
 });
 
-app.controller("RegisterController", function($scope, $firebaseAuth, $firebaseObject, $location, $ionicPopup, myMiddleware) {
+app.controller("tabController", function($scope, $location, $ionicPopup, myMiddleware) {
 
-    $scope.register = function(mail, pass, Name, lastname) {
-        var fbAuth = $firebaseAuth(fb);
+    $scope.toHome=function(){
+        $location.path('/tab/home');
+         window.setTimeout(function() { window.location.reload(true); }, 250);
+    };
+
+    $scope.toSearch=function(){
+        $location.path('/tab/search');
+         window.setTimeout(function() { window.location.reload(true); }, 250);
+    };
+
+    $scope.toUpComingClasses=function(){
+        $location.path('/tab/upComingClasses');
+         window.setTimeout(function() { window.location.reload(true); }, 250);
+    };
+    
+});
+
+app.controller("resetPasswordController", function($scope, $location, $ionicPopup, myMiddleware) {
+    $scope.reset = function(email) {        
+        $ionicPopup.show({
+            title: 'An email was sent',
+            buttons: [{
+                text: 'OK',
+                type: 'button-positive',
+                onTap: function() {
+                    $location.path("/login");
+                }
+            }]
+        });
+    };
+    
+});
+
+
+app.controller("RegisterController", function($scope, $location, $ionicPopup, myMiddleware) {
+
+    $scope.register = function(mail, pass, name, lastName) {
         $scope.user = [];
         $scope.user.password = pass;
         $scope.user.email = mail;
 
         $scope.profile = [];
-        $scope.profile.name = Name;
+        $scope.profile.name = name;
+        $scope.profile.lastName = lastName
         $scope.profile.email = mail;
         $scope.singonsuccess = true;
         myMiddleware.singon($scope.user);
-        alert($scope.singonsuccess);
         if($scope.singonsuccess){
             $scope.profilesuccess = true;
             myMiddleware.agregarPersona($scope.profile,function(dataprofile){
@@ -190,8 +215,7 @@ app.controller("RegisterController", function($scope, $firebaseAuth, $firebaseOb
                             alert("Desafortunadamente se tuvo un problema al intentar loguearse, por favor intente denuevo más tarde.");
                             $location.path('/login');
                         }else{
-                            var emaildiv = document.getElementById("email");
-                            emaildiv.innerHTML = $scope.user.email;
+                            window.localStorage['email']= $scope.user.email;
                             $location.path('/tab/home');
                         }
                     });
@@ -207,36 +231,40 @@ app.controller("RegisterController", function($scope, $firebaseAuth, $firebaseOb
     };
 });
 
-app.controller("myProfileController", function($scope, $firebaseObject, $ionicPopup, $location, myMiddleware) {
-    var auth = fb.getAuth();
-    //var obj = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
-    //var object = $firebaseObject(obj);
+app.controller("myProfileController", function($scope, $ionicPopup, $location, myMiddleware) {
+
+    var object = [];
 
     $scope.list = function() {
-        if(auth) {
-        object.$bindTo($scope, "data");
-        }
+        $scope.person = [];
+        $scope.person.email =  window.localStorage['email']
+        console.log("el email dado es: "+$scope.person.email);
+        myMiddleware.obtenerPersonaEmail($scope.person,function(data){
+            data.lastname =data.lastName;
+            object = data;
+            console.log("ya hay data y su nombre es: "+ data.name+ " last:"+data.lastName);
+            if($scope.person.email!= undefined) {
+                $scope.data = object;
+            }
+        });
     };
 
     $scope.logout = function() {
-        var firebaseAuth = fb.getAuth();
-        var obj = new Firebase("https://hastler.firebaseio.com/users/" + firebaseAuth.uid);
-        if(firebaseAuth) {
-            if(navigator.userAgent.indexOf('Android') != -1) {
-                obj.unauth();
-                $location.path("/login");
-                window.setTimeout(function() { window.location.reload(true); }, 500);
-            } else {
-                //location.href = location.origin;
-                obj.unauth();
-                $location.path("/login");
-                //window.location.reload(true);
-            }
+        if(navigator.userAgent.indexOf('Android') != -1) {
+            window.localStorage['email'] = '';
+            $location.path("/login");
+            window.setTimeout(function() { window.location.reload(true); }, 500);
+        } else {
+            //location.href = location.origin;
+            window.localStorage['email'] = '';
+            $location.path("/login");
+            //window.location.reload(true);
         }
     };
 
     $scope.updateRecords = function(name, lastname, tel) {
-        if(auth) {
+        if(document.getElementById("email").value!='') { //si no esta logeado
+            object.id = $scope.data.id; //este id se tiene que sacar de la información del list
             if(name !== undefined) {
                 object.name = name;
             }
@@ -246,48 +274,54 @@ app.controller("myProfileController", function($scope, $firebaseObject, $ionicPo
             if(tel !== undefined) {
                 object.tel = tel;
             }
-            object.$save().then(function(ref) {
-                console.log(ref.key() === object.$id);
-                $ionicPopup.show({
-                    title: 'Changes Saved Successfully',
-                    buttons: [{
-                        text: 'OK',
-                        type: 'button-positive',
-                        onTap: function() {
-                            $location.path("/tab/myProfile");
-                        }
-                    }]
-                });
-            }, function(error) {
-                console.log("ERROR: " + error);
-                $ionicPopup.alert({
-                    title: 'Alert',
-                    template: error
-                });
+            object.lastName=object.lastname;
+            myMiddleware.editPersona(object, function(data){
+
+                if(data){
+                    $ionicPopup.show({
+                        title: 'Changes Saved Successfully',
+                        buttons: [{
+                            text: 'OK',
+                            type: 'button-positive',
+                            onTap: function() {
+                                $location.path("/tab/myProfile");
+                            }
+                        }]
+                    });
+                }else{
+                    var error = "no se ha podido editar";
+                    console.log("ERROR: " + error);
+                    $ionicPopup.alert({
+                        title: 'Alert',
+                        template: error
+                    });
+                }
             });
+        }else{
+            var error = "parece ser que ud no está logeado";
+            console.log("ERROR: " + error);
+            $ionicPopup.alert({
+                title: 'Alert',
+                template: error
+            });
+            $location.path("/login");
         }
     };
 });
 
-app.controller("menuController", function($scope, $firebaseObject, $ionicPopup, $location, myMiddleware) {
-    var auth = fb.getAuth();
-    //var obj = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
-    //var object = $firebaseObject(obj);
+app.controller("menuController", function($scope, $ionicPopup, $location, myMiddleware) {
 
     $scope.logout = function() {
-        var firebaseAuth = fb.getAuth();
-        var obj = new Firebase("https://hastler.firebaseio.com/users/" + firebaseAuth.uid);
-        if(firebaseAuth) {
-            if(navigator.userAgent.indexOf('Android') != -1) {
-                obj.unauth();
-                $location.path("/login");
-                window.setTimeout(function() { window.location.reload(true); }, 500);
-            } else {
-                //location.href = location.origin;
-                obj.unauth();
-                $location.path("/login");
-                //window.location.reload(true);
-            }
+        if(navigator.userAgent.indexOf('Android') != -1) {
+
+            window.localStorage['email'] = '';
+            $location.path("/login");
+            window.setTimeout(function() { window.location.reload(true); }, 500);
+        } else {
+            //location.href = location.origin;
+            window.localStorage['email']='';
+            $location.path("/login");
+            //window.location.reload(true);
         }
     };
 
@@ -300,43 +334,53 @@ app.controller("menuController", function($scope, $firebaseObject, $ionicPopup, 
     };    
 });
 
-app.controller("ServicesController", function($scope, $firebaseObject, $ionicPopup, $location) {
-    var auth = fb.getAuth();
-    //var obj = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
-    //var object = $firebaseObject(obj);
+app.controller("upComingClassesController", function($scope, $ionicPopup, $location, myMiddleware) {
+
+    var object = [];
+
     $scope.list = function() {
-        if(auth) {
-            object.$bindTo($scope, "data");
-        }
+        $scope.email = window.localStorage['email'];
+        myMiddleware.obtenerServiciosAll(function(data){
+            object = data;
+            if($scope.email!= undefined) {
+                $scope.services = object;
+                console.log("hay data.");
+            }
+        });
     };
   
 });
 
-app.controller("ServiceFormController", function($scope, $firebaseObject, $ionicPopup, $location, myMiddleware ) {
-    var auth = fb.getAuth();
-    //var obj1 = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
-    var obj2 = new Firebase("https://hastler.firebaseio.com/services/");
-    //var object1 = $firebaseObject(obj1);
+app.controller("ServiceFormController", function($scope, $ionicPopup, $location, myMiddleware ) {
+
     $scope.service = [];
     
     $scope.list = function() {
-        if(auth) {
-            object1.$bindTo($scope, "data");
-        }
+        $scope.data = [];
+        $scope.person = [];
+        $scope.person.email = window.localStorage['email'];
+        myMiddleware.obtenerPersonaEmail($scope.person,function(data){
+            if($scope.person.email!=undefined){
+                $scope.data = data;
+                console.log("el dueño será: "+($scope.data.name +" "+ $scope.data.lastName))
+            }
+        });
     };
 
     $scope.create = function(title, category) {
         $scope.service.serviceName = title;
-        $scope.service.owner = $scope.data.hastly;
+        $scope.service.owner = ($scope.data.name +" "+ $scope.data.lastName);
         $scope.service.category = category;
-        myMiddleware.guardarServicio($scope.service);
-/*
-        $scope.data.services.push({
-            title: title,
-            owner: $scope.data.hastly,
-            category: category
+        $scope.service.email =  window.localStorage['email'];
+        myMiddleware.guardarServicio($scope.service,function(data){
+            if (data) {
+                alert("el servicio se agrego");
+            }else{
+                alert("ocurrio un problema al agregar el servicio... intentelo más tarde.")
+            }
+
         });
-*/
+        $scope.services += $scope.service;
         $location.path("/tab/services");
     };
 
@@ -346,33 +390,70 @@ app.controller("ServiceFormController", function($scope, $firebaseObject, $ionic
     ];
 });
 
-app.controller("myCreateServicesController", function($scope, $firebaseObject, $ionicPopup, $location, myMiddleware ) {
+app.controller("myCreateServicesController", function($scope, $ionicPopup, $location, myMiddleware ) {
+    var object = [];
+
     $scope.toServiceForm = function() {
         $location.path('/tab/serviceForm');
     };
-});
-
-app.controller('homeController', function($scope, $firebaseObject, $ionicPopup, $location) {
-    var auth = fb.getAuth();
-    var obj1 = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
-    var obj2 = new Firebase("https://hastler.firebaseio.com/services/");
-    var object1 = $firebaseObject(obj1);
-    var object2 = $firebaseObject(obj2);
-    $scope.serviceList = [];
-    $scope.myServiceList = [];
 
     $scope.list = function() {
-        if(auth) {
-            object1.$bindTo($scope, "data").then(function() {
-                $scope.myServiceList = $scope.data.myServices;
-            });
-            object2.$bindTo($scope, "data2").then(function() {
-                $scope.serviceList = $scope.data2.services;
-            });
-        }
+        $scope.email = window.localStorage['email'];
+        $scope.servicio = [];
+        $scope.servicio.email = window.localStorage['email'];
+        myMiddleware.obtenerServiciosEmail($scope.servicio,function(data){
+            object = data;
+            if($scope.email!= undefined) {
+                $scope.services = object;
+                console.log("hay data.");
+            }
+        });
+    };
+
+    $scope.showConfirm = function(id) {
+        var confirmPopup = $ionicPopup.confirm({
+            title: 'delete',
+            template: 'Are you sure you want to delete this service?'
+        });
+        confirmPopup.then(function(res) {
+            if(res) {
+                $scope.delete(id);
+            } else {
+                console.log('You are not sure');
+            }
+        });
+    };
+
+    $scope.delete = function(id) {
+        $scope.servicio = [];
+        $scope.servicio.id = id;
+        myMiddleware.borrarServicios($scope.servicio,function(data){
+            if(data){
+                console.log("se borro exitosamente el servicio " +id);
+                window.setTimeout(function() { window.location.reload(true); }, 500);
+            }else{
+                console.log("un problema al borrar el servicio");
+            }
+        });
+    };
+});
+
+app.controller('homeController', function($scope, $ionicPopup, $location, myMiddleware) {
+    var object = [];
+
+    $scope.list = function() {
+        $scope.email = window.localStorage['email']
+        myMiddleware.obtenerServiciosAll(function(data){
+            object = data;
+            if($scope.email!= undefined) {
+                $scope.services = object;
+                console.log("hay data.");
+            }
+        });
     };
 
     $scope.adquire = function(service) {
+        /*
         if(auth) {
             if($scope.data.hasOwnProperty("myServices") !== true) {
                 $scope.data.myServices = [];
@@ -382,31 +463,27 @@ app.controller('homeController', function($scope, $firebaseObject, $ionicPopup, 
 
             $location.path("/tab/myServices");
         }
+        */
     }
 });
 
-app.controller('searchController', function($scope, $firebaseObject, $ionicPopup, $location) {
-    var auth = fb.getAuth();
-    //var obj1 = new Firebase("https://hastler.firebaseio.com/users/" + auth.uid);
-    var obj2 = new Firebase("https://hastler.firebaseio.com/services/");
-    //var object1 = $firebaseObject(obj1);
-    var object2 = $firebaseObject(obj2);
-    $scope.serviceList = [];
-    $scope.myServiceList = [];
+app.controller('searchController', function($scope, $ionicPopup, $location, myMiddleware) {
+    var object = [];
 
     $scope.list = function() {
-        if(auth) {
-            object1.$bindTo($scope, "data").then(function() {
-                $scope.myServiceList = $scope.data.myServices;
-            });
-            object2.$bindTo($scope, "data2").then(function() {
-                $scope.serviceList = $scope.data2.services;
-            });
-        }
+        $scope.email = window.localStorage['email'];
+        myMiddleware.obtenerServiciosAll(function(data){
+            object = data;
+            if($scope.email!= undefined) {
+                $scope.services = object;
+                console.log("hay data.");
+                console.log(window.localStorage['email']);
+            }
+        });
     };
 
     $scope.adquire = function(service) {
-        if(auth) {
+        /*if(auth) {
             if($scope.data.hasOwnProperty("myServices") !== true) {
                 $scope.data.myServices = [];
             }
@@ -414,6 +491,6 @@ app.controller('searchController', function($scope, $firebaseObject, $ionicPopup
             $scope.data.myServices.push(service);
 
             $location.path("/tab/myServices");
-        }
+        }*/
     }
 });

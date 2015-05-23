@@ -17,33 +17,46 @@ public class EditPerson implements UnitOfWork {
 	@Override
 	public boolean run() {
 		Person personE = null;
-		String change = person.getEmail();
-		if(change!= null){
-			personE = personRepository.updatePerson(person.getId(),
-					"email", person.getEmail());
-		}
-		change = person.getHastly();
-		if(change!= null){
-			personE = personRepository.updatePerson(person.getId(),
-					"hastly", person.getHastly());
-		}
-		change = person.getImage();
-		if(change!= null){
-			personE = personRepository.updatePerson(person.getId(),
-					"image", person.getImage());
-		}
-		change = person.getName();
-		if(change!= null){
-			personE = personRepository.updatePerson(person.getId(),
-					"name", person.getName());
-		}
-		change = person.getTelephone();
-		if(change!= null){
-			personE = personRepository.updatePerson(person.getId(),
-					"telephone", person.getTelephone());
-		}
-		if(personE.getId() == person.getId()){
-			return true;
+		if(person!=null){
+			String change = person.getEmail();
+			if(change!= null){
+				personE = personRepository.updatePerson(person.getId(),
+						"email", person.getEmail());
+			}
+			change = person.getHastly();
+			if(change!= null){
+				personE = personRepository.updatePerson(person.getId(),
+						"hastly", person.getHastly());
+			}
+			change = person.getImage();
+			if(change!= null){
+				personE = personRepository.updatePerson(person.getId(),
+						"image", person.getImage());
+			}
+			change = person.getName();
+			if(change!= null){
+				personE = personRepository.updatePerson(person.getId(),
+						"name", person.getName());
+			}
+			change = person.getTelephone();
+			if(change!= null){
+				personE = personRepository.updatePerson(person.getId(),
+						"telephone", person.getTelephone());
+			}
+			change = person.getLastName();
+			if(change!= null){
+				System.out.println("se está cambiando el lastname");
+				personE = personRepository.updatePerson(person.getId(),
+						"lastName", person.getLastName());
+			}
+			if(personE == null){
+				return false;
+			}
+			if(personE.getId() !=null){
+				return true;
+			}else{
+				return false;
+			}
 		}else{
 			return false;
 		}

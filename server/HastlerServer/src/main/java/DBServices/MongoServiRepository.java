@@ -71,5 +71,10 @@ public class MongoServiRepository implements ServiRepository {
 		return finded;
 	}
 
-
+	@Override
+	public List<Servi> findServiEmail(String email) {
+		Query searchUserQuery = new Query(Criteria.where("email").is(email));
+		List<Servi> finded = mongoOperation.find(searchUserQuery, Servi.class);
+		return finded;
+	}
 }

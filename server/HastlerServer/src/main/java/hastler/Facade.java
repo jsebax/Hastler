@@ -27,6 +27,7 @@ import business.GetPerson;
 import business.GetPersonEmail;
 import business.GetPersonHastly;
 import business.GetService;
+import business.GetServiceEmail;
 import business.LogIn;
 import business.PostComment;
 import business.PostMatch;
@@ -145,10 +146,12 @@ public class Facade {
 	@RequestMapping(value = "/editarPersona", method = RequestMethod.POST)
 	public @ResponseBody Boolean editarPersona(@RequestBody Person person){
 		System.out.println("editarPersona");
+		System.out.println("el id es : "+ person.getId());
 		UnitOfWork editPerson = new EditPerson();
 		editPerson.SetRepository(personMongo);
 		((EditPerson)editPerson).setPerson(person);
 		boolean result = editPerson.run();
+		System.out.println("el resultado es : "+ result);
 		return result;
 	}
 	
@@ -186,6 +189,23 @@ public class Facade {
 		boolean result = getServi.run();
 		if(result){
 			List<Servi> servis = ((GetService)getServi).getServices();
+			return servis;
+		}else{
+			return null;
+		}
+	}
+	
+	@RequestMapping(value = "/servicioEmail", method = RequestMethod.GET)
+	public @ResponseBody List<Servi> obtenerServiciosEmail(@RequestParam(value = "email", required=true) String email){
+		Servi servicio = new Servi();
+		servicio.setEmail(email);
+		System.out.println("obtenerServiciosEmail");
+		UnitOfWork getServi = new GetServiceEmail();
+		getServi.SetRepository(serviMongo);
+		((GetServiceEmail)getServi).setServi(servicio);
+		boolean result = getServi.run();
+		if(result){
+			List<Servi> servis = ((GetServiceEmail)getServi).getServices();
 			return servis;
 		}else{
 			return null;
