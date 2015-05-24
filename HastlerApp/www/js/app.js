@@ -130,6 +130,12 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
     $urlRouterProvider.otherwise('/login');
 });
 
+app.controller("serviceController", function($scope, $ionicPopup, $location, myMiddleware) {
+
+    
+
+});
+
 app.controller("LoginController", function($scope, $location, $ionicPopup, $cordovaFacebook, myMiddleware) {
 
     $scope.session = function(){
