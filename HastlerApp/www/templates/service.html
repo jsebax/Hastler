@@ -1,0 +1,34 @@
+<ion-view view-title="{{ service.serviceName }}" ng-init="list()" class="services">
+    <ion-nav-bar class="bar-dark">
+        <ion-nav-back-button></ion-nav-back-button>
+    </ion-nav-bar>
+   
+    <ion-content>
+        <div ng-repeat="service in services " class="item">
+
+            <button class="button button-block item item-icon-right" ng-click="showme = !showme">
+                <i class="icon ion-android-arrow-dropdown-circle"></i>
+                {{ service.serviceName }}
+            </button>
+            
+            <div style="display:none">
+                {{ service.id }}
+            </div>
+
+            <label class="item">
+                <h2>Category</h2>
+                <p>{{ service.category }}</p>
+            </label>
+
+            <label class="item">
+                <h2>Owner</h2>
+                <p>{{ service.owner }}</p>
+            </label>
+
+            <label class="item">
+                <button class="button button-block button-positive" ng-click="adquire(service)">Adquire</button>
+            </label>
+
+        </div>        
+    </ion-content>
+</ion-view>
