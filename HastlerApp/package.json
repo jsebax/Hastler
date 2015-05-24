@@ -1,7 +1,7 @@
 {
-  "name": "firebaseexample",
+  "name": "hastlerapp",
   "version": "1.0.0",
-  "description": "FirebaseExample: An Ionic project",
+  "description": "HastlerApp: An Ionic project",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^1.3.3",
@@ -15,8 +15,10 @@
     "shelljs": "^0.3.0"
   },
   "cordovaPlugins": [
-    "org.apache.cordova.device",
-    "org.apache.cordova.console",
+    "cordova-plugin-device",
+    "cordova-plugin-console",
+    "cordova-plugin-whitelist",
+    "cordova-plugin-splashscreen",
     "com.ionic.keyboard"
   ],
   "cordovaPlatforms": [
