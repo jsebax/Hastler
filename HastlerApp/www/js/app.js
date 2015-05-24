@@ -123,9 +123,8 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/login');
 });
+app.controller("LoginController", function($scope, $location, $ionicPopup, $cordovaFacebook, myMiddleware) {
 
-<<<<<<< HEAD
-app.controller("LoginController", function($scope, $location, $ionicPopup, myMiddleware) {
     $scope.session = function(){
         if(window.localStorage['email']!=''&&
                 window.localStorage['email']!=undefined){
@@ -133,10 +132,6 @@ app.controller("LoginController", function($scope, $location, $ionicPopup, myMid
         }
     };
 
-=======
-app.controller("LoginController", function($scope, $location, $ionicPopup, $cordovaFacebook, myMiddleware) {
-    
->>>>>>> origin/master
     $scope.toResetPassword = function() {
         $location.path('/resetPassword');
     };
@@ -199,6 +194,7 @@ app.controller("LoginController", function($scope, $location, $ionicPopup, $cord
             // For example, show the error message inside a toast notification on Android
         });
     };
+
 });
 
 app.controller("tabController", function($scope, $location, $ionicPopup, myMiddleware) {
