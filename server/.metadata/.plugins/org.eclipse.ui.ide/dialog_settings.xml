@@ -4,7 +4,7 @@
 		<item value="com.atlassian.connector.eclipse.jira:3.2.3.v20140630"/>
 		<item value="com.atlassian.connector.eclipse.monitor:3.2.3.v20140630"/>
 		<item value="org.aspectj:1.8.5.20150128171000"/>
-		<item value="org.cloudfoundry.ide.eclipse.server:1.8.2.201505070649-RELEASE"/>
+		<item value="org.cloudfoundry.ide.eclipse.server:1.8.0.201502131756-RELEASE"/>
 		<item value="org.eclipse.ajdt:2.2.4.e44x-20150202-1700"/>
 		<item value="org.eclipse.cvs:1.4.100.v20150204-1700"/>
 		<item value="org.eclipse.datatools.common.doc.user:1.12.0.v201405281819-26-311A16321A3557"/>
