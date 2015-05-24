@@ -4,16 +4,25 @@
     </ion-nav-bar>
    
     <ion-content>
-        <div class="list">
+        <div class="list card">
             <div ng-repeat="service in services " class="item">
                 <button class="button button-block item item-icon-right" ng-click="showme = !showme">
-                    <i class="icon ion-android-arrow-dropdown-circle"></i>
-                    {{ service.serviceName }}
+
+                    <strong>{{ service.serviceName }}</strong>
+                    <div class="item item-body">
+                    <img class="full-image" src="http://karya.com.tr/wp-content/uploads/2014/06/harvard.jpg">
+                    </div>                
+                    <div class="item item-avatar">
+                    <img src="https://lh3.googleusercontent.com/-MMVM88kotCQ/AAAAAAAAAAI/AAAAAAAAAAA/neeJld0xTdE/photo.jpg">
+                    <h2><strong>{{ service.owner }}</h2></strong>
+                    </div>
                 </button>
+
                 <div style="display:none">
                     {{ service.id }}
                 </div>
-                <div ng-show="showme">
+
+               <!-- <div ng-show="showme">
                     
                     <label class="item">
                         <h2>Category</h2>
@@ -28,8 +37,8 @@
                     <label class="item">
                         <button class="button button-block button-positive" ng-click="adquire(service)">Adquire</button>
                     </label>
-                </div>
-            </div>
+                </div> -->
+            </div> 
         </div>
     </ion-content>
 </ion-view>

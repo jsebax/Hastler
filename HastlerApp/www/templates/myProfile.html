@@ -1,25 +1,35 @@
-<ion-view view-title="Profile" ng-init="list()">
+<ion-view view-title="Profile" ng-init="list()" class= "profile">
     <ion-nav-bar class="bar-dark">
         <ion-nav-back-button></ion-nav-back-button>
     </ion-nav-bar>
-    <ion-content class="padding">        
-        <div class="list card">
+
+
+    <ion-content class="padding">   
+    
+    <div class="profile-imagen item item-avatar">
+            <img src="https://lh3.googleusercontent.com/-MMVM88kotCQ/AAAAAAAAAAI/AAAAAAAAAAA/neeJld0xTdE/photo.jpg"> 
+            <strong>{{ data.name }}</strong>   
+    </div>  
+               
+         
+
+        <div class="list card">      
             <div class="item item-divider">
-                Name
+               <strong> {{data.name}}</strong>
             </div>
             <div class="item item-text-wrap">
-                {{data.name}}
+                
                 <input ng-model="dataName" type="text" placeholder="New name"/>
             </div>
             <div class="item item-divider">
-                Lastname
+                <strong>Lastname</strong>
             </div>
             <div class="item item-text-wrap">
                 {{data.lastname}}
                 <input ng-model="dataLastname" type="text" placeholder="New lastname"/>
             </div>
             <div class="item item-divider">
-                Hastly
+                <strong>Hastly</strong>
             </div>
             <div class="item item-text-wrap">
                 {{data.hastly}}
@@ -27,13 +37,13 @@
            -->
             </div>
             <div class="item item-divider">
-                Email
+               <strong>Email</strong>
             </div>
             <div class="item item-text-wrap">
                 {{data.email}}
             </div>
             <div class="item item-divider">
-                Phone
+                <strong>Phone</strong>
             </div>
             <div class="item item-text-wrap">
                 {{data.tel}}

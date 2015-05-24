@@ -8133,3 +8133,13 @@ org.eclipse.jface.text.BadLocationException: null
 2015-05-23 20:40:18,202 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
 2015-05-23 20:40:18,204 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2015-05-23 20:40:18,205 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 13:08:56,496 [Worker-8] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: org.springframework:gs-spring-boot:0.1.0 @ C:\Users\USERR\Documents\Hastler\server\HastlerServer\pom.xml.
+2015-05-24 13:09:04,977 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 13:09:04,977 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 13:09:04,978 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 13:09:04,983 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 13:09:04,983 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 13:09:04,987 [Worker-8] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of HastlerServer
+2015-05-24 13:09:04,988 [Worker-8] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for HastlerServer
+2015-05-24 13:09:04,998 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.apache.maven.plugins:maven-clean-plugin:jar:2.5 is missing, no dependency information available
+2015-05-24 13:09:05,016 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
