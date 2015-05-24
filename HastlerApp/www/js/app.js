@@ -43,6 +43,12 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
         controller: 'RegisterController'
     })
 
+    .state('service', {
+        url: '/service',
+        templateUrl: 'templates/service.html',
+        controller: 'serviceController'
+    })
+
     .state('tabs', {
         url: '/tab',
         abstract: true,
@@ -123,6 +129,7 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/login');
 });
+
 app.controller("LoginController", function($scope, $location, $ionicPopup, $cordovaFacebook, myMiddleware) {
 
     $scope.session = function(){
@@ -427,7 +434,7 @@ app.controller("ServiceFormController", function($scope, $ionicPopup, $location,
     };
 
     $scope.categories = [
-        "Academy",
+        "Academic",
         "Music"
     ];
 });
