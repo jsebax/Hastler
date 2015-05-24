@@ -1,0 +1,12 @@
+diff a/HastlerApp/www/js/app.js b/HastlerApp/www/js/app.js	(rejected hunks)
+@@ -158,7 +158,9 @@
+      * Learn how facebooks graph api works: https://developers.facebook.com/docs/graph-api/quickstart/v2.2
+      * The array params "public_profile", "email", "user_friends" are the permissions / data that the app is trying to access.
+     */
+-    $scope.fbLogin = function() {
++
++    //COSO FB
++    /*$scope.fbLogin = function() {
+         $cordovaFacebook.login(["public_profile", "email", "user_friends"])
+         .then(function(success) {
+             /*

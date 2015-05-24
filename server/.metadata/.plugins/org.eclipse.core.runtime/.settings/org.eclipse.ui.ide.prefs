@@ -1,5 +1,9 @@
 PROBLEMS_FILTERS_MIGRATE=true
 eclipse.preferences.version=1
+<<<<<<< HEAD
 platformState=1431638824184
+=======
+platformState=1427324527603
+>>>>>>> origin/saito
 quickStart=false
 tipsAndTricks=true
