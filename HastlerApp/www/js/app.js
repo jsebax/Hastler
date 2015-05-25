@@ -23,6 +23,9 @@ app.run(function($ionicPlatform) {
 });
 
 app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+
+    $ionicConfigProvider.tabs.position('bottom');
+
     $stateProvider
 
     .state('login', {
@@ -74,7 +77,7 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
         url: '/upComingClasses',
         views: {
             'upComingClasses-tab': {
-                templateUrl: 'templates/upComingClasses.html',
+                templateUrl: 'templates/upcomingClasses.html',
                 controller: 'upComingClassesController'
             }
         }
@@ -271,13 +274,13 @@ app.controller("LoginController", function($scope, $location, $ionicPopup, $cord
                     id: result.id,
                     name: result.name,
                     pic: result.picture.data.url,
-                    email: resul.email
+                    email: result.email
                 }
                 //Do what you wish to do with user data. Here we are just displaying it in the view
                 myMiddleware.emailCheck(userData,function(data){
                     if(data){
                         console.log("entro...");
-                        window.localStorage['email']= email;
+                        window.localStorage['email']= userData.email;
                         $location.path('/tab/home');
                     }else{
                         $ionicPopup.prompt({
