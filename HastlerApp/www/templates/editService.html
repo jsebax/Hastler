@@ -1,4 +1,4 @@
-<ion-view view-title="Service Edit" ng-init="list()" class= "editservice" >
+<ion-view view-title="Editar Clase" ng-init="list()" class= "editservice" >
     <ion-nav-bar class="bar-dark">
         <ion-nav-back-button></ion-nav-back-button>
     </ion-nav-bar>
@@ -9,7 +9,7 @@
                 {{service.id}}
             </div>
             <div class="item item-divider">
-               <strong> Service Name </strong>
+               <strong>Nombre de la clase</strong>
             </div>
             <div class="item item-text-wrap">
                 {{service.serviceName}}
@@ -17,7 +17,7 @@
                 <input ng-model="serviceName" type="text" placeholder="New name"/>
             </div>
             <div class="item item-divider">
-                <strong>Category</strong>
+                <strong>Categoria</strong>
             </div>
 
             <div class="item item-text-wrap">
@@ -29,13 +29,13 @@
                 </div>
             </div>
             <div class="item item-divider">
-               <strong>owner</strong>
+               <strong>Propietario</strong>
             </div>
             <div class="item item-text-wrap">
                 {{service.owner}}
             </div>
             <div class="item item-divider">
-                <strong>Place</strong>
+                <strong>Lugar</strong>
             </div>
             <div class="item item-text-wrap">
                 {{service.city}}
@@ -43,7 +43,7 @@
             </div>
         </div>
          
-         <button class="button button-block button-positive" ng-click="updateRecords(serviceName, serviceCategory, dataCity);">Save Changes</button>  
+         <button class="button button-block button-positive" ng-click="updateRecords(serviceName, serviceCategory, dataCity);">Guardar cambios</button>  
 
     </ion-content>
 </ion-view>

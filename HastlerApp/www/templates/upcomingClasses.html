@@ -16,19 +16,19 @@
                     <div class="item">
                     <div class="item item-avatar">
                     <img src="img/avatarMan.jpg"></img>
-                    <strong>Owner</strong>
+                    <strong>Propietario</strong>
                     <strong><h2>{{ service.owner }}</h2></strong>
                     </div>
                     </div>
-                    <strong>Rate</strong> 
+                    <strong>Calificación</strong> 
                     <rating ng-model="rate" max="max"></rating>
-                    <strong>Comment</strong>
+                    <strong>Comentarios</strong>
                     <div>
                         <textarea ng-model="comment" rows="5"
                         cols="45" placeholder="New comment">
                         </textarea>
 
-                        <button class="button button-block button-positive" ng-click="submitComment(service.id,comment, rate);">Save comment</button>
+                        <button class="button button-block button-positive" ng-click="submitComment(service.id,comment, rate);">Guardar Comentario</button>
                     </div>
                 </div>
                 <button class="button icon ion-trash-b button-assertive" ng-click="delete(service.matchId)">

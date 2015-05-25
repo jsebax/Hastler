@@ -1,4 +1,4 @@
-<ion-view view-title="Search" ng-init="list()" class="services">
+<ion-view view-title="Buscar" ng-init="list()" class="services">
     <ion-nav-bar class="bar-dark">
         <ion-nav-back-button></ion-nav-back-button>
     </ion-nav-bar>
@@ -27,14 +27,14 @@
                    <h2>{{ service.owner }}</h2>
                     </div>
                     <button class="button button-block item item-icon-right" ng-click="com = !com">
-                    <strong>Comments</strong>
+                    <strong>Comentarios</strong>
                     </button>
                     <div ng-show="com" ng-repeat="comment in service.comments" class="item">   
-                        <strong>User</strong><br></br>
+                        <strong>Usuario</strong><br></br>
                         {{comment.email}}<br></br>
-                        <strong>Rate</strong> 
+                        <strong>Calificación</strong> 
                         <rating ng-model="comment.calification" max="5"></rating><br></br>
-                        <strong>Comment</strong><br></br>
+                        <strong>Comentarios</strong><br></br>
                         {{comment.content}}
                     </div>
                      <button class="button icon ion-plus-round button-balanced" ng-click="adquire(service)">
