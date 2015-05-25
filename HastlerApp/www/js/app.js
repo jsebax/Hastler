@@ -654,7 +654,6 @@ app.controller("ServiceFormController", function($scope, $ionicPopup, $location,
                         text: 'OK',
                         type: 'button-positive',
                         onTap: function() {
-                            $location.path("/tab/services");
                             window.setTimeout(function() { window.location.reload(true); }, 500);
                         }
                     }]

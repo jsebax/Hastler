@@ -69,7 +69,7 @@ ENTIDADES:
 */
 
 //var app = angular.module('starter', ['ionic']);
-var urlServer = "http://localhost:8080/";
+var urlServer = "http://52.25.8.145:8080/";
 
 app.service('myMiddleware', function($http) {
 
