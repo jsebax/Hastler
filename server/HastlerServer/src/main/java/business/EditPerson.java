@@ -40,12 +40,12 @@ public class EditPerson implements UnitOfWork {
 			}
 			change = person.getTelephone();
 			if(change!= null){
+				System.out.println("se está cambiando el numero");
 				personE = personRepository.updatePerson(person.getId(),
 						"telephone", person.getTelephone());
 			}
 			change = person.getLastName();
-			if(change!= null){
-				System.out.println("se está cambiando el lastname");
+			if(change!= null){				
 				personE = personRepository.updatePerson(person.getId(),
 						"lastName", person.getLastName());
 			}

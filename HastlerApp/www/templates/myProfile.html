@@ -7,7 +7,8 @@
     <ion-content class="padding">   
     
     <div class="profile-imagen item item-avatar">
-            <img src="https://lh3.googleusercontent.com/-MMVM88kotCQ/AAAAAAAAAAI/AAAAAAAAAAA/neeJld0xTdE/photo.jpg"> 
+            <img src="img/avatarMan.jpg"> 
+            </img>
             <strong>{{ data.name }}</strong>   
     </div>  
                
@@ -15,10 +16,10 @@
 
         <div class="list card">      
             <div class="item item-divider">
-               <strong> {{data.name}}</strong>
+               <strong> Name</strong>
             </div>
             <div class="item item-text-wrap">
-                
+                {{data.name}}
                 <input ng-model="dataName" type="text" placeholder="New name"/>
             </div>
             <div class="item item-divider">
@@ -28,14 +29,12 @@
                 {{data.lastname}}
                 <input ng-model="dataLastname" type="text" placeholder="New lastname"/>
             </div>
-            <div class="item item-divider">
+            <!--<div class="item item-divider">
                 <strong>Hastly</strong>
             </div>
             <div class="item item-text-wrap">
                 {{data.hastly}}
-               <!-- <input ng-model="dataHastly" type="text" placeholder="New hastly"/>
-           -->
-            </div>
+            </div>-->
             <div class="item item-divider">
                <strong>Email</strong>
             </div>
@@ -46,10 +45,10 @@
                 <strong>Phone</strong>
             </div>
             <div class="item item-text-wrap">
-                {{data.tel}}
+                {{data.telephone}}
                 <input ng-model="dataTel" type="text" placeholder="New phone"/>
             </div>
         </div>
-        <button class="button button-small button-positive" ng-click="updateRecords(dataName, dataLastname, dataTel);">Save Changes</button>
+        <button class="button button-block button-positive" ng-click="updateRecords(dataName, dataLastname, dataTel);">Save Changes</button>
     </ion-content>
 </ion-view>

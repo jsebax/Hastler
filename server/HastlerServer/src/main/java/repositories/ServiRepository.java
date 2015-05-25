@@ -20,4 +20,6 @@ public interface ServiRepository extends Repository {
 		List<Servi> findServi(String serviceName);
 
 		List<Servi> findServiEmail(String email);
+
+		Servi findServiId(String id);
 }

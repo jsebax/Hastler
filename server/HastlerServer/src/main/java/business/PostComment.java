@@ -1,12 +1,13 @@
 package business;
 
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.List;
 
-import DBServices.MongoServiRepository;
-import entity.Servi;
 import repositories.Repository;
 import repositories.ServiRepository;
+import DBServices.MongoServiRepository;
+import entity.Comment;
+import entity.Servi;
 
 public class PostComment implements UnitOfWork {
 
@@ -19,13 +20,15 @@ public class PostComment implements UnitOfWork {
 
 	@Override
 	public boolean run() {
-		List<String> comments = Collections.emptyList();
+		List<Comment> comments = new ArrayList<Comment>();
 		comments.add(this.servi.getComment());
 		Servi service = serviRepository.findOneServi(this.servi.getId());
-		comments.addAll(service.getComments());
+		if(service.anyComments()){
+			comments.addAll(service.getComments());
+		}
 		Servi serviR = serviRepository.updateServi(this.servi.getId(), 
-				"comment", comments);
-		if(serviR.getId() == this.servi.getId()){
+				"comments", comments);
+		if(serviR!=null){
 			return true;
 		}else{
 			return false;

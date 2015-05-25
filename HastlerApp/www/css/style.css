@@ -8,6 +8,17 @@
     padding-right: 4%;
 }
 
+.logoH{
+    font-size: 50px;
+    font-family: 'Lobster13Regular', Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, .2) 3px 3px 3px;
+    color: white;
+    /*text stroke*/
+    -webkit-text-stroke: 4px rgba(0, 0, 0, .6);
+}
+
 
 .login {
 	background: url('../img/login.jpg') no-repeat center;
@@ -87,9 +98,18 @@
     padding-left: 20px;
     margin-top: -10px;
     margin-bottom: 50px;
-  
 }
 
+.editservice {
+    background: url('../img/services.jpg') no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: 100% ;
+    text-align: center
+}
 .color-white{
     color: #fff;
 }
@@ -107,17 +127,6 @@ input:-moz-placeholder, textarea:-moz-placeholder {
 
 .color-black{
     color: #000000;
-}
-
-.logo{
-    font-size: 50px;
-    font-family: 'Lobster13Regular', Helvetica, sans-serif;
-    font-weight: bold;
-    text-align: center;
-    text-shadow: rgba(0, 0, 0, .2) 3px 3px 3px;
-    color:white;
-    /*text stroke*/
-    -webkit-text-stroke: 4px rgba(0, 0, 0, .6);
 }
 
 .fbbody  

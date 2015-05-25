@@ -77,4 +77,11 @@ public class MongoServiRepository implements ServiRepository {
 		List<Servi> finded = mongoOperation.find(searchUserQuery, Servi.class);
 		return finded;
 	}
+
+	@Override
+	public Servi findServiId(String id) {
+		Query searchUserQuery = new Query(Criteria.where("id").is(id));
+		Servi finded = mongoOperation.findOne(searchUserQuery, Servi.class);
+		return finded;
+	}
 }

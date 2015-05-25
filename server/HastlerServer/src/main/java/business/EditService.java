@@ -37,7 +37,7 @@ public class EditService implements UnitOfWork {
 			serviE = serviRepository.updateServi(servi.getId(),
 					"serviceName", servi.getServiceName());
 		}
-		if(serviE.getId()==servi.getId()){
+		if(serviE!=null){
 			return true;
 		}else{
 			return false;

@@ -16,7 +16,7 @@ public interface MatchRepository extends Repository{
     Match updateMatch(String id, String toUp, Object update);
 
 	List<Match> findMatchServi(String id);
-	
-	List<Match> findMatchHastly(String id);
+
+	List<Match> findMatchUser(String user);
 }
 

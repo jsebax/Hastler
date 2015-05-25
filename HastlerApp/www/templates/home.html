@@ -9,35 +9,31 @@
                 <button class="button button-block item item-icon-right" ng-click="showme = !showme">
 
                     <strong>{{ service.serviceName }}</strong>
+
+                </button>
+                <div ng-show="showme">
                     <div class="item item-body">
-                    <img class="full-image" src="http://karya.com.tr/wp-content/uploads/2014/06/harvard.jpg">
                     </div>                
                     <div class="item item-avatar">
-                    <img src="https://lh3.googleusercontent.com/-MMVM88kotCQ/AAAAAAAAAAI/AAAAAAAAAAA/neeJld0xTdE/photo.jpg">
-                    <h2><strong>{{ service.owner }}</h2></strong>
+                    <strong><h2>{{ service.owner }}</h2></strong>
                     </div>
-                </button>
-
+                    <button class="button button-block item item-icon-right" ng-click="com = !com">
+                    <strong>Comments</strong>
+                    </button>
+                    <div ng-show="com" ng-repeat="comment in service.comments" class="item">   
+                        <strong>User</strong><br></br>
+                        {{comment.email}}<br></br>
+                        <strong>Rate</strong> 
+                        <rating ng-model="comment.calification" max="5"></rating><br></br>
+                        <strong>Comment</strong><br></br>
+                        {{comment.content}}
+                    </div>
+                    <button class="button icon ion-edit button-balanced" ng-click="adquire(service)">
+                    </button>
+                </div>
                 <div style="display:none">
                     {{ service.id }}
                 </div>
-
-               <!-- <div ng-show="showme">
-                    
-                    <label class="item">
-                        <h2>Category</h2>
-                        <p>{{ service.category }}</p>
-                    </label>
-
-                    <label class="item">
-                        <h2>Owner</h2>
-                        <p>{{ service.owner }}</p>
-                    </label>
-
-                    <label class="item">
-                        <button class="button button-block button-positive" ng-click="adquire(service)">Adquire</button>
-                    </label>
-                </div> -->
             </div> 
         </div>
     </ion-content>

@@ -8143,3 +8143,318 @@ org.eclipse.jface.text.BadLocationException: null
 2015-05-24 13:09:04,988 [Worker-8] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for HastlerServer
 2015-05-24 13:09:04,998 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - The POM for org.apache.maven.plugins:maven-clean-plugin:jar:2.5 is missing, no dependency information available
 2015-05-24 13:09:05,016 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 15:15:00,531 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 15:15:00,532 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 15:15:00,532 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 15:15:00,534 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 15:15:00,535 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 15:17:40,155 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 15:17:40,155 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 15:17:40,156 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 15:17:40,188 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 15:17:40,189 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 15:18:26,669 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 15:18:26,670 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 15:18:26,670 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 15:18:26,689 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 15:18:26,689 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 15:18:41,984 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 15:18:41,984 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 15:18:41,985 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 15:18:41,988 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 15:18:41,989 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 15:19:34,753 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 15:19:34,754 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 15:19:34,754 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 15:19:34,757 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 15:19:34,757 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 15:19:55,721 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 15:19:55,722 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 15:19:55,722 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 15:19:55,725 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 15:19:55,725 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 15:22:08,585 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 15:22:08,586 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 15:22:08,586 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 15:22:08,588 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 15:22:08,589 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 17:00:17,174 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 17:00:17,175 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 17:00:17,175 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 17:00:17,181 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 17:00:17,181 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 17:04:42,448 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 17:04:42,449 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 17:04:42,449 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 17:04:42,452 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 17:04:42,452 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 17:27:28,852 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 17:27:28,853 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 17:27:28,853 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 17:27:28,856 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 17:27:28,857 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 17:48:31,748 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 17:48:31,748 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 17:48:31,748 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 17:48:31,750 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 17:48:31,751 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 17:48:59,910 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 17:48:59,910 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 17:48:59,911 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 17:48:59,913 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 17:48:59,913 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 17:49:12,028 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 17:49:12,028 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 17:49:12,029 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 17:49:12,031 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 17:49:12,033 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 17:50:29,641 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 17:50:29,642 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 17:50:29,642 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 17:50:29,646 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 17:50:29,647 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 17:50:44,596 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 17:50:44,597 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 17:50:44,597 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 17:50:44,602 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 17:50:44,603 [Worker-49] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 17:52:09,708 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 17:52:09,708 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 17:52:09,708 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 17:52:09,712 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 17:52:09,712 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 17:52:43,047 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 17:52:43,047 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 17:52:43,048 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 17:52:43,049 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 17:52:43,050 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 17:54:01,563 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 17:54:01,571 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 17:54:01,573 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 17:54:01,579 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 17:54:01,579 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 17:54:37,710 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 17:54:37,710 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 17:54:37,710 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 17:54:37,712 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 17:54:37,712 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 17:55:06,097 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 17:55:06,097 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 17:55:06,098 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 17:55:06,101 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 17:55:06,101 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 18:19:43,218 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:19:43,219 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:19:43,220 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:19:43,224 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:19:43,224 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 18:19:53,673 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:19:53,674 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:19:53,674 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:19:53,679 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:19:53,680 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 18:20:16,338 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:20:16,339 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:20:16,339 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:20:16,342 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:20:16,342 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 18:20:23,406 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:20:23,406 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:20:23,406 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:20:23,408 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:20:23,409 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 18:20:59,739 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:20:59,743 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:20:59,744 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:20:59,748 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:20:59,750 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 18:21:46,404 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:21:46,405 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:21:46,405 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:21:46,407 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:21:46,407 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 18:22:00,612 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:22:00,612 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:22:00,612 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:22:00,614 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:22:00,615 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 18:22:12,557 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:22:12,558 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:22:12,559 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:22:12,564 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:22:12,564 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 18:22:23,017 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:22:23,018 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:22:23,018 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:22:23,020 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:22:23,020 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 18:24:18,528 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:24:18,530 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:24:18,530 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:24:18,533 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:24:18,533 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 18:24:39,187 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:24:39,187 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:24:39,187 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:24:39,189 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:24:39,190 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 18:24:57,289 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:24:57,290 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:24:57,290 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:24:57,294 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:24:57,295 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 18:25:10,446 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:25:10,447 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:25:10,447 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:25:10,450 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:25:10,451 [Worker-58] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 18:25:21,534 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:25:21,535 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:25:21,535 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:25:21,537 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:25:21,537 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 18:25:28,710 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:25:28,710 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:25:28,710 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:25:28,714 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:25:28,714 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 18:25:38,306 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:25:38,307 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:25:38,307 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:25:38,309 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:25:38,309 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 18:25:45,364 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:25:45,364 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:25:45,365 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:25:45,367 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:25:45,368 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 18:25:51,596 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:25:51,597 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:25:51,597 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:25:51,599 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:25:51,600 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 18:25:54,812 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:25:54,812 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:25:54,813 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:25:54,814 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:25:54,815 [Worker-50] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 18:26:03,777 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:26:03,777 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:26:03,778 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 18:26:03,780 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 18:26:03,780 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 19:17:34,129 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:17:34,129 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:17:34,130 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:17:34,132 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:17:34,132 [Worker-59] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 19:17:50,478 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:17:50,478 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:17:50,479 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:17:50,481 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:17:50,481 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 19:20:04,309 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:20:04,309 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:20:04,309 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:20:04,310 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:20:04,311 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 19:20:51,728 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:20:51,731 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:20:51,731 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:20:51,733 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:20:51,733 [Worker-70] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 19:21:00,135 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:21:00,136 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:21:00,136 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:21:00,139 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:21:00,139 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 19:21:04,246 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:21:04,247 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:21:04,247 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:21:04,249 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:21:04,250 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 19:21:18,799 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:21:18,799 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:21:18,799 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:21:18,804 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:21:18,804 [Worker-67] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 19:45:37,646 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:45:37,647 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:45:37,647 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:45:37,649 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:45:37,649 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 19:45:48,278 [Worker-73] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:45:48,279 [Worker-73] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:45:48,279 [Worker-73] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:45:48,281 [Worker-73] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:45:48,281 [Worker-73] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 19:46:10,381 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:46:10,382 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:46:10,382 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:46:10,384 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:46:10,385 [Worker-76] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 19:47:59,445 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:47:59,446 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:47:59,446 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:47:59,448 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:47:59,449 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 19:48:04,888 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:48:04,888 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:48:04,889 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:48:04,893 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:48:04,893 [Worker-79] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 19:48:31,290 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:48:31,290 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:48:31,291 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:48:31,295 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:48:31,295 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 19:49:51,490 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:49:51,490 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:49:51,491 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:49:51,493 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:49:51,493 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 19:50:04,370 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:50:04,370 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:50:04,370 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 19:50:04,371 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 19:50:04,372 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 22:11:08,290 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 22:11:08,291 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 22:11:08,291 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 22:11:08,332 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 22:11:08,332 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 22:11:21,474 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 22:11:21,475 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 22:11:21,475 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 22:11:21,525 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 22:11:21,525 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 22:11:27,344 [Worker-107] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 22:11:27,344 [Worker-107] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 22:11:27,345 [Worker-107] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 22:11:27,347 [Worker-107] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 22:11:27,347 [Worker-107] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 22:13:48,093 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 22:13:48,093 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 22:13:48,093 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 22:13:48,094 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 22:13:48,095 [Worker-103] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 22:17:46,048 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 22:17:46,049 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 22:17:46,049 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 22:17:46,051 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 22:17:46,051 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 22:18:00,464 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 22:18:00,464 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 22:18:00,464 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 22:18:00,466 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 22:18:00,467 [Worker-105] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 22:18:14,303 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 22:18:14,304 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 22:18:14,304 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 22:18:14,306 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 22:18:14,307 [Worker-106] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources
+2015-05-24 22:18:38,731 [Worker-104] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 22:18:38,731 [Worker-104] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 22:18:38,731 [Worker-104] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\main\resources
+2015-05-24 22:18:38,733 [Worker-104] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2015-05-24 22:18:38,733 [Worker-104] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\USERR\Documents\Hastler\server\HastlerServer\src\test\resources

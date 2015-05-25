@@ -64,8 +64,8 @@ public class MongoMatchRepository implements MatchRepository {
 	}
 
 	@Override
-	public List<Match> findMatchHastly(String data) {
-		Query searchMatchQuery = new Query(Criteria.where("hastly").is(data));
+	public List<Match> findMatchUser(String user) {
+		Query searchMatchQuery = new Query(Criteria.where("emailUser").is(user));
 		List<Match> finded = mongoOperation.find(searchMatchQuery, Match.class);
 		return finded;
 	}

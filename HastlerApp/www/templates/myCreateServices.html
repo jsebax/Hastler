@@ -9,16 +9,21 @@
                 <button class="button button-block item item-icon-right" ng-click="showme = !showme">
 
                     <strong>{{ service.serviceName }}</strong>
-                    <div class="item item-body">
-                    <img class="full-image" src="http://karya.com.tr/wp-content/uploads/2014/06/harvard.jpg">
-                    </div>                
-                    <div class="item item-avatar">
-                    <img src="https://lh3.googleusercontent.com/-MMVM88kotCQ/AAAAAAAAAAI/AAAAAAAAAAA/neeJld0xTdE/photo.jpg">
-                    <h2><strong>{{ service.owner }}</h2></strong>
-                    </div>
-                </button>
 
-                <button class="button icon ion-edit button-balanced" ng-click="">
+                </button>
+                <div ng-show="showme">
+                    <div ng-repeat="match in service.matches" class="item">                
+                        <div class="item item-avatar">
+                        <img src="img/avatarMan.jpg">
+                        </img>
+                        <strong><h2>{{ match.emailUser }}</h2></strong>
+                        </div>
+                    </div> 
+
+                </div>
+ 
+
+                <button class="button icon ion-edit button-balanced" ng-click="toEditService(service)">
                 </button>
                 <button class="button icon ion-trash-b button-assertive" ng-click="showConfirm(service.id)">
                 </button>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;business.GetMatchHastly&apos; to &apos;GetMatchUser&apos;&#x0D;&#x0A;- Original project: &apos;HastlerServer&apos;&#x0D;&#x0A;- Original element: &apos;business.GetMatchHastly&apos;&#x0D;&#x0A;- Renamed element: &apos;business.GetMatchUser&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;GetMatchHastly&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;business{GetMatchHastly.java[GetMatchHastly" matchStrategy="1" name="GetMatchUser" qualified="false" references="true" similarDeclarations="false" stamp="1432507928403" textual="false" version="1.0"/>
+</session>

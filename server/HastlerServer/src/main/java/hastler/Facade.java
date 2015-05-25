@@ -16,18 +16,21 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import business.DelService;
+import business.DeleteMatch;
 import business.EditPerson;
 import business.EditService;
+import business.EmailCheck;
 import business.GetAllService;
 import business.GetCategory;
 import business.GetMatch;
-import business.GetMatchHastly;
+import business.GetMatchUser;
 import business.GetMatchServiId;
 import business.GetPerson;
 import business.GetPersonEmail;
 import business.GetPersonHastly;
 import business.GetService;
 import business.GetServiceEmail;
+import business.GetServiceId;
 import business.LogIn;
 import business.PostComment;
 import business.PostMatch;
@@ -224,6 +227,23 @@ public class Facade {
 		return result;
 	}
 	
+	@RequestMapping(value = "/servicioId", method = RequestMethod.GET)
+	public @ResponseBody Servi obtenerServiciosId(@RequestParam(value = "id", required=true) String id){
+		Servi servicio = new Servi();
+		servicio.setId(id);
+		System.out.println("obtenerServiciosId");
+		UnitOfWork getServi = new GetServiceId();
+		getServi.SetRepository(serviMongo);
+		((GetServiceId)getServi).setServi(servicio);
+		boolean result = getServi.run();
+		if(result){
+			Servi servis = ((GetServiceId)getServi).getServices();
+			return servis;
+		}else{
+			return null;
+		}
+	}
+	
 	@RequestMapping(value = "/editarServi", method = RequestMethod.POST)
 	public @ResponseBody boolean editarServicio(@RequestBody Servi servicio){
 		System.out.println("editarServicio");
@@ -231,6 +251,7 @@ public class Facade {
 		editServi.SetRepository(serviMongo);
 		((EditService)editServi).setServi(servicio);
 		boolean result = editServi.run();
+		System.out.println(result);
 		return result;
 	}
 	
@@ -289,6 +310,18 @@ public class Facade {
 		}
 	}
 	
+	@RequestMapping(value = "/match", method = RequestMethod.DELETE)
+	public @ResponseBody boolean eliminarMatch(@RequestParam(value = "id", required=true) String id){
+		Match match = new Match();
+		match.setId(id);
+		System.out.println("eliminarMatch");
+		UnitOfWork delMatch = new DeleteMatch();
+		delMatch.SetRepository(matchMongo);
+		((DeleteMatch)delMatch).setMatch(match);
+		boolean result = delMatch.run();
+		return result;
+	}
+	
 	@RequestMapping(value = "/matchServi", method = RequestMethod.GET)
 	public @ResponseBody List<Match> obtenerMatchServiId(@RequestParam(value = "serviId", required=true) 
 		String serviId){
@@ -297,28 +330,28 @@ public class Facade {
 		System.out.println("obtenerMatchServiId");
 		UnitOfWork getMatch = new GetMatchServiId();
 		getMatch.SetRepository(matchMongo);
-		((GetMatch)getMatch).setMatch(match);
+		((GetMatchServiId)getMatch).setMatch(match);
 		boolean result = getMatch.run();
 		if(result){
-			List<Match> matchs = ((GetMatch)getMatch).getMatches();
+			List<Match> matchs = ((GetMatchServiId)getMatch).getMatches();
 			return matchs;
 		}else{
 			return null;
 		}
 	}
 	
-	@RequestMapping(value = "/matchHastly", method = RequestMethod.GET)
-	public @ResponseBody List<Match> obtenerMatchHastly(@RequestParam(value = "hastly", required=true) 
-				String hastly){
+	@RequestMapping(value = "/matchUser", method = RequestMethod.GET)
+	public @ResponseBody List<Match> obtenerMatchUser(@RequestParam(value = "email", required=true) 
+				String email){
 		Match match = new Match();
-		match.setHastly(hastly);
-		System.out.println("obtenerMatchHastly");
-		UnitOfWork getMatch = new GetMatchHastly();
+		match.setEmailUser(email);
+		System.out.println("obtenerMatchEmail");
+		UnitOfWork getMatch = new GetMatchUser();
 		getMatch.SetRepository(matchMongo);
-		((GetMatch)getMatch).setMatch(match);
+		((GetMatchUser)getMatch).setMatch(match);
 		boolean result = getMatch.run();
 		if(result){
-			List<Match> matchs = ((GetMatch)getMatch).getMatches();
+			List<Match> matchs = ((GetMatchUser)getMatch).getMatches();
 			return matchs;
 		}else{
 			return null;
@@ -341,6 +374,20 @@ public class Facade {
 		login.SetRepository(userMongo);
 		((LogIn)login).setUser(user);
 		boolean result = login.run();
+		// esto es boolean respuesta = userMongo.findOneUser(user);
+		return result;
+	}
+	
+	@RequestMapping(value = "/emailCheck", method = RequestMethod.GET)
+	@ResponseBody
+	public boolean login(@RequestParam(value = "email", required=false) String email){
+		User user = new User();
+		user.setEmail(email);
+		System.out.println("login");
+		UnitOfWork emailCheck = new EmailCheck();
+		emailCheck.SetRepository(userMongo);
+		((EmailCheck)emailCheck).setUser(user);
+		boolean result = emailCheck.run();
 		// esto es boolean respuesta = userMongo.findOneUser(user);
 		return result;
 	}

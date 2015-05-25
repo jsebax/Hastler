@@ -18,4 +18,6 @@ public interface UserRepository extends Repository{
 	boolean findOneUser(User us);
 
 	boolean findOneUser(String email, String pass);
+	
+	boolean findOneUser(String email, int pass);
 }

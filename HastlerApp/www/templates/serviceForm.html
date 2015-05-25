@@ -5,7 +5,7 @@
     
     <ion-content>
         <div style="display:none">
-            {{data.hastly}}
+            {{data.id}}
         </div>
         <h1 align="center">New Service</h1>
         <div class="list">
@@ -18,7 +18,11 @@
                 <select ng-model="serviceCategory" ng-options="cat for cat in categories">
                 </select>
             </label> 
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Place</span>
+                <input ng-model="serviceCity" type="text" placeholder="Write the place of the service"/>
+            </label>  
         </div>
-        <button class="button button-block button-positive" ng-click="create(serviceTitle, serviceCategory)">Create Service</button>
+        <button class="button button-block button-positive" ng-click="create(serviceTitle, serviceCategory, serviceCity)">Create Service</button>
     </ion-content>
 </ion-view>

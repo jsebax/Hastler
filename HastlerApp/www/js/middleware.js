@@ -32,7 +32,7 @@ ENTIDADES:
 		-id;
 		-hastly;
 		-serviId;
-		List<String> -users;
+		-emailUser;
 */
 
 /* GET
@@ -237,7 +237,7 @@ app.service('myMiddleware', function($http) {
 	}
 
 	this.obtenerServiciosEmail = function (servicio, callback){
-		//servicio.serviceName = stringbusqueda;
+		//servicio.email = stringbusqueda;
 		var servicios;
 		var urlthis = urlServer+"servicioEmail";
 
@@ -245,6 +245,22 @@ app.service('myMiddleware', function($http) {
 		    url: urlthis, 
 		    method: 'GET',
 		    params: {email:servicio.email},
+		}).success(function(data, status, headers, config){
+		    callback(data);
+		}).error(function(data, status, headers, config){
+		    callback(false);
+		});
+	}
+
+	this.obtenerServiciosId = function (servicio, callback){
+		//servicio.id = stringbusqueda;
+		var servicios;
+		var urlthis = urlServer+"servicioId";
+
+		$http({
+		    url: urlthis, 
+		    method: 'GET',
+		    params: {id:servicio.id},
 		}).success(function(data, status, headers, config){
 		    callback(data);
 		}).error(function(data, status, headers, config){
@@ -303,13 +319,16 @@ app.service('myMiddleware', function($http) {
 		});
 	}
 
-	this.agregarComentario = function (servicio, callback){
+	this.agregarComentario = function (id, content, rate, callback){
 		/*
 			servicio.id se necesita;
 			servicio.comments[0]=commentarioAgregado;
 		*/
-		var jsonString = JSON.stringify({"id":servicio.id,"comments":servicio.comments});
-		var urlthis = urlServer+"editarServi";
+		var jsonString = JSON.stringify({"id":id,
+			"comments":[{"email":window.localStorage['email'],
+						"content":content,"calification":rate}]});
+		console.log("enviare: "+ jsonString);
+		var urlthis = urlServer+"comentario";
 
 		$http.post(urlthis,jsonString).success(function(data, status, headers, config) {
 		    if(data){
@@ -327,11 +346,11 @@ app.service('myMiddleware', function($http) {
 	this.agregarMatch = function (match, callback){
 		/*
 			rellenar de match:
-			-hastly;
+			-emailUser;
 			-serviId;
 		*/
-		var jsonString = JSON.stringify({"hastly":match.hastly,"serviId":match.serviId});
 		var urlthis = urlServer+"match";
+		var jsonString = JSON.stringify({"serviId":match.serviId,"emailUser":match.emailUser});
 		$http.post(urlthis,jsonString).success(function(data, status, headers, config) {
 		    if(data){
 		    	console.log("exito al agregar match");
@@ -377,14 +396,29 @@ app.service('myMiddleware', function($http) {
 		});
 	}
 
-	this.obtenerMatchHastly = function (match,callback){
-		//match.hastly se necesita;
+	this.obtenerMatchUser = function (match,callback){
+		//match.emailUser se necesita;
 		var matchesR;
-		var urlthis = urlServer + "matchHastly";
+		var urlthis = urlServer + "matchUser";
 		$http({
 		    url: urlthis, 
 		    method: 'GET',
-		    params: {hastly:match.hastly},
+		    params: {email:match.emailUser},
+		}).success(function(data, status, headers, config){
+		    callback(data);
+		}).error(function(data, status, headers, config){
+		    callback(false);
+		});		
+	}
+
+	this.borrarMatch = function (match,callback){
+		//match.emailUser se necesita;
+		var matchesR;
+		var urlthis = urlServer + "match";
+		$http({
+		    url: urlthis, 
+		    method: 'delete',
+		    params: {id:match.id},
 		}).success(function(data, status, headers, config){
 		    callback(data);
 		}).error(function(data, status, headers, config){
@@ -410,6 +444,24 @@ app.service('myMiddleware', function($http) {
 		}).error(function(data, status, headers, config) {
 		    console.log("Singon fallido");
 		    return false; 
+		});
+	}
+
+	this.emailCheck = function (user, callback){
+		/*
+			user.password se necesita
+			user.username se necesita o user.email se necesita
+		*/
+		var loged;
+		var urlthis = urlServer + "emailCheck";
+		$http({
+		    url: urlthis, 
+		    method: 'GET',
+		    params: {email:user.email},
+		}).success(function(data, status, headers, config){
+		    callback(data);
+		}).error(function(data, status, headers, config){
+		    callback(false);
 		});
 	}
 

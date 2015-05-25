@@ -28,7 +28,7 @@ public class Servi implements ServiceI {
 	
 	private String hastly;
 	
-	private List<String> comments;
+	private List<Comment> comments;
 	
 	public Servi() {
 		super();
@@ -89,15 +89,16 @@ public class Servi implements ServiceI {
 		this.hastly = hastly;
 	}
 	
-	public String getComment(){
+	public Comment getComment(){
 		if(comments!= null){
+			System.out.println("esto es el com "+ comments.get(0).getContent());
 			return comments.get(0);
 		}else{
 			return null;
 		}
 	}
 	
-	public String getComment(int index){
+	public Comment getComment(int index){
 		if(comments.size()>index){
 			return comments.get(index);
 		}else{
@@ -105,8 +106,16 @@ public class Servi implements ServiceI {
 		}
 	}
 	
-	public List<String> getComments(){
-		return comments;
+	public List<Comment> getComments(){
+			return comments;
+	}
+	
+	public boolean anyComments(){
+		if(comments!=null){
+			return true;
+		}else{
+			return false;
+		}
 	}
 	
 	private void notNull(String title2, String string) throws Exception {

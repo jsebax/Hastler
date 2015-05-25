@@ -1,0 +1,57 @@
+package entity;
+
+import java.util.Iterator;
+import java.util.List;
+
+import org.springframework.data.annotation.Id;
+
+public class Match {
+	
+	@Id
+	private String id;
+	
+	private String hastly;
+	
+	private String serviId;
+	
+	private String emailUser;
+
+	public Match() {
+		super();
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getHastly() {
+		return hastly;
+	}
+
+	public void setHastly(String hastly) {
+		this.hastly = hastly;
+	}
+
+	public String getServiId() {
+		return serviId;
+	}
+
+	public void setServiId(String serviId) {
+		this.serviId = serviId;
+	}
+
+	public String getEmailUser() {
+		return emailUser;
+	}
+
+	public void setEmailUser(String emailUser) {
+		this.emailUser = emailUser;
+	}
+
+	
+	
+}

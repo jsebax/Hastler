@@ -1,8 +1,5 @@
 package entity;
 
-import java.util.Iterator;
-import java.util.List;
-
 import org.springframework.data.annotation.Id;
 
 public class Match {
@@ -14,7 +11,7 @@ public class Match {
 	
 	private String serviId;
 	
-	private List<String> users;
+	private String emailUser;
 
 	public Match() {
 		super();
@@ -44,24 +41,14 @@ public class Match {
 		this.serviId = serviId;
 	}
 
-	public List<String> getUsers() {
-		return users;
+	public String getEmailUser() {
+		return emailUser;
 	}
 
-	public void setUsers(List<String> users) {
-		this.users = users;
+	public void setEmailUser(String emailUser) {
+		this.emailUser = emailUser;
 	}
+
 	
-	public boolean findUser(String user){
-		boolean result = false;
-		for (Iterator<String> iterator = users.iterator(); iterator.hasNext();) {
-			String string = (String) iterator.next();
-			if(string.equals(user)){
-				result = true;
-				break;
-			}
-		}		
-		return result;
-	}
 	
 }

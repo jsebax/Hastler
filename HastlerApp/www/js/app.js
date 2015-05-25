@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
 
-var app = angular.module('starter', ['ionic', 'ngCordova']);
+var app = angular.module('starter', ['ionic', 'ngCordova','ionic.rating']);
 
 
 app.run(function($ionicPlatform) {
@@ -41,12 +41,6 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
         url: '/register',
         templateUrl: 'templates/register.html',
         controller: 'RegisterController'
-    })
-
-    .state('service', {
-        url: '/service',
-        templateUrl: 'templates/service.html',
-        controller: 'serviceController'
     })
 
     .state('tabs', {
@@ -106,6 +100,26 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
         }
     })
 
+    .state('tabs.editService', {
+        url: '/editService',
+        views: {
+            'menu-tab': {
+                    templateUrl: 'templates/editService.html',
+                    controller: 'editServiceController'
+            }
+        }
+    })
+
+    .state('tabs.service', {
+        url: '/service',
+        views: {
+            'menu-tab': {
+                templateUrl: 'templates/service.html',
+                controller: 'serviceController'
+            }
+        }
+    })
+
     .state('tabs.myProfile', {
         url: '/myProfile',
         views: {
@@ -132,7 +146,68 @@ app.config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
 
 app.controller("serviceController", function($scope, $ionicPopup, $location, myMiddleware) {
 
-    
+    var object = [];
+
+    $scope.list = function() {
+        $scope.service = window.localStorage['service'];
+        object.id = $scope.service.id;
+        console.log("el servicio a mostrar tiene id: " + object.id);
+    };
+
+  
+
+});
+
+app.controller("editServiceController", function($scope, $ionicPopup, $location, myMiddleware) {
+
+    var object = [];
+
+    $scope.list = function() {
+        $scope.service = [];
+        $scope.service.id = window.localStorage['serviceId'];
+        $scope.service.serviceName =window.localStorage['serviceName'];
+        $scope.service.owner = window.localStorage['owner'];
+        $scope.service.category = window.localStorage['category'];
+        $scope.service.city =window.localStorage['city'];
+        object.id = $scope.service.id;
+        console.log("el servicio a cambiar tiene id: " + object.id);
+    };
+
+
+    $scope.updateRecords = function(name,category,city){
+        object.id =$scope.service.id;
+        object.serviceName = name;
+        object.category = category;
+        object.city = city;
+        myMiddleware.editarServicio(object,function(data){
+            if(data){
+                $ionicPopup.show({
+                    title: 'Changes have been saved!',
+                    buttons: [{
+                        text: 'OK',
+                        type: 'button-positive',
+                        onTap: function() {
+                            $location.path('/tab/myCreateServices');
+                            window.setTimeout(function() { window.location.reload(true); }, 250);
+                        }
+                    }]
+                });
+            }else{
+                var error = "no se ha podido editar el servicio por favor intentelo más tarde";
+                console.log("ERROR: " + error);
+                $ionicPopup.alert({
+                    title: 'Alert',
+                    template: error
+                });
+            }
+        });
+    }
+
+    $scope.categories = [
+        "Academic",
+        "Music"
+    ];
+  
 
 });
 
@@ -158,7 +233,12 @@ app.controller("LoginController", function($scope, $location, $ionicPopup, $cord
             $scope.loginsuccess = data;
             console.log($scope.loginsuccess);
             if(!$scope.loginsuccess){
-                alert("El email o la contraseña no son correctos");
+                var error = "El email o la contraseña no son correctos";
+                console.log("ERROR: " + error);
+                $ionicPopup.alert({
+                    title: 'Alert',
+                    template: error
+                });
             }else{
                 console.log("entro...");
                 window.localStorage['email']= email;
@@ -181,7 +261,7 @@ app.controller("LoginController", function($scope, $location, $ionicPopup, $cord
              *
             */
             //To know more available fields go to https://developers.facebook.com/tools/explorer/
-            $cordovaFacebook.api("me?fields=id,name,picture", [])
+            $cordovaFacebook.api("me?fields=id,name,picture,email", [])
             .then(function(result) {
                 /*
                  * As an example, we are fetching the user id, user name, and the users profile picture
@@ -190,12 +270,25 @@ app.controller("LoginController", function($scope, $location, $ionicPopup, $cord
                 var userData = {
                     id: result.id,
                     name: result.name,
-                    pic: result.picture.data.url
+                    pic: result.picture.data.url,
+                    email: resul.email
                 }
                 //Do what you wish to do with user data. Here we are just displaying it in the view
-                $scope.fbData = JSON.stringify(userData, null, 4);
-
-                $location.path('/tab/home');
+                myMiddleware.emailCheck(userData,function(data){
+                    if(data){
+                        console.log("entro...");
+                        window.localStorage['email']= email;
+                        $location.path('/tab/home');
+                    }else{
+                        $ionicPopup.prompt({
+                           title: 'Password Choice',
+                           template: 'Enter your secret password',
+                           inputPlaceholder: 'Your password'
+                         }).then(function(res) {
+                            $scope.register(userData.email,res,userData.name,'');
+                         });
+                    }
+                });
 
             }, function(error) {
                 //Error message
@@ -206,6 +299,53 @@ app.controller("LoginController", function($scope, $location, $ionicPopup, $cord
             // Depending on your platform show the message inside the appropriate UI widget
             // For example, show the error message inside a toast notification on Android
         });
+    };
+
+    $scope.register = function(mail, pass, name, lastName) {
+        $scope.user = [];
+        $scope.user.password = pass;
+        $scope.user.email = mail;
+
+        $scope.profile = [];
+        $scope.profile.name = name;
+        $scope.profile.lastName = lastName
+        $scope.profile.email = mail;
+        $scope.singonsuccess = true;
+        myMiddleware.singon($scope.user);
+        if($scope.singonsuccess){
+            $scope.profilesuccess = true;
+            myMiddleware.agregarPersona($scope.profile,function(dataprofile){
+                $scope.profilesuccess = dataprofile;
+                if($scope.profilesuccess){
+                    myMiddleware.login($scope.user,function(data){
+                        $scope.loginsuccess = data;
+                        if(!$scope.loginsuccess){
+                            var error = "Desafortunadamente se tuvo un problema al intentar loguearse, por favor intente denuevo más tarde.";
+                            console.log("ERROR: " + error);
+                            $ionicPopup.alert({
+                                title: 'Alert',
+                                template: error
+                            });
+                            $location.path('/login');
+                        }else{
+                            window.localStorage['email']= $scope.user.email;
+                            $location.path('/tab/home');
+                        }
+                    });
+                }else{
+                    $location.path('/login');
+                    var error = "Desafortunadamente se tuvo un problema al intentar loguearse, por favor intente denuevo más tarde.";
+                    console.log("ERROR: " + error);
+                    $ionicPopup.alert({
+                        title: 'Alert',
+                        template: error
+                    });
+                }
+            });
+        }else{            
+            $location.path=('/register');
+        }
+        
     };
 
 });
@@ -267,7 +407,12 @@ app.controller("RegisterController", function($scope, $location, $ionicPopup, my
                     myMiddleware.login($scope.user,function(data){
                         $scope.loginsuccess = data;
                         if(!$scope.loginsuccess){
-                            alert("Desafortunadamente se tuvo un problema al intentar loguearse, por favor intente denuevo más tarde.");
+                            var error = "Desafortunadamente se tuvo un problema al intentar loguearse, por favor intente denuevo más tarde.";
+                            console.log("ERROR: " + error);
+                            $ionicPopup.alert({
+                                title: 'Alert',
+                                template: error
+                            });
                             $location.path('/login');
                         }else{
                             window.localStorage['email']= $scope.user.email;
@@ -276,7 +421,12 @@ app.controller("RegisterController", function($scope, $location, $ionicPopup, my
                     });
                 }else{
                     $location.path('/login');
-                    alert("Desafortunadamente se tuvo un problema al intentar loguearse, por favor intente denuevo más tarde.");
+                    var error = "Desafortunadamente se tuvo un problema al intentar loguearse, por favor intente denuevo más tarde.";
+                    console.log("ERROR: " + error);
+                    $ionicPopup.alert({
+                        title: 'Alert',
+                        template: error
+                    });
                 }
             });
         }else{            
@@ -327,8 +477,9 @@ app.controller("myProfileController", function($scope, $ionicPopup, $location, m
                 object.lastname = lastname;
             }
             if(tel !== undefined) {
-                object.tel = tel;
+                object.telephone = tel;
             }
+            object.tel = object.telephone;
             object.lastName=object.lastname;
             myMiddleware.editPersona(object, function(data){
 
@@ -392,18 +543,85 @@ app.controller("menuController", function($scope, $ionicPopup, $location, myMidd
 app.controller("upComingClassesController", function($scope, $ionicPopup, $location, myMiddleware) {
 
     var object = [];
+    $scope.rate = 1;
+    $scope.max = 5;
 
     $scope.list = function() {
-        $scope.email = window.localStorage['email'];
-        myMiddleware.obtenerServiciosAll(function(data){
-            object = data;
-            if($scope.email!= undefined) {
+        $scope.match = [];
+        $scope.match.emailUser = window.localStorage['email'];
+        myMiddleware.obtenerMatchUser($scope.match,function(data){
+            if($scope.match.emailUser!= undefined) {
+                for (i in data){
+                    object.id = data[i].serviId;
+                     myMiddleware.obtenerServiciosId(object,function(servi){
+                        if(!servi){
+                             var error = "error al cargar servicios";
+                            console.log("ERROR: " + error);
+                            $ionicPopup.alert({
+                                title: 'Alert',
+                                template: error
+                            });
+                        }else{
+                            servi.matchId = data[i].id;
+                            $scope.services[i] = servi;
+                        }
+                     });
+                }
                 $scope.services = object;
                 console.log("hay data.");
             }
         });
     };
-  
+
+    $scope.delete = function(id){
+        $scope.match = [];
+        $scope.match.id = id;
+        myMiddleware.borrarMatch($scope.match,function(data){
+            if(data){
+                $ionicPopup.show({
+                    title: 'Match Successfully deleted',
+                    buttons: [{
+                        text: 'OK',
+                        type: 'button-positive',
+                        onTap: function() {
+                            window.setTimeout(function() { window.location.reload(true); }, 500);
+                        }
+                    }]
+                });
+            }else{
+                var error = "error deleting match";
+                console.log("ERROR: " + error);
+                $ionicPopup.alert({
+                    title: 'Alert',
+                    template: error
+                }); 
+            }
+        });
+    };
+
+    $scope.submitComment = function(id,content,rate){        
+        myMiddleware.agregarComentario(id, content, rate, function(data){
+            if(data){
+                $ionicPopup.show({
+                    title: 'Comment Successfully added',
+                    buttons: [{
+                        text: 'OK',
+                        type: 'button-positive',
+                        onTap: function() {
+                            window.setTimeout(function() { window.location.reload(true); }, 500);
+                        }
+                    }]
+                });
+            }else{
+                var error = "Error Adding Comment";
+                console.log("ERROR: " + error);
+                $ionicPopup.alert({
+                    title: 'Alert',
+                    template: error
+                });
+            }
+        });
+    }
 });
 
 app.controller("ServiceFormController", function($scope, $ionicPopup, $location, myMiddleware ) {
@@ -422,21 +640,36 @@ app.controller("ServiceFormController", function($scope, $ionicPopup, $location,
         });
     };
 
-    $scope.create = function(title, category) {
+    $scope.create = function(title, category, city) {
         $scope.service.serviceName = title;
         $scope.service.owner = ($scope.data.name +" "+ $scope.data.lastName);
         $scope.service.category = category;
+        $scope.service.city = city;
         $scope.service.email =  window.localStorage['email'];
         myMiddleware.guardarServicio($scope.service,function(data){
             if (data) {
-                alert("el servicio se agrego");
+                $ionicPopup.show({
+                    title: 'Service Successfully added',
+                    buttons: [{
+                        text: 'OK',
+                        type: 'button-positive',
+                        onTap: function() {
+                            $location.path("/tab/services");
+                            window.setTimeout(function() { window.location.reload(true); }, 500);
+                        }
+                    }]
+                });
+                
             }else{
-                alert("ocurrio un problema al agregar el servicio... intentelo más tarde.")
+                var error = "ocurrio un problema al agregar el servicio... intentelo más tarde.";
+                console.log("ERROR: " + error);
+                $ionicPopup.alert({
+                    title: 'Alert',
+                    template: error
+                });
             }
 
         });
-        $scope.services += $scope.service;
-        $location.path("/tab/services");
     };
 
     $scope.categories = [
@@ -452,6 +685,15 @@ app.controller("myCreateServicesController", function($scope, $ionicPopup, $loca
         $location.path('/tab/serviceForm');
     };
 
+    $scope.toEditService = function(service) {
+        window.localStorage['serviceId'] = service.id;
+        window.localStorage['serviceName']= service.serviceName;
+        window.localStorage['owner']= service.owner;
+        window.localStorage['category']= service.category;
+        window.localStorage['city']= service.city;
+        $location.path('/tab/editService');
+    };
+
     $scope.list = function() {
         $scope.email = window.localStorage['email'];
         $scope.servicio = [];
@@ -460,6 +702,18 @@ app.controller("myCreateServicesController", function($scope, $ionicPopup, $loca
             object = data;
             if($scope.email!= undefined) {
                 $scope.services = object;
+                for(i in $scope.services){
+                    $scope.match =[];
+                    $scope.match.serviId =$scope.services[i].id;
+                    myMiddleware.obtenerMatchServiId($scope.match,function(data){
+                        if(!data){
+                            var error = "Error trying to load matches";
+                            console.log("ERROR: " + error);
+                        }else{
+                            $scope.services[i].matches = data;
+                        }
+                    });
+                }
                 console.log("hay data.");
             }
         });
@@ -485,9 +739,24 @@ app.controller("myCreateServicesController", function($scope, $ionicPopup, $loca
         myMiddleware.borrarServicios($scope.servicio,function(data){
             if(data){
                 console.log("se borro exitosamente el servicio " +id);
-                window.setTimeout(function() { window.location.reload(true); }, 500);
+                $ionicPopup.show({
+                    title: 'Service Successfully deleted',
+                    buttons: [{
+                        text: 'OK',
+                        type: 'button-positive',
+                        onTap: function() {
+                            window.setTimeout(function() { window.location.reload(true); }, 500);
+                        }
+                    }]
+                });
             }else{
                 console.log("un problema al borrar el servicio");
+                var error = "Error trying to delete the service";
+                console.log("ERROR: " + error);
+                $ionicPopup.alert({
+                    title: 'Alert',
+                    template: error
+                });
             }
         });
     };
@@ -508,18 +777,52 @@ app.controller('homeController', function($scope, $ionicPopup, $location, myMidd
     };
 
     $scope.adquire = function(service) {
-        /*
-        if(auth) {
-            if($scope.data.hasOwnProperty("myServices") !== true) {
-                $scope.data.myServices = [];
+       $scope.match = [];
+       $scope.match.emailUser = window.localStorage['email'];
+       $scope.match.serviId = service.id;
+       myMiddleware.obtenerServiciosId(service,function(data){
+            if(!data){
+                var error = "Error trying to adquire the service";
+                console.log("ERROR: " + error);
+                $ionicPopup.alert({
+                    title: 'Alert',
+                    template: error
+                });
+            }else{
+                if(data.email==$scope.match.emailUser){
+                    var error = "This services is yours";
+                    console.log("ERROR: " + error);
+                    $ionicPopup.alert({
+                        title: 'Alert',
+                        template: error
+                    });
+                }else{
+                    myMiddleware.agregarMatch($scope.match,function(data){
+                        if(data){
+                            $ionicPopup.show({
+                                title: 'Service Successfully adquired',
+                                buttons: [{
+                                    text: 'OK',
+                                    type: 'button-positive',
+                                    onTap: function() {
+                                        window.setTimeout(function() { window.location.reload(true); }, 500);
+                                    }
+                                }]
+                            });
+                        }else{
+                            var error = "Error trying to adquire the service";
+                            console.log("ERROR: " + error);
+                            $ionicPopup.alert({
+                                title: 'Alert',
+                                template: error
+                            });
+                        }
+                   });
+                }
             }
-
-            $scope.data.myServices.push(service);
-
-            $location.path("/tab/myServices");
-        }
-        */
-    }
+       });
+       
+   };
 });
 
 app.controller('searchController', function($scope, $ionicPopup, $location, myMiddleware) {
@@ -537,15 +840,51 @@ app.controller('searchController', function($scope, $ionicPopup, $location, myMi
         });
     };
 
-    $scope.adquire = function(service) {
-        /*if(auth) {
-            if($scope.data.hasOwnProperty("myServices") !== true) {
-                $scope.data.myServices = [];
+   $scope.adquire = function(service) {
+       $scope.match = [];
+       $scope.match.emailUser = window.localStorage['email'];
+       $scope.match.serviId = service.id;
+       myMiddleware.obtenerServiciosId(service,function(data){
+            if(!data){
+                var error = "Error trying to adquire the service";
+                console.log("ERROR: " + error);
+                $ionicPopup.alert({
+                    title: 'Alert',
+                    template: error
+                });
+            }else{
+                if(data.email==$scope.match.emailUser){
+                    var error = "This services is yours";
+                    console.log("ERROR: " + error);
+                    $ionicPopup.alert({
+                        title: 'Alert',
+                        template: error
+                    });
+                }else{
+                    myMiddleware.agregarMatch($scope.match,function(data){
+                        if(data){
+                            $ionicPopup.show({
+                                title: 'Service Successfully adquired',
+                                buttons: [{
+                                    text: 'OK',
+                                    type: 'button-positive',
+                                    onTap: function() {
+                                        window.setTimeout(function() { window.location.reload(true); }, 500);
+                                    }
+                                }]
+                            });
+                        }else{
+                            var error = "Error trying to adquire the service";
+                            console.log("ERROR: " + error);
+                            $ionicPopup.alert({
+                                title: 'Alert',
+                                template: error
+                            });
+                        }
+                   });
+                }
             }
-
-            $scope.data.myServices.push(service);
-
-            $location.path("/tab/myServices");
-        }*/
-    }
+       });
+       
+   };
 });
