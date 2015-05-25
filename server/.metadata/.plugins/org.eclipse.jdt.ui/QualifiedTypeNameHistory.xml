@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="DTO.ServiDTO"/>
 <fullyQualifiedTypeName name="exeption.ServiceNotFoundException"/>
 <fullyQualifiedTypeName name="rest.PersonService"/>
 <fullyQualifiedTypeName name="com.mkyong.model.User"/>
@@ -47,7 +46,6 @@
 <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="repositories.ServiRepository"/>
 <fullyQualifiedTypeName name="DBServices.MongoServiRepository"/>
 <fullyQualifiedTypeName name="org.springframework.data.mongodb.core.mapping.MongoMappingContext"/>
@@ -60,4 +58,6 @@
 <fullyQualifiedTypeName name="entity.Match"/>
 <fullyQualifiedTypeName name="entity.Servi"/>
 <fullyQualifiedTypeName name="entity.Person"/>
+<fullyQualifiedTypeName name="entity.Comment"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
