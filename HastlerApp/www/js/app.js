@@ -155,9 +155,7 @@ app.controller("serviceController", function($scope, $ionicPopup, $location, myM
         $scope.service = window.localStorage['service'];
         object.id = $scope.service.id;
         console.log("el servicio a mostrar tiene id: " + object.id);
-    };
-
-  
+    };  
 
 });
 
